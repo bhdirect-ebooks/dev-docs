@@ -1,0 +1,46 @@
+code:
+  intro:
+    welcome: index.html
+    on_style: on_style.html
+  style:
+    general_format: general_format.html
+    html_style: html_style.html
+    html_format: html_format.html
+    css_style: css_style.html
+    css_format: css_format.html
+    epub_style: epub_style.html
+    git_commit: git_commit.html
+  epubs:
+    construction: construction.html
+    metadata: metadata.html
+    navigation: navigation.html
+    semantics: semantics.html
+  content:
+    structural: structural_types.html
+    data_att: data_types.html
+    general_content: general_types.html
+    indexes: indexes.html
+    dictionaries: dictionaries.html
+    bibles: bibles.html
+
+css:
+  core:
+    overview: index.html
+    events: events.html
+    locals: locals.html
+    router: router.html
+    box: box.html
+    rendering: rendering.html
+    posts: posts.html
+    scaffolds: scaffolds.html
+    themes: themes.html
+  extensions:
+    console: console.html
+    deployer: deployer.html
+    filter: filter.html
+    generator: generator.html
+    helper: helper.html
+    migrator: migrator.html
+    processor: processor.html
+    renderer: renderer.html
+    tag: tag.html

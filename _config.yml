@@ -1,0 +1,24 @@
+title: "B&H Direct eBook Development Style Guide"
+description: "Recommended code, CSS Library, and Development Process for the B&H Direct Digital Product Development Team"
+author: Weston Littrell
+language: en
+timezone: America/Chicago
+url: https://style.bhdirect-ebooks.org
+root: /
+permalink: news/:year/:month/:day/:title/
+archive_dir: news
+code_dir: downloads/code
+new_post_name: :year-:month-:day-:title.md # File name of new posts
+post_asset_folder: true
+highlight:
+  enable: true
+  line_number: false
+per_page: 0
+
+theme: navy
+deploy:
+  type: git
+  repo: git@github.com:bhdirect-ebooks/dev-docs.git
+
+google_analytics: UA-96933940-1
+github: bhdirect-ebooks

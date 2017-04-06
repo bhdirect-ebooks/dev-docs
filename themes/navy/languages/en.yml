@@ -1,0 +1,63 @@
+menu:
+  code: Recommended Code
+  css: CSS Library
+  process: "Development Process & Tools"
+  news: News
+
+index:
+  get_started: Get started
+
+page:
+  contents: Contents
+  back_to_top: Back to Top
+  improve: Improve this doc
+  prev: Prev
+  next: Next
+  last_updated: "Last updated: %s"
+
+sidebar:
+  code:
+    intro: Introduction
+    welcome: Welcome
+    on_style: On Style Guides
+    style: General Code Formatting
+    general_format: General Formatting Rules
+    html_style: HTML Style Rules
+    html_format: HTML Formatting Rules
+    css_style: CSS Style Rules
+    css_format: CSS Formatting Rules
+    epub_style: EPUB Style Rules
+    git_commit: Git Commit Messages
+    epubs: EPUB Guidelines
+    construction: Constructing an EPUB
+    metadata: Metadata
+    navigation: Navigation and Container Files
+    semantics: EPUB Structural Semantics
+    content: Content Tagging
+    structural: Structural Types
+    data_att: Data Types
+    general_content: General Types
+    indexes: Indexes
+    dictionaries: Dictionaries
+    bibles: Bibles
+  css:
+    core: Core
+    overview: Overview
+    events: Events
+    locals: Locals
+    router: Router
+    box: Box
+    rendering: Rendering
+    posts: Posts
+    scaffolds: Scaffolds
+    themes: Themes
+    extensions: Extensions
+    console: Console
+    deployer: Deployer
+    filter: Filter
+    generator: Generator
+    helper: Helper
+    migrator: Migrator
+    processor: Processor
+    renderer: Renderer
+    tag: Tag
