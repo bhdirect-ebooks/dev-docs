@@ -1,8 +1,9 @@
-# <span class="changes">Dictionaries</span>
+title: Dictionaries
+---
 
-## Dictionary File Conventions
+## Dictionary File Naming
 
-For our team, follow the file naming conventions for any dictionary front matter and back matter. However, for the main dictionary content, do not use "chapter" in the file names. Instead, use the source language alphabet characters that correspond with the dictionary terms in each content document.
+For our team, follow the normal file naming conventions for any dictionary front matter and back matter. However, for the main dictionary content, do not use "chapter" in the file names. Instead, use the source language alphabet characters that correspond with the dictionary terms in each content document.
 
 As an example, an English dictionary would use the following names:
 
@@ -31,20 +32,22 @@ With front matter and backmatter included, it would look something like:
 
 Dictionaries require special metadata in the EPUB opf. The particulars depend on the type of dictionary. The [full dictionary specification is available via idpf](http://www.idpf.org/epub/dict/epub-dict.html) for reference.
 
-The minimum requirement is a <code>dc:type</code> of <code>dictionary</code> and a <code>meta</code> element indicating the subtype.
+The minimum requirement is a `dc:type` of `dictionary` and a `meta` element indicating the subtype.
 
 The following subtypes are available for use:
 
-* <code>monolingual</code> -- dictionary with headwords and entry content in a single language
-* <code>bilingual</code> -- dictionary with headwords in source language, other entry content in target language
-* <code>multilingual</code> -- dictionary with headwords in source language, other entry content in two or more target languages
-* <code>thesaurus</code> -- synonym dictionary or thesaurus
-* <code>encyclopedia</code> -- encyclopedia
-* <code>spelling</code> -- special-purpose spelling dictionary
-* <code>pronouncing</code> -- special-purpose dictionary of pronunciations
-* <code>etymological</code> -- special-purpose dictionary of etymologies (word origins)
+* `monolingual` -- dictionary with headwords and entry content in a single language
+* `bilingual` -- dictionary with headwords in source language, other entry content in target language
+* `multilingual` -- dictionary with headwords in source language, other entry content in two or more target languages
+* `thesaurus` -- synonym dictionary or thesaurus
+* `encyclopedia` -- encyclopedia
+* `spelling` -- special-purpose spelling dictionary
+* `pronouncing` -- special-purpose dictionary of pronunciations
+* `etymological` -- special-purpose dictionary of etymologies (word origins)
 
 ### Monolingual Dictionary
+
+Monolingual dictionaries are the default subtype when the dictionary `dc:type` is used. However, for consistent coding practices, we will use the `monolingual` subtype for any monolingual dictionaries that do not fall into the other subtype categories.
 
 ```html
 <dc:language>en</dc:language>
@@ -54,9 +57,13 @@ The following subtypes are available for use:
 <meta property="target-language">en</meta>
 ```
 
-Monolingual dictionaries are the default subtype when the dictionary <code>dc:type</code> is used. However, for consistent coding practices, we will use the <code>monolingual</code> subtype for any monolingual dictionaries that do not fall into the other subtype categories.
-
 ### Bilingual Dictionary
+
+An example of metadata for a unidirectional bilingual dictionary is given in the recommended code (in this case a Greek-English dictionary).
+
+The metadata contains a `dc:language` tag for each language, along with the dictionary `dc:type` and `bilingual` subtype. In addition, the source and target languages are identified with `meta` tags and the appropriate `property` for each.
+
+In the Greek-English dictionary example, the `source-language` is `grc` because the entries are Greek terms, and the `target-language` is `en` because definitions/translations are given in English.
 
 ```html
 <dc:language>en</dc:language>
@@ -67,13 +74,11 @@ Monolingual dictionaries are the default subtype when the dictionary <code>dc:ty
 <meta property="target-language">en</meta>
 ```
 
-An example of metadata for a unidirectional bilingual dictionary is given in the recommended code (in this case a Greek-English dictionary).
-
-The metadata contains a <code>dc:language</code> tag for each language, along with the dictionary <code>dc:type</code> and <code>bilingual</code> subtype. In addition, the source and target languages are identified with <code>meta</code> tags and the appropriate <code>property</code> for each.
-
-In the Greek-English dictionary example, the <code>source-language</code> is <code>grc</code> because the entries are Greek terms, and the <code>target-language</code> is <code>en</code> because definitions/translations are given in English.
-
 ### Multilingual Dictionary
+
+Continuing with the bilingual Greek-English dictionary example, if terms were also translated into another language, even if just for clarification or equivalent term information, the work is then a `multilingual` subtype.
+
+The multilingual example now shows how the metadata would look such a dictionary. For a multilingual dictionary, there is one `source-language` and multiple `target-language`s.
 
 ```html
 <dc:language>en</dc:language>
@@ -86,20 +91,20 @@ In the Greek-English dictionary example, the <code>source-language</code> is <co
 <meta property="target-language">hbo</meta>
 ```
 
-Continuing with the bilingual Greek-English dictionary example, if terms were also translated into another language, even if just for clarification or equivalent term information, the work is then a <code>multilingual</code> subtype.
-
-The multilingual example now shows how the metadata would look such a dictionary. For a multilingual dictionary, there is one <code>source-language</code> and multiple <code>target-language</code>s.
-
 ### Other Dictionary Types
+
+For other dictionary subtypes, simply use the appropriate subtype code in the `meta property="dcterms:type" refines` tag.
 
 ```html
 <dc:type id="dict-type">dictionary</dc:type>
 <meta property="dcterms:type" refines="#dict-type">encyclopedia</meta>
 ```
 
-For other dictionary subtypes, simply use the appropriate subtype code in the <code>meta property="dcterms:type" refines</code> tag.
-
 ## Dictionary Content
+
+Dictionaries in EPUBs must follow a prescribed pattern using a set of dictionary `epub:type`s.
+
+Each index in the work should be nested in an `dictionary` type `body`, in documents corresponding to the source language's alphabet or other grouping used by the work itself.
 
 ```html
 <body epub:type="dictionary">
@@ -107,11 +112,11 @@ For other dictionary subtypes, simply use the appropriate subtype code in the <c
 </body>
 ```
 
-Dictionaries in EPUBs must follow a prescribed pattern using a set of dictionary <code>epub:type</code>s.
-
-Each index in the work should be nested in an <code>dictionary</code> type <code>body</code>, in documents corresponding to the source language's alphabet or other grouping used by the work itself.
-
 ### Dictionary Entries
+
+Each dictionary entry is nested in an `article` element with `epub:type="dictentry"`.
+
+The term itself is placed in `<dfn></dfn>;`
 
 ```html
 <body epub:type="dictionary">
@@ -125,9 +130,5 @@ Each index in the work should be nested in an <code>dictionary</code> type <code
  </article>
 </body>
 ```
-
-Each dictionary entry is nested in an <code>article</code> element with <code>epub:type="dictentry"</code>.
-
-The term itself is placed in <code>&lt;dfn&gt;&lt;/dfn&gt;</code>
 
 ### Additional Dictionary Guidelines Forthcoming

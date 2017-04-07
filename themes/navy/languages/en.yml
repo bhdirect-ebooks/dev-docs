@@ -1,6 +1,6 @@
 menu:
   code: Recommended Code
-  css: CSS Library
+  css_lib: CSS Library
   process: "Development Process & Tools"
   news: News
 
@@ -20,7 +20,7 @@ sidebar:
     intro: Introduction
     welcome: Welcome
     on_style: On Style Guides
-    style: General Code Formatting
+    style: Code Formatting
     general_format: General Formatting Rules
     html_style: HTML Style Rules
     html_format: HTML Formatting Rules
@@ -30,17 +30,18 @@ sidebar:
     git_commit: Git Commit Messages
     epubs: EPUB Guidelines
     construction: Constructing an EPUB
-    metadata: Metadata
-    navigation: Navigation and Container Files
-    semantics: EPUB Structural Semantics
-    content: Content Tagging
+    metadata: EPUB Metadata
+    navigation: Navigation Document
+    content: Content Markup
+    semantics: EPUB Semantics
     structural: Structural Types
     data_att: Data Types
+    multimedia: Media Types
     general_content: General Types
     indexes: Indexes
     dictionaries: Dictionaries
     bibles: Bibles
-  css:
+  css_lib:
     core: Core
     overview: Overview
     events: Events
@@ -61,3 +62,28 @@ sidebar:
     processor: Processor
     renderer: Renderer
     tag: Tag
+  process:
+    dev: Dev Process
+    overview: Overview
+    prep: Prep
+    admin: Project Admin
+    triage: Triage
+    git: Git and GitHub
+    structure: Create EPUB Structure
+    clean: "Clean & Code"
+    content: Markup Content
+    package: Package Doc
+    nav: Navigation Doc
+    enhance: Enhance
+    pagebreak: Page Breaks
+    scripture: Scripture References
+    footnotes: Footnotes
+    indexes: Indexes
+    abbr: Abbreviations
+    videos: Videos
+    glossary: Glossary
+    special: Particular Projects
+    qa: "QA & Convert"
+    self: Self Review
+    peer: Peer Review
+    convert: "Convert & Upload"

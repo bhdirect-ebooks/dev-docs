@@ -14,16 +14,17 @@ code:
     construction: construction.html
     metadata: metadata.html
     navigation: navigation.html
-    semantics: semantics.html
   content:
+    semantics: semantics.html
     structural: structural_types.html
     data_att: data_types.html
+    multimedia: media_types.html
     general_content: general_types.html
     indexes: indexes.html
     dictionaries: dictionaries.html
     bibles: bibles.html
 
-css:
+css_lib:
   core:
     overview: index.html
     events: events.html
@@ -44,3 +45,29 @@ css:
     processor: processor.html
     renderer: renderer.html
     tag: tag.html
+
+process:
+  dev:
+    overview: index.html
+  prep:
+    admin: project_admin.html
+    triage: triage.html
+    git: git.html
+    structure: epub_dir.html
+  clean:
+    content: markup.html
+    package: package_doc.html
+    nav: nav_doc.html
+  enhance:
+    pagebreak: page_break.html
+    scripture: scripture.html
+    footnotes: footnotes.html
+    indexes: indexes.html
+    abbr: abbr.html
+    videos: videos.html
+    glossary: glossary.html
+    special: special_types.html
+  qa:
+    self: self_review.html
+    peer: peer_review.html
+    convert: convert.html

@@ -1,3 +1,4 @@
-# <span class="changes">Bibles</span>
+title: Bibles
+---
 
 Bible guidelines forthcoming.

@@ -1,9 +1,14 @@
-# Navigation Document
+title: Navigation Document
+---
+
+All navigational aids are located within the `<body>` of the navigation document (toc.xhtml for our EPUB projects).
+
+Each one is an ordered list (`<ol>`) of hyperlinks (`<li><a></a></li>`) nested in a `<nav>` element.
 
 ```html
 <body>
   <nav>
-    <h1>Title</h1>
+    <h1>Nav Title</h1>
     <ol>
       <li><a></a></li>
     </ol>
@@ -11,57 +16,37 @@
 </body>
 ```
 
-All navigational aids are located within the <code>&#60;body&#62;</code> of the navigation document (toc.xhtml for our EPUB projects). Each one is an ordered list (<code>&#60;ol&#62;</code>) of hyperlinks nested in a <code>&#60;nav&#62;</code> element.
-
 ## Table of Contents
+
+Each EPUB we develop must have a TOC in the navigation document.
+
+General guidelines for the TOC:
+
+* The EPUB TOC should reflect the printed TOC, but...
+* should only include text between the `<li></li>` tags (no classes, etc.),
+* should not be deeply nested (2 or 3 levels max),
+* should always include part, chapter, or section labels and/or ordinals,
+* should not include elements that appear prior to the TOC in its linear order.
 
 ```html
 <nav epub:type="toc" id="toc">
   <h1>Table of Contents</h1>
-  <ol id="tocList">
+  <ol>
     <!-- <li> elements with <a>, linking to each location -->
     <!-- with additional nested lists as the TOC requires. -->
   </ol>
 </nav>
 ```
+## Page List
 
-Each EPUB we develop must have a TOC in the navigation document.
-
-The EPUB TOC should always reflect the printed TOC.
-
-## LOA, LOI, LOT, LOV
+The final navigational aid we must include in every EPUB is a list of links to all pages. This list must follow the order of `pagebreak` types as they occur in the document and the order of content documents in the `<spine>`.
 
 ```html
-<nav epub:type="loi" id="loi">
-  <h1>[Maps, Photos, etc.]</h1>
-  <ol id="figureList">
-    <!-- <li> with <a> for each corresponding <figure> -->
-  </ol>
-</nav>
-
-<nav epub:type="lot" id="lot">
-  <h1>Tables</h1>
-  <ol id="tableList">
-    <!-- <li> with <a> for each <table>* -->
-    <!-- *This should only include the tables used
-         for illustration purposes in the work itself,
-         not those added merely for presentation. -->
-  </ol>
-</nav>
-
-<nav epub:type="lov" id="lov">
-  <h1>Videos</h1>
-  <ol id="videoList">
-    <!-- <li> with <a> for each <video> -->
-  </ol>
-</nav>
-
-<nav epub:type="loa" id="loa">
-  <h1>Audio</h1>
-  <ol id="audioList">
-    <!-- <li> with <a> for each <audio> -->
+<nav epub:type="page-list">
+  <h1>Page Numbers</h1>
+  <ol>
+    <li><a href="xyz.xhtml#page1">1</a></li>
+    <!-- etc. -->
   </ol>
 </nav>
 ```
-
-Lists of all audio clips, figures, tables, and videos in the document receive their own navigation sections within the navigation document. Only those that apply to the document should be included.

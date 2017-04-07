@@ -1,10 +1,12 @@
-# Metadata
-
-The <code>&#60;metadata&#62;</code> element is the required first child of <code>&#60;body&#62;</code> of the Package Document (content.opf).
+title: EPUB Metadata
+---
 
 ## General Book Metadata
+The `<metadata>` element is the required first child of `<body>` in the Package Document (content.opf).
 
-> <span class="changes">New Code Example</span>
+The required elements are `<dc:identifier>`, `<dc:title>`, and `<dc:language>`, along with `<meta property="dcterms:modified">`.
+
+<aside class="notice">For our EPUBs, make sure to include at a minimum all recommended metadata elements shown here.</aside>
 
 ```xml
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -24,7 +26,7 @@ The <code>&#60;metadata&#62;</code> element is the required first child of <code
   <!-- Use additional <dc:creator> elements for each author and editor -->
 
   <!-- Publication -->
-  <dc:date>2017</dc:date><!-- year in which you are developing the EPUB -->
+  <dc:date>2017</dc:date><!-- year in which you are developing the ePub -->
   <dc:publisher>Publisher Name</dc:publisher>
   <meta property="marc:relators:pup"><!-- publisher place (city and state) --></meta>
   <meta property="dcterms:dateCopyrighted">2015</meta><!-- copyright year of the publication -->
@@ -35,11 +37,14 @@ The <code>&#60;metadata&#62;</code> element is the required first child of <code
 </metadata>
 ```
 
-The required elements are <code>&#60;dc:identifier&#62;</code>, <code>&#60;dc:title&#62;</code>, and <code>&#60;dc:language&#62;</code>, along with <code>&#60;meta property="dcterms:modified"&#62;</code>.
-
-<aside class="notice">For our EPUBs, make sure to include at a minimum all recommended metadata elements shown here.</aside>
-
 ## Subtitle and Edition Metadata
+
+When the work has a subtitle and/or an edition, multiple `<dc:title>` elements must be used and refined with <code>title-type</code>.
+
+Any time an EPUB requires multiple `<dc:title>` elements:
+
+* each title type must appear in the appropriate order, and
+* the "expanded" title type must always be included as the top element.
 
 ```xml
 <dc:title id="full-title">The Essence of the New Testament: A Survey, 2nd Edition</dc:title>
@@ -55,14 +60,13 @@ The required elements are <code>&#60;dc:identifier&#62;</code>, <code>&#60;dc:ti
 <meta refines="#the-edition" property="title-type">edition</meta>
 ```
 
-When the work has a subtitle and/or an edition, multiple <code>&#60;dc:title&#62;</code> elements must be used and refined with <code>title-type</code>.
-
-Any time an EPUB requires multiple <code>&#60;dc:title&#62;</code> elements:
-
-* each title type must appear in the appropriate order, and
-* the "expanded" title type must always be included as the top element.
-
 ## Set/Series Metadata
+
+Sets, or series, also require multiple `<dc:title>` elements along with <code>refines</code> attributes.
+
+Additionally, the <code>group-position</code> property determines this volume's position in the set.
+
+<aside class="warning">As with subtitles and editions, including additional `<dc:title>` elements necessitates the use of the "expanded" title type at the top.</aside>
 
 ```xml
 <dc:title id="full-title">The Lord of the Rings: The Fellowship of the Ring</dc:title>
@@ -73,16 +77,17 @@ Any time an EPUB requires multiple <code>&#60;dc:title&#62;</code> elements:
 
 <dc:title id="set-title">The Lord of the Rings</dc:title>
 <meta refines="#set-title" property="title-type">collection</meta>
-<meta refines="#set-title" property="group-position">1</meta> <!-- first volume -->
+<meta refines="#set-title" property="group-position">1</meta>
+<!-- The "1" above indicates that this is the first in a series -->
 ```
 
-Sets, or series, also require multiple <code>&#60;dc:title&#62;</code> elements along with <code>refines</code> attributes.
-
-Additionally, the <code>group-position</code> property determines this volume's position in the set.
-
-*As with subtitles and editions, including additional <code>&#60;dc:title&#62;</code> elements necessitates the use of the "expanded" title type at the top.*
-
 ## Journal Metadata
+
+<aside class="tip">See a [journal metadata](https://gitlab.com/snippets/26999) snippet on GitLab.</aside>
+
+For journals, `<meta property="dcterms:bibliographicCitation">` must be included as a child of the `<metadata>` element.
+
+<aside class="warning">The `content` attribute value is one, unbroken string, but it is broken below for readability.</aside>
 
 ```xml
 <meta property="dcterms:bibliographicCitation" scheme="kev.ctx"
@@ -94,9 +99,3 @@ content="&ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal
 &rft.date=YYYY
 &rft.chron=Month-Month" />
 ```
-
-> See a [journal metadata](https://gitlab.com/snippets/26999) snippet on GitLab.
-
-For journals, <code>&#60;meta property="dcterms:bibliographicCitation"&#62;</code> must be included as a child of the <code>&#60;metadata&#62;</code> element.
-
-*The <code class="inline">content</code> attribute value is one, unbroken string, but it is broken here for readability.*
