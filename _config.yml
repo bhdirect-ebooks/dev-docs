@@ -24,5 +24,6 @@ google_analytics: UA-96933940-1
 github: bhdirect-ebooks
 algolia:
   en:
+    app_id: VI85ZK1HNX
     api_key: cc39376d206d0aeb898a187406db8e90
     index_name: bhdirect-dev
