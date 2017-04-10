@@ -9,7 +9,7 @@ Where it all begins... and ends.
 2. Create or add yourself to the project in Harvest.
 3. Track time in Harvest
 4. After initializing your project in [Git and GitHub](git.html), add the repo(s) to the Trello card.
-   * For each repo, click on GitHub, then\
+   * For each repo, click on GitHub, then
      Attach Branch → Choose a different repo → \[search for and click repo\] → master
 
 ## Review
@@ -19,7 +19,7 @@ Where it all begins... and ends.
 3. *Reviewer: when complete (and if there are issues), move the card to "Review Issue Resolution"*
 4. Dev: When done resolving issues from Review, move the Trello card back to "Ready for Review"
 
-# Related Tools/Scripts
+## Related Tools/Scripts
 
 [Trello (web app)](https://trello.com/wordsearchbhacademiccontentdevelopmentteam 'Trelloundefined)
 

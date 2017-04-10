@@ -109,7 +109,7 @@ Tag poetry with `poetry` classes, making sure to follow the indentation conventi
 ```
 Rendered version of the example code:
 
-![Poetry example - rendered version.](../images/poetry-example.png)
+![Poetry example - rendered version.](../assets/images/poetry-example.png)
 
 ## Quotation Marks
 

@@ -10,7 +10,11 @@ Recommended free course: [How to Use Git and GitHub](https://www.udacity.com/cou
 
 1. Create a `.gitignore` file in your home directory (`\~/`)
 2. Then, add a line with ".DS_Store" without the quotes to that file
-3. In your terminal, enter `git config --global core.excludesfile \~/.gitignore`
+3. In your terminal, enter
+
+```plain
+git config --global core.excludesfile \~/.gitignore
+```
 
 ## Create a local repo
 
@@ -27,7 +31,7 @@ git commit -am "initial commit"
 1. Navigate to [https://github.com/bhdirect-ebooks](https://github.com/bhdirect-ebooks)
 2. Click the green "New" button
 3. Repository name:
-   * Volume: 13-digit ePub ISBN
+   * Volume: 13-digit EPUB ISBN
    * Set: set short name
 4. Description: full title of the volume or set
 5. Select "Private"
@@ -60,4 +64,6 @@ git add --all
 
 A push will upload your local Git repo to its remote counterpart. You do not need to push every time you commit. Make a habit of pushing your repo at least once or twice each work day.
 
-    git push origin master
+```plain
+git push origin master
+```

@@ -1,7 +1,7 @@
 title: On Style Guides
 ---
 
-This coding style guide defines formatting and style rules for the HTML and CSS files contained within ePubs. It aims at promoting effective collaboration and consistent code quality and acts as the official style guide to follow as you markup, code, and transform content for distribution.
+This coding style guide defines formatting and style rules for the HTML and CSS files contained within EPUBs. It aims at promoting effective collaboration and consistent code quality and acts as the official style guide to follow as you markup, code, and transform content for distribution.
 
 This quote from [CSS Guidelines](http://cssguidelin.es/#the-importance-of-a-styleguide), an opinionated CSS style guide, summarizes well the benefits of a style guide for teams:
 

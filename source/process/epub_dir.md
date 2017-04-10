@@ -1,15 +1,18 @@
+title: EPUB Directories and Files
+---
+
 It's just file naming, right?
 
-# Related Tools/Scripts
+## Related Tools/Scripts
 
-[split-files-for-epub (script)](https://cms.lifeway.com/share/page/site/bh-academic/document-details?nodeRef=workspace://SpacesStore/18c39ebf-6433-495f-9b17-ff0d2b89a665 'Alfresco » Loginundefined)
+[split-files-for-epub (script)](https://cms.lifeway.com/share/page/site/bh-academic/document-details?nodeRef=workspace://SpacesStore/18c39ebf-6433-495f-9b17-ff0d2b89a665)
 
-* Install [Satimage.osax](http://www.satimage.fr/software/en/downloads/downloads_companion_osaxen.html 'Smile companion osaxundefined) before running this script.
+* Install [Satimage osax (2nd from top)](http://www.satimage.fr/software/en/downloads/downloads_companion_osaxen.html) before running this script.
 
 How to use:
 
-[https://www.youtube.com/watch?v=0xC2vKnCIZg](https://www.youtube.com/watch?v=0xC2vKnCIZg)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0xC2vKnCIZg" frameborder="0" allowfullscreen></iframe>
 
-# Style Guide
+## Style Guide Links
 
-[Constructing an ePub](https://bhdirect-ebooks.gitlab.io/development-style-guide/#constructing-an-epub 'Dev Style Guideundefined)
+[Constructing an EPUB](../code/construction.html)

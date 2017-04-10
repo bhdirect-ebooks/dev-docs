@@ -1,22 +1,24 @@
-// https://github.com/chriskempson/tomorrow-theme
-highlight-background = #fff
-highlight-current-line = #efefef
-highlight-selection = #d6d6d6
+// based on cobalt2 by Wes Bos
+highlight-background = rgb(25,53,73)
+highlight-text = #f8f8f2
+highlight-current-line = rgb(31,70,98)
+highlight-selection = rgb(13,67,119)
 highlight-foreground = #4d4d4c
-highlight-comment = #8e908c
-highlight-red = #c82829
-highlight-orange = #f5871f
-highlight-yellow = #eab700
-highlight-green = #718c00
-highlight-aqua = #3e999f
-highlight-blue = #4271ae
-highlight-purple = #8959a8
+highlight-comment = #08f
+highlight-keyword = #ff9d00
+highlight-yellow = rgb(255,198,0)
+highlight-tag = rgb(158,255,255)
+highlight-attribute = #3ad900
+highlight-constant = rgb(255,96,127)
+highlight-dec = rgb(128,255,182)
+
 
 pre, code
   font-family: font-mono
   color: highlight-foreground
   background: #eee
   font-size: 0.95em
+  font-weight: bold
 
 code
   padding: 0 5px
@@ -30,9 +32,10 @@ pre
     padding: 0
 
 .highlight
-  background: #eee
+  background: highlight-background
+  border-top: 2px solid #ffc600
   padding: 10px 15px
-  color: highlight-foreground
+  color: highlight-text
   overflow: auto
   margin: 0
   table
@@ -51,47 +54,15 @@ pre
     padding: 0
     border: none
     background: none
+    color: highlight-text
   .line
     height: 22px
 
 pre
   .comment
-  .title
     color: highlight-comment
-  .variable
-  .attribute
-  .tag
-  .regexp
-  .ruby .constant
-  .xml .tag .title
-  .xml .pi
-  .xml .doctype
-  .html .doctype
-  .css .id
-  .css .class
-  .css .pseudo
-    color: highlight-red
-  .number
-  .preprocessor
-  .built_in
-  .literal
-  .params
-  .constant
-    color: highlight-orange
-  .class
-  .ruby .class .title
-  .css .rules .attribute
-    color: highlight-green
-  .string
-  .value
-  .inheritance
-  .header
-  .ruby .symbol
-  .xml .cdata
-    color: highlight-green
-  .css .hexcolor
-    color: highlight-aqua
-  .function
+    font-style: italic
+  .title
   .python .decorator
   .python .title
   .ruby .function .title
@@ -99,7 +70,49 @@ pre
   .perl .sub
   .javascript .title
   .coffeescript .title
-    color: highlight-blue
-  .keyword
+    color: highlight-comment
+  .variable
+  .attr
+  .selector-attr
+  .function
+  .selector-id
+  .selector-class
   .javascript .function
-    color: highlight-purple
+    color: highlight-yellow
+  .tag
+    color: #fff
+  .name
+  .selector-tag
+    color: highlight-tag
+  .attribute
+    color: highlight-dec
+  .regexp
+    color: #fd971f
+  .ruby .constant
+  .xml .tag .title
+  .xml .pi
+  .meta
+    color: highlight-tag
+    font-style: italic
+  .css .id
+  .css .class
+  .css .pseudo
+  .keyword
+    color: highlight-keyword
+  .number
+  .preprocessor
+  .built_in
+  .literal
+  .params
+  .constant
+    color: highlight-constant
+  .class
+  .ruby .class .title
+  .css .rules .attribute
+  .value
+  .inheritance
+  .header
+  .ruby .symbol
+  .xml .cdata
+  .string
+    color: highlight-attribute

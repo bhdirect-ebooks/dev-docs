@@ -1,22 +1,22 @@
 title: Dev Process Overview
 ---
 
-## Prep
+## I. Prep
 
-### Start the project
+### A. Start the project
 
-* [Project Admin](project_admin.html)
-* [Triage (project info gathering)](triage.html)
-* Create a Git repository (see [Git and GitHub](git.html))
+1. [Project Admin](project_admin.html)
+1. [Triage (project info gathering)](triage.html)
+1. Create a Git repository (see [Git and GitHub](git.html))
 
-### Create/restructure ePub directory
+### B. Create EPUB directory
 
-* Structure and name [ePub Directories and Files](epub_dir.html)
-* Add main ePub <body> and <section> types
+* Structure and name [EPUB Directories and Files](epub_dir.html)
+* Add main EPUB `<body>` and `<section>` types
 
-## Clean & Code
+## II. Clean & Code
 
-### Identify and markup content types and styles
+### A. Identify and markup content types and styles
 
 * Cover, title page, and copyright page
 * Headings (hierarchical)
@@ -28,30 +28,30 @@ title: Dev Process Overview
 * Non-decorative images
 * Remove external hyperlinks
 
-### Create well-formed ePub documents
+### B. Create well-formed EPUB documents
 
 * [Package document (content.opf)](package_doc.html)
 * Navigation document (toc.xhtml)
 
-## Enhance
+## III. Enhance
 
-### On every project:
+### A. Every project
 
 * Page breaks
 * Scripture references
 
-### On most projects:
+### B. Most projects
 
 * Footnotes
 * [Indexes](indexes.html)
 
-### On some projects:
+### C. Some projects
 
 * Abbreviations
 * Videos
 * Glossary
 
-### On particular projects:
+### D. Particular projects
 
 * Commentaries
   * Scripture context
@@ -69,19 +69,19 @@ title: Dev Process Overview
 * Date-aligned works
   * Date context
 
-## QA & Convert
+## IV. QA & Convert
 
-### Self Review
+### A. Self Review
 
 * Epub check
 * Style check
 * iBooks review
 
-### Peer Review
+### B. Peer Review
 
 * [Review Process](peer_review.html)
 
-### Conversion
+### C. Conversion
 
 MyWSB & Desktop (all projects)
 

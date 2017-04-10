@@ -13,7 +13,7 @@ Name the EPUB project files and folders according to the following conventions.
 
 Use the following directory structure for each EPUB:
 
-![Screen shot of the correct directory structure.](../images/dir-struct.png)
+![Screen shot of the correct directory structure.](../assets/images/dir-struct.png)
 
 ## Package and Container Files
 
@@ -50,6 +50,6 @@ Metadata and included files will vary from one publication to the next, but the 
 
 ### toc.xhtml
 
-The toc.xhtml is the navigation document for the EPUBs we develop. The children of <code>&#60;body&#62;</code> must be <code>&#60;nav&#62;</code> elements.
+The toc.xhtml is the navigation document for the EPUBs we develop. The children of `<body>` must be `<nav>` elements.
 
 The [linked toc.xhtml shows the basic form](https://github.com/bhdirect-ebooks/epub-container/blob/master/OEBPS/toc.xhtml). See [Navigation Document](navigation.html#Navigation-Document) for necessary specifics.

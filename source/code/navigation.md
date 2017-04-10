@@ -6,14 +6,12 @@ All navigational aids are located within the `<body>` of the navigation document
 Each one is an ordered list (`<ol>`) of hyperlinks (`<li><a></a></li>`) nested in a `<nav>` element.
 
 ```html
-<body>
-  <nav>
-    <h1>Nav Title</h1>
-    <ol>
-      <li><a></a></li>
-    </ol>
-  </nav>
-</body>
+<nav>
+  <h1>Nav Title</h1>
+  <ol>
+    <li><a></a></li>
+  </ol>
+</nav>
 ```
 
 ## Table of Contents

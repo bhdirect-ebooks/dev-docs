@@ -42,26 +42,8 @@ sidebar:
     dictionaries: Dictionaries
     bibles: Bibles
   css_lib:
-    core: Core
+    core: CSS Library
     overview: Overview
-    events: Events
-    locals: Locals
-    router: Router
-    box: Box
-    rendering: Rendering
-    posts: Posts
-    scaffolds: Scaffolds
-    themes: Themes
-    extensions: Extensions
-    console: Console
-    deployer: Deployer
-    filter: Filter
-    generator: Generator
-    helper: Helper
-    migrator: Migrator
-    processor: Processor
-    renderer: Renderer
-    tag: Tag
   process:
     dev: Dev Process
     overview: Overview

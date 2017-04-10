@@ -26,7 +26,7 @@ The required elements are `<dc:identifier>`, `<dc:title>`, and `<dc:language>`, 
   <!-- Use additional <dc:creator> elements for each author and editor -->
 
   <!-- Publication -->
-  <dc:date>2017</dc:date><!-- year in which you are developing the ePub -->
+  <dc:date>2017</dc:date><!-- year in which you are developing the EPUB -->
   <dc:publisher>Publisher Name</dc:publisher>
   <meta property="marc:relators:pup"><!-- publisher place (city and state) --></meta>
   <meta property="dcterms:dateCopyrighted">2015</meta><!-- copyright year of the publication -->
