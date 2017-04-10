@@ -17,8 +17,8 @@
 {{ partial('google_analytics') }}
 <!-- Algolia -->
 {% if config.algolia[page.lang] %}
-<link rel="stylesheet" href="//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
-<script type="text/javascript" src="//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
 <script type="text/javascript">
 document.getElementById('search-input-wrap').classList.add('on');
 docsearch({
