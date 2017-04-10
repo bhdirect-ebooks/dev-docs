@@ -8,7 +8,7 @@ root: /
 permalink: news/:year/:month/:day/:title/
 archive_dir: news
 code_dir: downloads/code
-new_post_name: :year-:month-:day-:title.md # File name of new posts
+new_post_name: :year-:month-:day-:title.md
 post_asset_folder: true
 highlight:
   enable: true
@@ -22,3 +22,7 @@ deploy:
 
 google_analytics: UA-96933940-1
 github: bhdirect-ebooks
+algolia:
+  en:
+    api_key: cc39376d206d0aeb898a187406db8e90
+    index_name: bhdirect-dev
