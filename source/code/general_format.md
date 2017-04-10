@@ -1,7 +1,7 @@
 title: General Formatting Rules
 ---
 
-<aside class="notice">Style guide Adapted from <a target="_blank" href="https://google.github.io/styleguide/htmlcssguide.xml">Google HTML/CSS Style Guide</a></aside>
+<aside class="notice">Code formatting guidelines adapted from <a target="_blank" href="https://google.github.io/styleguide/htmlcssguide.xml">Google HTML/CSS Style Guide</a></aside>
 
 ## Indentation
 

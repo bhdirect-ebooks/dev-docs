@@ -3,6 +3,7 @@
 {{ js('js/scrollingelement') }}
 {{ js('js/toc') }}
 {{ js('js/mobile_nav') }}
+{{ js('js/asides') }}
 <!-- endbuild -->
 <script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
 {% if page.layout === 'plugins' %}
@@ -25,7 +26,7 @@ var search = docsearch({
   apiKey: '{{ config.algolia[page.lang].api_key }}',
   indexName: '{{ config.algolia[page.lang].index_name }}',
   inputSelector: '#search-input',
-  debug: true
+  debug: false
 });
 </script>
 {% endif %}

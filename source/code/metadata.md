@@ -6,7 +6,7 @@ The `<metadata>` element is the required first child of `<body>` in the Package 
 
 The required elements are `<dc:identifier>`, `<dc:title>`, and `<dc:language>`, along with `<meta property="dcterms:modified">`.
 
-<aside class="notice">For our EPUBs, make sure to include at a minimum all recommended metadata elements shown here.</aside>
+<aside class="caution">For our EPUBs, make sure to include at a minimum all recommended metadata elements shown here.</aside>
 
 ```xml
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -66,7 +66,7 @@ Sets, or series, also require multiple `<dc:title>` elements along with <code>re
 
 Additionally, the <code>group-position</code> property determines this volume's position in the set.
 
-<aside class="warning">As with subtitles and editions, including additional `<dc:title>` elements necessitates the use of the "expanded" title type at the top.</aside>
+<aside class="caution">As with subtitles and editions, including additional `<dc:title>` elements necessitates the use of the "expanded" title type at the top.</aside>
 
 ```xml
 <dc:title id="full-title">The Lord of the Rings: The Fellowship of the Ring</dc:title>
@@ -83,11 +83,11 @@ Additionally, the <code>group-position</code> property determines this volume's 
 
 ## Journal Metadata
 
-<aside class="tip">See a [journal metadata](https://gitlab.com/snippets/26999) snippet on GitLab.</aside>
+<aside class="notice">See a [journal metadata](https://gitlab.com/snippets/26999) snippet on GitLab.</aside>
 
 For journals, `<meta property="dcterms:bibliographicCitation">` must be included as a child of the `<metadata>` element.
 
-<aside class="warning">The `content` attribute value is one, unbroken string, but it is broken below for readability.</aside>
+<aside class="caution">The `content` attribute value is one, unbroken string, but it is broken below for readability.</aside>
 
 ```xml
 <meta property="dcterms:bibliographicCitation" scheme="kev.ctx"

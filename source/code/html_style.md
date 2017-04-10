@@ -38,7 +38,7 @@ Use valid XHTML in the context of EPUB3 specifications.
 
 * Use type attributes for style sheets and scripts. (e.g., <code class="rec">&#60;link href="../css/wordsearch.css" rel="stylesheet" type="text/css" /&#62;</code>).
 * Properly nest elements: <code class="rec">&#60;p&#62;&#60;span class="bold"&#62;...&#60;/span&#62;&#60;/p&#62;</code>, not <code class="not">&#60;p&#62;&#60;span class="bold"&#62;...&#60;/p&#62;&#60;/span&#62;</code>.
-* Close void elements: <codeclass="rec">&#60;br /&#62;</code>, not <code class="not">&#60;br&#62;</code>.
+* Close void elements: <code class="rec">&#60;br /&#62;</code>, not <code class="not">&#60;br&#62;</code>.
 * Use end tags: <code class="rec">&#60;p&#62;Text&#60;/p&#62;</code>, not <code class="not">&#60;p&#62;Text</code>.
 
 ## Semantics
@@ -47,7 +47,9 @@ Use HTML according to its purpose, and always prefer semantic elements over thos
 
 ### Ambiguous elements
 
-`<div>`<br />`<span>`
+`<div>`<br>`<span>`<br>`<section>` (although `section` defines a section in a document, this is still too ambiguous to use in our projects without semantic inflection)
+
+<aside class="caution">Make sure every ambiguous element has at least one attribute that allows for some kind of semantic inflection or data (`epub:type`, `class`, or `data-cross-x`).</aside>
 
 ### Semantic elements
 
@@ -55,13 +57,15 @@ Contents of semantic elements are defined in the specification, promote usabilit
 
 #### Pertinent HTML5 Examples
 
-<table><tr><th>Element</th><th>Notes on Meaning</th></tr><tr><td>`<article>`</td><td>Defines an article</td></tr><tr><td>`<aside>`</td><td>Defines content aside from the main document content</td></tr><tr><td>`<figure>`</td><td>`<figure>` specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.</td></tr><tr><td>`<figcaption>`</td><td>`<figcaption>` defines a caption for a `<figure>` element.</td></tr><tr><td>`<section>`</td><td>Defines a section in a document</td></tr></table>
+<table><tr><th>Element</th><th>Notes on Meaning</th></tr><tr><td>`<article>`</td><td>Defines an article</td></tr><tr><td>`<aside>`</td><td>Defines content aside from the main document content</td></tr><tr><td>`<figure>`</td><td>`<figure>` specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.</td></tr><tr><td>`<figcaption>`</td><td>`<figcaption>` defines a caption for a `<figure>` element.</td></tr></table>
 
 ### Semantic Evolution
 
 The meanings have been adjusted for some older elements since HTML 4.01. It is important to familiarize yourself with current use of elements and their intended meanings.
 
-<table><tr><th>Element</th><th>Notes on Use</th></tr><tr><td>`<a>`</td><td><p>In HTML 4.01, the `<a>` element could be either a hyperlink or an anchor. In HTML5, `<a>` always denotes a hyperlink, and the <code class="not">name</code> attribute is not supported.</p><p>Use the `id` attribute rather than <code class="not">name</code> for internal linking.</p></td></tr><tr><td>`<hr>`</td><td><p>Once defined as a horizontal rule, the `<hr>` element is now defined in semantic terms, rather than presentational terms.</p><p>In HTML5, the `<hr>` element communicates a thematic break (or context).</p></td></tr><tr><td>`<b>`</td><td><p>According to the HTML5 specification, the <code class="not">&#60;b&#62;</code> element should be used as a last resort when no other element is more appropriate.</p><p>We no longer use the <code class="not">&#60;b&#62;</code> element.</p></td></tr><tr><td>`<i>`</td><td><p>In HTML 4.01, the <code class="not">&#60;i&#62;</code> tag was used to render text in italics. However, this is not necessarily the case with HTML5. Now, <code class="not">&#60;i&#62;</code> defines a part of text in an alternate voice or mood, but its use has fallen out of favor.</p><p>We no longer use the <code class="not">&#60;i&#62;</code> element.</p></td></tr></table>
+<table><tr><th>Element</th><th>Notes on Use</th></tr><tr><td>`<a>`</td><td><p>In HTML 4.01, the `<a>` element could be either a hyperlink or an anchor. In HTML5, `<a>` always denotes a hyperlink, and the <code class="not">name</code> attribute is not supported.</p><p>Use the <code class="rec">id</code> attribute rather than <code class="not">name</code> for internal linking.</p></td></tr><tr><td>`<hr>`</td><td><p>Once defined as a horizontal rule, the `<hr>` element is now defined in semantic terms, rather than presentational terms.</p><p>In HTML5, the `<hr>` element communicates a thematic break (or context).</p></td></tr><tr><td>`<b>`</td><td><p>According to the HTML5 specification, the <code class="not">&#60;b&#62;</code> element should be used as a last resort when no other element is more appropriate.</p><p>We no longer use the <code class="not">&#60;b&#62;</code> element.</p></td></tr><tr><td>`<i>`</td><td><p>In HTML 4.01, the <code class="not">&#60;i&#62;</code> tag was used to render text in italics. However, this is not necessarily the case with HTML5. Now, <code class="not">&#60;i&#62;</code> defines a part of text in an alternate voice or mood, but its use has fallen out of favor.</p><p>We no longer use the <code class="not">&#60;i&#62;</code> element.</p></td></tr></table>
+
+<aside class="notice">Our default stylesheet includes classes for bold and italic formatting.</aside>
 
 ### HTML Element Reference
 

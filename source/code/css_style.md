@@ -45,7 +45,7 @@ In contrast to the above section, using types with <em>attribute</em> selectors 
 
 Therefore, always qualify attribute selectors with types.
 
-<aside class="tip">If you need to use an epub:type attribute selector, make sure to use both versions seen in the example markup, one using the vertical pipe, "|", and one using an escaped colon, "\\:". (The vertical pipe is for XML parsing, and the escaped colon is for HTML parsing.)</aside>
+<aside class="caution">If you need to use an epub:type attribute selector, make sure to use both versions seen in the example markup, one using the vertical pipe, "|", and one using an escaped colon, "\\:". (The vertical pipe is for XML parsing, and the escaped colon is for HTML parsing.)</aside>
 
 ```css
 /* Recommended */

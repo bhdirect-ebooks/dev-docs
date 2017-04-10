@@ -65,7 +65,7 @@ To indicate that a specific portion of text should not be parsed as Scripture, u
 ```html
 <span data-cross-context='{"parsing":""}'>123:4</span>
 ```
-<span class="warning">After using an empty parsing attribute in this way, always restore context with a normal parsing context tag.</span>
+<aside class="warning">Important: After using an empty parsing attribute in this way, always restore context with a normal parsing context tag.</aside>
 
 ### Date Context
 
@@ -123,11 +123,11 @@ In journals, Use standard HTML for articles, along with the `data-cross-article-
 
 In Bibles, the words of Jesus must be tagged with the `data-cross-speech-act` attribute. This is built for potential extensibility to all biblical speech acts, but for now, the only value should be `'{"speaker":"Jesus"}'`.
 
-<aside class="danger">Words of Jesus `span` elements cannot be used to cover more than a single verse. Start a new `<span data-cross-speech-act='{"speaker":"Jesus"}'>` for every verse.</aside>
-
 ```html
 <span data-cross-speech-act='{"speaker":"Jesus"}'>"Have you understood all these things?"</span>
 ```
+
+<aside class="warning">Words of Jesus `span` elements **cannot be used to cover more than a single verse**. Start a new `<span data-cross-speech-act='{"speaker":"Jesus"}'>` **for every verse**.</aside>
 
 ### LESSON<em>maker</em> Content
 

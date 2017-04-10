@@ -122,7 +122,10 @@ note-warn = hsl(0, 100%, 50%)
   color: color-default
   @media print
     font-size: 12pt
-  p, ol, ul, dl, table, blockquote, iframe, .highlight
+  p, ol, ul, dl, table, blockquote, iframe
+    margin: 1em 0
+    font-size: 1.05em
+  .highlight
     margin: 1em 0
   h1
     font-size: 2em
@@ -253,3 +256,56 @@ $article-footer-link
   box-shadow: 0 0 2px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24)
   margin-bottom: 24px
   padding: 20px 0
+
+.notice
+.caution
+.warning
+.tip
+  font-size: 0.9em
+  padding: 15px 20px
+  a:hover
+    font-weight: bold
+  i
+    float: left
+    padding: 6px 13px 0 0
+
+.notice
+  border-left: 2px solid rgb(14,131,205)
+  background-color: rgba(14,131,205,0.3)
+  color: rgb(14,131,205)
+  a
+  a:hover
+  a:visited
+    color: rgb(14,131,205)
+    text-decoration: underline
+
+.caution
+  border-left: 2px solid rgb(255,198,0)
+  background-color: rgba(255,223,155,0.5)
+  color: rgb(105,81,32)
+  a
+  a:hover
+  a:visited
+    color: rgb(105,81,32)
+    text-decoration: underline
+
+.warning
+  border-left: 2px solid rgb(86,40,40)
+  background-color: rgba(220,103,103,0.5)
+  color: rgb(86,40,40)
+  a
+  a:hover
+  a:visited
+    color: rgb(86,40,40)
+    text-decoration: underline
+
+
+.tip
+  border-left: 2px solid rgb(40,86,53)
+  background-color: rgba(163,188,184,0.4)
+  color: rgb(40,86,53)
+  a
+  a:hover
+  a:visited
+    color: rgb(40,86,53)
+    text-decoration: underline

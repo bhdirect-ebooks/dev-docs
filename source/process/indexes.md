@@ -9,7 +9,7 @@ Sample:[skeletal_index.xhtml](../assets/skeletal_index.xhtml)
 
 ![skeletal_index_guide.jpg](../assets/images/skeletal_index_guide.jpg)
 
-<aside class="info">Before performing the conversion below, make sure you have a correct `page-list` in toc.xhtml, since epubindex uses it for creating hrefs.</aside>
+<aside class="caution">Before performing the conversion below, make sure you have a correct `page-list` in toc.xhtml, since epubindex uses it for creating hrefs.</aside>
 
 ## Converting to EPUB Indexes
 
