@@ -25,7 +25,7 @@ var search = docsearch({
   apiKey: '{{ config.algolia[page.lang].api_key }}',
   indexName: '{{ config.algolia[page.lang].index_name }}',
   inputSelector: '#search-input',
-  debug: false
+  debug: true
 });
 </script>
 {% endif %}
