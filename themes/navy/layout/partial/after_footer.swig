@@ -24,8 +24,7 @@ document.getElementById('search-input-wrap').classList.add('on');
 docsearch({
   apiKey: '{{ config.algolia[page.lang].api_key }}',
   indexName: '{{ config.algolia[page.lang].index_name }}',
-  inputSelector: '#search-input',
-  debug: false
+  inputSelector: '#search-input'
 });
 </script>
 {% endif %}
