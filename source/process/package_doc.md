@@ -12,7 +12,7 @@ The brain of the EPUB.
 
 * Insert copyright page permissions into `<dc:rights>` in the `<metadata>` section
 
-## Style Guide Links
+## Recommended Code
 
 [Package and Container Files](../code/construction.html#Package-and-Container-Files)
 

@@ -10,6 +10,6 @@ Because UI/UX and stuff...
 * Quickly inserts a page-list nav into your toc.xhtml. Make sure you don't have one there already, or you'll end up with two.
 * Install [Satimage osax (2nd from top)](http://www.satimage.fr/software/en/downloads/downloads_companion_osaxen.html) before running this script.
 
-# Style Guide Links
+# Recommended Code
 
 [Navigation Document](../code/navigation.html)

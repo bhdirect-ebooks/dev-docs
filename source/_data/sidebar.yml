@@ -50,6 +50,5 @@ process:
     glossary: glossary.html
     special: special_types.html
   qa:
-    self: self_review.html
-    peer: peer_review.html
+    review: review.html
     convert: convert.html

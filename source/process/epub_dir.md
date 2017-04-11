@@ -13,6 +13,6 @@ How to use:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0xC2vKnCIZg" frameborder="0" allowfullscreen></iframe>
 
-## Style Guide Links
+## Recommended Code
 
 [Constructing an EPUB](../code/construction.html)

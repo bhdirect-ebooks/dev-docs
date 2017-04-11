@@ -66,6 +66,5 @@ sidebar:
     glossary: Glossary
     special: Particular Projects
     qa: "QA & Convert"
-    self: Self Review
-    peer: Peer Review
+    review: Review Process
     convert: "Convert & Upload"
