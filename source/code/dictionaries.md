@@ -15,17 +15,17 @@ As an example, an English dictionary would use the following names:
 
 With front matter and backmatter included, it would look something like:
 
-* ExampleDict01_frontmatter01_cover.xhtml
-* ExampleDict01_frontmatter02_titlepage.xhtml
-* ExampleDict01_frontmatter03_copyright-page.xhtml
+* ExampleDict01\_frontmatter01\_cover.xhtml
+* ExampleDict01\_frontmatter02\_titlepage.xhtml
+* ExampleDict01\_frontmatter03\_copyright-page.xhtml
 * etc.
 * ExampleDict02_A.xhtml
 * ExampleDict02_B.xhtml
 * ExampleDict02_C.xhtml
 * ExampleDict02_D.xhtml
 * etc.
-* ExampleDict03_backmatter01_appendix.xhtml
-* ExampleDict03_backmatter02_appendix.xhtml
+* ExampleDict03\_backmatter01\_appendix.xhtml
+* ExampleDict03\_backmatter02\_appendix.xhtml
 * etc.
 
 ## Dictionary Metadata

@@ -24,9 +24,11 @@ If the aside includes a heading, use `<p epub:type="bridgehead"></p>`.
 
 ## Headings
 
-Heading tags reflect a hierarchy and should therefore be used for semantic (not stylistic) purposes. The highest level heading in any section should be tagged using `<h1>`. The next lower level heading tag would be `<h2>`, then `<h3>`, etc.
+Heading tags reflect a hierarchy and should therefore be used for semantic (not stylistic) purposes. _Only the chapter title (or frontmatter/backmatter section title) should be tagged using `<h1>`._ The next lower level heading tag would be `<h2>`, then `<h3>`, etc.
 
 Heading tags are also not to be used for subheadings ([See the spec](http://w3c.github.io/html/sections.html#headings-and-sections)). Handle any stylistic differences using CSS. _Our default stylesheet contains subheading classes._
+
+**Heading text must be title case for our eBooks.**
 
 For any headings that should not be included in the document outline (usually in `aside` elements), use `<p epub:type="bridgehead"></p>`.
 

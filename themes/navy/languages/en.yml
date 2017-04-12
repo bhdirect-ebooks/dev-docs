@@ -44,6 +44,13 @@ sidebar:
   css_lib:
     core: CSS Library
     overview: Overview
+    text: Text
+    type: Typography
+    wsextra: Academic Symbols
+    para: Paragraphs
+    head: Headings
+    inline: Inline Elements
+    general: General Classes
   process:
     dev: Dev Process
     overview: Overview

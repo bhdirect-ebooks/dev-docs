@@ -27,6 +27,12 @@ code:
 css_lib:
   core:
     overview: index.html
+  text:
+    head: headings.html
+    para: paragraphs.html
+    inline: inline.html
+    general: general.html
+    wsextra: wsextra.html
 
 process:
   dev:
