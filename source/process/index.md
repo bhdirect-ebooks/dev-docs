@@ -79,7 +79,7 @@ title: Dev Process Overview
 
 ### B. Peer Review
 
-* [Review Process](peer_review.html)
+* [Review Process](review.html)
 
 ### C. Conversion
 
