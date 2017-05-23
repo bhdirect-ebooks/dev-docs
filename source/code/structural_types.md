@@ -31,10 +31,24 @@ The title page section should be in the second frontmatter document, and it shou
 
 The copyright page should be the third frontmatter document.
 
+On the copyright page, use a handful of special classes to indicate types of data:
+
+  * `.permissions` - use with every paragraph that contains permissions/rights information
+  * `.year` - use with `<span>` to tag the copyright year (or string of years)
+  * `.copyright` - use with the paragraph that contains the whole copyright string
+  * `.pub-place` - use with `<span>` or `<p>` to indicate the publisher's location
+
+Note the use of those classes below:
+
 ```html
 <body epub:type="frontmatter">
   <section epub:type="copyright-page">
+    <p class="copyright">© <span class="year">1996</span> John Knox Press</p>
     <p>Copyright page content in &#60;p&#62; tags.</p>
+    <p>etc.</p>
+    <p class="pub-place">Louisville, Kentucky</p>
+    <p class="permissions">All rights reserved.</p>
+    <p class="permissions">Unless otherwise noted, Scripture is taken from the NIV, etc.</p>
     <p>etc.</p>
   </section>
 </body>

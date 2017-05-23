@@ -8,9 +8,6 @@ Where it all begins... and ends.
 1. Add yourself to the Trello card and move it to "In Development"
 2. Create or add yourself to the project in Harvest.
 3. Track time in Harvest
-4. After initializing your project in [Git and GitHub](git.html), add the repo(s) to the Trello card.
-   * For each repo, click on GitHub, then
-     Attach Branch → Choose a different repo → \[search for and click repo\] → master
 
 ## Review
 
@@ -21,6 +18,8 @@ Where it all begins... and ends.
 
 ## Related Tools/Scripts
 
-[Trello (web app)](https://trello.com/wordsearchbhacademiccontentdevelopmentteam 'Trelloundefined)
+[Trello (web app)](https://trello.com/wordsearchbhacademiccontentdevelopmentteam)
 
-[Harvest (app/web app)](https://lifewaychristianresources.harvestapp.com/ 'Harvest IDundefined)
+[Harvest (app/web app)](https://lifewaychristianresources.harvestapp.com/)
+
+[Git and GitHub](git.html)

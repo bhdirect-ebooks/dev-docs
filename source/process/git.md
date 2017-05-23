@@ -5,18 +5,34 @@ Get yourself right with Git.
 
 Recommended free course: [How to Use Git and GitHub](https://www.udacity.com/course/how-to-use-git-and-github--ud775)
 
-## Before using
-***(do this only once)***
+## Commit
 
-1. Create a `.gitignore` file in your home directory (`\~/`)
-2. Then, add a line with ".DS_Store" without the quotes to that file
-3. In your terminal, enter
+If you add any files to the directory, you'll need to add them to tracking ***before*** you commit:
 
 ```plain
-git config --global core.excludesfile \~/.gitignore
+git add --all
 ```
 
-## Create a local repo
+You can't really commit too much, so commit often (once per logical set of changes is a good rule of thumb). You will likely commit multiple times per hour.
+
+See our [Git commit message guidelines](../code/git_commit.html).
+
+```plain
+git commit -am "commit message here"
+```
+
+## Push
+
+A push will upload your local Git repo to its remote counterpart. You do not need to push every time you commit. Make a habit of pushing your repo at least once or twice each work day.
+
+```plain
+git push origin master
+```
+
+## For reference
+***(no longer necessary with the latest process)***
+
+### Create a local repo
 
 Initialize the repo and make your first commit.
 
@@ -26,7 +42,7 @@ git add --all
 git commit -am "initial commit"
 ```
 
-## Create a remote repo in GitHub
+### Create a remote repo in GitHub
 
 1. Navigate to [https://github.com/bhdirect-ebooks](https://github.com/bhdirect-ebooks)
 2. Click the green "New" button
@@ -37,33 +53,19 @@ git commit -am "initial commit"
 5. Select "Private"
 6. Click "Create repository"
 
-## Add the remote to the local repo and push
+### Add the remote to the local repo and push
 
 ```plain
 git remote add origin (the remote repo url)
 git push origin master
 ```
 
-## Commit
+### Before using (only needed once)
 
-You can't really commit too much, so commit often (once per logical set of changes is a good rule of thumb). You will likely commit multiple times per work hour.
-
-See our [Git commit message guidelines](../code/git_commit.html).
-
-```plain
-git commit -am "commit message here"
-```
-
-If you add any files to the directory, you'll need to add them to tracking ***before*** you commit:
+1. Create a `.gitignore` file in your home directory (`\~/`)
+2. Then, add a line with ".DS_Store" without the quotes to that file
+3. In your terminal, enter
 
 ```plain
-git add --all
-```
-
-## Push
-
-A push will upload your local Git repo to its remote counterpart. You do not need to push every time you commit. Make a habit of pushing your repo at least once or twice each work day.
-
-```plain
-git push origin master
+git config --global core.excludesfile \~/.gitignore
 ```

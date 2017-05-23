@@ -5,13 +5,57 @@ It's just file naming, right?
 
 ## Related Tools/Scripts
 
-[split-files-for-epub (script)](https://cms.lifeway.com/share/page/site/bh-academic/document-details?nodeRef=workspace://SpacesStore/18c39ebf-6433-495f-9b17-ff0d2b89a665)
-
-* Install [Satimage osax (2nd from top)](http://www.satimage.fr/software/en/downloads/downloads_companion_osaxen.html) before running this script.
+[split-files (node)](https://github.com/bhdirect-ebooks/split-files)
 
 How to use:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0xC2vKnCIZg" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ArEiGm9T_2g" frameborder="0" allowfullscreen></iframe>
+
+**Use one of the following comments at the beginning of each section break:**
+  * `<!-- front [section] -->`
+  * `<!-- toc -->`
+  * `<!-- part -->`
+  * `<!-- chapter -->`
+  * `<!-- notes -->` - *use only for notes in a chapter (for a notes document in backmatter, use `<!-- back footnotes -->`)*
+  * `<!-- back [section] -->`
+  * `<!-- trim -->` - *use to remove content*
+  * `<!-- ^continue^ -->` - *use to include the content with the previous section after a `<!-- trim -->` or `<!-- notes -->` section*
+
+**Front and back section types:**
+*(If a section type is not found below, use a brief descriptive name. For definitions of any type below, see [EPUB 3 Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/))*
+
+**For use with "front":**
+abbr *(use for abbreviation lists)*
+copyright-page
+cover
+dedication
+epigraph
+foreword
+introduction
+preamble
+preface
+prologue
+titlepage
+
+**For use with "back":**
+afterword
+appendix
+conclusion
+epilogue
+footnotes
+index
+
+**For use with "front" or "back":**
+acknowledgments
+bibliography
+colophon
+contributors
+errata
+glossary
+imprimatur
+imprint
+other-credits
+revision-history
 
 ## Recommended Code
 

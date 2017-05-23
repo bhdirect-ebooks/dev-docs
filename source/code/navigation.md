@@ -27,7 +27,7 @@ General guidelines for the TOC:
 * should not include elements that appear prior to the TOC in its linear order.
 
 ```html
-<nav epub:type="toc" id="toc">
+<nav epub:type="toc">
   <h1>Table of Contents</h1>
   <ol>
     <!-- <li> elements with <a>, linking to each location -->

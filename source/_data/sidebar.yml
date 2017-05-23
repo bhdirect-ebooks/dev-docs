@@ -39,8 +39,7 @@ process:
     overview: index.html
   prep:
     admin: project_admin.html
-    triage: triage.html
-    git: git.html
+    scaffold: proj_scaffold.html
     structure: epub_dir.html
   clean:
     content: markup.html

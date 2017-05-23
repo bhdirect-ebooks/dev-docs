@@ -6,13 +6,11 @@ title: Dev Process Overview
 ### A. Start the project
 
 1. [Project Admin](project_admin.html)
-1. [Triage (project info gathering)](triage.html)
-1. Create a Git repository (see [Git and GitHub](git.html))
+1. [Project Scaffolding](proj_scaffold.html)
 
 ### B. Create EPUB directory
 
 * Structure and name [EPUB Directories and Files](epub_dir.html)
-* Add main EPUB `<body>` and `<section>` types
 
 ## II. Clean & Code
 
@@ -31,7 +29,7 @@ title: Dev Process Overview
 ### B. Create well-formed EPUB documents
 
 * [Package document (content.opf)](package_doc.html)
-* Navigation document (toc.xhtml)
+* [Navigation document (toc.xhtml)](nav_doc.html)
 
 ## III. Enhance
 

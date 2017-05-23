@@ -56,7 +56,7 @@ sidebar:
     overview: Overview
     prep: Prep
     admin: Project Admin
-    triage: Triage
+    scaffold: Project Scaffolding
     git: Git and GitHub
     structure: Create EPUB Structure
     clean: "Clean & Code"
