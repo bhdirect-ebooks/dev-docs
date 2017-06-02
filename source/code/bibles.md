@@ -15,23 +15,23 @@ For the book of Psalms, use three digits in the file name for chapter numbers. F
 
 * csb19_Psalms022.xhtml
 
-Frontmatter should be the translation abbreviation and `00_frontmatter` followed by `_[epub:type]`.
+Frontmatter should be the translation abbreviation and `00_front` followed by `_[epub:type]`.
 
-Backmatter, similarly, should be the translation abbreviation and `67_backmatter` followed by `_[epub:type]`, ***or whatever the last number is***. In a normal protestant translation, it will be 67. However, if the title is just the NT or OT, it will be lower; or if the title contains apocrypha, it can be higher.
+Backmatter, similarly, should be the translation abbreviation and `67_back` followed by `_[epub:type]`, ***or whatever the last number is***. In a normal protestant translation, it will be 67. However, if the title is just the NT or OT, it will be lower; or if the title contains apocrypha, it can be higher.
 
-With front matter and backmatter included, it would look something like:
+With front matter and back matter included, it would look something like:
 
-* csb00\_frontmatter01\_cover.xhtml
-* csb00\_frontmatter02\_titlepage.xhtml
-* csb00\_frontmatter03\_copyright-page.xhtml
+* csb00\_front01\_cover.xhtml
+* csb00\_front02\_titlepage.xhtml
+* csb00\_front03\_copyright-page.xhtml
 * etc.
 * csb01_Genesis01.xhtml
 * csb01_Genesis02.xhtml
 * csb01_Genesis03.xhtml
 * etc.
 * csb66_Revelation22.xhtml
-* csb67\_backmatter01\_appendix.xhtml
-* csb67\_backmatter02\_appendix.xhtml
+* csb67\_back01\_appendix.xhtml
+* csb67\_back02\_appendix.xhtml
 * etc.
 
 ## Additional Bible Guidelines Forthcoming

@@ -23,11 +23,11 @@ Every EPUB we develop will have multiple `frontmatter` partitions, and most will
 
 ## Document Divisions
 
-The most common division we use is the `chapter`, and another relevant division, although it occurs much less frequently, is the `part`. Use both where applicable in chapter files.
+The most common division we use is the `chapter`, and another relevant division, although it occurs much less frequently, is the `part`. For our EPUBs, parts should always be hierarchically one level above the chapter level and always at the same level throughout the entire book. They should not be used below the chapter level or as sub-part sections.
 
-Because our documents are split into multiple chapter files, nesting `chapter` sections inside `part` sections does not make sense. Therefore, nest only part-specific headings and subsequent introductory text inside the `part` section alone.
+Chapter content should be placed in one file per chapter. Part content, whether it's only a title or made up of many large sections, should also be placed in its own file, with one file per part. Use both where applicable in body matter files.
 
-Include the `bodymatter` EPUB type with the `<body>` tag for all chapter documents.
+Include the `bodymatter` EPUB type with the `<body>` tag for all chapter and part documents.
 
 ```html
 <!-- Division by chapter -->
@@ -42,10 +42,6 @@ Include the `bodymatter` EPUB type with the `<body>` tag for all chapter documen
   <section epub:type="part">
     <h1>The First Testament</h1>
     <p>The First Testament (commonly known as the Old Testament) is a collection of books that make up the first three-quarters of the Bible. Our designation of the Bible's two main parts as "First" and "New" follows the example of the book of Hebrews…</p>
-  </section>
-
-  <section epub:type="chapter">
-    <h1>Genesis</h1>
   </section>
 </body>
 ```

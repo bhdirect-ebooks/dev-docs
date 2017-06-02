@@ -7,25 +7,30 @@ For our team, follow the normal file naming conventions for any dictionary front
 
 As an example, an English dictionary would use the following names:
 
-* ExampleDict02_A.xhtml
-* ExampleDict02_B.xhtml
-* ExampleDict02_C.xhtml
-* ExampleDict02_D.xhtml
+* ExampleDict02\_body01\_A.xhtml
+* ExampleDict02\_body02\_B.xhtml
+* ExampleDict02\_body03\_C.xhtml
+* ExampleDict02\_body04\_D.xhtml
 * etc.
 
-With front matter and backmatter included, it would look something like:
+For sections spanning multiple letters, for instance "X, Y, and Z," use a hyphen in the name:
 
-* ExampleDict01\_frontmatter01\_cover.xhtml
-* ExampleDict01\_frontmatter02\_titlepage.xhtml
-* ExampleDict01\_frontmatter03\_copyright-page.xhtml
+* ExampleDict02\_body21\_X-Z.xhtml
+
+
+With front matter and back matter included, it would look something like:
+
+* ExampleDict01\_front01\_cover.xhtml
+* ExampleDict01\_front02\_titlepage.xhtml
+* ExampleDict01\_front03\_copyright-page.xhtml
 * etc.
-* ExampleDict02_A.xhtml
-* ExampleDict02_B.xhtml
-* ExampleDict02_C.xhtml
-* ExampleDict02_D.xhtml
+* ExampleDict02\_body01\_A.xhtml
+* ExampleDict02\_body02\_B.xhtml
+* ExampleDict02\_body03\_C.xhtml
+* ExampleDict02\_body04\_D.xhtml
 * etc.
-* ExampleDict03\_backmatter01\_appendix.xhtml
-* ExampleDict03\_backmatter02\_appendix.xhtml
+* ExampleDict03\_back01\_appendix.xhtml
+* ExampleDict03\_back02\_appendix.xhtml
 * etc.
 
 ## Dictionary Metadata
