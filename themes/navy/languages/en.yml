@@ -47,10 +47,27 @@ sidebar:
     text: Text
     type: Typography
     wsextra: Academic Symbols
-    para: Paragraphs
+    para: Paragraphs - General
     head: Headings
     inline: Inline Elements
     general: General Classes
+    types: Paragraphs - Types
+    poetry: Poetry
+    languages: Languages
+    blocks: Text Blocks
+    asides: Asides
+    lists: Lists
+    tables: Tables
+    quotes: Quotes
+    notes: Notes
+    embedded: Embedded Content
+    figures: Figures & Images
+    video: Video
+    special: Special Types
+    articles: Dictionary Articles
+    bibles: Bibles
+    layout: Layout
+    width: Width Classes
   process:
     dev: Dev Process
     overview: Overview

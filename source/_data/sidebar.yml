@@ -30,9 +30,30 @@ css_lib:
   text:
     head: headings.html
     para: paragraphs.html
-    inline: inline.html
+    types: types.html
     general: general.html
+    inline: inline.html
+    languages: languages.html
     wsextra: wsextra.html
+
+  blocks:
+    asides: asides.html
+    notes: notes.html
+    lists: lists.html
+    poetry: poetry.html
+    tables: tables.html
+    quotes: quotes.html
+
+  embedded:
+    figures: figures.html
+    video: video.html
+
+  special:
+    articles: articles.html
+    bibles: bibles.html
+
+  layout:
+    width: width.html
 
 process:
   dev:

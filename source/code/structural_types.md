@@ -77,7 +77,7 @@ Each note indicator in the document, whether for a footnote or endnote, should b
 
 File names must always be included in the `href` attributes of both the footnote link and backlink, even for `<footer>`-based footnotes.
 
-The note content syntax, after the `</sup>` is a non-breaking space (`&#38;#160;`) followed by the note wrapped with `<span class="note"></span>`.
+The note content syntax, after the `</sup>` is a non-breaking space (`#160;`) followed by the note wrapped with `<span class="note"></span>`.
 
 **All note text must be included in `<span class="note"></span>` with no exceptions.** For long, multiple-paragraph footnotes, do not use `<p>`. Instead, add line breaks using `<br />`
 
