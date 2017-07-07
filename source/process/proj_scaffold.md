@@ -22,6 +22,8 @@ The video below briefly describes each part of the structure. The video describe
 
 [start-project (node)](https://github.com/bhdirect-ebooks/start-project)
 
-* Install globally with npm and use with every project.
-  * Clone the project repo and `cd` into it.
-  * Then, just enter `start-project`, and the script will prompt you for some info and return some important project information.
+* Install globally with npm and use with every project (`sudo npm install -g @bhdirect/start-project`).
+* Usage info:
+  * Clone your project repo.
+  * Create the `src` directory and add the source files to it.
+  * Then, `cd` into the project folder and enter `start-project`. The script will prompt you for some info and return some important project information.

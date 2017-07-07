@@ -7,9 +7,8 @@ The meat and potatoes of Bible software.
 
 [parsify](https://github.com/bhdirect-ebooks/parsify)
 
-* Open terminal and clone the above repo by entering: `git clone https://github.com/bhdirect-ebooks/parsify`
-* cd into /parsify and run `sudo npm install -g` to install on your system
-* run `parsify -h` for usage information
+* Run `sudo npm install -g @bhdirect/stylecheck` to install on your system
+* Usage: `cd` into an individual EPUB's ISBN-level directory and run `parsify`
 
 ## Recommended Code
 
