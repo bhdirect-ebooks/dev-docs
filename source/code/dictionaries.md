@@ -125,15 +125,37 @@ The term itself is placed in `<dfn></dfn>;`
 
 ```html
 <body epub:type="dictionary">
- <article epub:type="dictentry">
-   <dfn>ἀγαθός</dfn>
-     <!-- translations/definitions for "ἀγαθός" -->
- </article>
- <article epub:type="dictentry">
-   <dfn>ὠφέλεια</dfn>
-     <!-- translations/definitions for "ὠφέλεια" -->
- </article>
+  <article epub:type="dictentry" id="entry-1">
+    <h2 class="nd">ἀγαθός</h2>
+    <dfn>ἀγαθός</dfn>
+    <!-- translations/definitions for "ἀγαθός" -->
+  </article>
+  <article epub:type="dictentry" id="entry-272">
+    <h2 class="nd">ὠφέλεια</h2>
+    <dfn>ὠφέλεια</dfn>
+    <!-- translations/definitions for "ὠφέλεια" -->
+  </article>
 </body>
 ```
 
-### Additional Dictionary Guidelines Forthcoming
+## Search Key Map
+
+Make sure the EPUB includes a [Search Key Map](http://www.idpf.org/epub/dict/#sec-2.4) in the OEBPS folder, named `skmap.xml`.
+
+Add the following line to the `content.opf` `<manifest>` under the `<!-- Navigation -->` section.
+
+```xml
+  <item id="skmap" href="skmap.xml" media-type="application/vnd.epub.search-key-map+xml" properties="search-key-map dictionary" />
+```
+
+A Search Key Map must include this markup for every entry:
+
+```xml
+<!-- href should point to the entry id -->
+<search-key-group href="text/DictJesus202_A.xhtml#entry-1">
+<!-- match value should be the term -->
+  <match value="Abiding" />
+</search-key-group>
+```
+
+Take a look at a [completed Search Key Map on GitHub](https://github.com/bhdirect-ebooks/9781462766512/blob/master/OEBPS/skmap.xml).

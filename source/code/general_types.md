@@ -6,52 +6,22 @@ title: General Content Types
 Abbreviations should follow the HTML specification.
 
 ```html
-<abbr title="Septuagint">LXX</abbr>
+<abbr title="Abbreviation Definition">ABBRD</abbr>
 ```
 
 ## Asides
 
-Any special sections that are separate from the main content of a chapter should be tagged as asides using the HTML `<aside>` element.
+Any brief sections that are separated from the main flow of a chapter should be tagged as asides using the HTML `<aside>` element. ([Pull quotes](https://en.wikipedia.org/wiki/Pull_quote) are an exception to this rule for our EPUBs. [For pull quotes, see the CSS Library](https://style.bhdirect-ebooks.org/css_lib/quotes.html))
 
-If the aside includes a heading, use `<p epub:type="bridgehead"></p>`.
+When in doubt about using `<aside>`, [consult the spec](https://www.w3.org/TR/html5/sections.html#the-aside-element).
+
+Use `<p epub:type="bridgehead"></p>` for any headings in an `<aside>` section.
 
 ```html
 <aside>
   <p epub:type="bridgehead">Greek Highlight</p>
   <p><span class="bold">Blessed. Greek</span> <span class="lang-grc">μακάριος</span> (<span class="translit">makarios</span>). This term occurs ...</p>
 </aside>
-```
-
-## Headings
-
-Heading tags reflect a hierarchy and should therefore be used for semantic (not stylistic) purposes. _Only the chapter title (or frontmatter/backmatter section title) should be tagged using `<h1>`._ The next lower level heading tag would be `<h2>`, then `<h3>`, etc.
-
-Heading tags are also not to be used for subheadings ([See the spec](http://w3c.github.io/html/sections.html#headings-and-sections)). Handle any stylistic differences using CSS. _Our default stylesheet contains subheading classes._
-
-**Heading text must be title case for our eBooks.**
-
-For any headings that should not be included in the document outline (usually in `aside` elements), use `<p epub:type="bridgehead"></p>`.
-
-### Chapter Titles, Labels, and Numbers
-
-Chapter titles should always be tagged as `<h1>` elements.
-
-When a chapter has a label (e.g., "Chapter 1") or just a number expressing order (e.g., "1") <strong>and</strong> also has a title, there are special classes to use. Follow the recommended code examples, using the classes `.label` or `.ordinal`.
-
-Do the same for any Section or Part title.
-
-```html
-<!-- Chapter titled simply "Chapter 1" -->
-<h1>Chapter 1</h1>
-
-<!-- Chapter titled "Chapter 1: How We Got the New Testament" -->
-<h1><span class="label">Chapter 1</span>How We Got the New Testament</h1>
-
-<!-- Chapter titled "1. What Is Theology?" -->
-<h1><span class="ordinal">1</span>What Is Theology?</h1>
-
-<!-- Section titled "Section 1: Introduction to the Study of the Bible -->
-<h1><span class="label">Section 1</span>Introduction to the Study of the Bible</h1>
 ```
 
 ## HTML Semantics
@@ -116,6 +86,10 @@ Rendered version of the example code:
 ## Quotation Marks
 
 Typographic (curly) quotes and straight quotes are equally acceptable in book text. Simply leave the quotes as received from the source.
+
+## Quotes: Block, Pull, Etc.
+
+[CSS Library: Quotes](https://style.bhdirect-ebooks.org/css_lib/quotes.html)
 
 ## Tables
 

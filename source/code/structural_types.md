@@ -10,7 +10,7 @@ As outlined in [File Naming Conventions](construction.html#File-Naming-Conventio
 ```html
 <body epub:type="frontmatter">
   <section epub:type="cover">
-    <img src="../images/cover.jpg" alt="cover image" />
+    <img src="../images/cover.jpg" alt="cover" />
   </section>
 </body>
 ```
@@ -35,7 +35,7 @@ On the copyright page, use a handful of special classes to indicate types of dat
 
   * `.permissions` - use with every paragraph that contains permissions/rights information
   * `.year` - use with `<span>` to tag the copyright year (or string of years)
-  * `.copyright` - use with the paragraph that contains the whole copyright string
+  * `.copyright` - use with the paragraph or span that contains the whole copyright string; **must start with `©` `&#xA9;` or `&#169;`**
   * `.pub-place` - use with `<span>` or `<p>` to indicate the publisher's location
 
 Note the use of those classes below:
@@ -43,7 +43,7 @@ Note the use of those classes below:
 ```html
 <body epub:type="frontmatter">
   <section epub:type="copyright-page">
-    <p class="copyright">© <span class="year">1996</span> John Knox Press</p>
+    <p>Copyright <span class="copyright">© <span class="year">1996</span> John Knox Press</span></p>
     <p>Copyright page content in &#60;p&#62; tags.</p>
     <p>etc.</p>
     <p class="pub-place">Louisville, Kentucky</p>
@@ -54,9 +54,64 @@ Note the use of those classes below:
 </body>
 ```
 
+
+## Headings
+
+Heading tags reflect a hierarchy and should therefore be used for semantic (not stylistic) purposes. _Only the chapter title, part title, or frontmatter/backmatter section title should be tagged using `<h1>`._ The next lower level heading tag would be `<h2>`, then `<h3>`, etc.
+
+***It is important to understand the concept of the HTML document outline*** [See the spec](http://w3c.github.io/html/sections.html#outline). Always think of headings in terms of the document outline.
+
+Since headings create an outline, heading tags should not be used for subheadings ([See the spec](http://w3c.github.io/html/sections.html#headings-and-sections)).
+
+**Heading text must be title case for our eBooks.**
+
+For any headings that should not be included in the document outline (usually in `aside` elements), use `<p epub:type="bridgehead"></p>`. Also acceptable: `<p>` with `.h1sub`, `.h2sub`, or `.h3sub`.
+
+### Chapter Titles, Labels, and Numbers
+
+As mentioned above, chapter titles should always be tagged as `<h1>` elements.
+
+When a chapter has a label of some kind (e.g., "Chapter 1", "1", "A" "IV", etc.) <strong>and</strong> also has a title, there is a special class to use. Follow the recommended code examples, using the `.label` class.
+
+**Do the same for any Section or Part title.**
+
+```html
+<!-- Chapter titled simply "Chapter 1" -->
+<h1>Chapter 1</h1> <!-- Don't use .label when the label *is* the title -->
+
+<!-- Chapter titled "Chapter 1: How We Got the New Testament" -->
+<h1><span class="label">Chapter 1</span>How We Got the New Testament</h1>
+
+<!-- Part titled "1. What Is Theology?" -->
+<h1><span class="label">1</span>What Is Theology?</h1>
+
+<!-- Section titled "Section 1: Introduction to the Study of the Bible -->
+<h1><span class="label">Section 1</span>Introduction to the Study of the Bible</h1>
+```
+
+### Parts
+
+Whenever a book has a part structure (hierarchical groupings of related chapters), at least one special class (`.top-level`) should be used with _any `<h1>` element in front, back, or body that does not belong in a part_.
+
+#### `.top-level` Example
+<aside class="notice">Let's imagine we have a book with the following structure. <strong>The bolded sections should have the `.top-level` class on their `<h1>` elements.</strong><ul style="list-style-type:none"><li><strong>Preface</strong></li><li><strong>Introduction</strong></li><li>Part 1<ul style="list-style-type:none"><li>Chapter 1</li><li>Chapter 2</li></ul></li><li><strong>Interlude</strong></li><li>Part 2<ul style="list-style-type:none"><li>Chapter 3</li><li>Chapter 4</li></ul></li><li><strong>Conclusion</strong></li><li><strong>Index</strong></li></ul><p>More specifically, the `<section epub:type="">` and `<h1>` conventions would be like so:</p><table><tr><th>Book Section</th><th>Section Epub Type</th><th>h1</th></tr><tr><td>Preface</td><td>`preface`</td><td>`<h1 class="top-level">Preface</h1>`</td></tr><tr><td>Introduction</td><td>`introduction`</td><td>`<h1 class="top-level">Introduction</h1>`</td></tr><tr><td>Part 1</td><td>`part`</td><td>`<h1>Part 1</h1>`</td></tr><tr><td>Chapter 1</td><td>`chapter`</td><td>`<h1>Chapter 1</h1>`</td></tr><tr><td>Chapter 2</td><td>`chapter`</td><td>`<h1>Chapter 2</h1>`</td></tr><tr><td>Interlude</td><td>`chapter`</td><td>`<h1 class="top-level">Interlude</h1>`</td></tr><tr><td>Part 2</td><td>`part`</td><td>`<h1>Part 2</h1>`</td></tr><tr><td>Chapter 3</td><td>`chapter`</td><td>`<h1>Chapter 3</h1>`</td></tr><tr><td>Chapter 4</td><td>`chapter`</td><td>`<h1>Chapter 4</h1>`</td></tr><tr><td>Conclusion</td><td>`conclusion`</td><td>`<h1 class="top-level">Conclusion</h1>`</td></tr><tr><td>Index</td><td>`index`</td><td>`<h1 class="top-level">Index</h1>`</td></tr></table></aside>
+
+#### Sub-Parts
+
+When there are parts that consist of sub-parts, the special classes `.part-1`, `.part-2`, `.part-3`, `.part-4`, `.part-5`, and `.part-6` exist to help you represent the book's structural hierarchy.
+
+***Note that the numbers 1-6 here indicate hierarchy level, not sequential order!*** ([Just like h1-6 tags.](http://w3c.github.io/html/sections.html#outline))
+
+##### Sub-Parts Example
+<aside class="notice">Let's imagine we have a book with the following structure.<ul style="list-style-type:none"><li>Preface</li><li>Introduction</li><li>Part A<ul style="list-style-type:none"><li>Part A-1<ul style="list-style-type:none"><li>Chapter 1</li><li>Chapter 2</li></ul></li><li>Part A-2<ul style="list-style-type:none"><li>Chapter 3</li></ul></li></ul></li><li>Interlude</li><li>Part B<ul style="list-style-type:none"><li>Chapter 4</li><li>Chapter 5</li></ul></li><li>Conclusion</li><li>Index</li></ul><p>In this case, the `<section epub:type="">` and `<h1>` conventions would be like so:</p><table><tr><th>Book Section</th><th>Section Epub Type</th><th>h1</th></tr><tr><td>Preface</td><td>`preface`</td><td>`<h1 class="top-level">Preface</h1>`</td></tr><tr><td>Introduction</td><td>`introduction`</td><td>`<h1 class="top-level">Introduction</h1>`</td></tr><tr><td>Part A</td><td>`part`</td><td>`<h1 class="part-1">Part A</h1>`</td></tr><tr><td>Part A-1</td><td>`part`</td><td>`<h1 class="part-2">Part A-1</h1>`</td></tr><tr><td>Chapter 1</td><td>`chapter`</td><td>`<h1>Chapter 1</h1>`</td></tr><tr><td>Chapter 2</td><td>`chapter`</td><td>`<h1>Chapter 2</h1>`</td></tr><tr><td>Part A-2</td><td>`part`</td><td>`<h1 class="part-2">Part A-2</h1>`</td></tr><tr><td>Chapter 3</td><td>`chapter`</td><td>`<h1>Chapter 3</h1>`</td></tr><tr><td>Interlude</td><td>`chapter`</td><td>`<h1 class="top-level">Interlude</h1>`</td></tr><tr><td>Part B</td><td>`part`</td><td>`<h1 class="part-1">Part B</h1>`</td></tr><tr><td>Chapter 4</td><td>`chapter`</td><td>`<h1>Chapter 4</h1>`</td></tr><tr><td>Chapter 5</td><td>`chapter`</td><td>`<h1>Chapter 5</h1>`</td></tr><tr><td>Conclusion</td><td>`conclusion`</td><td>`<h1 class="top-level">Conclusion</h1>`</td></tr><tr><td>Index</td><td>`index`</td><td>`<h1 class="top-level">Index</h1>`</td></tr></table></aside>
+
 ## Page Breaks
 
 Pages should be marked with an `<span>` element and the EPUB `pagebreak` type, like the example here (where <em>X</em> is the page identifier).
+
+```html
+<span epub:type="pagebreak" id="pageX" title="X" />
+```
 
 EPUB "pagebreak" tags are inserted before the all text of the corresponding source page, and for our team, they must follow these guidelines:
 * not in `h1-6` but above
@@ -64,8 +119,6 @@ EPUB "pagebreak" tags are inserted before the all text of the corresponding sour
 * not as direct children of `<ol>`, `<ul>`, `<dl>`, or `<table>` (HTML syntax rules)
 
 ```html
-<span epub:type="pagebreak" id="pageX" title="X" />
-
 <!-- Above headings -->
 <span epub:type="pagebreak" id="page808" title="808" />
 <h1>My Heading</h1>
@@ -87,7 +140,7 @@ The note content syntax, after the `</sup>` is a non-breaking space (`#160;`) fo
 
 <!-- Note content markup -->
 <div id="note-1" epub:type="footnote">
-  <p><sup><a href="[filename].xhtml#note-backlink-1">1</a></sup>&#160;<span class="note">Note text is placed here.</span></p>
+  <p><sup><a href="[filename].xhtml#note-backlink-1">1</a></sup>&#160;<span class="note">Note text is placed here.<br />Paragraphs are separated with 'br' tags.</span></p>
 </div>
 <!-- One <div> for each note. -->
 ```
@@ -111,6 +164,8 @@ Each entry in a bibliography should be tagged with `<p epub:type="biblioentry" c
 
 <!-- With chapter, inside the chapter <section>-->
 <section epub:type="bibliography">
+  <!-- the heading here is not always <h2> -->
+  <!-- it should instead follow the document outline -->
   <h2>Bibliography</h2>
   <p epub:type="biblioentry" class="hang">Entry text.</p>
   <!-- One <p epub:type="biblioentry" class="hang"> for every entry -->

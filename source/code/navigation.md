@@ -23,7 +23,7 @@ General guidelines for the TOC:
 * The EPUB TOC should reflect the printed TOC, but...
 * should only include text between the `<li></li>` tags (no classes, etc.),
 * should not be deeply nested (2 or 3 levels max),
-* should always include part, chapter, or section labels and/or ordinals,
+* should always include part, chapter, or section label,
 * should not include elements that appear prior to the TOC in its linear order.
 
 ```html

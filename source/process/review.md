@@ -5,28 +5,27 @@ Quality control is the best!
 
 ## Related Tools/Scripts
 
-Install [stylecheck](https://github.com/bhdirect-ebooks/stylecheck):
+Install [stylecheck](https://github.com/bhdirect-ebooks/stylecheck): `sudo npm install -g @bhdirect/stylecheck`:
 
-```plain
-sudo npm install -g @bhdirect/stylecheck
-[enter your network password]
-```
+Use stylecheck (in `/dev/epub/isbn/`): `stylecheck me`
 
-Use stylecheck:
-
-```plain
-cd [path/to/epub/directory]
-stylecheck me
-```
-
-***Then check for Scripture errors; search for `error_`***
+<aside class="caution"><strong>Remember to check for Scripture errors after running stylecheck (search for `error_`).</strong></aside>
 
 ## Admin
+### Developer
+
+<aside class="caution"><strong>As the developer, it is your responsibility to ensure that the EPUBs you develop are completed according to the Style Guide by performing a thorough self-review.</strong>
+<ul><li>Do not move a card into "Ready for Review" unless you have completed the entire review process on your own project.</li><li>Peer Review is meant to be a "second set of eyes" because humans make mistakes. It should not be used as an error catch-all for projects that are not fully-developed. That approach is disrespectful towards your fellow team members and their time.</li><li>Placing a card in "Ready for Review" means you affirm that development is complete and ready for delivery to paying customers!</li></ul></aside>
+
+0. If the project passes a thorough self-review and you feel in good conscience that it is ready to be sold, move the Trello card to "Ready for Review"
+1. Once the card is in "Review Issue Resolution," resolve issues with commits **using 1 commit for each issue**, [following the commit style guidelines](../code/git_commit.html).
+2. When you are done with issue resolution, **move the card to "Ready for Review" (_not "In Review"_)**.
+
+### Reviewer
 
 1. Add yourself to the Harvest project and track time against "Review"
 2. Add yourself to the Trello card and move it to "In Review"
-3. Add any issues to the repo in GitHub
-   ![githubissue.gif](../assets/images/githubissue.gif)
+3. Add any issues to the repo in GitHub ([20-second how-to GIF](../assets/images/githubissue.gif))
 4. When complete (and if there are issues), move the card to "Review Issue Resolution"
 5. If there are no issues (usually 2nd or later review), move the card to "Ready for Release"
 
@@ -34,76 +33,60 @@ stylecheck me
 
 See [Project Review Rubric](https://docs.google.com/document/d/1J1QP8AWLWvXdtBA10E6fKc_dagvOHtkVN6J5LqQFHjU/).
 
-### Structure & Style
-
-1. Run through EPUB Checker
-2. Run through stylecheck
-
 ### Checkpoint!
 
 <aside class="warning">Make sure the EPUB passes EpubCheck and stylecheck before moving forward! If you are reviewing another developer's project, do not proceed with Review, and <strong>don't</strong> open issues in GitHub based on these tools. Simply move the Trello card to Review Issue Resolution and alert the developer.</aside>
 
-### Navigation & Package Docs
+### Content.opf
 
-1. Check toc.xhtml
-   * ensure both `toc` nav and `page-list` nav are included according to the style guide
-   * ensure toc matches source...
-     * ***but***, toc should not be deeply nested; 2 to 3 levels are plenty to not overwhelm the UI
-   * ensure no classes are used in any toc item text
-   * ensure no leading or trailing spaces exist for any nav entry (both in toc and page-list; check inside `<a></a>` and `<li></li>`)
-   * check that each chapter and part is listed (**literally** check for “Chapter” or “Part” at the beginning of each toc entry)
-   * each toc item should link to a document + page `id`
-   * if the book has parts, check for nesting in toc
-   * check that toc.xhtml renders correctly in a browser and nested lists are correct.
-2. Check content.opf
-   * `spine`
-     * ensure the linear order is correct
-     * ensure toc.xhtml is not at the top, but rather in its source location
-   * `metadata`
-     * check for all required meta elements (according to the style guide)
+1. `spine`
+   * ensure the linear order is correct
+   * ensure toc.xhtml is not at the top, but rather in its source location
+2. `metadata`
+   * check for all required meta elements (according to the style guide)
+   * If journal, check for [Journal metadata](../code/metadata.html#Journal-Metadata)
+   * If dictionary, check for [Dictionary metadata](../code/dictionaries.html#Dictionary-Metadata)
+     * Also, check for [Search Key Map](../code/dictionaries.html#Search-Key-Map) in manifest and included in EPUB
+
 
 ### Code Choice
 
-1. Using stylecheck views, verify quality of
+0. Search for un-fixed Scripture ref errors: `error_`
+1. Check TOC stylecheck view ... ensure TOC renders correctly and represents source
+2. Using stylecheck views, verify quality of
    * headings ... ensure correct semantic structure
    * lists ... check for appropriate nesting and ensure no duplication of list item indicators in the text.
-   * tables ... appropriate tagging (future version of stylecheck; for now, check in browser)
-2. First character inside `.copyright` classed element must be ©
-3. Check for unhandled OCR tags
-   * Regex: `<(?:translit|drop|f(?:n|rac)|[ij]n|wksh|[hl]ang|s(?:ig|c(?:rip)?|[tv])|c(?:ap|n)|bq|p(?:[123456]|age|ro)|auth|fix[^>]*?)>`
-4. Check for bad paragraph breaks
-   * Regex: `<\/p>\s+(<span epub:type="pagebreak"[^>]+>)?\s+<p[^>]*?>(<span[^>]+>(<\/span>)?)?[a-z]`
-5. Check pagebreaks
-   * do they exist?
-   * are they placed appropriately?
-     * not in h1-6 but above
-     * not breaking Scripture references
-     * not as direct children of `<ol>`, `<ul>`, `<dl>`, or `<table>`
-6. Check hyperlinks
-   * make sure internal linking is only by document + page `id` (links to documents only will result in broken links upon conversion)
-7. Check `data-cross-...` attributes
-   * search for `data-cross-(?!ref)` to find all of our data attributes in use and ensure they are used according to the style guide
+   * tables ... appropriate widths, columns, look
+3. Check hyperlinks
+   * make sure internal linking is only by document + `id` (links to documents only will result in broken links upon conversion)
+   * ensure non-pagebreak `id` attributes are coded like `<a id=""></a>` only
+4. Check classes that are specific to certain elements
+   * .full-width and .float-left or -right only with `<figure>` (or `<div>` with child `<figure>`s)
+   * .h1-6 only on `<h2-6>`
+   * .h1sub-h3sub only on `<p>`
+   * .label only on `<span>` and only as child of `<h1>`
+   * .pullquotec only with `<div>`
+   * .pullquotel or r only with `<div>` or `<span>`
+   * .poetry only with `<div>` or `<blockquote>`
+   * .poem1-10 only with `<p>`
+   * .scriptext only with `<blockquote>`
+   * .verse only with `<sup>`
+   * .versenum (only with `<span>`), .selah, & .bookname only in Bibles
+5. Check `data-cross-...` attributes
+   * search for `data-cross-(?!ref)` to find all non-ref data attributes in use and ensure they are used according to the style guide
    * check that the JSON values are formatted correctly (`'{"type":"data"}'`)
-8. Check tables and media
+6. Check tables and media
    * make sure `<figure>`, `<table>`, and `<video>` code blocks have the right markup
    * make sure `<img>` elements include `alt` attributes and are in `<figure>` blocks (or *not* in `<figure>` blocks, if they carry no real meaning in the work itself)
-9. Ensure proper code style is followed in all other types of content
+7. Ensure proper code style is followed in all other types of content
    * abbreviation lists and `<abbr>` elements themselves
      * `<abbr>` should only have `title` attribute, no `class` or `id`
    * asides (with or without bridgeheads)
    * bibliographies
    * block quotes (normal and Scripture)
-   * footnotes and footnote indicators
+   * footnotes and footnote indicators (including all footnote content in note span)
+     * Check for ibid
+     * Exactly one `<p>` in footnote `<div>`
    * glossaries
    * indexes
    * pull quotes
-10. Look for tags that should be present in specific types of content (refer to [Dev Process Overview](index.html#D-Particular-projects), "Particular Projects")
-
-### Rendered Content
-
-1. Preview some things in the browser (tables, lists, images)
-2. Zip to EPUB and check in iBooks
-   * check UI TOC button to ensure toc correctness
-   * click from TOC to several chapters to test navigation
-   * click several footnotes to ensure functionality
-   * skim/scan for anomalies or weird rendering
