@@ -37,56 +37,13 @@ See [Project Review Rubric](https://docs.google.com/document/d/1J1QP8AWLWvXdtBA1
 
 <aside class="warning">Make sure the EPUB passes EpubCheck and stylecheck before moving forward! If you are reviewing another developer's project, do not proceed with Review, and <strong>don't</strong> open issues in GitHub based on these tools. Simply move the Trello card to Review Issue Resolution and alert the developer.</aside>
 
-### Content.opf
-
-1. `spine`
-   * ensure the linear order is correct
-   * ensure toc.xhtml is not at the top, but rather in its source location
-2. `metadata`
-   * check for all required meta elements (according to the style guide)
-   * If journal, check for [Journal metadata](../code/metadata.html#Journal-Metadata)
-   * If dictionary, check for [Dictionary metadata](../code/dictionaries.html#Dictionary-Metadata)
-     * Also, check for [Search Key Map](../code/dictionaries.html#Search-Key-Map) in manifest and included in EPUB
+* **If any Structural or Markup Issues exist**, make sure they should. If any of them are issues that should have been addressed, follow the warning above and notify the developer.
 
 
-### Code Choice
-
-0. Search for un-fixed Scripture ref errors: `error_`
-1. Check TOC stylecheck view ... ensure TOC renders correctly and represents source
-2. Using stylecheck views, verify quality of
-   * headings ... ensure correct semantic structure
-   * lists ... check for appropriate nesting and ensure no duplication of list item indicators in the text.
-   * tables ... appropriate widths, columns, look
-3. Check hyperlinks
-   * make sure internal linking is only by document + `id` (links to documents only will result in broken links upon conversion)
-   * ensure non-pagebreak `id` attributes are coded like `<a id=""></a>` only
-4. Check classes that are specific to certain elements
-   * .full-width and .float-left or -right only with `<figure>` (or `<div>` with child `<figure>`s)
-   * .h1-6 only on `<h2-6>`
-   * .h1sub-h3sub only on `<p>`
-   * .label only on `<span>` and only as child of `<h1>`
-   * .pullquotec only with `<div>`
-   * .pullquotel or r only with `<div>` or `<span>`
-   * .poetry only with `<div>` or `<blockquote>`
-   * .poem1-10 only with `<p>`
-   * .scriptext only with `<blockquote>`
-   * .verse only with `<sup>`
-   * .versenum (only with `<span>`), .selah, & .bookname only in Bibles
-5. Check `data-cross-...` attributes
-   * search for `data-cross-(?!ref)` to find all non-ref data attributes in use and ensure they are used according to the style guide
-   * check that the JSON values are formatted correctly (`'{"type":"data"}'`)
-6. Check tables and media
-   * make sure `<figure>`, `<table>`, and `<video>` code blocks have the right markup
-   * make sure `<img>` elements include `alt` attributes and are in `<figure>` blocks (or *not* in `<figure>` blocks, if they carry no real meaning in the work itself)
-7. Ensure proper code style is followed in all other types of content
-   * abbreviation lists and `<abbr>` elements themselves
-     * `<abbr>` should only have `title` attribute, no `class` or `id`
-   * asides (with or without bridgeheads)
-   * bibliographies
-   * block quotes (normal and Scripture)
-   * footnotes and footnote indicators (including all footnote content in note span)
-     * Check for ibid
-     * Exactly one `<p>` in footnote `<div>`
-   * glossaries
-   * indexes
-   * pull quotes
+* **Check all views in stylecheck** to ensure everything is on the up and up.
+  * **TOC**: ensure the toc accurately reflects the structure of the book. Click on a few links and verify they point to the correct locations.
+  * **Heading Outlines**: ensure each heading outline is correct.
+  * **Lists**: ensure the lists render well and do not duplicate item indicators. _In the markup, make sure the `.none` class is used only where no item indicators are intended._
+  * **Tables**: ensure tables render well in the smaller viewports provided by stylecheck. Look for anything out of sorts.
+  * **Quotes**: look for anything out of sorts here. Ensure scripture quotes and normal blockquotes were each tagged appropriately.
+  * **Asides**: look for anything out of sorts here. In general, asides should be brief and tangential. Long asides are an indication something should probably be tagged differently.
