@@ -1,9 +1,9 @@
-title: Academic Symbols (WS Extra)
+title: Apparatus Symbols (WS Extra)
 ---
 
 ## Usage
 
-Use the `.wsextra` class to display symbols commonly used in biblical academics, usually with `<span>` like `<span class="wsextra">&#xE513;</span>`.
+Use the `.wsextra` class to display symbols referring to [critical apparatuses](https://www.logos.com/products/info/apparatuses), usually with `<span>` like `<span class="wsextra">&#xE513;</span>`.
 
 ## Character Entities
 
