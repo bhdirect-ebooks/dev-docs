@@ -8,10 +8,6 @@ The brain of the EPUB.
 
 * Add directory files to the `<manifest>` and `<spine>`
 
-[write-rights (script)](https://cms.lifeway.com/share/page/site/bh-academic/document-details?nodeRef=workspace://SpacesStore/7e94c1a8-4833-4da6-a0c3-7f348740bee2)
-
-* Insert copyright page permissions into `<dc:rights>` in the `<metadata>` section
-
 ## Recommended Code
 
 [Package and Container Files](../code/construction.html#Package-and-Container-Files)
