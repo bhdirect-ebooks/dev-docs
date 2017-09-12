@@ -27,16 +27,13 @@ Since an `alt` value would be redundant when a `figcaption` is present, you may 
 
 ### Embedded Videos
 
-Videos are wrapped with a `<div>` element. Each video must have a corresponding SVG as the `poster`, and there must be two transcoded source files located in the epub-remote-resources s3 bucket, an MP4 and a WEBM file as a fallback.
+Included by using the `<video>` element, each video must have a corresponding SVG as the `poster` and two transcoded source files located in the epub-remote-resources s3 bucket, an MP4 and a WEBM file as a fallback.
 
 ```html
-<!-- id required only for linked videos; see below -->
-<div id="video-3">
-  <video poster="../images/everyday-theology-003.svg" controls="controls" preload="none">
-    <source src="https://epub-remote-resources.mywsb.com/9781433651090/everyday-theology-003.mp4" type="video/mp4" />
-    <source src="https://epub-remote-resources.mywsb.com/9781433651090/everyday-theology-003.webm" type="video/webm" />
-  </video>
-</div>
+<video poster="../images/everyday-theology-003.svg" controls="controls" preload="none">
+  <source src="https://epub-remote-resources.mywsb.com/9781433651090/everyday-theology-003.mp4" type="video/mp4" />
+  <source src="https://epub-remote-resources.mywsb.com/9781433651090/everyday-theology-003.webm" type="video/webm" />
+</video>
 ```
 
 ### Linked Videos
