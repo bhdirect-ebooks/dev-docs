@@ -27,13 +27,11 @@ Use stylecheck (in `/dev/epub/isbn/`): `stylecheck me`
 4. When complete (and if there are issues), move the card to "Review Issue Resolution"
 5. If there are no issues (usually 2nd or later review), move the card to "Ready for Release"
 
-## What to Look For
-
-See [Project Review Rubric](https://docs.google.com/document/d/1J1QP8AWLWvXdtBA10E6fKc_dagvOHtkVN6J5LqQFHjU/).
-
 ### Checkpoint!
 
 <aside class="warning">Make sure the EPUB passes EpubCheck and stylecheck before moving forward! If you are reviewing another developer's project, do not proceed with Review, and <strong>don't</strong> open issues in GitHub based on these tools. Simply move the Trello card to Review Issue Resolution and alert the developer.</aside>
+
+## What to Look For
 
 * **If any Structural or Markup Issues exist**, make sure they should. If any of them are issues that should have been addressed, follow the warning above and notify the developer.
 
