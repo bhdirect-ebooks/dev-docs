@@ -9,8 +9,6 @@ Install [stylecheck](https://github.com/bhdirect-ebooks/stylecheck): `sudo npm i
 
 Use stylecheck (in `/dev/epub/isbn/`): `stylecheck me`
 
-<aside class="caution"><strong>Remember to check for Scripture errors after running stylecheck (search for `error_`).</strong></aside>
-
 ## Admin
 ### Developer
 
