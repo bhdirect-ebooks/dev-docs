@@ -63,8 +63,6 @@ Heading tags reflect a hierarchy and should therefore be used for semantic (not 
 
 Since headings create an outline, heading tags should not be used for subheadings ([See the spec](http://w3c.github.io/html/sections.html#headings-and-sections)).
 
-**Heading text must be title case for our eBooks.**
-
 For any headings that should not be included in the document outline (usually in `aside` elements), use `<p epub:type="bridgehead"></p>`. Also acceptable: `<p>` with `.h1sub`, `.h2sub`, or `.h3sub`.
 
 ### Chapter Titles, Labels, and Numbers

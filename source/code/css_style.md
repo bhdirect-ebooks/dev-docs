@@ -5,17 +5,15 @@ title: CSS Style Rules
 
 <aside class="notice">Access the latest versions of our team's [default stylesheets](https://github.com/bhdirect-ebooks/epub-container/tree/master/OEBPS/styles) on GitHub.</aside>
 
-Use the provided "mywsb.css" stylesheet along with "bookstyles.css".
+Use the provided "mywsb-dev.css" stylesheet.
 
 ## Styling Content
 
-<aside class="notice">See [mywsb.css Classes](https://docs.google.com/a/lifeway.com/document/d/1TjewWPcYAQM7RWZTKeAk3F8sG0kUeVOIcbHwAz_DHUQ/edit?usp=sharing) for useable and deprecated classes.</aside>
-
 Your goal is not to recreate the printed version of a publication. Rather, your goal is a clean, well-formed, and usable digital product. Therefore, avoid adjusting styles wherever possible.
 
-If you must make adjustments, insert those adjustments in the "bookstyles.css" style sheet by reusing the existing selector(s) and adding your declarations there.
+The inclusion of the [Tachyons framework](http://tachyons.io/) in our stylesheet allows you to adjust content formatting as needed without having to write CSS. Consult the [CSS Library](../css_lib/) for more information.
 
-Do not add new classes, and ensure that any adjustments you make conform to the CSS Style Rules.
+Avoid adding writing CSS unless absolutely necessary.
 
 ## CSS Validity
 

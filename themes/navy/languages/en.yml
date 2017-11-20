@@ -67,7 +67,9 @@ sidebar:
     articles: Dictionary Articles
     bibles: Bibles
     layout: Layout
-    width: Width Classes
+    tachyons: Tachyons
+    typography: Typography
+    util: Utilities
   process:
     dev: Dev Process
     overview: Overview

@@ -35,7 +35,6 @@ css_lib:
     inline: inline.html
     languages: languages.html
     wsextra: wsextra.html
-
   blocks:
     asides: asides.html
     notes: notes.html
@@ -43,17 +42,16 @@ css_lib:
     poetry: poetry.html
     tables: tables.html
     quotes: quotes.html
-
+  tachyons:
+    typography: typography.html
+    layout: layout.html
+    util: util.html
   embedded:
     figures: figures.html
     video: video.html
-
   special:
     articles: articles.html
     bibles: bibles.html
-
-  layout:
-    width: width.html
 
 process:
   dev:

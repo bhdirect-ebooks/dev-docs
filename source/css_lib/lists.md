@@ -13,11 +13,13 @@ title: Lists
 * `.abbr-list`
 
 **For use with `<ol>`**
+* `.digit`
 * `.upper-roman`
 * `.lower-roman`
 * `.upper-alpha`
 * `.lower-alpha`
-* `.digit`
+* `.lower-greek`
+* `.hebrew`
 
 **Qualifying classes - use along with the above classes only**
 * `.paren`
