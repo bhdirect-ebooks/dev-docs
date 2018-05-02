@@ -36,7 +36,7 @@ When quoting attributes values, use double quotation marks.
 <!-- Recommended -->
 <p class="oh-yeah">...</p>
 
-<hr data-cross-context='{"scripture":"Gen.1.1"}' />
+<hr data-context='{"scripture":"Gen.1.1"}' />
 
 <!-- Not Recommended -->
 <p class='nope'>...</p>

@@ -49,7 +49,7 @@ Use HTML according to its purpose, and always prefer semantic elements over thos
 
 `<div>`<br>`<span>`<br>`<section>` (although `section` defines a section in a document, this is still too ambiguous to use in our projects without semantic inflection)
 
-<aside class="caution">Make sure every ambiguous element has at least one attribute that allows for some kind of semantic inflection or data (`epub:type`, `class`, or `data-cross-x`).</aside>
+<aside class="caution">Make sure every ambiguous element has at least one attribute that allows for some kind of semantic inflection or data (`epub:type`, `class`, or `data-x`).</aside>
 
 ### Semantic elements
 

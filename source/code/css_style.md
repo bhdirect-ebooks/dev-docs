@@ -47,14 +47,14 @@ Therefore, always qualify attribute selectors with types.
 
 ```css
 /* Recommended */
-figure[data-cross-tour*=illustration] {}
+figure[data-tour*=illustration] {}
 
 /* For epub:type, always use both versions seen below */
 p[epub\:type~=bridgehead] {}
 p[epub|type~=bridgehead] {}
 
 /* Not Recommended */
-[data-cross-scripture] {}
+[data-scripture] {}
 ```
 
 ## Shorthand Properties

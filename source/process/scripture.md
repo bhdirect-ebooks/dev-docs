@@ -5,10 +5,9 @@ The meat and potatoes of Bible software.
 
 ## Related Tools/Scripts
 
-[parsify](https://github.com/bhdirect-ebooks/parsify)
+[percival](https://github.com/bhdirect-ebooks/percival)
 
-* Run `sudo npm install -g @bhdirect/parsify` to install on your system
-* Usage: `cd` into an individual EPUB's ISBN-level directory and run `parsify`
+<iframe width="560" height="315" src="https://www.youtube.com/embed/r5ognIEjlR0" frameborder="0" allowfullscreen></iframe>
 
 ## Recommended Code
 

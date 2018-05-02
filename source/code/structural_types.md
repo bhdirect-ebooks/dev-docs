@@ -108,7 +108,7 @@ When there are parts that consist of sub-parts, the special classes `.part-1`, `
 Pages should be marked with an `<span>` element and the EPUB `pagebreak` type, like the example here (where <em>X</em> is the page identifier).
 
 ```html
-<span epub:type="pagebreak" id="pageX" title="X" />
+<span epub:type="pagebreak" id="pageX" title="X"></span>
 ```
 
 EPUB "pagebreak" tags are inserted before the all text of the corresponding source page, and for our team, they must follow these guidelines:
@@ -118,7 +118,7 @@ EPUB "pagebreak" tags are inserted before the all text of the corresponding sour
 
 ```html
 <!-- Above headings -->
-<span epub:type="pagebreak" id="page808" title="808" />
+<span epub:type="pagebreak" id="page808" title="808"></span>
 <h1>My Heading</h1>
 ```
 
@@ -201,7 +201,7 @@ This means that any pagebreaks and headings must be outside of the `<dl>` elemen
 ```html
 <!-- Separate sections and page break examples -->
 <section epub:type="glossary">
-  <a epub:type="pagebreak" id="pagexv" title="xv"></a>
+  <span epub:type="pagebreak" id="pagexv" title="xv"></span>
   <h1>Abbreviations</h1>
   <h2>Periodicals, Reference Works, and Serials</h2>
   <dl class="abbr-list">
@@ -212,7 +212,7 @@ This means that any pagebreaks and headings must be outside of the `<dl>` elemen
     <!-- etc. -->
   </dl>
 
-  <a epub:type="pagebreak" id="pagexvi" title="xvi"></a>
+  <span epub:type="pagebreak" id="pagexvi" title="xvi"></span>
   <h2>Ancient Works</h2>
   <h3>Pseudepigraphical Books</h3>
   <dl class="abbr-list">
