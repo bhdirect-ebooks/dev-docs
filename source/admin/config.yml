@@ -1,0 +1,48 @@
+backend:
+  name: git-gateway
+  branch: master
+
+development:
+  backend:
+    name: netlify-api
+    url: http://localhost:8080
+
+publish_mode: editorial_workflow
+
+media_folder: "static/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "news"
+    label: "News"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "code"
+    label: "Recommended Code"
+    folder: "code"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "css_lib"
+    label: "CSS Library"
+    folder: "css_lib"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "process"
+    label: "Development Process"
+    folder: "process"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}

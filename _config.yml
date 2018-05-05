@@ -8,6 +8,8 @@ root: /
 permalink: news/:year/:month/:day/:title/
 archive_dir: news
 code_dir: downloads/code
+skip_render:
+    - 'admin/config.yml'
 new_post_name: :year-:month-:day-:title.md
 post_asset_folder: true
 highlight:
