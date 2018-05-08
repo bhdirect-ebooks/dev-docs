@@ -16,15 +16,22 @@ title: Dev Process Overview
 
 ## II. Clean & Code
 
-### A. Identify and [markup content](markup.html) types and styles
+### A. Identify and [markup content](../code/general_types.html) types and styles
 
-#### All
-* Cover, title page, and copyright page
-* [Headings](../code/structural_types.html#Headings) (hierarchical)
+#### Non-Core
+* Cover image must meet specs (JPEG, 1300x2000)
+* Include source stylesheet in `OEBPS/styles/` and add to all text files **after** our default stylesheet, like:
+```html
+<link href="../styles/mywsb-dev.css" rel="stylesheet" type="text/css" />
+<link href="../styles/template.css" rel="stylesheet" type="text/css" />
+```
+* Replace all source stylesheet `font-family` values with **either** `sans-serif` or `serif`
+* `<h1>` (chapter titles must be `<h1>` and follow [styleguide](../code/structural_types.html#Headings); all other headings may remain as-is)
 * Pass EpubCheck
 
 #### Core
-* [Copyright page classes](../code/structural_types.html#Copyright-Page)
+* Cover, title page, and [copyright page](../code/structural_types.html#Copyright-Page)
+* [Headings](../code/structural_types.html#Headings) (hierarchical)
 * [Lists and outlines](../css_lib/lists.html)
 * [Block & pull quotes](../css_lib/quotes.html)
 * [Poetry](../css_lib/poetry.html)
@@ -50,9 +57,8 @@ title: Dev Process Overview
 
 ### All
 
-* [Page breaks](page_break.html)
+* [Page breaks](../code/structural_types.html#Page-Breaks)
 * [Scripture references](scripture.html)
-* [Footnotes](footnotes.html)
 * [Abbreviations](abbr.html)
 * [Videos](videos.html)
 * [Glossary](glossary.html)
@@ -61,8 +67,14 @@ title: Dev Process Overview
 * Workbooks/Studies
   * Workbook enhancement in CP
 
+### Non-Core
+* While footnotes do not have to follow the styleguide, they must follow these rules:
+  * all `<a>` tags for indicators must have `epub:type="noteref"`
+  * all footnote ids must be on traditional [block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements) (usually `<p>` or `<div>`)
+
 ### Core
 
+* [Footnotes](footnotes.html)
 * [Indexes](indexes.html)
 * [Dictionaries](../code/dictionaries.html)
   * Dictionary article markup
