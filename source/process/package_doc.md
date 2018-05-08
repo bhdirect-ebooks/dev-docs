@@ -1,3 +1,4 @@
+---
 title: Package Document (content.opf)
 ---
 The brain of the EPUB.

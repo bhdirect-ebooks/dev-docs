@@ -1,3 +1,4 @@
+---
 title: Scripture References
 ---
 

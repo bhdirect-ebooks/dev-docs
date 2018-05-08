@@ -1,3 +1,4 @@
+---
 title: General Content Types
 ---
 
