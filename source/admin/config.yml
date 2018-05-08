@@ -15,7 +15,7 @@ public_folder: "/assets/images/uploads"
 collections:
   - name: "news"
     label: "News"
-    folder: "_posts"
+    folder: "static/_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-post"
     fields:
@@ -24,7 +24,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "code"
     label: "Recommended Code"
-    folder: "code"
+    folder: "static/code"
     create: true
     slug: "{{slug}}"
     fields:
@@ -32,7 +32,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "css_lib"
     label: "CSS Library"
-    folder: "css_lib"
+    folder: "static/css_lib"
     create: true
     slug: "{{slug}}"
     fields:
@@ -40,7 +40,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "process"
     label: "Development Process"
-    folder: "process"
+    folder: "static/process"
     create: true
     slug: "{{slug}}"
     fields:
