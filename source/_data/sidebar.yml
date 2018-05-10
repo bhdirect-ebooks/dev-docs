@@ -76,3 +76,14 @@ process:
   qa:
     review: review.html
     convert: convert.html
+
+ocr:
+  process:
+    overview: index.html
+    step_one: step_one.html
+    step_two: step_two.html
+    step_three: step_three.html
+    step_four: step_four.html
+    step_five: step_five.html
+    review: review.html
+    misc: misc.html

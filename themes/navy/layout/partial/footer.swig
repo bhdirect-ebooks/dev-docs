@@ -5,6 +5,7 @@
     </div>
     <div id="footer-links">
       <a href="https://github.com/{{ config.github }}" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+      <a href="/admin" class="footer-link"><i class="fa fa-edit"></i></a>
     </div>
   </div>
 </footer>
