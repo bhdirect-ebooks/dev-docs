@@ -2,6 +2,7 @@ menu:
   code: Recommended Code
   css_lib: CSS Library
   process: Development Process
+  ocr: OCR Process
   news: News
 
 index:
@@ -94,3 +95,14 @@ sidebar:
     qa: "QA & Convert"
     review: Review Process
     convert: "Convert & Upload"
+  ocr:
+    process: OCR Process
+    overview: Overview
+    step_one: Step One
+    step_two: Step Two
+    step_three: Step Three
+    step_four: Step Four
+    step_five: Step Five
+    review: Review
+    misc: Miscellaneous
+    

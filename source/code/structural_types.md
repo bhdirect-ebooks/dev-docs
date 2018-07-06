@@ -1,3 +1,4 @@
+---
 title: Structural Types
 ---
 

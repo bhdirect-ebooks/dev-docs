@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: add-cms
+
+development:
+  backend:
+    name: netlify-api
+    url: http://localhost:8080
+
+publish_mode: editorial_workflow
+
+media_folder: "source/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "news"
+    label: "News"
+    folder: "source/_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "code"
+    label: "Recommended Code"
+    folder: "source/code"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "css_lib"
+    label: "CSS Library"
+    folder: "source/css_lib"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "process"
+    label: "Development Process"
+    folder: "source/process"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "ocr"
+    label: "OCR Process"
+    folder: "source/ocr"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
