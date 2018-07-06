@@ -18,18 +18,6 @@ title: Dev Process Overview
 
 ### A. Identify and [markup content](../code/general_types.html) types and styles
 
-#### Non-Core
-* Cover image must meet specs (JPEG, 1300x2000)
-* Include source stylesheet in `OEBPS/styles/` and add to all text files **after** our default stylesheet, like:
-```html
-<link href="../styles/mywsb-dev.css" rel="stylesheet" type="text/css" />
-<link href="../styles/template.css" rel="stylesheet" type="text/css" />
-```
-* Replace all source stylesheet `font-family` values with **either** `sans-serif` or `serif`
-* `<h1>` (chapter titles must be `<h1>` and follow [styleguide](../code/structural_types.html#Headings); all other headings may remain as-is)
-* Pass EpubCheck
-
-#### Core
 * Cover, title page, and [copyright page](../code/structural_types.html#Copyright-Page)
 * [Headings](../code/structural_types.html#Headings) (hierarchical)
 * [Lists and outlines](../css_lib/lists.html)
@@ -47,7 +35,7 @@ title: Dev Process Overview
 
 ### Checkpoint!
 
-<aside class="caution">Pass EpubCheck and stylecheck before moving forward!</aside>
+<aside class="caution">If possible, pass EpubCheck before moving forward!</aside>
 
 <div>&nbsp;</div>
 
@@ -55,27 +43,18 @@ title: Dev Process Overview
 
 ## III. Enhance
 
-### All
-
 * [Page breaks](../code/structural_types.html#Page-Breaks)
 * [Scripture references](scripture.html)
+* [Footnotes](footnotes.html)
+* [Indexes](indexes.html)
 * [Abbreviations](abbr.html)
 * [Videos](videos.html)
 * [Glossary](glossary.html)
+
 * Commentaries
   * [Scripture context](../code/data_types.html#Scripture-Context)
 * Workbooks/Studies
   * Workbook enhancement in CP
-
-### Non-Core
-* While footnotes do not have to follow the styleguide, they must follow these rules:
-  * all `<a>` tags for indicators must have `epub:type="noteref"`
-  * all footnote ids must be on traditional [block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements) (usually `<p>` or `<div>`)
-
-### Core
-
-* [Footnotes](footnotes.html)
-* [Indexes](indexes.html)
 * [Dictionaries](../code/dictionaries.html)
   * Dictionary article markup
   * Dictionary metadata

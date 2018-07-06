@@ -30,7 +30,7 @@ As instructed in [HTML semantics](html_style.html#Semantics), always use the mos
 
 ## Hyperlinks
 
-The only hyperlinks in the EPUB should be those that point to bookmarks within the EPUB itself. For any external URLs in the content, leave the URL as text only. Tagging with `<a>` is not recommended. This allows reading systems to decide whether or not to include hyperlinks to external content.
+The only hyperlinks in the EPUB should be those that point to bookmarks within the EPUB itself. For any external URLs in the content, leave the URL as text only. `<a href="" target="_blank"></a>`
 
 ## Languages and Transliterations
 

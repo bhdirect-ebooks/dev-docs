@@ -5,8 +5,9 @@ It's just file naming, right?
 
 ## Related Tools/Scripts
 
-[split-files (node)](https://github.com/bhdirect-ebooks/split-files)
+TODO: handle-ocr
 
+[split-files (node)](https://github.com/bhdirect-ebooks/split-files)
 How to use:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ArEiGm9T_2g" frameborder="0" allowfullscreen></iframe>
@@ -20,6 +21,23 @@ How to use:
   * `<!-- back [section] -->`
   * `<!-- trim -->` - *use to remove content*
   * `<!-- ^continue^ -->` - *use to include the content with the previous section after a `<!-- trim -->` or `<!-- notes -->` section*
+
+**Dictionaries & Encyclopedias**
+  * Use `<!-- entry -->` for each entry
+
+**Bibles**
+  * Use `<!-- [OSIS] -->` for each chapter of the Bible (using just the [book abbreviation](https://docs.google.com/spreadsheets/d/1tgzQru2dVaDU-zhaSfym1UuaPh3_Aktq91iDz9L9JtY/edit#gid=0))
+  For instance:
+
+```html
+<!-- Gen -->
+<h1>Chapter 1</h1>
+<p>... text of Genesis 1 ...</p>
+
+<!-- Gen -->
+<h1>Chapter 2</h1>
+<p>... text of Genesis 2 ...</p>
+```
 
 **Front and back section types:**
 *(If a section type is not found below, use a brief descriptive name. For definitions of any type below, see [EPUB 3 Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/))*
