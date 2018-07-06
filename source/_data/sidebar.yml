@@ -2,6 +2,14 @@ code:
   intro:
     welcome: index.html
     on_style: on_style.html
+  content:
+    structural: structural_types.html
+    data_att: data_types.html
+    multimedia: media_types.html
+    general_content: general_types.html
+    indexes: indexes.html
+    dictionaries: dictionaries.html
+    bibles: bibles.html
   style:
     general_format: general_format.html
     html_style: html_style.html
@@ -14,15 +22,7 @@ code:
     construction: construction.html
     metadata: metadata.html
     navigation: navigation.html
-  content:
     semantics: semantics.html
-    structural: structural_types.html
-    data_att: data_types.html
-    multimedia: media_types.html
-    general_content: general_types.html
-    indexes: indexes.html
-    dictionaries: dictionaries.html
-    bibles: bibles.html
 
 css_lib:
   core:
