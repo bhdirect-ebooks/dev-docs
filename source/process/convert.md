@@ -1,7 +1,6 @@
 ---
 title: Convert & Upload
 ---
-
 This is how we publish content right here. Oh yeah.
 
 ## Normal
@@ -13,3 +12,16 @@ This is how we publish content right here. Oh yeah.
 ## Partial
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G3udL6Rrkco" frameborder="0" allowfullscreen></iframe>
+
+## 
+
+## Navigating the Upload Process on VMWare (Windows)
+
+Running **_npm run build_** on the Mac-side command line (in the project folder of your book title) will add new directories and files to your project directory, and all these files are important for the conversion/upload process.
+
+Working in the VMWare environment can be a bit tricky. Below are a few steps for avoiding obstacles that deal with permissions and other scripting requirements.
+
+1. First, before opening VWWare, log into the Cisco AnyConnect VPN on your Mac-side.
+2. Next, open the VWWare environment (for setting up VMWare and other Windows-side programs, check this Google Doc).
+3. Next, sign in to the Windows-side CiscoAnyConnect.
+4. And finally, open the browser and use your sign in credentials to sign in to: [lifeway.okta.com](lifeway.okta.com)
