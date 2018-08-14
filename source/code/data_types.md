@@ -1,7 +1,6 @@
 ---
 title: Data Types
 ---
-
 In order to develop standards-based EPUBs while also retaining data types for use in our applications, we use a set of unique data attributes.
 
 Data attributes are an HTML5 approach to storing unique data for applications. The data attributes described in this chapter act as hooks for our conversion scripts that transform finished EPUBs for ingestion and upload to our content servers.
@@ -13,6 +12,7 @@ Each data attribute follows the same pattern. The data attribute is `data-x`, wh
 ```html
 <element data-x="value">
 ```
+
 ### Scripture Value Syntax (OSIS)
 
 All Scripture references that are values for Cross data attributes must be formatted according to OSIS book abbreviations and reference notation. OSIS is an entire specification for marking up Bibles in XML, but we are borrowing the spec only for Scripture references to use within our data attributes.
@@ -29,7 +29,7 @@ The above snippet is an example OSIS for Genesis 1:1-2.
 
 Verses in single chapter books should always be referenced using 1 as the chapter number (e.g., `Jude.1.3`)
 
-*Make sure to keep track of what each data attribute requires as its OSIS (whether b.c.v, b.c., or b).*
+_Make sure to keep track of what each data attribute requires as its OSIS (whether b.c.v, b.c., or b)._
 
 ## Context Markup
 
@@ -43,7 +43,7 @@ Use `data-context` with the HTML element `<hr>`, whose semantic meaning indicate
 
 Scripture context is identified by the `data-context` attribute, followed by the reference as the value.
 
-The reference should be the OSIS abbreviation (explained below). A single verse reference must be in the form of b.c.v, while *a reference to more than one verse must be b.c.v-b.c.v*
+The reference should be the OSIS abbreviation (explained below). A single verse reference must be in the form of b.c.v, while _a reference to more than one verse must be b.c.v-b.c.v_
 
 ```html
 <hr data-context="Gen.1.1" />
@@ -53,7 +53,7 @@ The reference should be the OSIS abbreviation (explained below). A single verse 
 
 ### Parsing Context
 
-Scripture parsing context is identified by the `data-parsing` attribute, and its value is an OSIS *of type b or b.c only*.
+Scripture parsing context is identified by the `data-parsing` attribute, and its value is an OSIS _of type b or b.c only_.
 
 ```html
 <hr data-parsing="Gen.1" />
@@ -68,6 +68,7 @@ To indicate that a specific portion of text should not be parsed as Scripture, u
 ```html
 <span data-parsing="">123:4</span><span data-parsing="Gen"></span>
 ```
+
 <aside class="warning">Important: After using an empty parsing attribute in this way, always restore context with a normal parsing context tag, as shown above.</aside>
 
 ### Date Context
@@ -93,7 +94,7 @@ Reference types are indicated with a data attribute along with the HTML element 
 
 Scripture references use the full b.c.v notation, and just as with the Scripture context attribute, a reference to more than one verse must be b.c.v-b.c.v.
 
-***All Scripture references in each volume must be tagged, non-orphaned and orphaned references alike.***
+_**All Scripture references in each volume must be tagged, non-orphaned and orphaned references alike.**_
 
 ```html
 <a data-ref="Gen.1.1-Gen.1.2">verses 1 and 2</a>
@@ -113,7 +114,7 @@ Unique attributes exist for other data types, like article authors in journals, 
 
 ### Journal Articles
 
-In journals, Use standard HTML for articles, along with the `data-author-first` and `data-author-last` attributes for article author data.
+In journals, use standard HTML for articles, along with the `data-author-first` and `data-author-last` attributes for article author data.
 
 ```html
 <article title="Article Title" data-author-first="Thom" data-author-last="Rainer">
@@ -123,6 +124,7 @@ In journals, Use standard HTML for articles, along with the `data-author-first` 
 ```
 
 ### Scripture Verse Content
+
 In Bibles, each verse must be denotated with `data-verse-start` and `data-verse-end` using `<span>`, which should be placed inline with the text.
 
 ```html
@@ -137,7 +139,7 @@ In Bibles, the words of Jesus must be tagged with the `data-speaker` attribute. 
 <span data-speaker="Jesus">"Have you understood all these things?"</span>
 ```
 
-<aside class="warning">Words of Jesus `span` elements **cannot be used to cover more than a single verse**. Start a new `<span data-speaker="Jesus">` **for every verse**.</aside>
+<aside class="warning">Words of Jesus \`span\` elements \*\*cannot be used to cover more than a single verse\*\*. Start a new \`<span data-speaker="Jesus">\` \*\*for every verse\*\*.</aside>
 
 ### LESSON<em>maker</em> Content
 
