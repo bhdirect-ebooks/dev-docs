@@ -92,8 +92,13 @@ A chiasm is a literary device that uses a repeating A-B-C ... C′-B′-A′ pat
 
 For a chiastic structure use the `poetry` classes above.
 
-```
-<p class="poem1">A "No servant can serve two masters;</p></p>
+```html
+<p class="poem1">A "No servant can serve two masters;</p>
+<p class="poem2">B for either he will hate the one,</p>
+<p class="poem3">C and love the other,</p>
+<p class="poem3">C' or else he will hold to one,</p>
+<p class="poem2">B' and despise the other.</p>
+<p class="poem1">A' You cannot serve God and mammon."</p>
 ```
 
 ## Quotation Marks
