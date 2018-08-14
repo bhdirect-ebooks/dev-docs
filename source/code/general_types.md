@@ -88,7 +88,13 @@ If the poetry was written by someone other than the author, it also needs to be 
 
 ## Chiasm
 
-A chiasm is a literary device that uses a repeating A-B-C ... C′-B′-A′ pattern for clarification and/or emphasis. For a chiastic structure use the `poetry` classes above.
+A chiasm is a literary device that uses a repeating A-B-C ... C′-B′-A′ pattern for clarification and/or emphasis. 
+
+For a chiastic structure use the `poetry` classes above.
+
+```
+<p class="poem1">A "No servant can serve two masters;</p></p>
+```
 
 ## Quotation Marks
 
