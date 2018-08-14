@@ -1,7 +1,6 @@
 ---
 title: General Content Types
 ---
-
 ## Abbreviations
 
 Abbreviations should follow the HTML specification.
@@ -63,7 +62,7 @@ Scripture quotes should be tagged as `blockquote` elements with the `scriptext` 
 
 ## Poetry
 
-Tag poetry with `poetry` classes, making sure to follow the indentation conventions of the source material. Nested `<div class="poetry">` tags create indented blocks.
+Tag poetry with `poetry` classes, (`poem1-10` or `poetry`) making sure to follow the indentation conventions of the source material. Nested `<div class="poetry">` tags create indented blocks.
 
 ```html
 <!-- Poetry example from the CSB, Genesis 2:23-24 -->
@@ -80,9 +79,16 @@ Tag poetry with `poetry` classes, making sure to follow the indentation conventi
 </div>
 <p>This is why a man leaves his ...</p>
 ```
+
 Rendered version of the example code:
 
 ![Poetry example - rendered version.](../assets/images/poetry-example.png)
+
+If the poetry was written by someone other than the author, it also needs to be wrapped in a `blockquote` tag.
+
+## Chiasm
+
+Use the `poetry` classes. See above.
 
 ## Quotation Marks
 
