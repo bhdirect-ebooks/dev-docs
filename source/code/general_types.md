@@ -34,7 +34,7 @@ The only hyperlinks in the EPUB should be those that point to bookmarks within t
 
 ## Languages and Transliterations
 
-Always use Unicode characters for any language or transliteration, along with one of the following four classes.
+Always use Unicode characters for any language or transliteration, along with one of the following four classes. Foreign book/article titles should only be styled with italics, not language specific styles such as `.lang` or `.translit`.
 
 ```html
 <!-- Greek -->
