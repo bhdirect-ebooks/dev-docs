@@ -1,13 +1,15 @@
 ---
-title: Page Breaks
+title: Page Breaks and the Page List
 ---
+Pagebreaks, besides mimicking the physical pages of a book, are necessary for some important functionality within an EPUB (namely, for indexes, the toc, and other internal linking).
 
-![Break yo self!](../assets/images/breakyoself.jpg)
+## page-lister
 
-Break yo self, book!
+The **page-lister** script will search for all the pagebreaks in an epub that [have been formatted per our style guide](https://style.bhdirect-ebooks.org/code/structural_types.html#Page-Breaks), and create a list of links in the .toc file, below the toc markup. Like Table of Contents, the page list is wrapped in nav tags with this markup:  
 
-## Related Tools/Scripts
+`<nav epub:type="page-list"> ` ... `</nav>`
 
+![](/assets/images/uploads/screen-shot-2018-09-13-at-10.52.05-am.png)
 
 ## Recommended Code
 
