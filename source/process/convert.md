@@ -3,9 +3,9 @@ title: Convert & Upload
 ---
 Once a title has made it through the entire development process and has passed peer review, congrats! It's time to convert and upload files so that they are one step closer to availability in Wordsearch and <https://app.wordsearchbible.com/>.
 
-## Navigating the Upload Process in VMWare (Windows)
+## Avoiding Issues During Conversion/Upload in VMWare (Windows)
 
-Running _**npm run build**_ on the Mac-side command line (in the project folder of your book title) will add new directories and files to your project directory, and all these files are important for the conversion/upload process.
+VMWare Fusion is what our team uses to simulate the Windows environment, which is necessary for running Wordsearch and reviewing titles therein. 
 
 Working in the VMWare environment can be a bit tricky. Below are a few steps for avoiding obstacles that deal with permissions and other scripting requirements.
 
@@ -13,23 +13,53 @@ Working in the VMWare environment can be a bit tricky. Below are a few steps for
 2. Next, open the VMWare environment (for setting up VMWare and other Windows-side programs, check this [Google Doc](https://docs.google.com/document/d/1FCB8IKsH9g0CzzPEqyoobgxX2euKk-bVAxDnywGRIuA/edit?usp=sharing)).
 3. Next, sign in to the Windows-side CiscoAnyConnect.
 4. And finally, open the browser (Windows-side) and use your sign in credentials to sign in to: [lifeway.okta.com](https://lifeway.okta.com/)
-5. Finally, sign (Windows-side) into to the <https://app.wordsearchbible.com> with these credentials: 
+5. Finally, sign into (Windows-side) to the <https://app.wordsearchbible.com> with these credentials: 
 
 * user: admin@msb.com
 * pass: godspow3r
 
+<hr />
+
+## The Basic Upload Process
+
+1.  In the command line ("Mac-side"), `cd` into project (must be in `~/Documents/EPUB Projects/[project-name]`)
+2. With the project directory (Mac-side), run **`update-project`** _(**purpose**: this will update a project's metadata and other pertinent details_).
+3. While still in the project directory(Mac-side), run **`npm run build`** in the command line _(**purpose**: this script builds, from the EPUB, a variety of files which are necessary for upload and distribution in Lifeway's platforms)_. 
+4. \[Follow steps above to open/log-in properly to VMWare]
+5. Within the VMWare (or "Windows-side"), open the command line and `cd` into the project directory. Run **`npm run compile`. **
+
+
+
+	In Windows (VMware Fusion), cd into project (must be root project folder \[shortname]), 
+npm run compile
+	Review in Wordsearch (be connected to the VPN)
+		Make any necessary changes (i.e. headings) in the dev folder. 
+Then run (on Mac) “npm run build” & (in Windows) “npm run compile” again.
+	Still in Windows, at the root project folder, npm run moveit
+		(copies all needed compiler files from WS Library to project folder)
+	Back on the Mac side, npm run upload
+	Make sure to push when you finish.
+
 ## Normal
 
-This video below gives a play-by-play of h
+The video below gives a play-by-play of a typical conversion & upload.
 
 [Notes](https://docs.google.com/document/d/1SKd2fDSqLkvqHil_4lCacR8y5F0ms-JzYy308O7D2sg/edit#heading=h.oe8txcg3fgbe)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DTfFtJwO3FY" frameborder="0" allowfullscreen></iframe>
+
+<hr />
 
 ## Partial
 
 Occasionally you may need to upload an additional title/volume to a set which was previously converted & uploaded. The video below details steps to take in that instance.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G3udL6Rrkco" frameborder="0" allowfullscreen></iframe>
+
+<hr />
+
+## Content Platform
+
+Once files have successfuly been converted and uploaded to Content Platform (CP), it's time to sign-in to CP (<https://content.lifeway.com/>)  and finalize the addition of the title to the CP library.
 
 ##
