@@ -38,7 +38,7 @@ When the title looks good in Wordsearch on the Windows-side, you can...
 
 **6. **Run **`npm run moveit`** within the Windows-side project directory.
 
-**7.** And then back on the Mac-side in the project directory, run **`npm run upload`** so that the files are moved to Content Platform and the Wordsearch library.
+**7.** Then on the Mac-side in the project directory, run **`npm run upload`** so that the files are moved to Content Platform and the Wordsearch library.
 
 <hr />
 
