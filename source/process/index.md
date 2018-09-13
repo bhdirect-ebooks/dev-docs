@@ -1,13 +1,12 @@
 ---
 title: Dev Process Overview
 ---
-
 ## I. Prep
 
 ### A. Start the project
 
 1. [Project Admin](project_admin.html)
-1. [Project Scaffolding](proj_scaffold.html)
+2. [Project Scaffolding](proj_scaffold.html)
 
 ### B. Create EPUB directory
 
@@ -51,7 +50,6 @@ title: Dev Process Overview
 * [Abbreviations](abbr.html)
 * [Videos](videos.html)
 * [Glossary](glossary.html)
-
 * Commentaries
   * [Scripture context](../code/data_types.html#Scripture-Context)
 * Workbooks/Studies
@@ -67,6 +65,7 @@ title: Dev Process Overview
   * [LESSONmaker markup](../code/data_types.html#LESSONmaker-Content)
 * Date-aligned works
   * [Date context](../code/data_types.html#Date-Context)
+* TOC (Table of Contents)
 
 <hr>
 
