@@ -17,6 +17,7 @@ An important step in developing an epub is to **carefully examine the source doc
 <hr />
 
 ### InDesign Files (Exporting & Using PageStaker to Insert Page Numbers)
+
 Should your source files be in InDesign, you can view the video below on exporting from InDesign. At times you may have a choice between InDesign and other files; one consideration is knowing that page numbers can often be easily added to InDesign files if not already present.
 
 _If_ a title's sources are within InDesign files and don't have any sort of page divisions, you can eliminate the tedious task of later manually entering page numbers by using the process outlined in the video below. 
@@ -28,6 +29,7 @@ _If_ a title's sources are within InDesign files and don't have any sort of page
 <hr />
 
 ### handle-ocr
+
 The handle-ocr script helps bridge the gap between the work of the OCR team and our development process. Files from OCR are usually exported in a .docx format, and handle-ocr will convert these .docx files into html markup. 
 
 The script operates on a folder/directory, so usually it's best to create a folder within your projects `src` directory, and insert the .docx files there. 
@@ -37,6 +39,8 @@ Then, from the command line, `cd` into the folder containing the .docx file(s), 
 <hr />
 
 ### split-files
+
+The **split-files ** script is a powerful one that will, based on markup you enter in the source xml/html/xhtml file(s), split the content into a file structure that aligns with our team's styleguide. It's often worthwhile to double/triple check markup before running this script and continuing with development.
 
 [split-files (node)](https://github.com/bhdirect-ebooks/split-files)
 How to use:
