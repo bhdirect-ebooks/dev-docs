@@ -5,8 +5,8 @@ title: Dev Process Overview
 
 ### A. Start the project
 
-1. [Project Admin](project_admin.html)
-2. [Project Scaffolding](proj_scaffold.html)
+1. [Project Admin](https://style.bhdirect-ebooks.org/process/project_admin.html)
+2. [Project Scaffolding](https://style.bhdirect-ebooks.org/process/project_admin.html)
 
 ### B. Create EPUB directory
 
