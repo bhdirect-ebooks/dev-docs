@@ -1,9 +1,9 @@
 ---
 title: Convert & Upload
 ---
-Once a title has made it through the entire development process and has passed peer review, congrats! It's time to convert and upload files so that they are available in Wordsearch and <https://app.wordsearchbible.com/>.
+Once a title has made it through the entire development process and has passed peer review, congrats! It's time to convert and upload files so that they are one step closer to availability in Wordsearch and <https://app.wordsearchbible.com/>.
 
-## Navigating the Upload Process nn VMWare (Windows)
+## Navigating the Upload Process in VMWare (Windows)
 
 Running _**npm run build**_ on the Mac-side command line (in the project folder of your book title) will add new directories and files to your project directory, and all these files are important for the conversion/upload process.
 
