@@ -18,6 +18,8 @@ Working in the VMWare environment can be a bit tricky. Below are a few steps for
 * user: admin@msb.com
 * pass: godspow3r
 
+(In the even that VMWare locks up, it often helps to log out of VPN, and redo the steps above).
+
 <hr />
 
 ## The Basic Upload Process
