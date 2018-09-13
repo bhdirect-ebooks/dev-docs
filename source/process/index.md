@@ -46,6 +46,7 @@ title: Dev Process Overview
 * [Page breaks](../code/structural_types.html#Page-Breaks)
 * [Scripture references](scripture.html)
 * [Footnotes](footnotes.html)
+* TOC (Table of Contents)
 * [Indexes](indexes.html)
 * [Abbreviations](abbr.html)
 * [Videos](videos.html)
@@ -65,7 +66,6 @@ title: Dev Process Overview
   * [LESSONmaker markup](../code/data_types.html#LESSONmaker-Content)
 * Date-aligned works
   * [Date context](../code/data_types.html#Date-Context)
-* TOC (Table of Contents)
 
 <hr>
 
