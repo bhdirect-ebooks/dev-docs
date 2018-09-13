@@ -1,5 +1,5 @@
 ---
-title: 'TOC (Table of Contents): Using Buildtoc'
+title: 'TOC (Table of Contents): Using buildtoc'
 ---
 The TOC (Table of Contents) resides in the OEBPS directory of an EPUB, and allows users to glance over the parts, chapters, and other features of that particular title. 
 
