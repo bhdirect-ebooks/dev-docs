@@ -40,7 +40,7 @@ Then, from the command line, `cd` into the folder containing the .docx file(s), 
 
 ### split-files
 
-The **split-files ** script is a powerful one that will, based on markup you enter in the source xml/html/xhtml file(s), split the content into a file structure that aligns with our team's styleguide. It's often worthwhile to double/triple check markup before running this script and continuing with development (it can be time-consuming to fix structural errors). This is a step where content can mysteriously disappear with mistakes.
+The **split-files ** script is a powerful one that will, based on markup you enter in the source xml/html/xhtml file(s), split the content into a file structure that aligns with our team's styleguide. It's often worthwhile to double/triple check markup before running this script and continuing with development (it can be time-consuming to fix structural errors). This is also a step where content can mysteriously disappear with mistakes.
 
 \*Developer tip: If using numbers in file names to correctly order files for this process, it's important to use leading zeroes (the machines will think that '10' comes right after '1'). Instead, use '01, 02, 04, etc' when adding numbers to a file's name prior to splitting.
 
