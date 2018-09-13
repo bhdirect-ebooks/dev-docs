@@ -1,13 +1,12 @@
 ---
 title: Dev Process Overview
 ---
-
 ## I. Prep
 
 ### A. Start the project
 
-1. [Project Admin](project_admin.html)
-1. [Project Scaffolding](proj_scaffold.html)
+1. [Project Admin](https://style.bhdirect-ebooks.org/process/project_admin.html)
+2. [Project Scaffolding](https://style.bhdirect-ebooks.org/process/project_admin.html)
 
 ### B. Create EPUB directory
 
@@ -47,11 +46,11 @@ title: Dev Process Overview
 * [Page breaks](../code/structural_types.html#Page-Breaks)
 * [Scripture references](scripture.html)
 * [Footnotes](footnotes.html)
+* TOC (Table of Contents)
 * [Indexes](indexes.html)
 * [Abbreviations](abbr.html)
 * [Videos](videos.html)
 * [Glossary](glossary.html)
-
 * Commentaries
   * [Scripture context](../code/data_types.html#Scripture-Context)
 * Workbooks/Studies
