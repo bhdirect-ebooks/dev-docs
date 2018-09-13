@@ -5,7 +5,11 @@ Pagebreaks, besides mimicking the physical pages of a book, are necessary for so
 
 ## page-lister
 
-The **page-lister** script will search for all the pagebreaks in an epub that [have been formatted per our style guide](https://style.bhdirect-ebooks.org/code/structural_types.html#Page-Breaks), and create a list of links in the .toc file below the toc markup. Like Table of Contents, the page list is wrapped in nav tags with this markup:  
+The **page-lister** script will search for all the pagebreaks in an epub that [have been formatted per our style guide](https://style.bhdirect-ebooks.org/code/structural_types.html#Page-Breaks), and create a list of links in the .toc file below the toc markup. 
+
+Using page-lister is pretty simple. Within the epub directory on the command line, run `page-lister`, and it will either insert a page list where there wasn't one, or replace a previous page list with a new one.
+
+Like Table of Contents, the page list is wrapped in nav tags with this markup:  
 
 `<nav epub:type="page-list">` ... `</nav>`
 
