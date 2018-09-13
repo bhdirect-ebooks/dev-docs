@@ -26,7 +26,7 @@ Working in the VMWare environment can be a bit tricky. Below are a few steps for
 
 **2. **With the project directory (Mac-side), run **`update-project`** _(**purpose**: this will update a project's metadata and other pertinent details_).
 
-**3. **While still in the project directory(Mac-side), run **`npm run build`** in the command line _(**purpose**: this script builds, from the EPUB, a variety of files which are necessary for upload and distribution in Lifeway's platforms)_. 
+**3. **While still in the project directory (Mac-side), run **`npm run build`** in the command line _(**purpose**: this script builds, from the EPUB, a variety of files which are necessary for upload and distribution in Lifeway's platforms)_. 
 
 **4. **\[Follow steps above to open/log-in properly to VMWare]
 
