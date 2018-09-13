@@ -1,5 +1,5 @@
 ---
-title: Page Breaks and the Page List
+title: 'Page Breaks, the Page List, and Using page-lister'
 ---
 Pagebreaks, besides mimicking the physical pages of a book, are necessary for some important functionality within an EPUB (namely, for indexes, the toc, and other internal linking).
 
