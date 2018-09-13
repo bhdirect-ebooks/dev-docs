@@ -23,8 +23,8 @@ Keep in mind that a TOC's elements **need to have labeled parts: **
 
 **Correctly Labeled Chapters/Appendices:**
 
-![](/assets/images/uploads/screen-shot-2018-09-13-at-10.12.30-am.png)
+![null](/assets/images/uploads/screen-shot-2018-09-13-at-10.12.30-am.png)
 
 **Lacking Appropriate Chapter Labels:**
 
-![](/assets/images/uploads/screen-shot-2018-09-13-at-10.16.35-am.png)
+![null](/assets/images/uploads/screen-shot-2018-09-13-at-10.16.35-am.png)
