@@ -27,6 +27,5 @@ Working in the VMWare environment can be a bit tricky. Below are a few steps for
 4. And finally, open the browser (Windows-side) and use your sign in credentials to sign in to: [lifeway.okta.com](https://lifeway.okta.com/)
 5. Finally, sign (Windows-side) into to the <https://app.wordsearchbible.com> with these credentials: 
 
-\    user: admin@msb.com
-
-\    pass: godspow3r
+* user: admin@msb.com
+* pass: godspow3r
