@@ -22,25 +22,27 @@ Working in the VMWare environment can be a bit tricky. Below are a few steps for
 
 ## The Basic Upload Process
 
-1.  In the command line ("Mac-side"), `cd` into project (must be in `~/Documents/EPUB Projects/[project-name]`)
-2. With the project directory (Mac-side), run **`update-project`** _(**purpose**: this will update a project's metadata and other pertinent details_).
-3. While still in the project directory(Mac-side), run **`npm run build`** in the command line _(**purpose**: this script builds, from the EPUB, a variety of files which are necessary for upload and distribution in Lifeway's platforms)_. 
-4. \[Follow steps above to open/log-in properly to VMWare]
-5. Within the VMWare (or "Windows-side"), open the command line and `cd` into the project directory. Run **`npm run compile`. **
+**1. **In the command line ("Mac-side"), `cd` into project (must be in `~/Documents/EPUB Projects/[project-name]`)
 
+**2. **With the project directory (Mac-side), run **`update-project`** _(**purpose**: this will update a project's metadata and other pertinent details_).
 
+**3. **While still in the project directory(Mac-side), run **`npm run build`** in the command line _(**purpose**: this script builds, from the EPUB, a variety of files which are necessary for upload and distribution in Lifeway's platforms)_. 
 
-	In Windows (VMware Fusion), cd into project (must be root project folder \[shortname]), 
-npm run compile
-	Review in Wordsearch (be connected to the VPN)
-		Make any necessary changes (i.e. headings) in the dev folder. 
-Then run (on Mac) “npm run build” & (in Windows) “npm run compile” again.
-	Still in Windows, at the root project folder, npm run moveit
-		(copies all needed compiler files from WS Library to project folder)
-	Back on the Mac side, npm run upload
-	Make sure to push when you finish.
+**4. **\[Follow steps above to open/log-in properly to VMWare]
 
-## Normal
+**5a. **Within the VMWare (or "Windows-side"), open the command line and `cd` into the project directory. Run **`npm run compile`. **Next, open the title in Wordsearch and check for heading/structure/markup issues. _(**purpose**: this takes the 'cross' files created from 'npm run build' and compiles them for use as a Wordsearch title)_.
+
+** 5b.** (Skip this step if there were no issues with the title in Wordsearch). If needed, make necessary changes on the Mac-side in the /dev folder, and then repeat (Mac-side) **`npm run build`**, then (Windows-side) **`npm run compile`, **and re-check the title.
+
+When the title looks good in Wordsearch on the Windows-side, you can...
+
+**6. **Run **`npm run moveit`** within the Windows-side project directory.
+
+**7.** And then back on the Mac-side in the project directory, run **`npm run upload`** so that the files are moved to Content Platform and the Wordsearch library.
+
+<hr />
+
+## The process in action...
 
 The video below gives a play-by-play of a typical conversion & upload.
 
