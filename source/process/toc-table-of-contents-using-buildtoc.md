@@ -3,7 +3,9 @@ title: 'TOC (Table of Contents): Using buildtoc'
 ---
 The TOC (Table of Contents) resides in the OEBPS directory of an EPUB, and allows users to glance over the parts, chapters, and other features of that particular title. 
 
-The general markup of the TOC can be found [here](https://style.bhdirect-ebooks.org/code/navigation.html#Table-of-Contents):
+The general markup of the TOC can be found [here](https://style.bhdirect-ebooks.org/code/navigation.html#Table-of-Contents).
+
+<hr />
 
 ## buildtoc
 
