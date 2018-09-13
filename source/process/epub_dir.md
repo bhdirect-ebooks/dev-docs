@@ -30,11 +30,11 @@ _If_ a title's sources are within InDesign files and don't have any sort of page
 
 ### handle-ocr
 
-The **handle-ocr** script helps bridge the gap between the work of the OCR team and our development process. Files from OCR are usually exported in a .docx format, and handle-ocr will convert these .docx files into html markup. 
+The **handle-ocr** script helps bridge the gap between the work of the OCR team and our development process. Files from OCR are usually exported in a .docx format, and **handle-ocr** will convert these .docx files into html markup. 
 
 The script operates on a folder/directory, so usually it's best to create a folder within your project's `src` directory, and insert the .docx files there. 
 
-Then, from the command line, `cd` into the folder containing the .docx file(s), and run `handle-ocr`. You should find a new html file within that same folder, and is available to be copied and prepped for the **split-files** script.
+Then, from the command line, `cd` into the folder containing the .docx file(s), and run `handle-ocr`. You should find a new html file within that same folder, and is available to be copied and prepped for **split-files** scripting.
 
 <hr />
 
