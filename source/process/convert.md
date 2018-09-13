@@ -1,21 +1,9 @@
 ---
 title: Convert & Upload
 ---
-This is how we publish content right here. Oh yeah.
+Once a title has made it through the entire development process and has passed peer review, congrats! It's time to convert and upload files so that they are available in Wordsearch and <https://app.wordsearchbible.com/>.
 
-## Normal
-
-[Notes](https://docs.google.com/document/d/1SKd2fDSqLkvqHil_4lCacR8y5F0ms-JzYy308O7D2sg/edit#heading=h.oe8txcg3fgbe)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DTfFtJwO3FY" frameborder="0" allowfullscreen></iframe>
-
-## Partial
-
-Occasionally you may need to upload an additional title/volume to a set which was previously converted & uploaded. The video below details steps to take in that instance.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/G3udL6Rrkco" frameborder="0" allowfullscreen></iframe>
-
-## Navigating the Upload Process on VMWare (Windows)
+## Navigating the Upload Process nn VMWare (Windows)
 
 Running _**npm run build**_ on the Mac-side command line (in the project folder of your book title) will add new directories and files to your project directory, and all these files are important for the conversion/upload process.
 
@@ -29,3 +17,19 @@ Working in the VMWare environment can be a bit tricky. Below are a few steps for
 
 * user: admin@msb.com
 * pass: godspow3r
+
+## Normal
+
+This video below gives a play-by-play of h
+
+[Notes](https://docs.google.com/document/d/1SKd2fDSqLkvqHil_4lCacR8y5F0ms-JzYy308O7D2sg/edit#heading=h.oe8txcg3fgbe)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DTfFtJwO3FY" frameborder="0" allowfullscreen></iframe>
+
+## Partial
+
+Occasionally you may need to upload an additional title/volume to a set which was previously converted & uploaded. The video below details steps to take in that instance.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G3udL6Rrkco" frameborder="0" allowfullscreen></iframe>
+
+##
