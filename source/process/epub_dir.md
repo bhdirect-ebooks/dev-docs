@@ -16,9 +16,9 @@ An important step in developing an epub is to **carefully examine the source doc
 
 ### InDesign Files
 
-If a title's sources are within InDesign files and don't have any sort of page divisions, you can eliminate the tedious task of manually entering page numbers by using the process outlined in the video below. 
+_If_ a title's sources are within InDesign files and don't have any sort of page divisions, you can eliminate the tedious task of later manually entering page numbers by using the process outlined in the video below. 
 
-**Beware!** This process must be done before any other development is done on the source files.
+\*\*\*Beware!\*\*\* This process must be done before any other development is done on the source files.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2X63u0LA2n8" frameborder="0" allowfullscreen></iframe>
 
