@@ -19,6 +19,8 @@ Example of running **buildtoc** in the command line (in the EPUB directory) with
 buildtoc -1
 ```
 
+<hr />
+
 ## TOC Labels
 
 Keep in mind that a TOC's elements **need to have labeled parts: **
