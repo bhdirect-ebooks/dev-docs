@@ -11,11 +11,13 @@ This is how we publish content right here. Oh yeah.
 
 ## Partial
 
+Occasionally you may need to upload a title/volume to a set which has been previously converted & uploaded. The video below details steps to take in that instance.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/G3udL6Rrkco" frameborder="0" allowfullscreen></iframe>
 
 ## Navigating the Upload Process on VMWare (Windows)
 
-Running _**npm run build**_ on the Mac-side command line (in the project folder of your book title) will add new directories and files to your project directory, and all these files are important for the conversion/upload process.
+Running **_npm run build_** on the Mac-side command line (in the project folder of your book title) will add new directories and files to your project directory, and all these files are important for the conversion/upload process.
 
 Working in the VMWare environment can be a bit tricky. Below are a few steps for avoiding obstacles that deal with permissions and other scripting requirements.
 
