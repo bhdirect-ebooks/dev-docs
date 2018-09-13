@@ -14,7 +14,10 @@ An important step in developing an epub is to **carefully examine the source doc
 
 ## Tools/Scripts for Working with Source Documents
 
-### InDesign Files
+<hr />
+
+### InDesign Files (Exporting & Using PageStaker to Insert Page Numbers)
+Should your source files be in InDesign, you can view the video below on exporting from InDesign. At times you may have a choice between InDesign and other files; one consideration is knowing that page numbers can often be easily added to InDesign files if not already present.
 
 _If_ a title's sources are within InDesign files and don't have any sort of page divisions, you can eliminate the tedious task of later manually entering page numbers by using the process outlined in the video below. 
 
@@ -32,6 +35,7 @@ The script operates on a folder/directory, so usually it's best to create a fold
 Then, from the command line, `cd` into the folder containing the .docx file(s), and run `handle-ocr`. You should find a new html file within that same folder, and is available to be copied and prepped for the **split-files** script.
 
 <hr />
+
 ### split-files
 
 [split-files (node)](https://github.com/bhdirect-ebooks/split-files)
