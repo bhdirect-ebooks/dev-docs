@@ -24,4 +24,9 @@ Working in the VMWare environment can be a bit tricky. Below are a few steps for
 1. First, before opening VWWare, log into the Cisco AnyConnect VPN on your Mac-side.
 2. Next, open the VMWare environment (for setting up VMWare and other Windows-side programs, check this [Google Doc](https://docs.google.com/document/d/1FCB8IKsH9g0CzzPEqyoobgxX2euKk-bVAxDnywGRIuA/edit?usp=sharing)).
 3. Next, sign in to the Windows-side CiscoAnyConnect.
-4. And finally, open the browser and use your sign in credentials to sign in to: [lifeway.okta.com](https://lifeway.okta.com/)
+4. And finally, open the browser (Windows-side) and use your sign in credentials to sign in to: [lifeway.okta.com](https://lifeway.okta.com/)
+5. Finally, sign (Windows-side) into to the <https://app.wordsearchbible.com> with these credentials: 
+
+\    user: admin@msb.com
+
+\    pass: godspow3r
