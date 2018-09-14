@@ -66,6 +66,7 @@ process:
     nav: nav_doc.html
   enhance:
     pagebreak: page_break.html
+    toc_formatting: toc-table-contents-using-buildtoc.html
     scripture: scripture.html
     footnotes: footnotes.html
     indexes: indexes.html
@@ -73,6 +74,7 @@ process:
     videos: videos.html
     glossary: glossary.html
     special: special_types.html
+    
   qa:
     review: review.html
     convert: convert.html
