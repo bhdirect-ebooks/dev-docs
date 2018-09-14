@@ -85,7 +85,7 @@ sidebar:
     nav: Navigation Doc
     enhance: Enhance
     pagebreak: Page Breaks
-    toc_formatting: TOC Formatting
+    toc_formatting: TOC Formatting & buildtoc
     scripture: Scripture References
     footnotes: Footnotes
     indexes: Indexes
