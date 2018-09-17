@@ -5,7 +5,7 @@ title: Dev Process Overview
 
 ## Tools
 
-[Setting Up Your Machine and Software Tools](https://style.bhdirect-ebooks.org/tools-setting-your-machine-and-software)
+[Setting Up Your Machine](https://style.bhdirect-ebooks.org/tools-setting-your-machine-and-software)
 
 <hr />
 
