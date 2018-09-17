@@ -7,13 +7,13 @@ title: 'Tools: Setting Up Your Machine'
 
 ## Adobe (InDesign & Photoshop) 
 
-Adobe InDesign is a common publishing software, and Photoshop has many capabilities for making quality images for our ebooks. Download in Self Service (in your Applications directory).  Click here for setup...
+Adobe InDesign is a common publishing software, and Photoshop has many capabilities for making quality images for our ebooks. Download from Self Service (in your Applications directory).  Click here for setup...
 
 <hr />
 
 ## BBEdit
 
-BBEdit is a source code editor that is particular good for use with regular expressions (regexes). **Download**: <https://drive.google.com/open?id=1hcnwOtWHRd6O7dBtWZXqZ6w27VcDQFWq> Click here for setup...
+BBEdit is a source code editor that is particular good for use with regular expressions (regexes). **Download (v.11.6.6)**: <https://drive.google.com/open?id=1hcnwOtWHRd6O7dBtWZXqZ6w27VcDQFWq> Click here for setup...
 
 <hr />
 
@@ -31,7 +31,7 @@ This app converts unzips an epub into html file directory or, you guessed it, zi
 
 ## MacOS
 
-Macs have a lot of great features... check out set up options
+Macs have a lot of great features, check out shortcuts and set up options
 
 <hr />
 
@@ -40,6 +40,10 @@ Macs have a lot of great features... check out set up options
 Node.js is a JavaScript run-time environment. Essentially, Node.js allows for JavaScript to be used elsewhere besides the browser. In epub development, that means JS scripts can read and edit local epub directories. Click here for setup...
 
 <hr />
+
+## Script Editor 
+
+_(Apple scripts) _Script Editor comes with MacOS (Applications > Utilities), and is used to edit Applescripts. Applescripts are slowly being deprecated from our development team, but some are still in use (and are very helpful).
 
 ## Self Service
 
