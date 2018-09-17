@@ -1,5 +1,5 @@
 ---
-title: 'Tools: Setting Your Machine and Software'
+title: 'Tools: Setting Up Your Machine'
 ---
 <hr />
 
