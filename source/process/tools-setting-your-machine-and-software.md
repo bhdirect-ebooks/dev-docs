@@ -7,13 +7,13 @@ title: 'Tools: Setting Up Your Machine'
 
 ## Adobe (InDesign & Photoshop) 
 
-Adobe InDesign is a common publishing software, and Photoshop has many capabilities for making quality images for our ebooks.  Click here for setup...
+Adobe InDesign is a common publishing software, and Photoshop has many capabilities for making quality images for our ebooks. Download in Self Service (in your Applications directory).  Click here for setup...
 
 <hr />
 
 ## BBEdit
 
-BBEdit is a source code editor that is particular good for use with regular expressions (regexes). Click here for setup...
+BBEdit is a source code editor that is particular good for use with regular expressions (regexes). **Download**: <https://drive.google.com/open?id=1hcnwOtWHRd6O7dBtWZXqZ6w27VcDQFWq> Click here for setup...
 
 <hr />
 
@@ -25,7 +25,7 @@ This is a great app that checks epub according to EPUB 3 specs, and lets you kno
 
 ## ePub Zip/Unzip 2.0.1
 
-This app converts unzips an epub into html file directory or, you guessed it, zips up an html epub directory into an epub file . Click here for setup...
+This app converts unzips an epub into html file directory or, you guessed it, zips up an html epub directory into an epub file. **Download**: <https://drive.google.com/open?id=15TssIvYh1140EIhs7jyTRSS-ewWy72J1> Move the app to your screen's dock, and then just drag epub folders or files onto it. Converted files should be in your Download folder.
 
 <hr />
 
@@ -57,4 +57,4 @@ VMWare allows Windows to be run on a Mac as a virtual machine (without rebooting
 
 ## VSCode
 
-VSCode is a powerful, free source code editor by Windows. Click here for setup...
+VSCode is a powerful, free source code editor by Windows. **Download**: <https://code.visualstudio.com/download> Click here for setup...
