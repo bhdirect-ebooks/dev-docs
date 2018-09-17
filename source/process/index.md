@@ -1,6 +1,14 @@
 ---
 title: Dev Process Overview
 ---
+<hr />
+
+## Tools
+
+Setting Up Your Machine and Software Tools
+
+<hr />
+
 ## I. Prep
 
 ### A. Start the project
