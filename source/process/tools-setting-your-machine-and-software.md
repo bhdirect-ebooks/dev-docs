@@ -7,13 +7,13 @@ title: 'Tools: Setting Up Your Machine'
 
 ## A Better Finder Rename
 
-This app allows you to quickly rename a batch of files, in a variety of ways. You should be able to find it in Self Service (in your Applications directory).
+This app allows you to quickly rename a batch of files, in a variety of ways. **Download **from Self Service (in your Applications directory).
 
 <hr />
 
 ## Adobe (InDesign & Photoshop) 
 
-Adobe InDesign is a common publishing software, and Photoshop has many capabilities for making quality images for our ebooks. Download from Self Service (in your Applications directory).  Click here for setup...
+Adobe InDesign is a common publishing software, and Photoshop has many capabilities for making quality images for our ebooks. **Download** from Self Service (in your Applications directory).  Click here for setup...
 
 <hr />
 
@@ -25,7 +25,7 @@ BBEdit is a source code editor that is particular good for use with regular expr
 
 ## EPUB-Checker
 
-This is a great app that checks epub according to EPUB 3 specs, and lets you know if it's valid or has issues. Click here for setup...
+This is a great app that checks epub according to EPUB 3 specs, and lets you know if it's valid or has issues. Download here <https://www.pagina.gmbh/produkte/epub-checker/#c776> Click here for setup...
 
 <hr />
 
