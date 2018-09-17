@@ -51,6 +51,8 @@ Node.js is a JavaScript run-time environment. Essentially, Node.js allows for Ja
 
 _(Apple scripts) _Script Editor comes with MacOS (Applications > Utilities), and is used to edit Applescripts. Applescripts are slowly being deprecated from our development team, but some are still in use (and are very helpful).
 
+<hr />
+
 ## Self Service
 
 Self Service allows you to download some apps common to the Lifeway organization. It should be listed under the Applications folder of your machine. 
