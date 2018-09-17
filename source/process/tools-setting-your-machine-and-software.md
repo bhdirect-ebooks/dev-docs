@@ -19,7 +19,7 @@ BBEdit is a source code editor that is particular good for use with regular expr
 
 ## MacOS
 
-Mac's have a lot of great features... check out set up options. Click here for setup...
+Macs have a lot of great features... check out set up options...
 
 <hr />
 
