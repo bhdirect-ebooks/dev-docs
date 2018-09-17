@@ -5,6 +5,12 @@ title: 'Tools: Setting Up Your Machine'
 
 <hr />
 
+## A Better Finder Rename
+
+This app allows you to quickly rename a batch of files, in a variety of ways. You should be able to find it in Self Service (in your Applications directory).
+
+<hr />
+
 ## Adobe (InDesign & Photoshop) 
 
 Adobe InDesign is a common publishing software, and Photoshop has many capabilities for making quality images for our ebooks. Download from Self Service (in your Applications directory).  Click here for setup...
