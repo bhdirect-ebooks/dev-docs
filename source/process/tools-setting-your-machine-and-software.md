@@ -41,7 +41,7 @@ BBEdit is a source code editor that is particular good for use with regular expr
 
 ## EPUB-Checker
 
-This is a great app that checks epub according to EPUB 3 specs, and lets you know if it's valid or has issues. Download here <https://www.pagina.gmbh/produkte/epub-checker/#c776> Click here for setup...
+This app checks epubs according to EPUB 3 specs, and you of issues. Download here <https://www.pagina.gmbh/produkte/epub-checker/#c776> Click here for setup...
 
 <hr />
 
