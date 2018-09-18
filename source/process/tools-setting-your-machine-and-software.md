@@ -11,7 +11,7 @@ This app allows you to quickly rename a batch of files, in a variety of ways. **
 
 <hr />
 
-## Adobe (InDesign & Photoshop) 
+## Adobe (InDesign & Photoshop)
 
 Adobe InDesign is a common publishing software, and Photoshop has many capabilities for making quality images for our ebooks. **Download** from Self Service (in your Applications directory).  Click here for setup...
 
@@ -37,19 +37,19 @@ This app converts unzips an epub into html file directory or, you guessed it, zi
 
 ## MacOS
 
-Macs have a lot of great features, check out shortcuts and set up options
+Macs have a lot of great features, check out: shortcuts and set up options.
 
 <hr />
 
 ## Node.js
 
-Node.js is a JavaScript run-time environment. Essentially, Node.js allows for JavaScript to be used elsewhere besides the browser. In epub development, that means JS scripts can read and edit local epub directories. Click here for setup...
+Node.js is a JavaScript run-time environment. Essentially, Node.js allows for JavaScript to be used elsewhere besides the browser. In epub development, that means JS scripts can read and edit local epub directories. Click here to learn more...
 
 <hr />
 
-## Script Editor 
+## Script Editor
 
-_(Apple scripts) _Script Editor comes with MacOS (Applications > Utilities), and is used to edit Applescripts. Applescripts are slowly being deprecated from our development team, but some are still in use (and are very helpful).
+_(Apple scripts)_ Script Editor comes with MacOS (Applications > Utilities), and is used to edit Applescripts. Applescripts are slowly being deprecated from our development team, but some are still in use (and are very helpful).
 
 <hr />
 
@@ -57,7 +57,7 @@ _(Apple scripts) _Script Editor comes with MacOS (Applications > Utilities), and
 
 Self Service allows you to download some apps common to the Lifeway organization. It should be listed under the Applications folder of your machine. 
 
-![](/assets/images/uploads/screen-shot-2018-09-17-at-4.02.29-pm.png)
+![null](/assets/images/uploads/screen-shot-2018-09-17-at-4.02.29-pm.png)
 
 <hr />
 
