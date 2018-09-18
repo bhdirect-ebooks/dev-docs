@@ -3,6 +3,22 @@ title: 'Tools: Setting Up Your Machine'
 ---
 <hr />
 
+## A New Machine
+
+Steps for setting up a new machine
+
+<hr />
+
+<hr />
+
+<hr />
+
+_Below are a number of apps commonly used in our development process_
+
+<hr />
+
+<hr />
+
 <hr />
 
 ## A Better Finder Rename
@@ -13,7 +29,7 @@ This app allows you to quickly rename a batch of files, in a variety of ways. **
 
 ## Adobe (InDesign & Photoshop)
 
-Adobe InDesign is a common publishing software, and Photoshop has many capabilities for making quality images for our ebooks. **Download** from Self Service (in your Applications directory).  Click here for setup...
+Adobe InDesign is a common publishing software suite, and Photoshop has many capabilities for making quality images for our ebooks. **Download** from Self Service (in your Applications directory).  Click here for setup...
 
 <hr />
 
