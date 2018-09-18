@@ -1,6 +1,14 @@
 ---
 title: Dev Process Overview
 ---
+<hr />
+
+## Tools
+
+[Setting Up Your Machine](https://style.bhdirect-ebooks.org/tools-setting-your-machine-and-software)
+
+<hr />
+
 ## I. Prep
 
 ### A. Start the project
@@ -46,7 +54,7 @@ title: Dev Process Overview
 * [Page breaks](../code/structural_types.html#Page-Breaks)
 * [Scripture references](scripture.html)
 * [Footnotes](footnotes.html)
-* TOC (Table of Contents)
+* [TOC (Table of Contents)](https://style.bhdirect-ebooks.org/process/toc-table-of-contents-using-buildtoc.html)
 * [Indexes](indexes.html)
 * [Abbreviations](abbr.html)
 * [Videos](videos.html)
