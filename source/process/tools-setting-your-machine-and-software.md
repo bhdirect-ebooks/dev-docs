@@ -1,9 +1,9 @@
 ---
-title: 'Tools: Setting Up Your Machine'
+title: Tools For Development
 ---
 <hr />
 
-## A New Machine
+## New Computer Setup
 
 Steps for setting up a new machine
 
@@ -27,9 +27,9 @@ This app allows you to quickly rename a batch of files, in a variety of ways. **
 
 <hr />
 
-## Adobe (InDesign & Photoshop)
+## Adobe (InDesign, Photoshop, & Reader)
 
-Adobe InDesign is a common publishing software suite, and Photoshop has many capabilities for making quality images for our ebooks. **Download** from Self Service (in your Applications directory).  Click here for setup...
+Adobe InDesign is a common publishing software suite, and Photoshop has many capabilities for making quality images for our ebooks. **Download** from Self Service (in your Applications directory).  Click for: InDesign tips - Photoshop tips - Reader tips
 
 <hr />
 
@@ -60,6 +60,12 @@ Macs have a lot of great features, check out: shortcuts and set up options.
 ## Node.js
 
 Node.js is a JavaScript run-time environment. Essentially, Node.js allows for JavaScript to be used elsewhere besides the browser. In epub development, that means JS scripts can read and edit local epub directories. Click here to learn more...
+
+<hr />
+
+## Preview
+
+Preview is Mac's onboard image viewer. Check here for some tips on using it.
 
 <hr />
 
