@@ -19,9 +19,7 @@ When creating markup, there are two broad categories of questions:
 
 ## WORKBOOK Enhancements (In Content Platform)
 
-For some initial steps for creating Workbook Enhancements, try checking out this [Google Doc](https://docs.google.com/document/d/1PHt7vAiTYnLbqnVne_HH8RrRO16PZGkagGWd8FLG7W8/edit?usp=sharing).
-
-
+For some initial steps in creating Workbook Enhancements, try checking out this [Google Doc](https://docs.google.com/document/d/1PHt7vAiTYnLbqnVne_HH8RrRO16PZGkagGWd8FLG7W8/edit?usp=sharing).
 
 ## Recommended Code
 
