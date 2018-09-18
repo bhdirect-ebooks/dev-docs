@@ -17,8 +17,6 @@ Steps for setting up a new machine
 
 ## Apps in our Ebook Development Process
 
-
-
 <hr />
 
 <hr />
