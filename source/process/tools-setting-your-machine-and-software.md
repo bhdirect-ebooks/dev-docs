@@ -27,7 +27,7 @@ Steps for setting up a new machine
 
 ### A Better Finder Rename
 
-This app allows you to quickly rename a batch of files, in a variety of ways. It's very helpful if you need to alter the structure of your chapters/parts in a /text directory of an epub. **Download **from Self Service (in your Applications directory).
+This app allows you to quickly rename a batch of files, in a variety of ways. It's very helpful if you need to alter the filenames in a /text directory of an epub. **Download **from Self Service (in your Applications directory).
 
 <hr />
 
