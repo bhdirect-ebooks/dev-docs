@@ -9,7 +9,7 @@ The general markup of the TOC can be found [here](https://style.bhdirect-ebooks.
 
 ## buildtoc
 
-For the developer, the **buildtoc**  script removes much toil from creating the TOC file, creating links to the various part/chapter file chapters in the /text directory of the OEBPS folder.
+For the developer, the **buildtoc**  script removes much toil from creating the TOC file, creating links to the various files in the /text directory of the OEBPS folder.
 
 The **buildtoc** script is contained within the @bhdirect/toolkit  node bundle, and specific instructions for using it can be found here: <https://www.npmjs.com/package/@bhdirect/buildtoc> (you will need to be logged in to you npmjs.org account that has been linked to the @bhdirect team repo).
 
