@@ -1,6 +1,7 @@
 ---
 title: Dictionaries & Encyclopedias
 ---
+<hr />
 
 ## Dictionary File Naming
 
@@ -8,26 +9,28 @@ For our team, follow the normal file naming conventions for any dictionary/encyc
 
 As an example:
 
-* ExampleDict02\_body001\_part01.xhtml
-* ExampleDict02\_body002\_entry001.xhtml
-* ExampleDict02\_body003\_entry002.xhtml
-* ExampleDict02\_body004\_entry003.xhtml
+* ExampleDict02_body001_part01.xhtml
+* ExampleDict02_body002_entry001.xhtml
+* ExampleDict02_body003_entry002.xhtml
+* ExampleDict02_body004_entry003.xhtml
 * etc.
 
 With front matter and back matter included, it would look something like:
 
-* ExampleDict01\_front01\_cover.xhtml
-* ExampleDict01\_front02\_titlepage.xhtml
-* ExampleDict01\_front03\_copyright-page.xhtml
+* ExampleDict01_front01_cover.xhtml
+* ExampleDict01_front02_titlepage.xhtml
+* ExampleDict01_front03_copyright-page.xhtml
 * etc.
-* ExampleDict02\_body001\_part01.xhtml
-* ExampleDict02\_body002\_entry001.xhtml
-* ExampleDict02\_body003\_entry002.xhtml
-* ExampleDict02\_body004\_entry003.xhtml
+* ExampleDict02_body001_part01.xhtml
+* ExampleDict02_body002_entry001.xhtml
+* ExampleDict02_body003_entry002.xhtml
+* ExampleDict02_body004_entry003.xhtml
 * etc.
-* ExampleDict03\_back01\_appendix.xhtml
-* ExampleDict03\_back02\_appendix.xhtml
+* ExampleDict03_back01_appendix.xhtml
+* ExampleDict03_back02_appendix.xhtml
 * etc.
+
+<hr />
 
 ## Dictionary/Encyclopedia Metadata
 
@@ -101,6 +104,8 @@ For other dictionary subtypes, simply use the appropriate subtype code in the `m
 <meta property="dcterms:type" refines="#dict-type">encyclopedia</meta>
 ```
 
+<hr />
+
 ## Dictionary/Encyclopedia Content
 
 Dictionaries/Encyclopedias in EPUBs must follow a prescribed pattern using a set of dictionary `epub:type`s.
@@ -112,6 +117,8 @@ Each index in the work should be nested in an `dictionary` type `body`, in docum
   <!-- a collection of entries -->
 </body>
 ```
+
+
 
 ### Entries
 
@@ -128,6 +135,8 @@ The term itself is placed in `<dfn></dfn>`;
   </article>
 </body>
 ```
+
+<hr />
 
 ## Search Key Map
 
