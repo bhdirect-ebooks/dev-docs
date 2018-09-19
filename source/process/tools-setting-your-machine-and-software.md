@@ -1,8 +1,6 @@
 ---
 title: Tools For Development
 ---
-
-
 <hr /><hr />
 
 <hr />
@@ -47,7 +45,7 @@ BBEdit is a source code editor that is particular good for use with regular expr
 
 ### EPUB-Checker
 
-This app checks epubs according to EPUB 3 specs, and you of issues. Download here <https://www.pagina.gmbh/produkte/epub-checker/#c776> 
+This app checks epubs according to EPUB 3 specs, and alerts you to issues. Download here <https://www.pagina.gmbh/produkte/epub-checker/#c776> 
 
 <hr />
 
@@ -121,7 +119,7 @@ Self Service allows you to download some apps common to the Lifeway organization
 
 ### Slack
 
-For team communication, jibber jabber, and gifs. Our channel is [ _**bhdirect-ebooks.slack.com**_ ] **Download** at: <https://slack.com/downloads/osx>
+For team communication, jibber jabber, and gifs. Our channel is [ **_bhdirect-ebooks.slack.com_** ] **Download** at: <https://slack.com/downloads/osx>
 
 <hr />
 
