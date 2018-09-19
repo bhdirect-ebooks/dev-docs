@@ -1,6 +1,10 @@
 ---
 title: Tools For Development
 ---
+
+
+<hr /><hr />
+
 <hr />
 
 <img src="http://oldcomputers.net/pics/appleii-system.jpg" width="130" style="float: right" />
@@ -117,7 +121,7 @@ Self Service allows you to download some apps common to the Lifeway organization
 
 ### Slack
 
-For team communication, jibber jabber, and gifs. Our channel is [ **_bhdirect-ebooks.slack.com_** ] **Download** at: <https://slack.com/downloads/osx>
+For team communication, jibber jabber, and gifs. Our channel is [ _**bhdirect-ebooks.slack.com**_ ] **Download** at: <https://slack.com/downloads/osx>
 
 <hr />
 
@@ -152,7 +156,5 @@ and finally
 ```
 brew install zsh
 ```
-
-
 
 <div>&nbsp;</div>
