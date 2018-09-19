@@ -65,6 +65,8 @@ We use harvest for tracking time on projects. **Download** from the Apple App St
 
 ### Homebrew
 
+Homebrew is a package manager for OS that can be helpful when updating developer tools in the command line, though be forewarned, it's often best to update Node separately from Homebrew.
+
 <hr />
 
 ### LFS
