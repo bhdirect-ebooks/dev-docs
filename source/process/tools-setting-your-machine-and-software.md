@@ -71,7 +71,7 @@ Homebrew is a package manager for OS that can be helpful when updating developer
 
 ### LFS
 
-LFS allows Git directories to push/pull large files (and operates in the background when used). To install:
+LFS allows Git directories to push/pull large files (and works automatically in the background when used). To install (with Homebrew):
 
 ```
 brew install git-lfs
