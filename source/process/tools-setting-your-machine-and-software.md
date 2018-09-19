@@ -47,7 +47,7 @@ BBEdit is a source code editor that is particular good for use with regular expr
 
 ### EPUB-Checker
 
-This app checks epubs according to EPUB 3 specs, and you of issues. Download here <https://www.pagina.gmbh/produkte/epub-checker/#c776> Click here for setup...
+This app checks epubs according to EPUB 3 specs, and you of issues. Download here <https://www.pagina.gmbh/produkte/epub-checker/#c776> 
 
 <hr />
 
@@ -69,7 +69,7 @@ Homebrew is a package manager for OS that can be helpful when updating developer
 
 <hr />
 
-### LFS
+### LFS (Large File Storage)
 
 LFS allows Git directories to push/pull large files (and works automatically in the background when used). To install (with Homebrew):
 
