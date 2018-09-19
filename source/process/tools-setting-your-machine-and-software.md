@@ -65,13 +65,25 @@ We use harvest for tracking time on projects. **Download** from the Apple App St
 
 ### Homebrew
 
-Homebrew is a package manager for OS that can be helpful when updating developer tools in the command line, though be forewarned, it's often best to update Node separately from Homebrew.
+Homebrew is a package manager for OS that can be helpful when updating developer tools/programs in the command line. It's worth mentioning that it's often best to <b>install & update Node apart from Homebrew</b>.
 
 <hr />
 
 ### LFS
 
-LFS allows Git directories to push/pull large files.
+LFS allows Git directories to push/pull large files (and operates in the background when used). To install:
+
+```
+brew install git-lfs
+```
+
+then
+
+```
+git lfs install
+```
+
+That should be it, but check here for further documentation: <https://git-lfs.github.com/>
 
 <hr />
 
