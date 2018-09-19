@@ -5,9 +5,11 @@ title: Tools For Development
 
 ## New Computer Setup
 
-<img src="https://goo.gl/images/y2cd8v" />
-
 Steps for setting up a new machine
+
+<img src="http://oldcomputers.net/pics/appleii-system.jpg" />
+
+
 
 <div>&nbsp;</div>
 
