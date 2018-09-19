@@ -9,8 +9,6 @@ title: Tools For Development
 
 Steps for setting up a new machine
 
-
-
 <div>&nbsp;</div>
 
 <hr />
@@ -22,8 +20,6 @@ Steps for setting up a new machine
 ## Apps in our Ebook Development Process
 
 <hr />
-
-
 
 <div>&nbsp;</div>
 
@@ -121,7 +117,7 @@ Self Service allows you to download some apps common to the Lifeway organization
 
 ### Slack
 
-For team communication, jibber jabber, and gifs. Our channel is [ _**bhdirect-ebooks.slack.com**_ ] **Download** at: <https://slack.com/downloads/osx>
+For team communication, jibber jabber, and gifs. Our channel is [ **_bhdirect-ebooks.slack.com_** ] **Download** at: <https://slack.com/downloads/osx>
 
 <hr />
 
@@ -139,6 +135,24 @@ VSCode is a powerful, free source code editor by Windows. **Download**: <https:/
 
 ### ZSH
 
-ZSH is short for 'Z Shell', which is a Unix shell and provides a number of convenient features when using the command line. Learn more here to install...
+ZSH is short for 'Z Shell', which is a Unix shell and provides a number of convenient features when using the command line. (With Homebrew installed) Run these commands to install:
+
+```
+ruby -e "$(curl -fsSL https://raw.zshhubusercontent.com/Homebrew/install/master/install)"
+```
+
+then
+
+```
+brew doctor
+```
+
+and finally
+
+```
+brew install zsh
+```
+
+
 
 <div>&nbsp;</div>
