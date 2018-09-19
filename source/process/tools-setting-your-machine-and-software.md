@@ -55,6 +55,12 @@ This app converts unzips an epub into html file directory or, you guessed it, zi
 
 <hr />
 
+## Harvest
+
+We use harvest for tracking time on projects. **Download** from the Apple App Store.
+
+<hr />
+
 ### MacOS
 
 Macs have a lot of great features, check out: shortcuts and set up options.
@@ -84,6 +90,12 @@ _(Apple scripts)_ Script Editor comes with MacOS (Applications > Utilities), and
 Self Service allows you to download some apps common to the Lifeway organization. It should be listed under the Applications folder of your machine. 
 
 ![null](/assets/images/uploads/screen-shot-2018-09-17-at-4.02.29-pm.png)
+
+<hr />
+
+## Slack
+
+For team communication, jibber jabber, and gifs. Our channel is [ **_bhdirect-ebooks.slack.com_** ] **Download** at: <https://slack.com/downloads/osx>
 
 <hr />
 
