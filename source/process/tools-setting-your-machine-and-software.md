@@ -137,7 +137,9 @@ VSCode is a powerful, free source code editor by Windows. **Download**: <https:/
 
 ### ZSH & Oh-My-Zsh
 
-ZSH is short for 'Z Shell', which is a Unix shell and provides a number of convenient features when using the command line. (With Homebrew installed) Run these commands to install:
+ZSH is short for 'Z Shell', which is a Unix shell and provides a number of convenient features when using the command line. (With Homebrew installed) 
+
+_To install ZSH:_
 
 ```
 ruby -e "$(curl -fsSL https://raw.zshhubusercontent.com/Homebrew/install/master/install)"
@@ -153,6 +155,12 @@ and finally
 
 ```
 brew install zsh
+```
+
+_To install Oh-My-Zsh:_
+
+```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 <div>&nbsp;</div>
