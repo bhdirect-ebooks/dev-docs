@@ -119,7 +119,7 @@ Self Service allows you to download some apps common to the Lifeway organization
 
 ### Slack
 
-For team communication, jibber jabber, and gifs. Our channel is [ **_bhdirect-ebooks.slack.com_** ] **Download** at: <https://slack.com/downloads/osx>
+For team communication, jibber jabber, and gifs. Our channel is [ _**bhdirect-ebooks.slack.com**_ ] **Download** at: <https://slack.com/downloads/osx>
 
 <hr />
 
@@ -139,7 +139,7 @@ VSCode is a powerful, free source code editor by Windows. **Download**: <https:/
 
 ZSH is short for 'Z Shell', which is a Unix shell and provides a number of convenient features when using the command line. (With Homebrew installed) 
 
-_To install ZSH:_
+<b>_To install ZSH:</b>_
 
 ```
 ruby -e "$(curl -fsSL https://raw.zshhubusercontent.com/Homebrew/install/master/install)"
@@ -157,7 +157,9 @@ and finally
 brew install zsh
 ```
 
-_To install Oh-My-Zsh:_
+<div>&nbsp;</div>
+
+<b>_To install Oh-My-Zsh:</b>_
 
 ```
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
