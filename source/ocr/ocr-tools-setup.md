@@ -28,3 +28,7 @@ Then click the "Show Advanced Settings button at the bottom. Make sure your sett
 ![null](/assets/images/uploads/imageadvancedsettings.png)
 
 _Languages_
+
+Typically, we want to have the first option, _Automatically select OCR languages_, selected. You can choose which languages the OCR software uses in its automatic selection and add them to the list.  The _Specify OCR languages manually_ option is for special cases in which unusual languages (such as Biblical Greek) need to be recognized.
+
+![](/assets/images/uploads/toolslanguages.png)
