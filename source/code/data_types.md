@@ -94,7 +94,7 @@ Reference types are indicated with a data attribute along with the HTML element 
 
 Scripture references use the full b.c.v notation, and just as with the Scripture context attribute, a reference to more than one verse must be b.c.v-b.c.v.
 
-**_All Scripture references in each volume must be tagged, non-orphaned and orphaned references alike._**
+_**All Scripture references in each volume must be tagged, non-orphaned and orphaned references alike.**_
 
 ```html
 <a data-ref="Gen.1.1-Gen.1.2">verses 1 and 2</a>
@@ -139,11 +139,25 @@ In Bibles (and **only** in Bibles), the words of Jesus must be tagged with the `
 <span data-speaker="Jesus">"Have you understood all these things?"</span>
 ```
 
-<aside class="warning">Words of Jesus \\`span\\` elements \\*\\*cannot be used to cover more than a single verse\\*\\*. Start a new \\`<span data-speaker="Jesus">\\` \\*\\*for every verse\\*\\*.</aside>
+<aside class="warning">Words of Jesus \\\`span\\\` elements \\\*\\\*cannot be used to cover more than a single verse\\\*\\\*. Start a new \\\`<span data-speaker="Jesus">\\\` \\\*\\\*for every verse\\\*\\\*.</aside>
+
+<div>&nbsp</div>
+
+<hr />
+
+
 
 ### LESSON<em>maker</em> Content
 
-In Bible studies, LESSON<em>maker</em> question `<li>` elements receive `data-question` or `data-panic` attributes, and each receives its `number` value.
+LESSON<em>maker</em> markup is designated for responsive devotionals or study guides that specifically focus on passages or books of Scripture.
+
+In Bible studies, LESSON<em>maker</em> question `<li>` elements receive `data-question` or `data-panic` attributes, and each receives its `number` value <em>(this number value specifies where that question is positioned in that particular list of questions)</em>.
+
+**`data-question` **questions tend to revolve more around a reader's subjective experience or connection with an idea in the text of the book.
+
+**`data-panic`** questions relate very directly to a Scripture passage, and focus on textual analysis or themes within that passage (and less related to the feelings or .
+
+
 
 ```html
 <ul>
