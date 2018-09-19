@@ -33,13 +33,13 @@ This app allows you to quickly rename a batch of files, in a variety of ways. It
 
 ### Adobe (InDesign, Photoshop, & Reader)
 
-Adobe InDesign is a common publishing software suite, and Photoshop has many capabilities for making quality images for our ebooks. **Download** from Self Service (in your Applications directory).  Click for: InDesign tips - Photoshop tips - Reader tips
+Adobe InDesign is a common publishing software suite, and Photoshop has many capabilities for making quality images for our ebooks. **Download** from Self Service (in your Applications directory).
 
 <hr />
 
 ### BBEdit
 
-BBEdit is a source code editor that is particular good for use with regular expressions (regexes). **Download (v.11.6.6)**: <https://drive.google.com/open?id=1hcnwOtWHRd6O7dBtWZXqZ6w27VcDQFWq> Click here for setup...
+BBEdit is a source code editor that is particular good for use with regular expressions (regexes). **Download (v.11.6.6)**: <https://drive.google.com/open?id=1hcnwOtWHRd6O7dBtWZXqZ6w27VcDQFWq>
 
 <hr />
 
@@ -63,7 +63,11 @@ We use harvest for tracking time on projects. **Download** from the Apple App St
 
 ### Homebrew
 
-Homebrew is a package manager for OS that can be helpful when updating developer tools/programs in the command line. It's worth mentioning that it's often best to <b>install & update Node apart from Homebrew</b>.
+Homebrew is a package manager for OS that can be helpful when updating developer tools/programs in the command line. It's worth mentioning that it's often best to <b>install & update Node apart from Homebrew</b>. Run the following in the command line to install:
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 <hr />
 
