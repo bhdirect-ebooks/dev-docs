@@ -23,9 +23,7 @@ Steps for setting up a new machine
 
 <hr />
 
-<hr />
 
-<hr />
 
 <div>&nbsp;</div>
 
