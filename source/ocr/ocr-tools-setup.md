@@ -21,8 +21,10 @@ _Image Processing_
 
 Make sure the Image Processing selections are as follows:
 
-![](/assets/images/uploads/imageprocessing.png)
+![null](/assets/images/uploads/imageprocessing.png)
 
 Then click the "Show Advanced Settings button at the bottom. Make sure your settings look like this:
 
-![](/assets/images/uploads/imageadvancedsettings.png)
+![null](/assets/images/uploads/imageadvancedsettings.png)
+
+_Languages_
