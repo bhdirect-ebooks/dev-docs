@@ -4,6 +4,7 @@ title: Tools For Development
 <hr />
 
 ## New Computer Setup
+<img href="https://goo.gl/images/y2cd8v">
 
 Steps for setting up a new machine
 
@@ -55,9 +56,21 @@ This app converts unzips an epub into html file directory or, you guessed it, zi
 
 <hr />
 
-## Harvest
+### Harvest
 
 We use harvest for tracking time on projects. **Download** from the Apple App Store.
+
+<hr />
+
+### Homebrew
+
+
+
+<hr />
+
+### LFS
+LFS allows Git directories to push/pull large files.
+
 
 <hr />
 
@@ -93,9 +106,9 @@ Self Service allows you to download some apps common to the Lifeway organization
 
 <hr />
 
-## Slack
+### Slack
 
-For team communication, jibber jabber, and gifs. Our channel is [ **_bhdirect-ebooks.slack.com_** ] **Download** at: <https://slack.com/downloads/osx>
+For team communication, jibber jabber, and gifs. Our channel is [ _**bhdirect-ebooks.slack.com**_ ] **Download** at: <https://slack.com/downloads/osx>
 
 <hr />
 
@@ -108,3 +121,7 @@ VMWare allows Windows to be run on a Mac as a virtual machine (without rebooting
 ### VSCode
 
 VSCode is a powerful, free source code editor by Windows. **Download**: <https://code.visualstudio.com/download> Click here for setup...
+
+<hr />
+
+### ZSH
