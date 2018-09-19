@@ -147,13 +147,15 @@ In Bibles (and **only** in Bibles), the words of Jesus must be tagged with the `
 
 ### LESSON<em>maker</em> Content
 
-LESSON<em>maker</em> markup is designated for responsive devotionals or study guides that specifically focus on passages or books of Scripture.
+LESSON<em>maker</em> markup is <em>**designated for responsive devotionals or study guides**</em> that specifically focus on passages or books of Scripture.
 
 In Bible studies, LESSON<em>maker</em> question `<li>` elements receive `data-question` or `data-panic` attributes, and each receives its `number` value <em>(this number value specifies where that question is positioned in that particular list of questions)</em>.
 
-**`data-question` **questions tend to revolve more around a reader's subjective experience or connection with an idea in the text of the book.
+**`data-question` **questions tend to revolve around a reader's subjective experience or connection with an idea in the text of the book, or might be just about the reader's opinions or subjective experiences.
 
 **`data-panic`** questions relate very directly to a Scripture verse or passage, and focus on textual analysis or themes within that passage (and less related to feelings or experiential connections of the reader).
+
+Examples:
 
 ```html
 <ul>
