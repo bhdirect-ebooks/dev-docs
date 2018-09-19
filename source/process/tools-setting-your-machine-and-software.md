@@ -97,7 +97,7 @@ Macs have a lot of great features, check out: shortcuts and set up options.
 
 ### Node.js
 
-Node.js is a JavaScript run-time environment. Essentially, Node.js allows for JavaScript to be used elsewhere besides the browser. In epub development, that means JS scripts can read and edit local epub directories. Click here to learn more...
+Node.js is a JavaScript run-time environment. Essentially, Node.js allows for JavaScript to be used elsewhere besides the browser. In epub development, that means JS scripts can read and edit local epub directories. Node works best when downloaded directly from the Node site (download the LTS version):  <https://nodejs.org/en/>
 
 <hr />
 
@@ -129,13 +129,13 @@ For team communication, jibber jabber, and gifs. Our channel is [ _**bhdirect-eb
 
 ### VMWare Fusion
 
-VMWare allows Windows to be run on a Mac as a virtual machine (without rebooting). It's necessary for our purposes to review titles in Wordsearch. Click here for setup...
+VMWare allows Windows to be run on a Mac as a virtual machine (without rebooting). It's necessary for our purposes to review titles in Wordsearch. You'll need to schedule a session with a Lifeway tech to help install this on your machine.
 
 <hr />
 
 ### VSCode
 
-VSCode is a powerful, free source code editor by Windows. **Download**: <https://code.visualstudio.com/download> Click here for setup...
+VSCode is a powerful, free source code editor by Windows. **Download**: <https://code.visualstudio.com/download> 
 
 <hr />
 
