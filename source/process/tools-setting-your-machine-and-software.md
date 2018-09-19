@@ -4,7 +4,8 @@ title: Tools For Development
 <hr />
 
 ## New Computer Setup
-<img href="https://goo.gl/images/y2cd8v">
+
+<img src="https://goo.gl/images/y2cd8v" />
 
 Steps for setting up a new machine
 
@@ -64,13 +65,11 @@ We use harvest for tracking time on projects. **Download** from the Apple App St
 
 ### Homebrew
 
-
-
 <hr />
 
 ### LFS
-LFS allows Git directories to push/pull large files.
 
+LFS allows Git directories to push/pull large files.
 
 <hr />
 
@@ -108,7 +107,7 @@ Self Service allows you to download some apps common to the Lifeway organization
 
 ### Slack
 
-For team communication, jibber jabber, and gifs. Our channel is [ _**bhdirect-ebooks.slack.com**_ ] **Download** at: <https://slack.com/downloads/osx>
+For team communication, jibber jabber, and gifs. Our channel is [ **_bhdirect-ebooks.slack.com_** ] **Download** at: <https://slack.com/downloads/osx>
 
 <hr />
 
