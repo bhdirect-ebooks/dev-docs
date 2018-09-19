@@ -161,7 +161,7 @@ In Bible studies, LESSON<em>maker</em> question `<li>` elements receive `data-qu
 
 **`data-question` **questions tend to revolve around a reader's subjective experience or connection with an idea in the text of the book, or might be just about the reader's opinions.
 
-**`data-panic`** questions relate very directly to a Scripture verse or passage, and focus on textual analysis or themes within that passage (and less related to feelings or experiential connections of the reader).
+**`data-panic`** questions relate directly to a Scripture verse or passage, and focus on textual analysis or themes within that passage (and are less related to feelings or experiential connections of the reader).
 
 Examples:
 
