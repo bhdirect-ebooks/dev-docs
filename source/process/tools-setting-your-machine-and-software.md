@@ -124,3 +124,7 @@ VSCode is a powerful, free source code editor by Windows. **Download**: <https:/
 <hr />
 
 ### ZSH
+
+ZSH is short for 'Z Shell', which is a Unix shell and provides a number of convenient features when using the command line. Learn more here to install...
+
+<div>&nbsp;</div>
