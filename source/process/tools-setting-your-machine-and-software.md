@@ -101,6 +101,10 @@ Node.js is a JavaScript run-time environment. Essentially, Node.js allows for Ja
 
 <hr />
 
+## PageStaker (for use with InDesign)
+
+Download here: <https://drive.google.com/open?id=1wgWb2j1fTorF4uYBbbHWiOEFB2LjSK7y>
+
 ### Preview
 
 Preview is Mac's onboard image viewer. Check here for some tips on using it.
@@ -123,7 +127,7 @@ Self Service allows you to download some apps common to the Lifeway organization
 
 ### Slack
 
-For team communication, jibber jabber, and gifs. Our channel is [ _**bhdirect-ebooks.slack.com**_ ] **Download** at: <https://slack.com/downloads/osx>
+For team communication, jibber jabber, and gifs. Our channel is [ **_bhdirect-ebooks.slack.com_** ] **Download** at: <https://slack.com/downloads/osx>
 
 <hr />
 
