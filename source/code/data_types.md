@@ -5,6 +5,8 @@ In order to develop standards-based EPUBs while also retaining data types for us
 
 Data attributes are an HTML5 approach to storing unique data for applications. The data attributes described in this chapter act as hooks for our conversion scripts that transform finished EPUBs for ingestion and upload to our content servers.
 
+<hr />
+
 ## Data Attribute Syntax
 
 Each data attribute follows the same pattern. The data attribute is `data-x`, where 'x' is the type, and the value is a simple string, as seen here.
@@ -30,6 +32,8 @@ The above snippet is an example OSIS for Genesis 1:1-2.
 Verses in single chapter books should always be referenced using 1 as the chapter number (e.g., `Jude.1.3`)
 
 _Make sure to keep track of what each data attribute requires as its OSIS (whether b.c.v, b.c., or b)._
+
+_<hr />_
 
 ## Context Markup
 
@@ -84,6 +88,8 @@ Date context for books that are date-aligned, like some devotionals, is identifi
 <hr data-datetime="yyyy-mm-ddT12:00" /> <!-- for PM -->
 ```
 
+<hr />
+
 ## Reference Markup
 
 A reference type is one that identifies a link to another resource in the web or desktop applications. Scripture references and Strong's number references are reference types.
@@ -107,6 +113,8 @@ Strong's number references also receive the `data-ref` attribute, a key of `"str
 ```html
 <a data-strongs="G2424">Jesus</a> <a data-strongs="G5547">Christ</a>
 ```
+
+<hr />
 
 ## Markup for Other Data
 
@@ -139,11 +147,23 @@ In Bibles (and **only** in Bibles), the words of Jesus must be tagged with the `
 <span data-speaker="Jesus">"Have you understood all these things?"</span>
 ```
 
-<aside class="warning">Words of Jesus \\`span\\` elements \\*\\*cannot be used to cover more than a single verse\\*\\*. Start a new \\`<span data-speaker="Jesus">\\` \\*\\*for every verse\\*\\*.</aside>
+<aside class="warning">Words of Jesus span elements cannot be used to cover more than a single verse. Start a new `<span data-speaker="Jesus">` for <b>every</b> verse.</aside>
+
+<div>&nbsp</div>
+
+<hr />
 
 ### LESSON<em>maker</em> Content
 
-In Bible studies, LESSON<em>maker</em> question `<li>` elements receive `data-question` or `data-panic` attributes, and each receives its `number` value.
+LESSON<em>maker</em> markup is <em>**designated for responsive devotionals or study guides**</em> that specifically focus on passages or books of Scripture.
+
+In Bible studies, LESSON<em>maker</em> question `<li>` elements receive `data-question` or `data-panic` attributes, and each receives its `number` value <em>(this number value specifies where that question is positioned in that particular list of questions)</em>.
+
+**`data-question` **questions tend to revolve around a reader's subjective experience or connection with an idea in the text of the book, or might be just about the reader's opinions.
+
+**`data-panic`** questions relate directly to a Scripture verse or passage, and focus on textual analysis or themes within that passage (and are less related to feelings or experiential connections of the reader).
+
+Examples:
 
 ```html
 <ul>
