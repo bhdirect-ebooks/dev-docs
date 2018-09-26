@@ -65,7 +65,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 <i>Java Development Kit</i>
 
-Install the MacOS version JDK from Oracle at: <https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
+
+
+Install the MacOS version JDK from Oracle at (again, you may need to restart your machine for this to install correctly): <https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
 
 <div>&nbsp;</div>
 
