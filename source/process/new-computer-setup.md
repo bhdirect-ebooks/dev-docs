@@ -5,9 +5,23 @@ title: New Computer Setup
 
 <hr /><hr />
 
-## 1. Command Line Tools
+## 1. Command Line Tools (& Git if needed)
+
+### Command Line Tools & Xcode
 
 Follow the instructions on this page to install Mac Command Line Tools/Xcode: <http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/>
+
+<div>&nbsp;</div>
+
+### Git
+
+Git should have installed with Xcode, but to confirm that it's there you can run this:
+
+```
+git --version
+```
+
+If Git isn't on your machine, you should be prompted to download and install it.
 
 <div>&nbsp;</div>
 
@@ -44,6 +58,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 <hr />
 
 ## 4. Install JDK
+
+<i>Java Development Kit</i>
 
 Install the MacOS version JDK from Oracle at: <https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
 
@@ -166,8 +182,6 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 * [PageStaker](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#PageStaker-for-use-with-InDesign)
 * [Slack](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#Slack)
 * [VSCode (Visual Studio Code)](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#VSCode)
-
-
 
 <hr />
 
