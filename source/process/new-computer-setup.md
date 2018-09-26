@@ -95,10 +95,13 @@ From any directory, run:
 sudo npm i -g @bhdirect/toolkit
 ```
 
-\
-<hr />
+
 
 <div>&nbsp;</div>
+
+<hr />
+
+
 
 ## 6. Install LFS
 
