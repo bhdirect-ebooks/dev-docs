@@ -33,9 +33,7 @@ Next, to install OhMyZSH, run:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-
-
-
+<div>&nbsp;</div>
 
 <hr />
 
@@ -83,7 +81,7 @@ npm install npm@latest -g
 
 ## 5. Install JDK
 
-
+Install the MacOS version JDK from Oracle at: <https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
 
 <hr />
 
