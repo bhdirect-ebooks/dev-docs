@@ -155,6 +155,20 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 
 <hr />
 
+## 8. Install Other Apps for Development
+
+* A Better Finder Rename
+* Adobe Suite
+* BBEdit
+* EPUB-Checker
+* ePUB Zip/UnZip
+* Harvest
+* PageStaker
+* Slack
+* VSCode (Visual Studio Code)
+
+
+
 <hr />
 
 <div>&nbsp;</div>
