@@ -20,10 +20,12 @@ Run the following command in the terminal, and check [here for any problems inst
 ```
 
 <hr />
+
 ## 3. Install ZSH & OhMyZSH
+ZSH should actually already be in your OS system, but run this Brew command to make sure it's install:
 
 
-## 3. Install Node 
+## 4. Install Node 
 
 ### Install Node
 
