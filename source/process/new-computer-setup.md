@@ -155,7 +155,15 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 
 <hr />
 
-8. Install other apps needed for development, if needed (See:
+## 8. Other Apps For Development
+
+* BBEDit
+* ePub Zip/Unzip
+* EPUB-Checker
+* Harvest
+* A Better Finder Rename
+* Slack
+* VMWare Fusion
 
 <hr />
 
