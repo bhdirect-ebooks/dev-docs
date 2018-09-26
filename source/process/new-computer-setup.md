@@ -147,11 +147,11 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 
 <hr />
 
-<div width="50">
+
 
 ![null](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.33-am.png)
 
-</div>
+
 
 <hr />
 
