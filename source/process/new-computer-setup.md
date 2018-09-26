@@ -33,11 +33,15 @@ Next, to install OhMyZSH, run:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
+
+
+
+
 <hr />
 
 ## 4. Install Node
 
-### Install Node
+### \>> Install Node
 
 Download from <https://nodejs.org/en/download/> (and don't use Brew or nvm to install).
 
@@ -57,11 +61,25 @@ npm install -g
 
 <div>&nbsp;</div>
 
-### Create npm Account/ Login on Command Line
+### \>> Create npm Account/ Login on Command Line
 
+If you haven't already done so, go to npmjs.org and create a user account. Our team lead will need to give you access to our team's npm packages.
 
+Then you can log in to npm on the command line:
+
+```
+npm login
+```
+
+Now you can make sure you have the latest version of npm by running:
+
+```
+npm install npm@latest -g
+```
 
 <hr />
+
+<div>&nbsp;</div>
 
 ## 5. Install JDK
 
