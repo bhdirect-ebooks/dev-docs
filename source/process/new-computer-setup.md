@@ -166,6 +166,7 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 * [PageStaker](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#PageStaker-for-use-with-InDesign)
 * [Slack](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#Slack)
 * [VMWare Fusion](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#VMWare-Fusion)
+* [VS Code (Visual Studio Code)](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#VSCode)
 
 
 
