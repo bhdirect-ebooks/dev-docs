@@ -1,6 +1,8 @@
 ---
 title: New Computer Setup
 ---
+<hr />
+
 <hr /><hr />
 
 ## 1. Command Line Tools
@@ -109,7 +111,7 @@ git lfs install
 
 ## 7. Remote Connectivity Github
 
-Run this to have your computer generate a new SSH key:
+Run this to have your computer generate a new SSH key (substituting your email address without quotation marks):
 
 ```
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -122,6 +124,24 @@ Next, run this command to display your ssh key. You'll copy and paste this in Gi
 ```
 cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 ```
+
+<hr />
+
+![](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.00-am.png)
+
+<hr />
+
+![](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.17-am.png)
+
+
+
+
+
+<hr />
+
+![](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.33-am.png)
+
+<hr />
 
 <div>&nbsp;</div>
 
