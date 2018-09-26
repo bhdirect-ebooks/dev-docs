@@ -143,6 +143,8 @@ Next, run this command to display your ssh key. You'll copy and paste this in Gi
 cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 ```
 
+<div>&nbsp;</div>
+
 <hr />
 
 ![](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.00-am.png)
