@@ -155,7 +155,7 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 
 <hr />
 
-## 8. Other Apps For Development
+## 8. Install Other Apps For Development
 
 * [A Better Finder Rename](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#A-Better-Finder-Rename)
 * [Adobe Photoshop, InDesign, and Reader](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#Adobe-InDesign-Photoshop-amp-Reader)
