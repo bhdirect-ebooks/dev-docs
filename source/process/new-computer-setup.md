@@ -164,6 +164,8 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 * A Better Finder Rename
 * Slack
 * VMWare Fusion
+* Adobe Photoshop, InDesign, and Reader
+* PageStaker
 
 <hr />
 
