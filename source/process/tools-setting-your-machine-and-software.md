@@ -1,6 +1,8 @@
 ---
 title: Tools For Development
 ---
+<hr /><hr />
+
 <hr />
 
 <img src="http://oldcomputers.net/pics/appleii-system.jpg" width="130" style="float: right" />
@@ -31,19 +33,19 @@ This app allows you to quickly rename a batch of files, in a variety of ways. It
 
 ### Adobe (InDesign, Photoshop, & Reader)
 
-Adobe InDesign is a common publishing software suite, and Photoshop has many capabilities for making quality images for our ebooks. **Download** from Self Service (in your Applications directory).  Click for: InDesign tips - Photoshop tips - Reader tips
+Adobe InDesign is a common publishing software suite, and Photoshop has many capabilities for making quality images for our ebooks. **Download** from Self Service (in your Applications directory).
 
 <hr />
 
 ### BBEdit
 
-BBEdit is a source code editor that is particular good for use with regular expressions (regexes). **Download (v.11.6.6)**: <https://drive.google.com/open?id=1hcnwOtWHRd6O7dBtWZXqZ6w27VcDQFWq> Click here for setup...
+BBEdit is a source code editor that is particular good for use with regular expressions (regexes). **Download (v.11.6.6)**: <https://drive.google.com/open?id=1hcnwOtWHRd6O7dBtWZXqZ6w27VcDQFWq>
 
 <hr />
 
 ### EPUB-Checker
 
-This app checks epubs according to EPUB 3 specs, and you of issues. Download here <https://www.pagina.gmbh/produkte/epub-checker/#c776> 
+This app checks epubs according to EPUB 3 specs, and alerts you to issues. You drag an EPUB directory to the app to run it. **Download** here <https://www.pagina.gmbh/produkte/epub-checker/#c776> 
 
 <hr />
 
@@ -61,7 +63,11 @@ We use harvest for tracking time on projects. **Download** from the Apple App St
 
 ### Homebrew
 
-Homebrew is a package manager for OS that can be helpful when updating developer tools/programs in the command line. It's worth mentioning that it's often best to <b>install & update Node apart from Homebrew</b>.
+Homebrew is a package manager for OS that can be helpful when updating developer tools/programs in the command line. It's worth mentioning that it's often best to <b>install & update Node apart from Homebrew</b>. Run the following in the command line to install:
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 <hr />
 
@@ -91,9 +97,13 @@ Macs have a lot of great features, check out: shortcuts and set up options.
 
 ### Node.js
 
-Node.js is a JavaScript run-time environment. Essentially, Node.js allows for JavaScript to be used elsewhere besides the browser. In epub development, that means JS scripts can read and edit local epub directories. Click here to learn more...
+Node.js is a JavaScript run-time environment. Essentially, Node.js allows for JavaScript to be used elsewhere besides the browser. In epub development, that means JS scripts can read and edit local epub directories. Node works best when downloaded directly from the Node site (download the LTS version):  <https://nodejs.org/en/>
 
 <hr />
+
+## PageStaker (for use with InDesign)
+
+Download here: <https://drive.google.com/open?id=1wgWb2j1fTorF4uYBbbHWiOEFB2LjSK7y>
 
 ### Preview
 
@@ -117,25 +127,27 @@ Self Service allows you to download some apps common to the Lifeway organization
 
 ### Slack
 
-For team communication, jibber jabber, and gifs. Our channel is [ **_bhdirect-ebooks.slack.com_** ] **Download** at: <https://slack.com/downloads/osx>
+For team communication, jibber jabber, and gifs. Our channel is [ _**bhdirect-ebooks.slack.com**_ ] **Download** at: <https://slack.com/downloads/osx>
 
 <hr />
 
 ### VMWare Fusion
 
-VMWare allows Windows to be run on a Mac as a virtual machine (without rebooting). It's necessary for our purposes to review titles in Wordsearch. Click here for setup...
+VMWare allows Windows to be run on a Mac as a virtual machine (without rebooting). It's necessary for our purposes to review titles in Wordsearch. You'll need to schedule a session with a Lifeway tech to help install this on your machine.
 
 <hr />
 
 ### VSCode
 
-VSCode is a powerful, free source code editor by Windows. **Download**: <https://code.visualstudio.com/download> Click here for setup...
+VSCode is a powerful, free source code editor by Windows. **Download**: <https://code.visualstudio.com/download> 
 
 <hr />
 
-### ZSH
+### ZSH & Oh-My-Zsh
 
-ZSH is short for 'Z Shell', which is a Unix shell and provides a number of convenient features when using the command line. (With Homebrew installed) Run these commands to install:
+ZSH is short for 'Z Shell', which is a Unix shell and provides a number of convenient features when using the command line. 
+
+<b>_To install ZSH (With Homebrew installed) :</b>_
 
 ```
 ruby -e "$(curl -fsSL https://raw.zshhubusercontent.com/Homebrew/install/master/install)"
@@ -153,6 +165,12 @@ and finally
 brew install zsh
 ```
 
+<div>&nbsp;</div>
 
+<b>_To install Oh-My-Zsh:</b>_
+
+```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
 
 <div>&nbsp;</div>
