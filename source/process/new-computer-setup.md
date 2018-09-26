@@ -1,15 +1,13 @@
 ---
 title: New Computer Setup
 ---
-<hr />
+<hr /><hr />
 
 ## 1. Command Line Tools
 
 Follow the instructions on this page to install Mac Command Line Tools: <http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/>
 
 <hr />
-
-
 
 ## 2. Install Homebrew
 
@@ -22,10 +20,22 @@ Run the following command in the terminal, and check [here for any problems inst
 <hr />
 
 ## 3. Install ZSH & OhMyZSH
+
 ZSH should actually already be in your OS system, but run this Brew command to make sure it's install:
 
+```
+brew install zsh
+```
 
-## 4. Install Node 
+Next, to install OhMyZSH, run:
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+<hr />
+
+## 4. Install Node
 
 ### Install Node
 
