@@ -5,7 +5,7 @@ title: New Computer Setup
 
 ## 1. Command Line Tools
 
-Follow the instructions on this page to install Mac Command Line Tools: <http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/>
+Follow the instructions on this page to install Mac Command Line Tools/Xcode: <http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/>
 
 <hr />
 
@@ -100,3 +100,27 @@ git lfs install
 ```
 
 [Check here for LFS documentation](https://git-lfs.github.com/)
+
+<div>&nbsp;</div>
+
+<hr />
+
+## 7. Remote Connectivity Github
+
+Run this to have your computer generate a new SSH key:
+
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+
+Next, run this command to display your ssh key. You'll copy and paste this in Github under Settings > SSH Keys.
+
+```
+cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
+```
+
+<div>&nbsp;</div>
+
+<hr />
