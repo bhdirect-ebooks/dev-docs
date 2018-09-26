@@ -7,11 +7,15 @@ title: New Computer Setup
 
 ## 1. Command Line Tools (& Git if needed)
 
+<hr />
+
 ### Command Line Tools & Xcode
 
 Follow the instructions on this page to install Mac Command Line Tools/Xcode: <http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/>
 
 <div>&nbsp;</div>
+
+<hr />
 
 ### Git
 
@@ -69,6 +73,8 @@ Install the MacOS version JDK from Oracle at: <https://www.oracle.com/technetwor
 
 ## 5. Install Node & npm Tools
 
+<hr />
+
 ### \>> Install Node
 
 Download from <https://nodejs.org/en/download/> (and don't use Brew or nvm to install).
@@ -86,6 +92,8 @@ npm install -g
 ```
 
 <div>&nbsp;</div>
+
+<hr />
 
 ### \>> Create npm Account/ Login on Command Line
 
