@@ -157,15 +157,17 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 
 ## 8. Other Apps For Development
 
-* BBEDit
-* ePub Zip/Unzip
-* EPUB-Checker
-* Harvest
-* A Better Finder Rename
-* Slack
-* VMWare Fusion
-* Adobe Photoshop, InDesign, and Reader
-* PageStaker
+* [A Better Finder Rename](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#A-Better-Finder-Rename)
+* [Adobe Photoshop, InDesign, and Reader](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#Adobe-InDesign-Photoshop-amp-Reader)
+* [BBEDit](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#BBEdit)
+* [EPUB-Checker](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#EPUB-Checker)
+* [ePub Zip/Unzip](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#ePub-Zip-Unzip-2-0-1)
+* [Harvest](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#Harvest)
+* [PageStaker](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#PageStaker-for-use-with-InDesign)
+* [Slack](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#Slack)
+* [VMWare Fusion](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#VMWare-Fusion)
+
+
 
 <hr />
 
