@@ -155,6 +155,8 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 
 <hr />
 
+8. Install other apps needed for development, if needed (See:
+
 <hr />
 
 <div>&nbsp;</div>
