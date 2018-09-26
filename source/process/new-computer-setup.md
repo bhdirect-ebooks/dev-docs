@@ -157,15 +157,15 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 
 ## 8. Install Other Apps for Development
 
-* A Better Finder Rename
-* Adobe Suite
-* BBEdit
-* EPUB-Checker
-* ePUB Zip/UnZip
-* Harvest
-* PageStaker
-* Slack
-* VSCode (Visual Studio Code)
+* [A Better Finder Rename](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#A-Better-Finder-Rename)
+* [Adobe Suite](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#Adobe-InDesign-Photoshop-amp-Reader)
+* [BBEdit](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#BBEdit)
+* [EPUB-Checker](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#EPUB-Checker)
+* [ePUB Zip/UnZip](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#ePub-Zip-Unzip-2-0-1)
+* [Harvest](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#Harvest)
+* [PageStaker](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#PageStaker-for-use-with-InDesign)
+* [Slack](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#Slack)
+* [VSCode (Visual Studio Code)](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#VSCode)
 
 
 
