@@ -69,8 +69,6 @@ Next, run this to install npm globally:
 npm install -g
 ```
 
-
-
 <div>&nbsp;</div>
 
 ### \>> Create npm Account/ Login on Command Line
@@ -89,8 +87,6 @@ Now you can make sure you have the latest version of npm by running:
 npm install npm@latest -g
 ```
 
-
-
 \>> Install latest version of <b>toolkit</b>, our team's comprehensive package container.
 
 From any directory, run:
@@ -99,13 +95,9 @@ From any directory, run:
 sudo npm i -g @bhdirect/toolkit
 ```
 
-
-
 <div>&nbsp;</div>
 
 <hr />
-
-
 
 ## 6. Install LFS
 
@@ -147,19 +139,21 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 
 <hr />
 
-![](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.00-am.png)
+![null](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.00-am.png)
 
 <hr />
 
-![](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.17-am.png)
+![null](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.17-am.png)
 
 <hr />
 
-![](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.33-am.png)
+<div width="50">
+
+![null](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.33-am.png)
+
+</div>
 
 <hr />
-
-
 
 <hr />
 
