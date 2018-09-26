@@ -39,7 +39,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 <hr />
 
-## 4. Install Node
+## 4. Install JDK
+
+Install the MacOS version JDK from Oracle at: <https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
+
+<div>&nbsp;</div>
+
+<hr />
+
+## 5. Install Node & npm Tools
 
 ### \>> Install Node
 
@@ -77,17 +85,20 @@ Now you can make sure you have the latest version of npm by running:
 npm install npm@latest -g
 ```
 
+
+
+\>> Install latest version of <b>toolkit</b>, our team's comprehensive package container.
+
+From any directory, run:
+
+```
+sudo npm i -g @bhdirect/toolkit
+```
+
+\
 <hr />
 
 <div>&nbsp;</div>
-
-## 5. Install JDK
-
-Install the MacOS version JDK from Oracle at: <https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
-
-<div>&nbsp;</div>
-
-<hr />
 
 ## 6. Install LFS
 
@@ -109,7 +120,7 @@ git lfs install
 
 <hr />
 
-## 7. Remote Connectivity Github
+## 7. Remote Connectivity to Github
 
 Run this to have your computer generate a new SSH key (substituting your email address without quotation marks):
 
@@ -133,13 +144,13 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 
 ![](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.17-am.png)
 
-
-
-
-
 <hr />
 
 ![](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.33-am.png)
+
+<hr />
+
+
 
 <hr />
 
