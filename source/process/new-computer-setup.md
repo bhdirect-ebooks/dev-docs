@@ -73,7 +73,7 @@ npm install -g
 
 ### \>> Create npm Account/ Login on Command Line
 
-If you haven't already done so, go to npmjs.org and create a user account. Our team lead will need to give you access to our team's npm packages.
+If you haven't already done so, go to <https://www.npmjs.com/> and create a user account. Our team lead will need to give you access to our team's npm packages.
 
 Then you can log in to npm on the command line:
 
@@ -147,28 +147,13 @@ cat ~/.ssh/id_rsa.pub or cat ~/.ssh/id_dsa.pub
 
 <hr />
 
-
+<div width="50">
 
 ![null](/assets/images/uploads/screen-shot-2018-09-26-at-11.19.33-am.png)
 
-
+</div>
 
 <hr />
-
-## 8. Install Other Apps For Development
-
-* [A Better Finder Rename](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#A-Better-Finder-Rename)
-* [Adobe Photoshop, InDesign, and Reader](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#Adobe-InDesign-Photoshop-amp-Reader)
-* [BBEDit](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#BBEdit)
-* [EPUB-Checker](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#EPUB-Checker)
-* [ePub Zip/Unzip](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#ePub-Zip-Unzip-2-0-1)
-* [Harvest](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#Harvest)
-* [PageStaker](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#PageStaker-for-use-with-InDesign)
-* [Slack](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#Slack)
-* [VMWare Fusion](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#VMWare-Fusion)
-* [VS Code (Visual Studio Code)](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#VSCode)
-
-
 
 <hr />
 
