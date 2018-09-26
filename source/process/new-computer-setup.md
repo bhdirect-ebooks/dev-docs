@@ -21,7 +21,7 @@ Run the following command in the terminal, and check [here for any problems inst
 
 ## 3. Install ZSH & OhMyZSH
 
-ZSH should actually already be in your OS system, but run this Brew command to make sure it's install:
+ZSH should actually already be in your OS system, but run this Brew command to make sure it's installed:
 
 ```
 brew install zsh
@@ -41,4 +41,46 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 Download from <https://nodejs.org/en/download/> (and don't use Brew or nvm to install).
 
+Run the following to confirm it's installed:
+
+```
+node -v
+```
+
+Next, run this to install npm globally:
+
+```
+npm install -g
+```
+
+
+
+<div>&nbsp;</div>
+
 ### Create npm Account/ Login on Command Line
+
+
+
+<hr />
+
+## 5. Install JDK
+
+
+
+<hr />
+
+## 6. Install LFS
+
+Run:
+
+```
+brew install git-lfs
+```
+
+Then:
+
+```
+git lfs install
+```
+
+[Check here for LFS documentation](https://git-lfs.github.com/)
