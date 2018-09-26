@@ -83,6 +83,8 @@ npm install npm@latest -g
 
 Install the MacOS version JDK from Oracle at: <https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
 
+<div>&nbsp;</div>
+
 <hr />
 
 ## 6. Install LFS
