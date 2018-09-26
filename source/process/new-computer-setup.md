@@ -9,6 +9,8 @@ title: New Computer Setup
 
 Follow the instructions on this page to install Mac Command Line Tools/Xcode: <http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/>
 
+<div>&nbsp;</div>
+
 <hr />
 
 ## 2. Install Homebrew
@@ -18,6 +20,8 @@ Run the following command in the terminal, and check [here for any problems inst
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+
+<div>&nbsp;</div>
 
 <hr />
 
