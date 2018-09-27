@@ -24,7 +24,7 @@ _If_ a title's sources are within InDesign files and don't have any sort of page
 
 \*\*\*Beware!\*\*\* This process must be done before any other development is done on the source files.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2X63u0LA2n8" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i3zzMRSPAUg" frameborder="0" allowfullscreen></iframe>
 
 <hr />
 
