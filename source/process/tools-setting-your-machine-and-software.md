@@ -45,13 +45,13 @@ BBEdit is a source code editor that is particular good for use with regular expr
 
 ### EPUB-Checker
 
-This app checks epubs according to EPUB 3 specs, and alerts you to issues. You drag an EPUB directory to the app to run it. **Download** here <https://www.pagina.gmbh/produkte/epub-checker/#c776> 
+This app checks epubs according to EPUB 3 specs, and alerts you to issues. You drag an EPUB directory to the app to run it. [**Download** here](https://www.pagina.gmbh/produkte/epub-checker/#c776)
 
 <hr />
 
 ### ePub Zip/Unzip 2.0.1
 
-This app converts unzips an epub into html file directory or, you guessed it, zips up an html epub directory into an epub file. **Download**: <https://drive.google.com/open?id=15TssIvYh1140EIhs7jyTRSS-ewWy72J1> Move the app to your screen's dock, and then just drag epub folders or files onto it. Converted files should be in your Download folder.
+This app converts unzips an epub into html file directory or, you guessed it, zips up an html epub directory into an epub file. [**Download here**](https://drive.google.com/open?id=15TssIvYh1140EIhs7jyTRSS-ewWy72J1). Move the app to your screen's dock, and then just drag epub folders or files onto it. Converted files should be in your Download folder.
 
 <hr />
 
@@ -127,7 +127,7 @@ Self Service allows you to download some apps common to the Lifeway organization
 
 ### Slack
 
-For team communication, jibber jabber, and gifs. Our channel is [ **_bhdirect-ebooks.slack.com_** ] **Download** at: <https://slack.com/downloads/osx>
+For team communication, jibber jabber, and gifs. Our channel is [ _**bhdirect-ebooks.slack.com**_ ] **Download** at: <https://slack.com/downloads/osx>
 
 <hr />
 
