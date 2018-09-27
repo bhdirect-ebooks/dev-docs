@@ -39,7 +39,7 @@ Adobe InDesign is a common publishing software suite, and Photoshop has many cap
 
 ### BBEdit
 
-BBEdit is a source code editor that is particular good for use with regular expressions (regexes). **Download (v.11.6.6)**: <https://drive.google.com/open?id=1hcnwOtWHRd6O7dBtWZXqZ6w27VcDQFWq>
+BBEdit is a source code editor that is particular good for use with regular expressions (regexes). [**Download (v.11.6.6)**](https://drive.google.com/open?id=1hcnwOtWHRd6O7dBtWZXqZ6w27VcDQFWq)
 
 <hr />
 
@@ -103,7 +103,7 @@ Node.js is a JavaScript run-time environment. Essentially, Node.js allows for Ja
 
 ## PageStaker (for use with InDesign)
 
-Download here: <https://drive.google.com/open?id=1wgWb2j1fTorF4uYBbbHWiOEFB2LjSK7y>
+[Download here](https://drive.google.com/open?id=1wgWb2j1fTorF4uYBbbHWiOEFB2LjSK7y)
 
 ### Preview
 
@@ -127,7 +127,7 @@ Self Service allows you to download some apps common to the Lifeway organization
 
 ### Slack
 
-For team communication, jibber jabber, and gifs. Our channel is [ _**bhdirect-ebooks.slack.com**_ ] **Download** at: <https://slack.com/downloads/osx>
+For team communication, jibber jabber, and gifs. Our channel is [ **_bhdirect-ebooks.slack.com_** ] **Download** at: <https://slack.com/downloads/osx>
 
 <hr />
 
