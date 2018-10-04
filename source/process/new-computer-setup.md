@@ -11,7 +11,7 @@ title: New Computer Setup
 
 ### Command Line Tools & Xcode
 
-Follow the instructions on this page to install Mac Command Line Tools/Xcode: <http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/>
+Follow the instructions on this page to install Mac Command Line Tools/Xcode: [https://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/)
 
 <div>&nbsp;</div>
 
@@ -61,13 +61,21 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 <hr />
 
-## 4. Install JDK
+## 4. Install Java
 
-<i>Java Development Kit</i>
+<i>Java Runtime Environment</i>
 
+Install the MacOS build of Java SE Runtime Environment 10 from Oracle at: <https://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html>
 
+Installation is easiest if you choose the MacOS file that has a `.dmg` extension.
 
-Install the MacOS version JDK from Oracle at (again, you may need to restart your machine for this to install correctly): <https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html>
+You may need to restart your machine after installation.
+
+Run the following to confirm Java is installed:
+```
+java -version
+```
+You may need to restart your machine after installation.
 
 <div>&nbsp;</div>
 
@@ -77,9 +85,10 @@ Install the MacOS version JDK from Oracle at (again, you may need to restart you
 
 <hr />
 
-### \>> Install Node
+### \>> Install NodeJS
 
-Download from <https://nodejs.org/en/download/> (and don't use Brew or nvm to install).
+Download the latest LTS version from <https://nodejs.org/en/download/>
+(please don't use Homebrew or nvm to install NodeJS).
 
 Run the following to confirm it's installed:
 
@@ -87,10 +96,10 @@ Run the following to confirm it's installed:
 node -v
 ```
 
-Next, run this to install npm globally:
+Next, run this to confirm npm is installed:
 
 ```
-npm install -g
+npm -v
 ```
 
 <div>&nbsp;</div>
@@ -99,18 +108,12 @@ npm install -g
 
 ### \>> Create npm Account/ Login on Command Line
 
-If you haven't already done so, go to <https://www.npmjs.com/> and create a user account. Our team lead will need to give you access to our team's npm packages.
+If you haven't already done so, go to <https://www.npmjs.com/> and create a user account. Our team lead will need to add you to the bhdirect npm organization and give you access to our private packages.
 
 Then you can log in to npm on the command line:
 
 ```
 npm login
-```
-
-Now you can make sure you have the latest version of npm by running:
-
-```
-npm install npm@latest -g
 ```
 
 \>> Install latest version of <b>toolkit</b>, our team's comprehensive package container.
@@ -125,7 +128,7 @@ sudo npm i -g @bhdirect/toolkit
 
 <hr />
 
-## 6. Install LFS
+## 6. Install Git LFS (Large File Service)
 
 Run:
 
