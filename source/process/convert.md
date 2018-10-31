@@ -42,6 +42,10 @@ When the title looks good in Wordsearch on the Windows-side, you can...
 
 **7.** Then on the Mac-side in the project directory, run **`npm run upload`** so that the files are moved to Content Platform and the Wordsearch library.
 
+**8.** Move the Scene7 image to the 'Covers Database' directory (no longer adding this to the _Automation>Scene7 folder) in Alfresco. Make sure to drag/add to the directory itself, and \_not\_ to one of the subfolders within it.
+
+![null](/assets/images/uploads/screen-shot-2018-10-31-at-9.47.57-am.png)
+
 <hr />
 
 ## The process in action...
