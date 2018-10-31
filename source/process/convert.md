@@ -42,7 +42,7 @@ When the title looks good in Wordsearch on the Windows-side, you can...
 
 **7.** Then on the Mac-side in the project directory, run **`npm run upload`** so that the files are moved to Content Platform and the Wordsearch library.
 
-8. Move the Scene7 image to the 'Images to Scene7' (no longer adding this to the _Automation>Scene7 folder) directory in Alfresco.
+**8. Move the Scene7 image to the 'Images to Scene7' (no longer adding this to the _Automation>Scene7 folder) directory in Alfresco.
 
 <hr />
 
