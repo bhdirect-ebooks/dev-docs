@@ -3,7 +3,9 @@ title: New Computer Setup
 ---
 <hr />
 
-<hr /><hr />
+<hr />
+
+<hr />
 
 ## 1. Command Line Tools (& Git if needed)
 
@@ -72,9 +74,11 @@ Installation is easiest if you choose the MacOS file that has a `.dmg` extension
 You may need to restart your machine after installation.
 
 Run the following to confirm Java is installed:
+
 ```
 java -version
 ```
+
 You may need to restart your machine after installation.
 
 <div>&nbsp;</div>
