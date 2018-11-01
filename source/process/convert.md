@@ -44,9 +44,9 @@ When the title looks good in Wordsearch on the Windows-side, you can...
 
 **8.** Move the Scene7 image to Alfresco in the '`Covers Database`' directory (no longer adding this to the _Automation>Scene7 folder) in Alfresco. Make sure to drag/add to the directory itself, and <i>not</i> to one of the individual subfolders within it.
 
-![](/assets/images/uploads/screen-shot-2018-11-01-at-11.57.40-am.png)
+![null](/assets/images/uploads/screen-shot-2018-11-01-at-11.57.40-am.png)
 
-**9.** Finally, be sure to push your project folder after uploading.
+**9.** Finally, be sure to <b>push your project</b> folder after uploading, so the necessary files are available to other LW departments.
 
 <hr />
 
