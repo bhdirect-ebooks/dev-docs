@@ -9,7 +9,7 @@ title: Tools For Development
 
 ## New Computer Setup
 
-Steps for setting up a new machine
+[Steps for setting up a new machine](https://style.bhdirect-ebooks.org/process/new-computer-setup)
 
 <div>&nbsp;</div>
 
