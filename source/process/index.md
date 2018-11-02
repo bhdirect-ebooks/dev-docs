@@ -6,13 +6,7 @@ title: Dev Process Overview
 ## Tools
 
 * [Apps Used in Development](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software)
-
-
-
 * [Setting Up Your Machine](https://style.bhdirect-ebooks.org/process/new-computer-setup)
-
-
-
 * [Collection of Team Videos](https://docs.google.com/spreadsheets/d/1Zcb8mRYyKbr3TGoOOk_12m_bPOncIC4m-gdXHM8r6Ms/edit#gid=0)
 
 <hr />
