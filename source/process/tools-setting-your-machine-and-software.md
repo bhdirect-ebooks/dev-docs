@@ -1,15 +1,17 @@
 ---
 title: Tools For Development
 ---
-<hr /><hr />
+<hr />
 
 <hr />
 
-<img src="https://oldcomputers.net/pics/appleii-system.jpg" width="130" style="float: right" />
+<hr />
+
+<img src="http://oldcomputers.net/pics/appleii-system.jpg" width="130" style="float: right" />
 
 ## New Computer Setup
 
-[Steps for setting up a new machine](https://style.bhdirect-ebooks.org/process/new-computer-setup)
+Steps for setting up a new machine
 
 <div>&nbsp;</div>
 
@@ -129,7 +131,7 @@ Self Service allows you to download some apps common to the Lifeway organization
 
 ### Slack
 
-For team communication, jibber jabber, and gifs. Our channel is [ **_bhdirect-ebooks.slack.com_** ] **Download** at: <https://slack.com/downloads/osx>
+For team communication, jibber jabber, and gifs. Our channel is [ _**bhdirect-ebooks.slack.com**_ ] **Download** at: <https://slack.com/downloads/osx>
 
 <hr />
 
