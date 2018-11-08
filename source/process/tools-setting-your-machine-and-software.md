@@ -7,7 +7,7 @@ title: Tools For Development
 
 <hr />
 
-<img src="http://oldcomputers.net/pics/appleii-system.jpg" width="130" style="float: right" />
+<img src="https://oldcomputers.net/pics/appleii-system.jpg" width="130" style="float: right" />
 
 ## New Computer Setup
 
