@@ -44,3 +44,7 @@ It is especially important that none of the boxes are selected in the **Detectio
 _Format Settings_
 
 Make sure your Format Settings are as follows:
+
+![](/assets/images/uploads/toolsformatting.png)
+
+Make sure the Document type on the left is set to DOC(X)/RTF/ODT.
