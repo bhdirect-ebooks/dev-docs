@@ -31,4 +31,16 @@ _Languages_
 
 Typically, we want to have the first option, _Automatically select OCR languages_, selected. You can choose which languages the OCR software uses in its automatic selection and add them to the list.  The _Specify OCR languages manually_ option is for special cases in which unusual languages (such as Biblical Greek) need to be recognized.
 
-![](/assets/images/uploads/toolslanguages.png)
+![null](/assets/images/uploads/toolslanguages.png)
+
+_OCR_
+
+Make sure the OCR settings are as follows:
+
+![](/assets/images/uploads/toolsocr.png)
+
+It is especially important that none of the boxes are selected in the **Detection of structural elements** section. If any of these boxes are checked, Abbyy will add unwanted structural elements to the document during the reading process, oftentimes making the document unreadable.
+
+_Format Settings_
+
+Make sure your Format Settings are as follows:
