@@ -47,4 +47,4 @@ Make sure your Format Settings are as follows:
 
 ![](/assets/images/uploads/toolsformatting.png)
 
-Make sure the Document type on the left is set to DOC(X)/RTF/ODT.
+These setting dictate the type of file that is exported when the book is finished in Abbyy. Make sure the Document type on the left is set to DOC(X)/RTF/ODT. Pay special attention to the **Document layout** setting. Your Word file will not look right if it is not set to Formatted text.
