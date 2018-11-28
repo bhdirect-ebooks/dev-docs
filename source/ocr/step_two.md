@@ -16,3 +16,5 @@ Table boxes will tell Abbyy which content it should read as tables. Tabular info
 ## Images/Figures
 
 We do not typically capture images/figures during the OCR process, the developers pull the images directly from the PDF. That being said, you cannot ignore images and capture along with the text. Abbyy will freak out and add all kinds of garbage to the text. Accordingly, draw your Text and Table boxes to exclude images. There is a cut box tool that allows you to cut out part of a box, in order to exclude unwanted non-text elements.
+
+Note:
