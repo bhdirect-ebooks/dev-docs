@@ -48,3 +48,11 @@ Make sure your Format Settings are as follows:
 ![](/assets/images/uploads/toolsformatting.png)
 
 These setting dictate the type of file that is exported when the book is finished in Abbyy. Make sure the Document type on the left is set to DOC(X)/RTF/ODT. Pay special attention to the **Document layout** setting. Your Word file will not look right if it is not set to Formatted text.
+
+**_Areas and Text_**
+
+Make sure your Areas and Text settings appear as follows:
+
+![](/assets/images/uploads/toolsareaandtext.png)
+
+The **Font used to display plain text** is set to Times New Roman because it does the best job of displaying transliterations, Greek, and Hebrew. You can change the Font either here before recognizing the book, or in the Abbyy text editor after recognizing. In addition, you are free to change the Color: to any color you prefer. This will be the color that Abbyy uses to display text that it is not confident it read correctly.
