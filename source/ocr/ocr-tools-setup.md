@@ -56,3 +56,7 @@ Make sure your Areas and Text settings appear as follows:
 ![](/assets/images/uploads/toolsareaandtext.png)
 
 The _Font used to display plain text_ is set to Times New Roman because it does the best job of displaying transliterations, Greek, and Hebrew. You can change the Font either here before recognizing the book, or in the Abbyy text editor after recognizing. In addition, you are free to change the Color: to any color you prefer. This will be the color that Abbyy uses to display text that it is not confident it read correctly.
+
+_**Other**_
+
+The only setting that you will likely need to change here is in the _Check for program updates_ section. I suggest you have the _Download and install updates without warnings_ item unchecked. There have been times in the past where we suspected updates caused issues in books, so manually installing updates at least alerts you to that possibility.
