@@ -30,7 +30,11 @@ As instructed in [HTML semantics](html_style.html#Semantics), always use the mos
 
 ## Hyperlinks
 
-The only hyperlinks in the EPUB should be those that point to bookmarks within the EPUB itself. For any external URLs in the content, leave the URL as text only. `<a href="" target="_blank"></a>`
+Our current practice is to add links to URLs. The link must contain the `target` attribute with a value of `_blank`. 
+
+```
+<a href="https://www.wordsearchbible.com/" target="_blank">www.wordsearchbible.com</a>
+```
 
 ## Languages and Transliterations
 
