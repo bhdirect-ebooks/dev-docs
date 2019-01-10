@@ -58,6 +58,8 @@ In the command line :
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/R9cCLvUzT34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<hr />
+
 ## Recommended Code
 
 [Scripture Value Syntax](../code/data_types.html#Scripture-Value-Syntax-OSIS)
