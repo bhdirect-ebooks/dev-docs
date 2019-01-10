@@ -67,6 +67,10 @@ Always use Unicode characters for any language or transliteration, along with on
 <span class="translit">br'shyt</span>
 ```
 
+<br />
+
+<hr />
+
 ## Scripture Quotes
 
 Scripture quotes should be tagged as `blockquote` elements with the `scriptext` class.
@@ -76,6 +80,10 @@ Scripture quotes should be tagged as `blockquote` elements with the `scriptext` 
   <p>For those He foreknew He also predestined to be conformed to the image of His Son, so that He would be the firstborn among many brothers. And those He predestined, He also called; and those He called, He also justified; and those He justified, He also glorified. (Rom 8:29–30)</p>
 </blockquote>
 ```
+
+<br />
+
+<hr />
 
 ## Poetry
 
@@ -103,6 +111,10 @@ Rendered version of the example code:
 
 If the poetry was written by someone other than the author, it also needs to be wrapped in a `blockquote` tag.
 
+<br />
+
+<hr />
+
 ## Chiasm
 
 A chiasm is a literary device that uses a repeating A-B-C ... C′-B′-A′ pattern for clarification and/or emphasis. 
@@ -118,13 +130,25 @@ For a chiastic structure use the `poetry` classes above.
 <p class="poem1">A' You cannot serve God and mammon."</p>
 ```
 
+<br />
+
+<hr />
+
 ## Quotation Marks
 
 Typographic (curly) quotes and straight quotes are equally acceptable in book text. Simply leave the quotes as received from the source.
 
+<br />
+
+<hr />
+
 ## Quotes: Block, Pull, Etc.
 
 [CSS Library: Quotes](https://style.bhdirect-ebooks.org/css_lib/quotes.html)
+
+<br />
+
+<hr />
 
 ## Tables
 
