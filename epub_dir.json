@@ -1,1 +1,1 @@
-{"status":"pending_publish"}
+{"type":"PR","pr":{"number":70,"head":"aab407b160131ac1f52b3a77982d8b2b765724b5"},"user":"mike.magnussen","status":"draft","branch":"cms/epub_dir","collection":"process","title":"EPUB Directories and Files","description":"No Description!","objects":{"entry":{"path":"source/process/epub_dir.md","sha":"cc5b82a4fd7071a020b21398b21ed8ef9feed42a"},"files":[]},"timeStamp":"2019-01-10T17:42:54.080Z"}
