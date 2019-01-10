@@ -1,14 +1,47 @@
 ---
 title: Scripture References
 ---
-
 The meat and potatoes of Bible software.
 
 ## Related Tools/Scripts
 
 [percival](https://github.com/bhdirect-ebooks/percival)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/r5ognIEjlR0" frameborder="0" allowfullscreen></iframe>
+<hr />
+
+### Percival: Starting And Navigating
+
+In the command line:
+
+```
+percival
+```
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nN6gbjQRPZ8" frameborder="0" ></iframe>
+
+<hr />
+
+### Percival: Working with Bible Refs
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G1RRK5v1LU4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr />
+
+### Percival: Continuing, Finishing, and Other
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nJf2bcFynNM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr />
+
+### Percival: Q&A, Part 1
+
+
+
+<hr />
+
+### Percival: Q&A, Part 2
 
 ## Recommended Code
 
