@@ -28,13 +28,26 @@ Use `<p epub:type="bridgehead"></p>` for any headings in an `<aside>` section.
 
 As instructed in [HTML semantics](html_style.html#Semantics), always use the most semantically-appropriate HTML tags as you markup content. Lists should be ordered or unordered HTML lists. Outlines should be ordered lists with the appropriate classes. Block quotes and poetry should always be tagged as such, and so on.
 
+<hr />
+
 ## Hyperlinks
 
-Our current practice is to add links to URLs. The link must contain the `target` attribute with a value of `_blank`. 
+Our current practice is to add links to URLs. The link must contain:
+
+* the `target` attribute with a value of `_blank`
+* the `rel` attribute with a value of `noopener`
+
+
+
+_Example:_
 
 ```
-<a href="https://www.wordsearchbible.com/" target="_blank">www.wordsearchbible.com</a>
+<a href="https://www.wordsearchbible.com/" target="_blank" rel="noopener">www.wordsearchbible.com</a>
 ```
+
+<br />
+
+<hr />
 
 ## Languages and Transliterations
 
@@ -54,6 +67,10 @@ Always use Unicode characters for any language or transliteration, along with on
 <span class="translit">br'shyt</span>
 ```
 
+<br />
+
+<hr />
+
 ## Scripture Quotes
 
 Scripture quotes should be tagged as `blockquote` elements with the `scriptext` class.
@@ -63,6 +80,10 @@ Scripture quotes should be tagged as `blockquote` elements with the `scriptext` 
   <p>For those He foreknew He also predestined to be conformed to the image of His Son, so that He would be the firstborn among many brothers. And those He predestined, He also called; and those He called, He also justified; and those He justified, He also glorified. (Rom 8:29–30)</p>
 </blockquote>
 ```
+
+<br />
+
+<hr />
 
 ## Poetry
 
@@ -90,6 +111,10 @@ Rendered version of the example code:
 
 If the poetry was written by someone other than the author, it also needs to be wrapped in a `blockquote` tag.
 
+<br />
+
+<hr />
+
 ## Chiasm
 
 A chiasm is a literary device that uses a repeating A-B-C ... C′-B′-A′ pattern for clarification and/or emphasis. 
@@ -105,13 +130,25 @@ For a chiastic structure use the `poetry` classes above.
 <p class="poem1">A' You cannot serve God and mammon."</p>
 ```
 
+<br />
+
+<hr />
+
 ## Quotation Marks
 
 Typographic (curly) quotes and straight quotes are equally acceptable in book text. Simply leave the quotes as received from the source.
 
+<br />
+
+<hr />
+
 ## Quotes: Block, Pull, Etc.
 
 [CSS Library: Quotes](https://style.bhdirect-ebooks.org/css_lib/quotes.html)
+
+<br />
+
+<hr />
 
 ## Tables
 
