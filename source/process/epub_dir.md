@@ -49,6 +49,22 @@ Then, from the command line, `cd` into the folder containing the .docx file(s), 
 
 <hr />
 
+### pretty
+
+The **pretty** script doesn't dramatically alter the file structure or content, but very efficiently cleans up spacing in file markup to make it, well, pretty. It is a part of the node toolkit, and can be run on a whole set or just one volume. To use, run
+
+```
+
+pretty
+```
+
+
+in the command line directory of the set or volume you want to make pretty.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cv9wkDk-4As" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr />
+
 ### split-files
 
 The **split-files ** script is a powerful one that will, based on markup you enter in the source xml/html/xhtml file(s), split the content into a file structure that aligns with our team's styleguide. It's often worthwhile to double/triple check markup before running this script and continuing with development (it can be time-consuming to fix structural errors). This is also a step where content can mysteriously disappear with mistakes.
