@@ -29,25 +29,12 @@ Since an `alt` value would be redundant when a `figcaption` is present, you may 
 
 The **tachyons** CSS stylings can be very helpful in controlling images. A few examples:
 
-```
-<!-- width 'w-80-ns' will keep the width at 80% and make sure that it reverts to it's original size in a smaller screen (the '-ns' part) -->
-```
-
-```
-<figure class="full-width w-80-ns">
-```
-
-```
-  <img alt="" src="../images/trinity.jpg" />
-```
-
-```
-  <figcaption>The Trinity</figcaption>
-```
-
-```
-</figure>
-```
+In the following example, width 'w-80-ns' will keep the width at 80% and make sure that it reverts to it's original size in a smaller screen (the '-ns' part). \
+\
+`<figure class="full-width w-80-ns">`\
+`  <img alt="" src="../images/trinity.jpg" />`\
+`  <figcaption>The Trinity</figcaption>`\
+`</figure>`
 
 <hr />
 
