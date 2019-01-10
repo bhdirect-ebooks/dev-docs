@@ -30,11 +30,17 @@ As instructed in [HTML semantics](html_style.html#Semantics), always use the mos
 
 ## Hyperlinks
 
-Our current practice is to add links to URLs. The link must contain the `target` attribute with a value of `_blank`. 
+Our current practice is to add links to URLs. The link must contain (as show in the example below):
+
+ the `target` attribute with a value of `_blank`. 
+
+the `rel` attribute with a value of `noopener`.
 
 ```
-<a href="https://www.wordsearchbible.com/" target="_blank">www.wordsearchbible.com</a>
+<a href="https://www.wordsearchbible.com/" target="_blank" rel="noopener">www.wordsearchbible.com</a>
 ```
+
+
 
 ## Languages and Transliterations
 
