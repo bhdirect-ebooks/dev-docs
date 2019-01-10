@@ -28,19 +28,21 @@ Use `<p epub:type="bridgehead"></p>` for any headings in an `<aside>` section.
 
 As instructed in [HTML semantics](html_style.html#Semantics), always use the most semantically-appropriate HTML tags as you markup content. Lists should be ordered or unordered HTML lists. Outlines should be ordered lists with the appropriate classes. Block quotes and poetry should always be tagged as such, and so on.
 
+<hr />
+
 ## Hyperlinks
 
 Our current practice is to add links to URLs. The link must contain (as show in the example below):
 
- the `target` attribute with a value of `_blank`. 
+* the `target` attribute with a value of `_blank`
+* the `rel` attribute with a value of `noopener`
 
-the `rel` attribute with a value of `noopener`.
 
 ```
 <a href="https://www.wordsearchbible.com/" target="_blank" rel="noopener">www.wordsearchbible.com</a>
 ```
 
-
+<hr />
 
 ## Languages and Transliterations
 
