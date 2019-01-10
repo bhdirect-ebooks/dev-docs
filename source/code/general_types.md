@@ -32,7 +32,7 @@ As instructed in [HTML semantics](html_style.html#Semantics), always use the mos
 
 ## Hyperlinks
 
-Our current practice is to add links to URLs. The link must contain (as show in the example below):
+Our current practice is to add links to URLs. The link must contain:
 
 * the `target` attribute with a value of `_blank`
 * the `rel` attribute with a value of `noopener`
