@@ -12,6 +12,17 @@ An important step in developing an epub is to **carefully examine the source doc
 * Is this title part of a set, and will this need to maintain some stylistic consistency related to other volumes? 
 * Are there unique features/considerations that lay outside of the usual development process?
 
+### Overview of the EPUB File Structure
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g9G8gcmJuIw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br />
+
+<br />
+
+<br />
+<hr />
+
 ## Tools/Scripts for Working with Source Documents
 
 <hr />
@@ -47,7 +58,7 @@ The **split-files ** script is a powerful one that will, based on markup you ent
 [split-files (node)](https://github.com/bhdirect-ebooks/split-files)
 How to use:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ArEiGm9T_2g" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_JV5I-MCLeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Use one of the following comments at the beginning of each section break:**
 
