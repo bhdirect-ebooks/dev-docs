@@ -60,6 +60,7 @@ title: Dev Process Overview
 * [Indexes](indexes.html)
 * [Abbreviations](abbr.html)
 * [Videos](videos.html)
+* Images
 * [Glossary](glossary.html)
 * Commentaries
   * [Scripture context](../code/data_types.html#Scripture-Context)
