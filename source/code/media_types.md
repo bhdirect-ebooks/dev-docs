@@ -1,7 +1,6 @@
 ---
 title: Media Types
 ---
-
 ## Images
 
 Images that do not serve a figural purpose in the content should be included according to XHTML specifications. **Purely decorative glyphs and line images should be excluded from the EPUBs we develop.**
@@ -24,6 +23,28 @@ There are three placement options for figures: left, right, and full-width cente
 
 Since an `alt` value would be redundant when a `figcaption` is present, you may leave it blank. (Refer to [Multimedia Fallback](html_style.html#Multimedia-Fallback) for `alt` guidelines.)
 
+The **tachyons** CSS stylings can be very helpful in controlling images. A few examples:
+
+```
+<!-- width 'w-80-ns' will keep the width at 80% and make sure that it reverts to it's original size in a smaller screen (the '-ns' part) -->
+```
+
+```
+<figure class="full-width w-80-ns">
+```
+
+```
+  <img alt="" src="../images/trinity.jpg" />
+```
+
+```
+  <figcaption>The Trinity</figcaption>
+```
+
+```
+</figure>
+```
+
 ## Videos
 
 ### Embedded Videos
@@ -45,7 +66,7 @@ Make sure each video has a unique `id` in order to link from the text.
 
 For consistency, the XHTML file name should be the same as the MP4 and WEBM file names (which, in turn, should be the same as the SVG file name).
 
-***Note the differences below for non-glossaries vs. glossaries.***
+_**Note the differences below for non-glossaries vs. glossaries.**_
 
 ```html
 <!-- Link from non-glossary file -->
