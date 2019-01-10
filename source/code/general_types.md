@@ -37,10 +37,15 @@ Our current practice is to add links to URLs. The link must contain (as show in 
 * the `target` attribute with a value of `_blank`
 * the `rel` attribute with a value of `noopener`
 
+<br />
+
+_Example:_
 
 ```
 <a href="https://www.wordsearchbible.com/" target="_blank" rel="noopener">www.wordsearchbible.com</a>
 ```
+
+<br />
 
 <hr />
 
