@@ -55,6 +55,7 @@ In the command line :
 <hr />
 
 ### "Percival and the Footnotes"
+Previously, footnotes were ignored in the Scripture tagging process but now are finally receiving their due attention.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/R9cCLvUzT34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
