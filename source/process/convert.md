@@ -56,7 +56,7 @@ The video below gives a play-by-play of a typical conversion & upload.
 
 [Notes](https://docs.google.com/document/d/1SKd2fDSqLkvqHil_4lCacR8y5F0ms-JzYy308O7D2sg/edit#heading=h.oe8txcg3fgbe)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DTfFtJwO3FY" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qSJ8YaV0XI4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <hr />
 
@@ -64,7 +64,7 @@ The video below gives a play-by-play of a typical conversion & upload.
 
 Occasionally you may need to upload an additional title/volume to a set which was previously converted & uploaded. The video below details steps to take in that instance.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/G3udL6Rrkco" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qZVwyTeSsVA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <hr />
 
