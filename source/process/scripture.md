@@ -13,9 +13,9 @@ The meat and potatoes of Bible software.
 
 In the command line:
 
-```
-percival
-```
+* ```
+  percival
+  ```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nN6gbjQRPZ8" frameborder="0" ></iframe>
 
@@ -28,6 +28,15 @@ percival
 <hr />
 
 ### Percival: Continuing, Finishing, and Other
+
+In the command line :
+
+* ```
+  percival continue
+  ```
+* ```
+  percival finish
+  ```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nJf2bcFynNM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
