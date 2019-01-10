@@ -12,6 +12,17 @@ An important step in developing an epub is to **carefully examine the source doc
 * Is this title part of a set, and will this need to maintain some stylistic consistency related to other volumes? 
 * Are there unique features/considerations that lay outside of the usual development process?
 
+### Overview of the EPUB File Structure
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g9G8gcmJuIw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br />
+
+<br />
+
+<br />
+<hr />
+
 ## Tools/Scripts for Working with Source Documents
 
 <hr />
@@ -38,6 +49,26 @@ Then, from the command line, `cd` into the folder containing the .docx file(s), 
 
 <hr />
 
+### pretty
+
+The **pretty** script doesn't dramatically alter the file structure or content, but very efficiently cleans up spacing in file markup to make it, well, pretty. It is a part of the node toolkit, and can be run on a whole set or just one volume. To use, run
+
+```
+
+pretty
+```
+
+
+in the command line directory of the set or volume you want to make pretty.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cv9wkDk-4As" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+<br />
+
+<hr />
+
 ### split-files
 
 The **split-files ** script is a powerful one that will, based on markup you enter in the source xml/html/xhtml file(s), split the content into a file structure that aligns with our team's styleguide. It's often worthwhile to double/triple check markup before running this script and continuing with development (it can be time-consuming to fix structural errors). This is also a step where content can mysteriously disappear with mistakes.
@@ -47,7 +78,7 @@ The **split-files ** script is a powerful one that will, based on markup you ent
 [split-files (node)](https://github.com/bhdirect-ebooks/split-files)
 How to use:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ArEiGm9T_2g" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_JV5I-MCLeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Use one of the following comments at the beginning of each section break:**
 
