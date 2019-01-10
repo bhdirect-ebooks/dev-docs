@@ -17,8 +17,6 @@ In the command line:
 percival
 ```
 
-
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nN6gbjQRPZ8" frameborder="0" ></iframe>
 
 <hr />
@@ -37,11 +35,15 @@ percival
 
 ### Percival: Q&A, Part 1
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BwRwUQGFur0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <hr />
 
 ### Percival: Q&A, Part 2
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6TdULVA89kk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr />
 
 ## Recommended Code
 
