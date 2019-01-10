@@ -71,6 +71,7 @@ process:
     footnotes: footnotes.html
     indexes: indexes.html
     abbr: abbr.html
+    images: images.html
     videos: videos.html
     glossary: glossary.html
     special: special_types.html
