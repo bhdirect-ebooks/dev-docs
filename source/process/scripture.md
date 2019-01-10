@@ -5,7 +5,7 @@ The meat and potatoes of Bible software.
 
 ## Related Tools/Scripts
 
-[percival](https://github.com/bhdirect-ebooks/percival)
+[percival](https://github.com/bhdirect-ebooks/percival) 
 
 <hr />
 
