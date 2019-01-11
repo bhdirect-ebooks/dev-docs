@@ -1,5 +1,5 @@
 ---
-title: Images
+title: Images (Editing Images)
 ---
 Since images are used in several parts of an EPUB, it's helpful to have some tools in your toolbelt for editing and formatting.
 
