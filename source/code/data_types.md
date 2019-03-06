@@ -79,11 +79,35 @@ To indicate that a specific portion of text should not be parsed as Scripture, u
 
 Date context for books that are date-aligned, like some devotionals, is identified by `data-datetime`, and its value is an HTML datetime value.
 
+For most books, month and day values are sufficient:
+
 ```html
-<!-- Just the date -->
+<!-- Just the month and day -->
+<hr data-datetime="mm-dd" />
+```
+
+If the devotional has morning and evening entries, AM and PM can be specified in the date attribute:
+
+```html
+<!-- Date with AM or PM -->
+<hr data-datetime="mm-ddT00:00" /> <!-- for AM -->
+<hr data-datetime="mm-ddT12:00" /> <!-- for PM -->
+```
+
+Within a book, date attributes must be in ascending order, though dates can be skipped. They should not be duplicated.
+
+Occasionally, we will need to add year data to the date attributes. This will be necessary when:
+
+- The devotional is in a set with other devotionals, and together they span more than one year. For example, a couple 1-year devotionals in a set.
+- The book does not have dates in ascending order. For example, it follows a year _other_ than the calendar year, such that there are date entries before Jan. 1.
+
+Start with the current year and work forward.
+
+```html
+<!-- Date with year data -->
 <hr data-datetime="yyyy-mm-dd" />
 
-<!-- Date with AM or PM -->
+<!-- Can also be used with AM or PM -->
 <hr data-datetime="yyyy-mm-ddT00:00" /> <!-- for AM -->
 <hr data-datetime="yyyy-mm-ddT12:00" /> <!-- for PM -->
 ```
