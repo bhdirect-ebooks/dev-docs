@@ -23,7 +23,7 @@ There are three placement options for figures: left, right, and full-width cente
 
 Since an `alt` value would be redundant when a `figcaption` is present, you may leave it blank. (Refer to [Multimedia Fallback](html_style.html#Multimedia-Fallback) for `alt` guidelines.)
 
-The **tachyons** CSS stylings can be very helpful in controlling images. A few examples:
+The **tachyons** CSS stylings can be very helpful in controlling images. 
 
 In the following example, width 'w-80-ns' will keep the width at 80% and make sure that it reverts to it's original size in a smaller screen, as `ns` means not small. 
 
@@ -69,7 +69,7 @@ Make sure each video has a unique `id` in order to link from the text.
 
 For consistency, the XHTML file name should be the same as the MP4 and WEBM file names (which, in turn, should be the same as the SVG file name).
 
-**_Note the differences below for non-glossaries vs. glossaries._**
+_**Note the differences below for non-glossaries vs. glossaries.**_
 
 ```html
 <!-- Link from non-glossary file -->
