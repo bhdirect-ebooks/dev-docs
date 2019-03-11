@@ -38,7 +38,7 @@ In the following example, width 'w-80-ns' will keep the width at 80% and make su
 
 ### Embedded Videos
 
-Included by using the `<video>` element, each video must have a corresponding SVG as the `poster` and two transcoded source files located in the epub-remote-resources s3 bucket: an MP4 and a WEBM file as a fallback. [How to transcode videos.](https://docs.google.com/document/d/1XziFW_5nUWsNkPK7hblfeaXe1MDCpfRRuyPP-EmyoM0/edit) Below is an example of how the video should appear in the HTML file.
+Included by using the <video> element, each video must have a corresponding SVG as the poster and two transcoded source files located in the epub-remote-resources s3 bucket: an MP4 and a WEBM file as a fallback. [How to transcode videos.](https://docs.google.com/document/d/1XziFW_5nUWsNkPK7hblfeaXe1MDCpfRRuyPP-EmyoM0/edit) Below is an example of how the video should appear in the HTML file.
 
 ```html
 <video poster="../images/everyday-theology-003.svg" controls="controls" preload="none">
@@ -46,6 +46,8 @@ Included by using the `<video>` element, each video must have a corresponding SV
   <source src="https://epub-remote-resources.mywsb.com/9781433651090/everyday-theology-003.webm" type="video/webm" />
 </video>
 ```
+
+[This SVG template](https://drive.google.com/file/d/1zB15OlTyGdrKX_L42XjTBSeQJ2TzHK2M/view?usp=sharing) can be used and modified to include the name of the current book.
 
 The content.opf should also include a manifest entry for each video file.
 
