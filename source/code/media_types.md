@@ -32,8 +32,8 @@ The **tachyons** CSS stylings can be very helpful in controlling images. A few e
 In the following example, width 'w-80-ns' will keep the width at 80% and make sure that it reverts to it's original size in a smaller screen (the '-ns' part). \
 \
 `<figure class="full-width w-80-ns">`\
-`  <img alt="" src="../images/trinity.jpg" />`\
-`  <figcaption>The Trinity</figcaption>`\
+`<img alt="" src="../images/trinity.jpg" />`\
+`<figcaption>The Trinity</figcaption>`\
 `</figure>`
 
 <hr />
@@ -42,13 +42,25 @@ In the following example, width 'w-80-ns' will keep the width at 80% and make su
 
 ### Embedded Videos
 
-Included by using the `<video>` element, each video must have a corresponding SVG as the `poster` and two transcoded source files located in the epub-remote-resources s3 bucket, an MP4 and a WEBM file as a fallback.
+Included by using the `<video>` element, each video must have a corresponding SVG as the `poster` and two transcoded source files located in the epub-remote-resources s3 bucket, an MP4 and a WEBM file as a fallback. [How to transcode videos.](https://docs.google.com/document/d/1XziFW_5nUWsNkPK7hblfeaXe1MDCpfRRuyPP-EmyoM0/edit) Below is an example of how the video should appear in the HTML file.
 
 ```html
 <video poster="../images/everyday-theology-003.svg" controls="controls" preload="none">
   <source src="https://epub-remote-resources.mywsb.com/9781433651090/everyday-theology-003.mp4" type="video/mp4" />
   <source src="https://epub-remote-resources.mywsb.com/9781433651090/everyday-theology-003.webm" type="video/webm" />
 </video>
+```
+
+The content.opf should also include a manifest entry for each video file.
+
+```
+<!-- Videos --><item href="https://epub-remote-resources.mywsb.com/9781433644443/AmerHist2-001.mp4" id="AmerHist2-001_alt" media-type="video/mp4" /><item href="https://epub-remote-resources.mywsb.com/9781433644443/AmerHist2-001.webm" id="AmerHist2-001" media-type="video/webm" /><item href="https://epub-remote-resources.mywsb.com/9781433644443/AmerHist2-002.mp4" id="AmerHist2-002_alt" media-type="video/mp4" /><item href="https://epub-remote-resources.mywsb.com/9781433644443/AmerHist2-002.webm" id="AmerHist2-002" media-type="video/webm" />
+```
+
+Each HTML file that includes a video must have the `remote-resources` property included in the manifest entry for that file.
+
+```
+<item id="AmerHist202_body01_chapter01" href="text/AmerHist202_body01_chapter01.xhtml" media-type="application/xhtml+xml" properties="remote-resources" />
 ```
 
 ### Linked Videos
@@ -59,7 +71,7 @@ Make sure each video has a unique `id` in order to link from the text.
 
 For consistency, the XHTML file name should be the same as the MP4 and WEBM file names (which, in turn, should be the same as the SVG file name).
 
-**_Note the differences below for non-glossaries vs. glossaries._**
+_**Note the differences below for non-glossaries vs. glossaries.**_
 
 ```html
 <!-- Link from non-glossary file -->
@@ -70,4 +82,24 @@ For consistency, the XHTML file name should be the same as the MP4 and WEBM file
   <a class="video-glyph" href="../videos/everyday-theology-123.xhtml"></a>
   <p>A view of the millennium that...</p>
 </dd>
+```
+
+### Audio Files
+
+Included by using the `audio` element, each audio file should be located in the epub-remote-resources s3 bucket. [How to add audio files to the epub-remote-resources s3 bucket.](https://docs.google.com/document/d/1SFj9rJviWlo_Kxdk25TOaQnNKbr7373OC4r_iukFIKU/edit) Below is an example of how the audio file should appear in the HTML file.
+
+```
+<div class="center">  <audio class="w-100 w-50-ns" controls="controls" src="https://epub-remote-resources.mywsb.com/9781535942041/superheroes-cant-save-you-05.mp3" >  <p>Sorry, it appears your system does not support audio playback.</p>  </audio></div>
+```
+
+The content.opf should also include a manifest entry for each audio file.
+
+```
+<item id="superheroes-cant-save-you-001.mp3" href="https://epub-remote-resources.mywsb.com/9781535942041/superheroes-cant-save-you-001.mp3" media-type="audio/mp3" />
+```
+
+Each HTML file that includes an audio file must have the `remote-resources` property included in the manifest entry for that file.
+
+```
+<item id="SuperheroAudio02_body01_chapter01" href="text/SuperheroAudio02_body01_chapter01.xhtml" media-type="application/xhtml+xml" properties="remote-resources" />
 ```
