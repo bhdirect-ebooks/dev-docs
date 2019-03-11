@@ -27,7 +27,7 @@ The **tachyons** CSS stylings can be very helpful in controlling images.
 
 In the following example, width 'w-80-ns' will keep the width at 80% and make sure that it reverts to it's original size in a smaller screen, as `ns` means not small. 
 
-```
+```html
 <figure class="full-width w-80-ns">
   <img alt="" src="../images/trinity.jpg" />
   <figcaption>The Trinity</figcaption>
@@ -51,7 +51,7 @@ Included by using the `<video>` element, each video must have a corresponding SV
 
 The content.opf should also include a manifest entry for each video file.
 
-```
+```html
 <!-- Videos -->
 <item href="https://epub-remote-resources.mywsb.com/9781433644443/AmerHist2-001.mp4" id="AmerHist2-001_alt" media-type="video/mp4" />
 <item href="https://epub-remote-resources.mywsb.com/9781433644443/AmerHist2-001.webm" id="AmerHist2-001" media-type="video/webm" />
@@ -59,7 +59,7 @@ The content.opf should also include a manifest entry for each video file.
 
 Each HTML file that includes a video must have the `remote-resources` property included in the manifest entry for that file.
 
-```
+```html
 <item id="AmerHist202_body01_chapter01" href="text/AmerHist202_body01_chapter01.xhtml" media-type="application/xhtml+xml" properties="remote-resources" />
 ```
 
@@ -88,7 +88,7 @@ _**Note the differences below for non-glossaries vs. glossaries.**_
 
 Included by using the `audio` element, each audio file should be located in the epub-remote-resources s3 bucket. [How to add audio files to the epub-remote-resources s3 bucket.](https://docs.google.com/document/d/1SFj9rJviWlo_Kxdk25TOaQnNKbr7373OC4r_iukFIKU/edit) Below is an example of how the audio file should appear in the HTML file.
 
-```
+```html
 <div class="center">
   <audio class="w-100 w-50-ns" controls="controls" src="https://epub-remote-resources.mywsb.com/9781535942041/superheroes-cant-save-you-05.mp3" >
   <p>Sorry, it appears your system does not support audio playback.</p>
@@ -98,13 +98,13 @@ Included by using the `audio` element, each audio file should be located in the 
 
 The content.opf should also include a manifest entry for each audio file.
 
-```
+```html
 <!-- Audio -->
 <item id="superheroes-cant-save-you-01.mp3" href="https://epub-remote-resources.mywsb.com/9781535942041/superheroes-cant-save-you-01.mp3" media-type="audio/mp3" />
 ```
 
 Each HTML file that includes an audio file must have the `remote-resources` property included in the manifest entry for that file.
 
-```
+```html
 <item id="SuperheroAudio02_body01_chapter01" href="text/SuperheroAudio02_body01_chapter01.xhtml" media-type="application/xhtml+xml" properties="remote-resources" />
 ```
