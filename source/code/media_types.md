@@ -23,20 +23,16 @@ There are three placement options for figures: left, right, and full-width cente
 
 Since an `alt` value would be redundant when a `figcaption` is present, you may leave it blank. (Refer to [Multimedia Fallback](html_style.html#Multimedia-Fallback) for `alt` guidelines.)
 
-<br />
-
-~~<hr />~~
-
 The **tachyons** CSS stylings can be very helpful in controlling images. A few examples:
 
-In the following example, width 'w-80-ns' will keep the width at 80% and make sure that it reverts to it's original size in a smaller screen (the '-ns' part). \
-\
-`<figure class="full-width w-80-ns">`\
-`<img alt="" src="../images/trinity.jpg" />`\
-`<figcaption>The Trinity</figcaption>`\
-`</figure>`
+In the following example, width 'w-80-ns' will keep the width at 80% and make sure that it reverts to it's original size in a smaller screen, as `ns` means not small. 
 
-<hr />
+```
+<figure class="full-width w-80-ns">
+  <img alt="" src="../images/trinity.jpg" />
+  <figcaption>The Trinity</figcaption>
+</figure>
+```
 
 ## Videos
 
