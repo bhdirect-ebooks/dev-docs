@@ -42,13 +42,25 @@ In the following example, width 'w-80-ns' will keep the width at 80% and make su
 
 ### Embedded Videos
 
-Included by using the `<video>` element, each video must have a corresponding SVG as the `poster` and two transcoded source files located in the epub-remote-resources s3 bucket, an MP4 and a WEBM file as a fallback. [How to transcode videos.](https://docs.google.com/document/d/1XziFW_5nUWsNkPK7hblfeaXe1MDCpfRRuyPP-EmyoM0/edit)
+Included by using the `<video>` element, each video must have a corresponding SVG as the `poster` and two transcoded source files located in the epub-remote-resources s3 bucket, an MP4 and a WEBM file as a fallback. [How to transcode videos.](https://docs.google.com/document/d/1XziFW_5nUWsNkPK7hblfeaXe1MDCpfRRuyPP-EmyoM0/edit) Below is an example of how the video should appear in the HTML file.
 
 ```html
 <video poster="../images/everyday-theology-003.svg" controls="controls" preload="none">
   <source src="https://epub-remote-resources.mywsb.com/9781433651090/everyday-theology-003.mp4" type="video/mp4" />
   <source src="https://epub-remote-resources.mywsb.com/9781433651090/everyday-theology-003.webm" type="video/webm" />
 </video>
+```
+
+The content.opf should also include a manifest entry for each video file.
+
+```
+<!-- Videos --><item href="https://epub-remote-resources.mywsb.com/9781433644443/AmerHist2-001.mp4" id="AmerHist2-001_alt" media-type="video/mp4" /><item href="https://epub-remote-resources.mywsb.com/9781433644443/AmerHist2-001.webm" id="AmerHist2-001" media-type="video/webm" /><item href="https://epub-remote-resources.mywsb.com/9781433644443/AmerHist2-002.mp4" id="AmerHist2-002_alt" media-type="video/mp4" /><item href="https://epub-remote-resources.mywsb.com/9781433644443/AmerHist2-002.webm" id="AmerHist2-002" media-type="video/webm" />
+```
+
+Each HTML file that includes a video must have the `remote-resources` property included in the manifest entry for that file.
+
+```
+<item id="AmerHist202_body01_chapter01" href="text/AmerHist202_body01_chapter01.xhtml" media-type="application/xhtml+xml" properties="remote-resources" />
 ```
 
 ### Linked Videos
@@ -59,7 +71,7 @@ Make sure each video has a unique `id` in order to link from the text.
 
 For consistency, the XHTML file name should be the same as the MP4 and WEBM file names (which, in turn, should be the same as the SVG file name).
 
-_**Note the differences below for non-glossaries vs. glossaries.**_
+**_Note the differences below for non-glossaries vs. glossaries._**
 
 ```html
 <!-- Link from non-glossary file -->
