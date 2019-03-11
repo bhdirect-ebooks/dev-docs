@@ -71,7 +71,7 @@ Make sure each video has a unique `id` in order to link from the text.
 
 For consistency, the XHTML file name should be the same as the MP4 and WEBM file names (which, in turn, should be the same as the SVG file name).
 
-**_Note the differences below for non-glossaries vs. glossaries._**
+_**Note the differences below for non-glossaries vs. glossaries.**_
 
 ```html
 <!-- Link from non-glossary file -->
@@ -82,4 +82,24 @@ For consistency, the XHTML file name should be the same as the MP4 and WEBM file
   <a class="video-glyph" href="../videos/everyday-theology-123.xhtml"></a>
   <p>A view of the millennium that...</p>
 </dd>
+```
+
+### Audio Files
+
+Included by using the `audio` element, each audio file should be located in the epub-remote-resources s3 bucket. [How to add audio files to the epub-remote-resources s3 bucket.](https://docs.google.com/document/d/1SFj9rJviWlo_Kxdk25TOaQnNKbr7373OC4r_iukFIKU/edit) Below is an example of how the audio file should appear in the HTML file.
+
+```
+<div class="center">  <audio class="w-100 w-50-ns" controls="controls" src="https://epub-remote-resources.mywsb.com/9781535942041/superheroes-cant-save-you-05.mp3" >  <p>Sorry, it appears your system does not support audio playback.</p>  </audio></div>
+```
+
+The content.opf should also include a manifest entry for each audio file.
+
+```
+<item id="superheroes-cant-save-you-001.mp3" href="https://epub-remote-resources.mywsb.com/9781535942041/superheroes-cant-save-you-001.mp3" media-type="audio/mp3" />
+```
+
+Each HTML file that includes an audio file must have the `remote-resources` property included in the manifest entry for that file.
+
+```
+<item id="SuperheroAudio02_body01_chapter01" href="text/SuperheroAudio02_body01_chapter01.xhtml" media-type="application/xhtml+xml" properties="remote-resources" />
 ```
