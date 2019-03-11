@@ -32,8 +32,8 @@ The **tachyons** CSS stylings can be very helpful in controlling images. A few e
 In the following example, width 'w-80-ns' will keep the width at 80% and make sure that it reverts to it's original size in a smaller screen (the '-ns' part). \
 \
 `<figure class="full-width w-80-ns">`\
-`  <img alt="" src="../images/trinity.jpg" />`\
-`  <figcaption>The Trinity</figcaption>`\
+`<img alt="" src="../images/trinity.jpg" />`\
+`<figcaption>The Trinity</figcaption>`\
 `</figure>`
 
 <hr />
@@ -42,7 +42,7 @@ In the following example, width 'w-80-ns' will keep the width at 80% and make su
 
 ### Embedded Videos
 
-Included by using the `<video>` element, each video must have a corresponding SVG as the `poster` and two transcoded source files located in the epub-remote-resources s3 bucket, an MP4 and a WEBM file as a fallback.
+Included by using the `<video>` element, each video must have a corresponding SVG as the `poster` and two transcoded source files located in the epub-remote-resources s3 bucket, an MP4 and a WEBM file as a fallback. [How to transcode videos.](https://docs.google.com/document/d/1XziFW_5nUWsNkPK7hblfeaXe1MDCpfRRuyPP-EmyoM0/edit)
 
 ```html
 <video poster="../images/everyday-theology-003.svg" controls="controls" preload="none">
@@ -59,7 +59,7 @@ Make sure each video has a unique `id` in order to link from the text.
 
 For consistency, the XHTML file name should be the same as the MP4 and WEBM file names (which, in turn, should be the same as the SVG file name).
 
-**_Note the differences below for non-glossaries vs. glossaries._**
+_**Note the differences below for non-glossaries vs. glossaries.**_
 
 ```html
 <!-- Link from non-glossary file -->
