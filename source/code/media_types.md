@@ -38,7 +38,7 @@ In the following example, width 'w-80-ns' will keep the width at 80% and make su
 
 ### Embedded Videos
 
-Included by using the `<video>` element, each video must have a corresponding SVG as the `poster` and two transcoded source files located in the epub-remote-resources s3 bucket: an MP4 and a WEBM file as a fallback. [How to transcode videos.](https://docs.google.com/document/d/1XziFW_5nUWsNkPK7hblfeaXe1MDCpfRRuyPP-EmyoM0/edit) Below is an example of how the video should appear in the HTML file.
+Add videos by using the `<video>` element. Each video must have a corresponding SVG as the `poster` and two transcoded source files located in the epub-remote-resources s3 bucket: an MP4 and a WEBM file as a fallback. [How to transcode videos.](https://docs.google.com/document/d/1XziFW_5nUWsNkPK7hblfeaXe1MDCpfRRuyPP-EmyoM0/edit) Below is an example of how the video should appear in the HTML file.
 
 ```html
 <video poster="../images/everyday-theology-003.svg" controls="controls" preload="none">
@@ -71,7 +71,7 @@ Make sure each video has a unique `id` in order to link from the text.
 
 For consistency, the XHTML file name should be the same as the MP4 and WEBM file names (which, in turn, should be the same as the SVG file name).
 
-_**Note the differences below for non-glossaries vs. glossaries.**_
+**_Note the differences below for non-glossaries vs. glossaries._**
 
 ```html
 <!-- Link from non-glossary file -->
@@ -86,7 +86,7 @@ _**Note the differences below for non-glossaries vs. glossaries.**_
 
 ### Audio Files
 
-Included by using the `audio` element, each audio file should be located in the epub-remote-resources s3 bucket. [How to add audio files to the epub-remote-resources s3 bucket.](https://docs.google.com/document/d/1SFj9rJviWlo_Kxdk25TOaQnNKbr7373OC4r_iukFIKU/edit) Below is an example of how the audio file should appear in the HTML file.
+Add audio files by using the `audio` element. Each audio file should be located in the epub-remote-resources s3 bucket. [How to add audio files to the epub-remote-resources s3 bucket.](https://docs.google.com/document/d/1SFj9rJviWlo_Kxdk25TOaQnNKbr7373OC4r_iukFIKU/edit) Below is an example of how the audio file should appear in the HTML file.
 
 ```html
 <div class="center">
