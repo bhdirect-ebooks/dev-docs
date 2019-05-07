@@ -23,15 +23,13 @@ The required elements are `<dc:identifier>`, `<dc:title>`, and `<dc:language>`, 
 
 The toolkit script **create-opf** may add other elements or more details, depending on the nature of the book.
 
-## Subtitle and Edition Metadata
+## Title Metadata
 
 When the work has a subtitle and/or an edition, make sure to include it in the first `<dc:title>` element.
 
 ```xml
 <dc:title>The Essence of the New Testament: A Survey, 2nd Edition</dc:title>
 ```
-
-## Set/Series Metadata
 
 Likewise, when the work is part of a set or series, make sure to include the set title in the first `<dc:title>` element as well.
 
