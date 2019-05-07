@@ -14,15 +14,18 @@ The required elements are `<dc:identifier>`, `<dc:title>`, and `<dc:language>`, 
   <dc:identifier id="isbn">urn:isbn:<!-- EPUB ISBN here --></dc:identifier>
   <meta property="dcterms:modified">2017-01-04T18:38:55Z</meta>
   <dc:title>The Full, Expanded Title</dc:title>
-  <dc:creator>First Last</dc:creator>
   <dc:language>en</dc:language>
+  <dc:creator id="creator1">First Last</dc:creator>
+  <meta refines="#creator1" property="role" scheme="marc:relators">aut</meta>
   <dc:source>urn:isbn:<!-- print/source ISBN here --></dc:source>
 </metadata>
 ```
 
+The toolkit script **create-opf** may add other elements or more details, depending on the nature of the book.
+
 ## Subtitle and Edition Metadata
 
-When the work has a subtitle and/or an edition, make sure to include it in the `<dc:title>` element.
+When the work has a subtitle and/or an edition, make sure to include it in the first `<dc:title>` element.
 
 ```xml
 <dc:title>The Essence of the New Testament: A Survey, 2nd Edition</dc:title>
@@ -30,27 +33,58 @@ When the work has a subtitle and/or an edition, make sure to include it in the `
 
 ## Set/Series Metadata
 
-Likewise, when the work is part of a set or series, make sure to include the set title in the `<dc:title>` element.
+Likewise, when the work is part of a set or series, make sure to include the set title in the first `<dc:title>` element as well.
 
 ```xml
 <dc:title>The Lord of the Rings: The Fellowship of the Ring</dc:title>
 ```
 
+## Creator Metadata
+
+
+
 ## Journal Metadata
 
-<aside class="notice">See a [journal metadata](https://gitlab.com/snippets/26999) snippet on GitLab.</aside>
+For journals (books in the **Periodicals** category,) a span tag containing certain metadata must be added to the copyright-page.xhtml file.
 
-For journals, `<meta property="dcterms:bibliographicCitation">` must be included as a child of the `<metadata>` element.
+```html
+<span class="periodical-meta" data-volume="1" data-issue="45" data-month="April-June" data-year="2001"></span>
+```
 
-<aside class="caution">The `content` attribute value is one, unbroken string, but it is broken below for readability.</aside>
+- `data-volume` should be a numerical value of at least one digit. If it is not clear what volume the journal belongs to, use `1`
+- `data-issue` should be a numerical value of at least one digit, and represent the number of the issue within the volume
+- `data-month` should be the capitalized, full-length name of the month or range of months the issue covers. 
+  - Ranges should be the first and last month in the range, separated by hyphen (dash)
+  - Issues covering quarters or seasons should have those translated to months for this attribute
+- `data-year` should be a numberical value of four digits, representing the year the issue falls within. If the issue spans years, use the earliest.
+
+### Why?
+
+CROSS books in the **Periodicals** category require a special `<meta>` tag in the `<head>` identifying the work as a journal, and giving volume, issue, month, and year data. Here is an example:
 
 ```xml
-<meta property="dcterms:bibliographicCitation" scheme="kev.ctx"
-content="&ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal
-&rft.jtitle=Full+Journal+Title
-&rft.stitle=ABBR
-&rft.volume=[\d]+
-&rft.issue=[\d]+
-&rft.date=YYYY
-&rft.chron=Month-Month" />
+<meta name="esjournal" volume="1" issue="1" month="January" year="2000" />
 ```
+
+The toolkit script **epub2cross** will create this `<meta>` tag from a `<meta property="dcterms:bibliographicCitation">` element in the `<metadata>` section of the ePub's **content.opf** file.
+
+This "bibliographic citation" tag is itself created by the toolkit script **create-opf** from the `<span class="periodical-meta"...></span>` element specified above, and data included in the ePub's **crossrc.json** file.
+
+Here is an example of the "bibliographic citation" element in **content.opf**
+
+<aside class="caution">The text should be one, unbroken string, but it is broken below for readability.</aside>
+
+```xml
+<meta property="dcterms:bibliographicCitation">
+&amp;ctx_ver=Z39.88-2004
+&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal
+&amp;rft.jtitle=Full+Journal+Title
+&amp;rft.stitle=ShortName
+&amp;rft.volume=[\d]+
+&amp;rft.issue=[\d]+
+&amp;rft.date=YYYY
+&amp;rft.chron=Month-Month
+</meta>
+```
+
+<aside class="notice">See a [bibliographic citation](https://gist.github.com/flintsteel7/3fd71706290ac6fc4949e09b2e7b4da4) example on GitHub.</aside>
