@@ -37,9 +37,64 @@ Likewise, when the work is part of a set or series, make sure to include the set
 <dc:title>The Lord of the Rings: The Fellowship of the Ring</dc:title>
 ```
 
+// TODO add more about title stuff
+
 ## Creator Metadata
 
+When a work has multiple creators/contributors, they should be included along with their roles.
 
+There are two classes of creators, "primary" creators, who are associated with the whole work, and "secondary" creators, who have contributed an introduction, chapter, article, or similar small portion of the work.
+
+### Primary Creators
+
+Primary creators should be included using additional `<dc:creator>` and `<meta>` role elements. Each `<dc:creator>` should have a unique id.
+
+```xml
+<dc:creator id="creator1">David Benner</dc:creator>
+<meta refines="#creator1" property="role" scheme="marc:relators">aut</meta>
+<dc:creator id="creator2">Peter Hill</dc:creator>
+<meta refines="#creator2" property="role" scheme="marc:relators">aut</meta>
+```
+<aside class="notice">
+In general, all primary creators will be included in the dev ePub's **crossrc.json** and **content.opf** files when the project is started.
+
+If you feel a primary creator has been left out, see [Requesting a Metadata Update](https://style.bhdirect-ebooks.org/process/metadata-update.html)
+</aside>
+
+### Secondary Creators
+
+
+
+Secondary creators can be associated with either a single file, or a portion of a file.
+
+To list a secondary creator associated with an entire file, use a `<meta>` tag with a `property="dc:creator"` attribute, and a `refines` attribute with a value pointing to the id of that file in the `<manifest>`.
+
+```xml
+  <!-- creator of and entire file -->
+  <meta id="creator2" refines="#BStoryingLife02_body03_chapter03" property="dc:creator">J.O. Terry</meta>
+  <meta refines="#creator2" property="role" scheme="marc:relators">aut</meta>
+...
+</metadata>
+<manifest>
+...
+  <item id="BStoryingLife02_body03_chapter03" href="text/BStoryingLife02_body03_chapter03.xhtml" media-type="application/xhtml+xml" />
+```
+
+For a secondary creators associated with only part of a file, use the same markup, but the `refines` attribute value should point to the path of the file, realtive to **content.opf**, and the id within the file where the portion begins.
+
+```xml
+  <!-- creators of portions of a file -->
+  <meta id="creator9" refines="text/FoundersJ3402_body07_chapter07.xhtml#ctb-loc-1" property="dc:creator">Sam Tullock</meta>
+  <meta refines="#creator9" property="role" scheme="marc:relators">aut</meta>
+  <meta id="creator10" refines="text/FoundersJ3402_body07_chapter07.xhtml#ctb-loc-2" property="dc:creator">Philip R. Taylor</meta>
+  <meta refines="#creator10" property="role" scheme="marc:relators">aut</meta>
+```
+
+Complicated? Yes. Thankfully, we have some processes to make this easier
+
+#### The `data-author` attribute and **create-opf**.
+
+#### When to use `data-author`
 
 ## Journal Metadata
 
