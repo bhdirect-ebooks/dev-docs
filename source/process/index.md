@@ -36,12 +36,14 @@ title: Dev Process Overview
 * [Tables](../code/general_types.html#Tables)
 * [Languages & transliterations](../css_lib/languages.html)
 * [Non-decorative images](../code/media_types.html#Images)
-* Cleanup all non-mywsb.css [classes](../code/css_style.html#Styling-Content) (replace or remove)
+* Convert existing [page breaks](../code/structural_types.html#Page-Breaks)
+* Bring code into compliance with [formatting rules](../code/general_format.html) and [style rules](../code/html_style.html)
+* Replace or remove all non-mywsb.css [classes](../code/css_style.html#Styling-Content)
 
 ### B. Create well-formed EPUB documents
 
 * [Package document (content.opf)](package_doc.html)
-* [Navigation document (toc.xhtml)](nav_doc.html)
+* [Navigation document](nav_doc.html) [(toc.xhtml)](toc-table-of-contents-using-buildtoc.html)
 
 ### Checkpoint!
 
@@ -53,15 +55,14 @@ title: Dev Process Overview
 
 ## III. Enhance
 
-* [Page breaks](../code/structural_types.html#Page-Breaks)
-* [Scripture references](scripture.html)
+* [Add page breaks](../code/structural_types.html#Page-Breaks)
 * [Footnotes](footnotes.html)
-* [TOC (Table of Contents)](https://style.bhdirect-ebooks.org/process/toc-table-of-contents-using-buildtoc.html)
 * [Indexes](indexes.html)
 * [Abbreviations](abbr.html)
+* [Glossary](glossary.html)
+* [Scripture references](scripture.html)
 * [Videos](videos.html)
 * [Images](https://style.bhdirect-ebooks.org/process/images)
-* [Glossary](glossary.html)
 * Commentaries
   * [Scripture context](../code/data_types.html#Scripture-Context)
 * Workbooks/Studies
