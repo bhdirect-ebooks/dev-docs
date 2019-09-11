@@ -134,10 +134,32 @@ The 18 books of the Old Testament Apocrypha, as listed in the [OSIS Bible Book A
 
 ### Strong's References
 
-Strong's number references also receive the `data-ref` attribute, a key of `"strongs"` and a value string starting with `H` for Hebrew or `G` for Greek and the number.
+Strong's number references receive a `data-strongs` attribute and a value string starting with `H` for Hebrew or `G` for Greek and the number.
 
 ```html
-<a data-strongs="G2424">Jesus</a> <a data-strongs="G5547">Christ</a>
+<span data-strongs="G2424">Jesus</span> <span data-strongs="G5547">Christ</span>
+```
+
+Multiple Strong's numbers can exist in the value, and should be separated by commas
+
+```html
+<span data-strongs="H2416,H5315">everything that has the breath of life</span>
+```
+
+### GK Numbers
+
+Goodrick-Kohlenberger numbers receive a `data-gk` attribute, and a value of the number. Multiple numbers can exist in the value, and should be separated by commas
+
+```html
+<span data-gk="4036">Therefore</span> <span data-gk="4005,1569">whoever</span>
+```
+
+Both Strong's and GK number data attributes can be used on the same element, and the order of the attributes doesn't matter.
+
+```html
+<span data-strongs="H7225" data-gk="8040">beginning</span>
+...
+<span data-gk="976,1068" data-strongs="H914,H996">separated</span>
 ```
 
 <hr />
