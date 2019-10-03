@@ -13,10 +13,7 @@ Working in the VMWare environment can be a bit tricky. Below are a few steps for
 2. Next, open the VMWare environment (for setting up VMWare and other Windows-side programs, check this [Google Doc](https://docs.google.com/document/d/1FCB8IKsH9g0CzzPEqyoobgxX2euKk-bVAxDnywGRIuA/edit?usp=sharing)).
 3. Next, sign in to the Windows-side CiscoAnyConnect.
 4. And finally, open the browser (Windows-side) and use your sign in credentials to sign in to: [lifeway.okta.com](https://lifeway.okta.com/)
-5. Finally, sign in (Windows-side) to the <https://app.wordsearchbible.com> with these credentials: 
-
-* user: admin@msb.com
-* pass: godspow3r
+5. Finally, sign in (Windows-side) to the <https://app.wordsearchbible.com> using admin credentials
 
 (In the even that VMWare locks up, it often helps to log out of VPN, and redo the steps above).
 
