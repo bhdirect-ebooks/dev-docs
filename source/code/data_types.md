@@ -195,9 +195,7 @@ In Bibles (and **only** in Bibles), the words of Jesus must be tagged with the `
 <span data-speaker="Jesus">"Have you understood all these things?"</span>
 ```
 
-<aside class="warning">Words of Jesus span elements cannot be used to cover more than a single verse. Start a new \\\`<span data-speaker="Jesus">\\\` for <b>every</b> verse.</aside>
-
-<div>&nbsp</div>
+<aside class="warning">Words of Jesus span elements cannot be used to cover more than a single verse. Start a new `<span data-speaker="Jesus">` for <b>every</b> verse.</aside>
 
 <hr />
 
