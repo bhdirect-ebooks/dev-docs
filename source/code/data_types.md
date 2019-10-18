@@ -211,12 +211,15 @@ In Bible studies, LESSON<em>maker</em> question `<li>` elements receive `data-qu
 
 **`data-panic`** questions relate directly to a Scripture verse or passage, and focus on textual analysis or themes within that passage (and are less related to feelings or experiential connections of the reader).
 
+<aside class="notice">Use whatever supported list class is appropriate on the `<ul>`</aside>
+
 Examples:
 
 ```html
-<ul>
+<ul class="digit">
   <li>This is not a question.</li>
   <li data-question="2">What was your favorite movie growing up?</li>
   <li data-panic="3">In Acts 10:34-48, what was the core content of the message Peter preached? What exactly did he say about Jesus?</li>
 </ul>
 ```
+
