@@ -211,7 +211,7 @@ In Bible studies, LESSON<em>maker</em> question `<li>` elements receive `data-qu
 
 **`data-panic`** questions relate directly to a Scripture verse or passage, and focus on textual analysis or themes within that passage (and are less related to feelings or experiential connections of the reader).
 
-<aside class="note">Use whatever supported list class is appropriate on the `<ul>`</aside>
+<aside class="notice">Use whatever supported list class is appropriate on the `<ul>`</aside>
 
 Examples:
 
