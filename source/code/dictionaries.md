@@ -5,126 +5,221 @@ title: Dictionaries & Encyclopedias
 
 ## Dictionary File Naming
 
-For our team, follow the normal file naming conventions for any dictionary/encyclopedia front matter and back matter. However, for the main content, do not use "chapter" in the file names. Instead, use `part` for each of the source language alphabet characters and `entry` for each term.
+For our team, follow the normal file naming conventions for any dictionary/encyclopedia front matter and back matter.
 
-As an example:
+For the main content, however, there are two options:
+1. use `part` for each of the source language alphabet characters* and `entry` for each <abbr title="The organizational unit of EPUB Dictionary content, consisting of at least one headword and further information on it">entry</abbr>.
+2. use `part` for each of the source language alphabet characters*, and include all entries in that part file
 
-* ExampleDict02_body001_part01.xhtml
-* ExampleDict02_body002_entry001.xhtml
-* ExampleDict02_body003_entry002.xhtml
-* ExampleDict02_body004_entry003.xhtml
+<small>* or other grouping used by the work itself</small> 
+ 
+Option 1 should be used in most cases.
+Option 2 should be considered if the average length of the entries is short.
+
+### Option 1 Example:
+
+* Op1Dict02_body001_part01.xhtml    `A`
+* Op1Dict02_body002_entry001.xhtml  `aardvark`
+* Op1Dict02_body003_entry002.xhtml  `abacus`
+* Op1Dict02_body004_entry003.xhtml  `abandon`
 * etc.
 
 With front matter and back matter included, it would look something like:
 
-* ExampleDict01_front01_cover.xhtml
-* ExampleDict01_front02_titlepage.xhtml
-* ExampleDict01_front03_copyright-page.xhtml
+* Op1Dict01_front01_cover.xhtml
+* Op1Dict01_front02_titlepage.xhtml
+* Op1Dict01_front03_copyright-page.xhtml
 * etc.
-* ExampleDict02_body001_part01.xhtml
-* ExampleDict02_body002_entry001.xhtml
-* ExampleDict02_body003_entry002.xhtml
-* ExampleDict02_body004_entry003.xhtml
+* Op1Dict02_body001_part01.xhtml
+* Op1Dict02_body002_entry001.xhtml
+* Op1Dict02_body003_entry002.xhtml
+* Op1Dict02_body004_entry003.xhtml
 * etc.
-* ExampleDict03_back01_appendix.xhtml
-* ExampleDict03_back02_appendix.xhtml
+* Op1Dict03_back01_appendix.xhtml
+* Op1Dict03_back02_appendix.xhtml
+* etc.
+
+### Option 2 Example:
+
+* Op2Dict02_body001_part01.xhtml    `A`
+* Op2Dict02_body002_part02.xhtml    `B`
+* etc.
+
+With front matter and back matter included, it would look something like:
+
+* Op2Dict01_front01_cover.xhtml
+* Op2Dict01_front02_titlepage.xhtml
+* Op2Dict01_front03_copyright-page.xhtml
+* etc.
+* Op2Dict02_body001_part01.xhtml
+* Op2Dict02_body002_part02.xhtml
+* etc.
+* Op2Dict03_back01_appendix.xhtml
+* Op2Dict03_back02_appendix.xhtml
 * etc.
 
 <hr />
 
 ## Dictionary/Encyclopedia Metadata
 
-These books require special metadata in the EPUB opf. The particulars depend on the type. The [full specification is available via idpf](http://www.idpf.org/epub/dict/epub-dict.html) for reference.
+Dictionary publications require special metadata in the EPUB package file, in our case `content.opf`. The particulars depend on the type. The [full specification is available via IDPF/W3C](http://www.idpf.org/epub/dict/epub-dict.html#sec-2.5) for reference.
 
-The minimum requirement is a `dc:type` of `dictionary` and a `meta` element indicating the subtype.
-
-The following subtypes are available for use:
-
-* `monolingual` -- dictionary with headwords and entry content in a single language
-* `bilingual` -- dictionary with headwords in source language, other entry content in target language
-* `multilingual` -- dictionary with headwords in source language, other entry content in two or more target languages
-* `thesaurus` -- synonym dictionary or thesaurus
-* `encyclopedia` -- encyclopedia
-* `spelling` -- special-purpose spelling dictionary
-* `pronouncing` -- special-purpose dictionary of pronunciations
-* `etymological` -- special-purpose dictionary of etymologies (word origins)
+Our minimum requirement is a `dc:type` of `dictionary` and `meta` elements indicating the subtype and language(s).
+- identify the publication as a dictionary: `<dc:type>dictionary</dc:type>`
+- identify the type of dictionary: `<meta property="dictionary-type">[subtype]</meta>`. The following subtypes are available for use:
+    * `monolingual` — dictionary with <abbr title="A word or phrase defined, translated, or otherwise treated in an entry">headword</abbr>s and <abbr title="The organizational unit of EPUB Dictionary content, consisting of at least one headword and further information on it">entry</abbr> content in a single language
+    * `bilingual` — dictionary with headwords in source language, other entry content in target language
+    * `multilingual` — dictionary with headwords in source language, other entry content in two or more target languages
+    * `thesaurus` — synonym dictionary or thesaurus
+    * `encyclopedia` — encyclopedia
+    * `spelling` — special-purpose spelling dictionary
+    * `pronouncing` — special-purpose dictionary of pronunciations
+    * `etymological` — special-purpose dictionary of etymologies (word origins)
+- identify the language(s) using [ISO 639-1 or 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php) language codes:
+  - source language — language of the headwords: `<meta property="source-language">[ISO 639]</meta>`
+  - target language(s) — language of the translation(s)/definition(s): `<meta property="target-language">[ISO 639]</meta>`
 
 ### Monolingual Dictionary/Encyclopedia
 
-Monolingual subtypes are the default subtype when the dictionary `dc:type` is used. However, for consistent coding practices, we will use the `monolingual` subtype for any monolingual dictionaries/encyclopedias that do not fall into the other subtype categories.
+Monolingual subtypes are the default subtype when the dictionary `dc:type` is used and no subtype is specified. However, for consistent coding practices, we will include the `monolingual` subtype `<meta>` element for any monolingual dictionaries/encyclopedias that do not fall into the other subtype categories.
+
+Even for monolingual dictionaries, `source-language` and `target-language` `<meta>` elements are required, they'll just have the same value as each other
 
 ```html
 <dc:language>en</dc:language>
-<dc:type id="dict-type">dictionary</dc:type>
-<meta property="dcterms:type" refines="#dict-type">monolingual</meta>
+<!-- other metadata -->
+<dc:type>dictionary</dc:type>
+<meta property="dictionary-type">monolingual</meta>
 <meta property="source-language">en</meta>
 <meta property="target-language">en</meta>
 ```
+Notice the `<dc:language>` element, which is a standard non-dictionary EPUB metadata requirement, but is still included in addition to the source and target dictionary-specific `<meta>` elements
+
 
 ### Bilingual Dictionary/Encyclopedia
 
-An example of metadata for a unidirectional bilingual subtype is given in the recommended code (in this case a Greek-English dictionary).
+A bilingual dictionary contains headwords in one language (e.g. Greek) and translations/definitions in another (e.g. English)
 
-The metadata contains a `dc:language` tag for each language, along with the dictionary `dc:type` and `bilingual` subtype. In addition, the source and target languages are identified with `meta` tags and the appropriate `property` for each.
+This example metadata is for a _unidirectional_ Greek-English dictionary.
 
-In the Greek-English dictionary example, the `source-language` is `grc` because the entries are Greek terms, and the `target-language` is `en` because definitions/translations are given in English.
+The `source-language` is `grc` because the headwords are Greek terms, and the `target-language` is `en` because definitions/translations are given in English. (The ISO 639-2 code of `eng` could also be used.)
 
 ```html
 <dc:language>en</dc:language>
 <dc:language>grc</dc:language>
-<dc:type id="dict-type">dictionary</dc:type>
-<meta property="dcterms:type" refines="#dict-type">bilingual</meta>
+<!-- other metadata -->
+<dc:type>dictionary</dc:type>
+<meta property="dictionary-type">bilingual</meta>
 <meta property="source-language">grc</meta>
 <meta property="target-language">en</meta>
 ```
 
+Notice the difference in order between the `<dc:language>` and  `<meta>` language elements. Since the `<dc:language>` elements refer to the EPUB in general, and are not dictionary specific, the publication's primary language comes first.
+
+Imagine the example Greek-English dictionary contains Greek headwords and some additional Greek within the body, but most of the content is written in English.
+
+When it comes to the dictionary specific language `<meta>` elements, however, `source-language` comes first, and refers to the language of the dictionary headwords, followed by `target-language` which identifies the language of the translations/definitions
+
+<aside class="caution">
+  <p>It is also possible to create a <i>bidirectional</i> bilingual dictionary, such as Greek-English/English-Greek. In such a case, the Greek-English and English-Greek sections would be separated into different <b>collection</b>s within the package file, as shown in the <a href="http://www.idpf.org/epub/dict/epub-dict.html#sec-2.5.4.4">EPUB Dictionary Specifications</a> from IDPF/W3C</p>
+  <p>Many of our automated scripts within <code>toolkit</code>, such as <code>manifest-and-spine</code>, <code>stylecheck</code>, <code>create-skmap</code>, and <code>epub2cross</code> do not yet support the use of <b>collection</b>s within EPUBs. If you believe this is necessary for your project, please talk to a tools developer.</p> 
+</aside>
+
 ### Multilingual Dictionary/Encyclopedia
 
-Continuing with the bilingual Greek-English example, if terms were also translated into another language, even if just for clarification or equivalent term information, the work is then a `multilingual` subtype.
+Imagine a Hebrew-English dictionary, where headwords were also translated into another language, (e.g. Greek) even if just for clarification or equivalent term information. This dictionary would receive the `multilingual` subtype.
 
-The multilingual example now shows how the metadata would look in such a book. For a multilingual subtype, there is one `source-language` and multiple `target-language`s.
+The example shows how the metadata would look in such a book. For a multilingual subtype, there is one `source-language` and two or more `target-language`s.
 
 ```html
 <dc:language>en</dc:language>
+<dc:language>heb</dc:language>
 <dc:language>grc</dc:language>
-<dc:language>hbo</dc:language>
-<dc:type id="dict-type">dictionary</dc:type>
-<meta property="dcterms:type" refines="#dict-type">multilingual</meta>
-<meta property="source-language">grc</meta>
+<!-- other metadata -->
+<dc:type>dictionary</dc:type>
+<meta property="dictionary-type">multilingual</meta>
+<meta property="source-language">heb</meta>
 <meta property="target-language">en</meta>
-<meta property="target-language">hbo</meta>
+<meta property="target-language">grc</meta>
 ```
 
 ### Other Dictionary/Encyclopedia Types
 
-For other dictionary subtypes, simply use the appropriate subtype code in the `meta property="dcterms:type" refines` tag.
+For other dictionary subtypes, simply use the appropriate subtype name in the `meta property="dictionary-type` element, along with the appropriate language elements
 
 ```html
-<dc:type id="dict-type">dictionary</dc:type>
-<meta property="dcterms:type" refines="#dict-type">encyclopedia</meta>
+<dc:language>en</dc:language>
+<!-- other metadata -->
+<dc:type>dictionary</dc:type>
+<meta property="dictionary-type">encyclopedia</meta>
+<meta property="source-language">en</meta>
+<meta property="target-language">en</meta>
 ```
 
 <hr />
 
 ## Dictionary/Encyclopedia Content
 
-Dictionaries/Encyclopedias in EPUBs must follow a prescribed pattern using a set of dictionary `epub:type`s.
+### Entries
 
-Each index in the work should be nested in an `dictionary` type `body`, in documents corresponding to the source language's alphabet or other grouping used by the work itself.
+And entry is the organizational unit of EPUB Dictionary content, consisting of at least one headword and further information on it. An entry in an EPUB Dictionary is independently distributable, meaning it can be rendered to users outside of its EPUB Dictionary Publication context.
 
+Semantic markup of the entry and its structure is detailed below. Refer to [Content Documents - Dictionaries](http://www.idpf.org/epub/dict/epub-dict.html#sec-2.2) from IDPF/W3C for full specifications.
+
+#### Body, Article, and Headings
+
+##### Option 1: each entry is in it's own file
+
+Part files will be treated normally:
 ```html
-<body epub:type="dictionary">
-  <!-- a collection of entries -->
+<body epub:type="part">
+  <h1>A</h1>
 </body>
 ```
 
+Entry file `<body>` tags should receive an `epub:type` of `dictionary`.
 
+The entry content should be contained within an `<article>` element with an `epub:type` of `dictentry`.
 
-### Entries
+An `<h1>` with the `.nd` class should be added. This heading will not be displayed in the rendered file, (due to CSS styling of `display: none;`) but the text of the heading will be shown in the Table of Contents, both for the EPUB and CROSS book.
+```html
+<body epub:type="dictionary">
+  <article epub:type="dictentry">
+    <h1 class="nd">aardvark</h1>
+    <!-- entry content -->
+  </article>
+</body>
+```
 
-Each dictionary/encyclopedia entry is nested in an `article` element with `epub:type="dictentry"`.
+<aside class="caution">
+  <p>No classes other than <code>.nd</code> should be used on the article headings, with the exception of <code>.top-level</code>, if necessary for proper hierarchy</p>
+</aside>
 
-The term itself is placed in `<dfn></dfn>`;
+##### Option 2: all entries are contained within a part file
+
+In this case, the part file's `<body>` tag should receive the `epub:type="dictionary"`.
+
+Each entry is still contained within an `<article epub:type="dictentry">`.
+
+But entry headings should use an `<h2>` with the `.nd` class, rather than an `<h1>`.
+```html
+<body epub:type="dictionary">
+  <h1>A</h1>
+  <article epub:type="dictentry">
+    <h2 class="nd">aardvark</h2>
+    <!-- entry content -->
+  </article>
+  <article epub:type="dictentry">
+    <h2 class="nd">abacus</h2>
+    <!--- entry content -->
+  </article>
+  <!-- additional entries -->
+</body>
+
+```
+
+#### Headwords
+The <abbr title="A word or phrase defined, translated, or otherwise treated in an entry">headword</abbr> itself is placed in `<dfn></dfn>`;
 
 ```html
 <body epub:type="dictionary">
