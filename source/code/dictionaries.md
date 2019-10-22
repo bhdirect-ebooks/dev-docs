@@ -60,7 +60,7 @@ With front matter and back matter included, it would look something like:
 
 <hr />
 
-## Dictionary/Encyclopedia Metadata
+## Dictionary Metadata
 
 Dictionary publications require special metadata in the EPUB package file, in our case `content.opf`. The particulars depend on the type. The [full specification is available via IDPF/W3C](http://www.idpf.org/epub/dict/epub-dict.html#sec-2.5) for reference.
 
@@ -79,7 +79,7 @@ Our minimum requirement is a `dc:type` of `dictionary` and `meta` elements indic
   - source language — language of the headwords: `<meta property="source-language">[ISO 639]</meta>`
   - target language(s) — language of the translation(s)/definition(s): `<meta property="target-language">[ISO 639]</meta>`
 
-### Monolingual Dictionary/Encyclopedia
+### Monolingual Dictionary
 
 Monolingual subtypes are the default subtype when the dictionary `dc:type` is used and no subtype is specified. However, for consistent coding practices, we will include the `monolingual` subtype `<meta>` element for any monolingual dictionaries/encyclopedias that do not fall into the other subtype categories.
 
@@ -96,7 +96,7 @@ Even for monolingual dictionaries, `source-language` and `target-language` `<met
 Notice the `<dc:language>` element, which is a standard non-dictionary EPUB metadata requirement, but is still included in addition to the source and target dictionary-specific `<meta>` elements
 
 
-### Bilingual Dictionary/Encyclopedia
+### Bilingual Dictionary
 
 A bilingual dictionary contains headwords in one language (e.g. Greek) and translations/definitions in another (e.g. English)
 
@@ -125,7 +125,7 @@ When it comes to the dictionary specific language `<meta>` elements, however, `s
   <p>Many of our automated scripts within <code>toolkit</code>, such as <code>manifest-and-spine</code>, <code>stylecheck</code>, <code>create-skmap</code>, and <code>epub2cross</code> do not yet support the use of <b>collection</b>s within EPUBs. If you believe this is necessary for your project, please talk to a tools developer.</p> 
 </aside>
 
-### Multilingual Dictionary/Encyclopedia
+### Multilingual Dictionary
 
 Imagine a Hebrew-English dictionary, where headwords were also translated into another language, (e.g. Greek) even if just for clarification or equivalent term information. This dictionary would receive the `multilingual` subtype.
 
@@ -143,7 +143,7 @@ The example shows how the metadata would look in such a book. For a multilingual
 <meta property="target-language">grc</meta>
 ```
 
-### Other Dictionary/Encyclopedia Types
+### Other Dictionary Types
 
 For other dictionary subtypes, simply use the appropriate subtype name in the `meta property="dictionary-type` element, along with the appropriate language elements
 
@@ -158,7 +158,7 @@ For other dictionary subtypes, simply use the appropriate subtype name in the `m
 
 <hr />
 
-## Dictionary/Encyclopedia Content
+## Dictionary Content
 
 ### Entries
 
