@@ -39,25 +39,36 @@ _<hr />_
 
 A context type is one which indicates a context boundary for our applications. The current context subtypes are Scripture, Parsing, and Date. To indicate one of these types of context boundary, use the following markup.
 
-Context tags should always be placed at the beginning of the corresponding content (similar to page breaks), but always following an `<h1>`.
-
-Use `data-context` with the HTML element `<hr>`, whose semantic meaning indicates a change in context, or `<span>` when `hr` is not appropriate.
-
 ### Scripture Context
 
 Scripture context is identified by the `data-context` attribute, followed by the reference as the value.
 
 The reference should be the OSIS abbreviation (explained below). A single verse reference must be in the form of b.c.v, while _a reference to more than one verse must be b.c.v-b.c.v_
 
+Use `data-context` with the HTML element `<hr>`, whose semantic meaning indicates a change in context.
+
+Scripture context tags should always be placed before the corresponding content, but always following an `<h1>`.
+
+Additionally, scripture context tags must be preceeded by a line break.
+
 ```html
+<!-- after an h1 -->
+<h1>Genesis 1</h1>
 <hr data-context="Gen.1.1" />
+
+<!-- before all other types of content -->
+<hr data-context="Matt.25.1-Matt.25.5" />
+<h3>“There’s Always Time” (<a data-ref="Matt.25.1-Matt.25.5">Matthew 25:1-5</a>)</h3>
 <!-- OR -->
-<span data-context="Gen.1.1"></span>
+<hr data-context="1Sam.1.1" />
+<p><span class="b"><a data-ref="1Sam.1.1">1:1</a></span> Possibly ten years earlier...</p>
 ```
 
 ### Parsing Context
 
 Scripture parsing context is identified by the `data-parsing` attribute, and its value is an OSIS _of type b or b.c only_.
+
+A `<span>` tag may be used in places where an `<hr>` is not appropriate.
 
 ```html
 <hr data-parsing="Gen.1" />
@@ -70,7 +81,7 @@ Scripture parsing context is identified by the `data-parsing` attribute, and its
 To indicate that a specific portion of text should not be parsed as Scripture, use `data-parsing` along with an empty value. Remember to use with a `<span>` element, rather than `<hr>`.
 
 ```html
-<span data-parsing="">123:4</span><span data-parsing="Gen"></span>
+<span data-parsing=""></span>123:4<span data-parsing="Gen"></span>
 ```
 
 <aside class="warning">Important: After using an empty parsing attribute in this way, always restore context with a normal parsing context tag, as shown above.</aside>
