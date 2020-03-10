@@ -159,18 +159,18 @@ Multiple Strong's numbers can exist in the value, and should be separated by com
 
 ### GK Numbers
 
-Goodrick-Kohlenberger numbers receive a `data-gk` attribute, and a value of the number. Multiple numbers can exist in the value, and should be separated by commas
+Goodrick-Kohlenberger numbers are similar to Strong's numbers, except they receive a `data-gk` attribute.
 
 ```html
-<span data-gk="4036">Therefore</span> <span data-gk="4005,1569">whoever</span>
+<span data-gk="G4036">Therefore</span> <span data-gk="G4005,G1569">whoever</span>
 ```
 
 Both Strong's and GK number data attributes can be used on the same element, and the order of the attributes doesn't matter.
 
 ```html
-<span data-strongs="H7225" data-gk="8040">beginning</span>
+<span data-strongs="H7225" data-gk="H8040">beginning</span>
 ...
-<span data-gk="976,1068" data-strongs="H914,H996">separated</span>
+<span data-gk="H976,H1068" data-strongs="H914,H996">separated</span>
 ```
 
 <hr />
