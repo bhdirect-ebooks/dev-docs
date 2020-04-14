@@ -117,7 +117,7 @@ title: Regex Library
 
 <summary>Spans</summary>
 
-* **Span combine (1): **Find and replace to combine the content of adjacent spans with the same class<br>F: `<span class="([^"]*)">([^<]*)</span>(\s*)<span class="\1">([^<]*)</span>`<br>R: `<span class="\1">\2\3\4</span>`
+* **Span combine (1): **Find and replace to combine the content of spans with the same class<br>F: `<span class="([^"]*)">([^<]*)</span>(\s*)<span class="\1">([^<]*)</span>`<br>R: `<span class="\1">\2\3\4</span>`
 
 
 
@@ -137,11 +137,11 @@ title: Regex Library
 
 
 
-* **Remove unnecessary span:** Find spans that are not needed<br>F: `<span class="[^"]*">(‘|“|’|”|\.|\)|\(|\?|!|,)+</span>`<br>R: `\1`
+* **Remove unnecessary span:** Find spans around punctuation and replace without the span<br>F: `<span class="[^"]*">(‘|“|’|”|\.|\)|\(|\?|!|,)+</span>`<br>R: `\1`
 
 
 
-* **Repeating spans:**
+* **Repeating spans:** Find and replace adjacent spans that repeat<br>F: `<span class="([^\n<>]+)">([^\n<>]+)</span><span class="\1">`<br>R: `<span class="\1">\2`
 
 </details>
 
