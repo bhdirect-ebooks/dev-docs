@@ -113,7 +113,7 @@ title: Regex Library
 
 </details>
 
-<details open>
+<details close>
 
 <summary>Spans</summary>
 
@@ -145,7 +145,7 @@ title: Regex Library
 
 </details>
 
-<details close>
+<details open>
 
 <summary>Links</summary>
 
