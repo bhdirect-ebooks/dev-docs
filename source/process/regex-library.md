@@ -22,22 +22,22 @@ title: Regex Library
 
 <br>
 
-<details open>
+<details close>
 
 <summary>Languages and Apparatus Symbols</summary>
-
-* **lang-grc: **Find instances of Greek. Find:
-
-
-```
-     ([\p{Greek}][\p{Greek} ́¨ˆ̂˘̆̑̃ˋ̔̓ ͂.,’“;]+\b)
-```
 
 * **lang-hbo: **Find instances of Hebrew. Find:
 
 
 ```
      (([ְֱֲֳִֵֶַָֹֺֻּֽ֑֖֛֢֣֤֥֦֧֪֚֭֮֒֓֔֕֗֘֙֜֝֞֟֠֡֨֩֫֬֯־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״]+-? ?)+)
+```
+
+* **lang-grc: **Find instances of Greek. Find:
+
+
+```
+     ([\p{Greek}][\p{Greek} ́¨ˆ̂˘̆̑̃ˋ̔̓ ͂.,’“;]+\b)
 ```
 
 * **Apparatus Symbols: **Find apparatus symbols. Find:
