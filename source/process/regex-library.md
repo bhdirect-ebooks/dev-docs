@@ -137,7 +137,10 @@ title: Regex Library
 
 
 
-* **Remove unnecessary span:**
+* **Remove unnecessary span:** Find spans that are not needed<br>F: `<span class="[^"]*">(‘|“|’|”|\.|\)|\(|\?|!|,)+</span>`<br>R: `\1`
+
+
+
 * **Repeating spans:**
 
 </details>
