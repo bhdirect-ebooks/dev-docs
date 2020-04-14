@@ -133,8 +133,10 @@ title: Regex Library
 
 
 
-* **Move comma out of span:**
-* **Move non-english chars in span:**
+* **Move non-english chars in span:** Find and replace the class of a span containing non-english characters<br>F: `<span class="(italic|i)">([^a-zA-Z0-9\s]+)</span>`<br>R: `<span class="\1">\2</span>`
+
+
+
 * **Remove unnecessary span:**
 * **Repeating spans:**
 
