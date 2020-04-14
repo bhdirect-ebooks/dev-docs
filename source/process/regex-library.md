@@ -77,7 +77,7 @@ title: Regex Library
 
 </details>
 
-<details open>
+<details close>
 
 <summary>Spacing</summary>
 
@@ -113,7 +113,7 @@ title: Regex Library
 
 </details>
 
-<details close>
+<details open>
 
 <summary>Spans</summary>
 
