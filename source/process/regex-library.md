@@ -5,7 +5,12 @@ title: Regex Library
 
 <summary>Prep</summary>
 
-* `code`, description
+* **extract text**: in the Find window, choose <mark>'Extract'</mark> to pull contents from a file or project. Find:
+
+
+```
+     <body(?msi)(.*?)</body>
+```
 
 </details>
 
@@ -15,7 +20,78 @@ title: Regex Library
 
 <summary>Clean and Code</summary>
 
+<br>
 
+<details open>
+
+<summary>Languages and Apparatus Symbols</summary>
+
+* **lang-grc: **Find instances of Greek. Find:
+
+
+```
+     ([\p{Greek}][\p{Greek} ́¨ˆ̂˘̆̑̃ˋ̔̓ ͂.,’“;]+\b)
+```
+
+* **lang-hbo: **Find instances of Hebrew. Find:
+
+
+```
+     (([ְֱֲֳִֵֶַָֹֺֻּֽ֑֖֛֢֣֤֥֦֧֪֚֭֮֒֓֔֕֗֘֙֜֝֞֟֠֡֨֩֫֬֯־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״]+-? ?)+)
+```
+
+* **Apparatus Symbols: **Find apparatus symbols. Find:
+
+
+```
+     ([ℵ]|&#x(?:2135;|E(?:00[021];|5(?:0[45E6FA];|1[034679];))))
+```
+
+* **Check Lang:** Find special lang characters. Find:
+
+
+```
+     <span class="([^"]+)">([^A-Z][^<]*[āåâêëėèēîīôöòōûüū][^<]*)</span>
+```
+
+* **Extract Lang: **Choose <mark>'Extract'</mark> to pull list of italic words. Use this list to look for untagged `lang` or `translit`. Find:
+
+
+```
+     <span class="(italic|i)">([^<]*)</span>
+```
+
+</details>
+
+<details close>
+
+<summary>Page Breaks and Paragraphs</summary>
+
+</details>
+
+<details close>
+
+<summary>Scriptext</summary>
+
+</details>
+
+<details close>
+
+<summary>Spacing</summary>
+
+</details>
+
+<details close>
+
+<summary>Spans</summary>
+
+</details>
+
+<details close>
+
+<summary>Links</summary>
+
+</details>
 
 </details>
 
