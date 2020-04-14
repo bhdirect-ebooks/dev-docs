@@ -117,6 +117,18 @@ title: Regex Library
 
 <summary>Spans</summary>
 
+* **Span combine (1): **Find and replace to combine the content of adjacent spans with the same class<br>F: `<span class="([^"]*)">([^<]*)</span>(\s*)<span class="\1">([^<]*)</span>`<br>R: `<span class="\1">\2\3\4</span>`
+
+
+
+* **Span combine (2):**
+* **Remove spans from headings:**
+* **Remove space within span:**
+* **Move comma out of span:**
+* **Move non-english chars in span:**
+* **Remove unnecessary span:**
+* **Repeating spans:**
+
 </details>
 
 <details close>
