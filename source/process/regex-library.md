@@ -121,9 +121,18 @@ title: Regex Library
 
 
 
-* **Span combine (2):**
-* **Remove spans from headings:**
-* **Remove space within span:**
+* **Span combine (2): **Find and replace spans that can be combined into a single class<br>F: `<span class="([^"]*)"><span class="([^"]*)">([^<]*)</span></span>`<br>R: `<span class="\1 \2">\3</span>`
+
+
+
+* **Remove spans from headings:** Find spans in headings that are potentially not needed<br>F: `(<h\d[^>]*>.*?)<span(\s*class="(?!label)[^"]*")*>([^<]*)</span>(.*?</h\d>)`<br>R: `\1\3\4`
+
+
+
+* **Remove space within spans:** Find spans with a space inside<br>F: `<span class="([^"]+)"> ([^<]+)</span>`<br>R: ` <span class="\1">\2</span>` (include the space _before_ the span)<br><br>F: `<span class="([^"]+)">([^<]+) </span>`<br>R: `<span class="\1">\2</span> ` (include the space _after_ the span)
+
+
+
 * **Move comma out of span:**
 * **Move non-english chars in span:**
 * **Remove unnecessary span:**
