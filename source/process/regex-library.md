@@ -22,7 +22,7 @@ title: Regex Library
 
 <br>
 
-<details open>
+<details close>
 
 <summary>Languages and Apparatus Symbols</summary>
 
@@ -46,7 +46,7 @@ title: Regex Library
 
 </details>
 
-<details close>
+<details open>
 
 <summary>Page Breaks and Paragraphs</summary>
 
@@ -55,6 +55,18 @@ title: Regex Library
 
 
 * **Pagebreak with no space: **Find page breaks that have no space on either side.<br>F: `(\w+<span epub:type="pagebreak" id="[^"]*" title="[^"]*"></span>)(\w+)`<br>R: `\1 \2`
+
+
+
+* **Pagebreak begin line space: **Find a pagebreak that has a space at the beginning of a line<br>F: `(<[^>]*><span epub:type="pagebreak"[^>]*></span>)\s`<br>R: `\1`
+
+
+
+* **Find broken paragraphs (1): **Find potential broken paragraphs<br>F: `([^\.|!|”|?|"|>|)|:])</p>\s*<p[^>]*>\s*(<span epub:type="pagebreak" id="page.+?" title="[^>]*></span>)`<br>R: `\1 \2`
+
+
+
+* **Find broken paragraphs (2): **Find potential broken paragraphs<br>F: `<p([^>]*)>\s*(<span epub:type="pagebreak" id="page.+?" title="[^>]*></span>)([a-z]+)`<br>! Case sensitive
 
 </details>
 
