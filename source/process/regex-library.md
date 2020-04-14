@@ -54,7 +54,7 @@ title: Regex Library
      <span class="([^"]+)">([^A-Z][^<]*[āåâêëėèēîīôöòōûüū][^<]*)</span>
 ```
 
-* **Extract Lang: **Choose <mark>'Extract'</mark> to pull list of italic words. Use this list to look for untagged `lang` or `translit`. Find:
+* **Extract Lang: **Choose <mark>'Extract'</mark> to create a list of italicized words. Use this list to look for untagged `lang` or `translit`. Find:
 
 
 ```
