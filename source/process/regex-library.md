@@ -65,7 +65,7 @@ title: Regex Library
 
 </details>
 
-<details open>
+<details close>
 
 <summary>Scriptext</summary>
 
@@ -77,9 +77,39 @@ title: Regex Library
 
 </details>
 
-<details close>
+<details open>
 
 <summary>Spacing</summary>
+
+* **No space between words: **Find and replace words with no space in between<br>F: `(<span class="(?!label)[^"]*">[^<]*</span>)(\w)`<br>R: `\1 \2`
+
+
+
+* **No space between spans: **Find and replace span tags with no space in between<br>F: `(<span class="(?!label)[^"]*">[^<]*</span>)(<span class="(?!label)[^"]*">\w+[^<]*</span>)`<br>R:` \1 \2`
+
+
+
+* **No space open parens: **Find and replace an opening parenthesis with no space before<br>F: `(\w</span>)(\()`<br>R: `\1 \2`
+
+
+
+* **Begin span spacing:** Find spans lacking a space before<br> F: `([a-z]+)(<span)`<br>R: `\1 \2`
+
+
+
+* **Space after first tag: **Find and replace opening tags with a space after<br>F: `<([^>])> (.*?)`<br>R: `<\1>\2`
+
+
+
+* **Space before last tag:** Find and replace closing tags with a space before<br>F:  `</(p|td|h1|h2|h3)>`<br>R: `</\1>`
+
+
+
+* **Dash spacing:** Find dashes with potential spacing issues<br>F: `(\s[^>/= ]*\s[-–][^</= ]*\s|\s[^>/= ]*[-–]\s[^</= ]*\s)`
+
+
+
+* **Space after comma: **Find a comma with no space after<br>F: `,([^"’”'<0-9 —\)]+)`<br>R: `, \1`
 
 </details>
 
