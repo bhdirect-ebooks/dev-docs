@@ -148,7 +148,7 @@ title: Regex Library
 <summary>LESSON_maker_ Markup</summary>
 
 * **LESSON_maker_ lists: **
-* **panic LESSON_maker_: **
+* **panic LESSON_maker_: **add the `panic` attribute 
 
 </details>
 
