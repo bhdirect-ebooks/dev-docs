@@ -148,7 +148,7 @@ title: Regex Library
 <summary>LESSON_maker_ Markup</summary>
 
 * **LESSON_maker_ lists: **
-* **panic LESSON_maker_: **add the `panic` attribute 
+* **panic LESSON_maker_: **add the `panic` attribute to list items with `data-refs`<br>F: `<li( value="\d+")? data-question(="\d+">.*?<a data-ref=")`<br>R: `<li\1 data-panic\2`
 
 </details>
 
