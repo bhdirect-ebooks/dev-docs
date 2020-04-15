@@ -72,7 +72,7 @@ title: Regex Library Draft
 
 <summary>Spans</summary>
 
-* **span combine (1)**: Find and replace to combine the content of spans with the same class<br>F: `<span class="([^"]*)">([^<]*)</span>(\s*)<span class="\1">([^<]*)</span>`<br>R: `<span class="\1">\2\3\4</span>`
+* **span combine (1)**: In this Regex Library navigate to _Clean and Code > Spacing > **no space between spans**_ and check before running span combine. Find and replace to combine the content of spans with the same class<br>F: `<span class="([^"]*)">([^<]*)</span>(\s*)<span class="\1">([^<]*)</span>`<br>R: `<span class="\1">\2\3\4</span>`
 * **span combine (2)**: Find and replace spans that can be combined into a single class<br>F: `<span class="([^"]*)"><span class="([^"]*)">([^<]*)</span></span>`<br>R: `<span class="\1 \2">\3</span>`
 * **remove spans from headings**: Find spans in headings that are potentially not needed<br>F: `(<h\d[^>]*>.*?)<span(\s*class="(?!label)[^"]*")*>([^<]*)</span>(.*?</h\d>)`<br>R: `\1\3\4`
 * **remove space within spans**: Find spans with a space inside<br>F: `<span class="([^"]+)"> ([^<]+)</span>`<br>R: `<span class="\1">\2</span>` (include the space _before_ the span)<br><br>F: `<span class="([^"]+)">([^<]+) </span>`<br>R: `<span class="\1">\2</span>` (include the space _after_ the span)
@@ -149,7 +149,7 @@ title: Regex Library Draft
 
 <details close>
 
-<summary>LESSON_maker_ Markup</summary>
+<summary>LESSON\_maker\_ Markup</summary>
 
 * **panic LESSON_maker_**: add the `panic` attribute to list items with `data-refs`<br>F: `<li( value="\d+")? data-question(="\d+">.*?<a data-ref=")`<br>R: `<li\1 data-panic\2`
 
@@ -166,7 +166,7 @@ title: Regex Library Draft
 * **remove pagebreaks from headings: **find and replace to move pagebreaks out of headings<br>F: `(<h\d>.*?)(<span epub:type="pagebreak[^>]*></span>)`<br>R: `\2\1`
 * **remove space before footnote**: find and replace extra space before a footnote indicator<br>F: `\s<sup class="fn"`<br>R: `<sup class="fn"`
 * **special chars spacing: **review special character spacing<br>F: `\s+(\{|\$|\&|\,|\:|\;|\?|\@|\#|\||\'|\<|\>|\-|\^|\*|\(|\)|\%|\!|\]|\"|”|“)\s+`<br>R: `\2 \1`
-* **special chars spans: **review special characters in spans and replace the character without the span<br>F:*_ \*\*`<span\[^>]_>({|$|&|,|:|;|?|@|#|||'|.|-|^|*|(|)|%|!|]|"|”|“|—)+</span>`<br>R:`\1`
+* **special chars spans: **review special characters in spans and replace the character without the span<br>F: `<span[^>]>({|$|&|,|:|;|?|@|#|||'|.|-|^||(|)|%|!|]|"|”|“|—)+</span>`<br>R: `\1`
 * **non-english chars spans: **review non-english characters in spans that could be tagged as `lang`<br>F: `<span class="i">([^a-zA-Z0-9\s]+)</span>`
 * **missed verses (1): **review potentially missed verses<br>F: `(?<!</abbr>|</span>)(?<!'>|[a-z]|\d|\.)(?:\(| )\d+:\d{1,2}(?!</a)'`
 * **missed verses (2):** review potentially missed verses<br>F: `(?<!</abbr>|</span>)(?<!'>|[a-z]|\d|\.)(?:\(| )\d+:\d{1,2}(?!</a)`
