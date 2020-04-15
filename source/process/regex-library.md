@@ -84,7 +84,7 @@ title: Regex Library
 
 <summary>Links</summary>
 
-* **existing Links: **Add `target="_blank"` attribute to existing external links<br>F: `<a href="http([^"]+)">`<br>R: `<a href="http\1" target="_blank" rel="noopener">`
+* **add `target="_blank"` to links: **Add `target="_blank"` attribute to existing external links<br>F: `<a href="http([^"]+)">`<br>R: `<a href="http\1" target="_blank" rel="noopener">`
 * **URLs: **Add links to URLs (Does not capture every instance)<br>F: `\shttp(.+?)([;|\.|,|\)][\s|<])`<br>R: `\s<a href="http\1" target="_blank" rel="noopener">http\1</a>\2\3`
 * **link chapters: **Find potential instances where chapters can be linked. Adjust the word `first` to `second` and the number `1` to `2` etc., to find all chapters<br>F: `(first chap(\.|ters?)|chap(s?\.|ters?) 1)(?!\d)`
 * **link parts:** Find potential instances where parts can be linked. Adjust the word `first` to `second` and the number `1` to `2` etc., to find all parts<br>F: `(first part|parts? 1)(?!\d)`
