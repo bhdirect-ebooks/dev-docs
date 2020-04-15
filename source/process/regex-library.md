@@ -135,7 +135,7 @@ title: Regex Library
 
 </details>
 
-<details open>
+<details close>
 
 <summary>Commentary Markup</summary>
 
@@ -143,11 +143,12 @@ title: Regex Library
 
 </details>
 
-<details close>
+<details open>
 
-<summary>LessonMaker Markup</summary>
+<summary>LESSON_maker_ Markup</summary>
 
-
+* **LESSON_maker_ lists: **
+* **panic LESSON_maker_: **
 
 </details>
 
