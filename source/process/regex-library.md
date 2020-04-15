@@ -108,11 +108,11 @@ title: Regex Library
 
 </details>
 
-<details open>
+<details close>
 
 <summary>Index</summary>
 
-* **move pagebreaks up top:** find pagebreaks in a file and move them before the h1<br>F: `(<h1[^>]*>.*?</h1>(?msi)(.*?))(<span epub:type="pagebreak"[^>]*></span>)`<br>R: `\3\1`
+* **move pagebreaks up top:** find pagebreaks in a file and move them before the h1. (<mark>Run multiple times until there are no new finds</mark>)<br>F: `(<h1[^>]*>.*?</h1>(?msi)(.*?))(<span epub:type="pagebreak"[^>]*></span>)`<br>R: `\3\1`
 
 </details>
 
@@ -131,15 +131,15 @@ title: Regex Library
 
 <summary>Percival</summary>
 
-
+* **percival parsing: **add parsing tags before headings containing scripture. Replace `Gen` with Bible book needed<br>F: `^(\s+)<(h\d)>(.*?)(\d+):(.*?)</\2>`<br>R: `\1<span data-parsing="Gen.\4"></span>\n\1<\2>\3\4:\5</\2>`
 
 </details>
 
-<details close>
+<details open>
 
 <summary>Commentary Markup</summary>
 
-
+* **headings** **`data-context`: **add `data-context` tags before headings. Adjust `h3` to capture desired heading<br>F: `^(\s+)<(h3)>(.*?<a data-ref="(.*?)">.*?</a>.*?)</\2>`<br>R: `\1<hr data-context="\4" />\n\1<\2>\3</\2>`
 
 </details>
 
