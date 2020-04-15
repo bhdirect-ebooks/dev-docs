@@ -6,7 +6,7 @@ title: Regex Library
 <summary>Prep</summary>
 
 * **extract text**: in the Find window, choose <mark>'Extract'</mark> to pull contents from a file or project.<br>F: `<body(?msi)(.*?)</body>`
-* **remove divs: **Find divs and replace with only the content inside the div<br>F: `<div( class="[^"]+")?>((.|\n)*?)</div>`<br>R: `\2`
+* **remove divs: **Find divs and replace with only the content inside the div<br>F: `<div( class="[^"]+")?>((.|\s)*?)</div>`<br>R: `\2`
 
 </details>
 
