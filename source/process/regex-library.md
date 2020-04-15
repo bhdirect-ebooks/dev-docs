@@ -12,7 +12,7 @@ title: Regex Library
 
 <br>
 
-<details open>
+<details close>
 
 <summary>Clean and Code</summary>
 
@@ -20,13 +20,14 @@ title: Regex Library
 
 <details close>
 
-<summary>Languages and Apparatus Symbols</summary>
+<summary>Languages, Apparatus and Symbols</summary>
 
 * **lang-hbo: **Find instances of Hebrew.<br>F: `(([ְֱֲֳִֵֶַָֹֺֻּֽ֑֖֛֢֣֤֥֦֧֪֚֭֮֒֓֔֕֗֘֙֜֝֞֟֠֡֨֩֫֬֯־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״]+-? ?)+)`
 * **lang-grc: **Find instances of Greek.<br>F: `([\p{Greek}][\p{Greek} ́¨ˆ̂˘̆̑̃ˋ̔̓ ͂.,’“;]+\b)`
 * **apparatus symbols: **Find apparatus symbols.<br>F: `([ℵ]|&#x(?:2135;|E(?:00[021];|5(?:0[45E6FA];|1[034679];))))`
 * **check lang:** Find special lang characters.<br>F: `<span class="([^"]+)">([^A-Z][^<]*[āåâêëėèēîīôöòōûüū][^<]*)</span>`
 * **extract lang: **Choose <mark>'Extract'</mark> to create a list of italicized words. Use this list to look for untagged `lang` or `translit`.<br>F: `<span class="(italic|i)">([^<]*)</span>`
+* **ampersands: **replace ampersands<br>F: `([^>])&`<br>R: `\1\&#38;`
 
 </details>
 
@@ -80,7 +81,42 @@ title: Regex Library
 
 </details>
 
+</details>
+
+<br>
+
 <details open>
+
+<summary>Enhance</summary>
+
+<details close>
+
+<summary>Abbreviations</summary>
+
+* **tables to ABBR 1: **convert tables to abbreviation lists<br>F: `<tr>\s*<td>(.*?)</td>\s*<td>(.*?)</td>\s*</tr>`<br>R: `<dt epub:type="glossterm"><dfn>\1</dfn></dt><dd epub:type="glossdef">\2</dd>`
+* **tables to ABBR 2: **after running _tables to ABBR 1_ use this regex to format the lists new lines<br>F: `<dfn>(.*?)</dfn></dt><dd epub:type="glossdef">(.*?)</dd>`<br>R: `\n\s\s\s\s\s\s\s\s\s\s\s\s<dfn>\1</dfn>\n\s\s\s\s\s\s\s\s\s\s</dt>\n\s\s\s\s\s\s\s\s\s\s<dd epub:type="glossdef">\2</dd>`
+
+</details>
+
+<details close>
+
+<summary>Footnotes</summary>
+
+* **remove space before footnote: **find and replace extra space before a footnote indicator<br>F: `\s<sup class="fn"`<br>R: `<sup class="fn"`
+* **unique footnote reference id: **use filename to make footnote reference id unique<br>F: `<sup class="fn" id="note-backlink-(\d+)"><a epub:type="noteref" href="([^#]+)_([^#]*?).xhtml#note-(\d+)">\[(\d+)\]</a></sup>`<br>R: `<sup class="fn" id="note-backlink-\3-\1"><a epub:type="noteref" href="\2_\3.xhtml#note-\3-\4">[\5]</a></sup>`
+* **unique footnote indicator id:** use filename to make footnote id unique<br>F: `<div id="note-(\d+)" epub:type="footnote">\s*<p><sup><a href="([^#]+)_([^#]*?)\.xhtml#note-backlink-(\d+)">`<br>R: `<div id="note-\3-\1" epub:type="footnote"><p><sup><a href="\2_\3.xhtml#note-backlink-\3-\4">`
+
+</details>
+
+<details open>
+
+<summary>Index</summary>
+
+* **move pagebreaks up top:** find pagebreaks in a file and move them before the h1<br>F: `(<h1[^>]*>.*?</h1>(?msi)(.*?))(<span epub:type="pagebreak"[^>]*></span>)`<br>R: `\3\1`
+
+</details>
+
+<details close>
 
 <summary>Links</summary>
 
@@ -91,15 +127,29 @@ title: Regex Library
 
 </details>
 
-</details>
+<details close>
 
-<br>
+<summary>Percival</summary>
+
+
+
+</details>
 
 <details close>
 
-<summary>Enhance</summary>
+<summary>Commentary Markup</summary>
 
-* `code`, description
+
+
+</details>
+
+<details close>
+
+<summary>LessonMaker Markup</summary>
+
+
+
+</details>
 
 </details>
 
