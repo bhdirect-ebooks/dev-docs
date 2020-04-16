@@ -29,6 +29,7 @@ title: Regex Library Draft
 * **check lang**: Find special `lang` characters<br>F: `<span class="([^"]+)">([^A-Z][^<]*[āåâêëėèēîīôöòōûüū][^<]*)</span>`
 * **extract lang**: Choose <mark>'Extract'</mark> to create a list of italicized words. Use this list to look for untagged lang or translit<br>F: `<span class="(italic|i)">([^<]*)</span>`
 * **ampersands**: replace ampersands<br>F: `([a-z]+\s*)&(\s*[a-z]+)`<br>R: `\1\&#38;\2`
+* **unsafe chars: **find characters that are unsafe to use within HTML attribute values<br>F: `[a-z-]+="[^"]*?[\x{0000}-\x{0009}\x{000b}\x{000c}\x{000e}-\x{001f}\x{007f}-\x{009f}\x{00ad}\x{0600}-\x{0604}\x{070f}\x{17b4}\x{17b5}\x{200c}-\x{200f}\x{2028}-\x{202f}\x{2060}-\x{206f}\x{feff}\x{fff0}-\x{ffff}]+?[^"]*"`
 
 </details>
 
@@ -149,7 +150,7 @@ title: Regex Library Draft
 
 <details close>
 
-<summary>LESSON\_maker\_ Markup</summary>
+<summary>LESSON_maker_ Markup</summary>
 
 * **panic LESSON_maker_**: add the `panic` attribute to list items with `data-refs`<br>F: `<li( value="\d+")? data-question(="\d+">.*?<a data-ref=")`<br>R: `<li\1 data-panic\2`
 
