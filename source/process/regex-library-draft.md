@@ -1,9 +1,9 @@
 ---
-title: Regex Library Draft
+title: Regex Library
 ---
 <details close>
 
-<summary>Prep</summary>
+<summary>General</summary>
 
 * **extract text:** in the Find window, choose <mark>'Extract'</mark> to pull contents from a file or project<br>F: `<body(?msi)(.*?)</body>`
 * **extract classes:** choose <mark>'Extract'</mark> to pull classes from a file or project<br>F: `\sclass="[^"]+"`
@@ -13,7 +13,7 @@ title: Regex Library Draft
 
 <br>
 
-<details open>
+<details close>
 
 <summary>Clean and Code</summary><blockquote>
 
@@ -150,7 +150,7 @@ title: Regex Library Draft
 
 <details close>
 
-<summary>LESSON_maker_ Markup</summary>
+<summary>LESSON\_maker\_ Markup</summary>
 
 * **panic LESSON_maker_**: add the `panic` attribute to list items with `data-refs`<br>F: `<li( value="\d+")? data-question(="\d+">.*?<a data-ref=")`<br>R: `<li\1 data-panic\2`
 
