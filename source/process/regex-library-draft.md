@@ -7,7 +7,7 @@ title: Regex Library
 
 * **extract text:** in the Find window, choose <mark>'Extract'</mark> to pull contents from a file or project<br>F: `<body(?msi)(.*?)</body>`
 * **extract classes:** choose <mark>'Extract'</mark> to pull classes from a file or project<br>F: `\sclass="[^"]+"`
-* **remove divs:** Find divs and replace with only the div content<br>F: `<div( class="[^"]+")?>((.|\s)*?)</div><br>R: \2`
+* **remove divs:** Find divs and replace with only the div content<br>F: `<div(?: class="[^"]+")?>((?:.|\s)*?)</div>`<br>R: `\1`
 
 </details>
 
@@ -24,7 +24,8 @@ title: Regex Library
 <summary>Languages, Apparatus and Symbols</summary>
 
 * **lang-hbo**: Find instances of Hebrew<br>F: (`([ְֱֲֳִֵֶַָֹֺֻּֽ֑֖֛֢֣֤֥֦֧֪֚֭֮֒֓֔֕֗֘֙֜֝֞֟֠֡֨֩֫֬֯־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״]+-? ?)+)`
-* **lang-grc**: Find instances of Greek<br>F: `([\p{Greek}][\p{Greek} ́¨ˆ̂˘̆̑̃ˋ̔̓ ͂.,’“;]+\b)`
+* **lang-grc: **Find instances of Greek<br>F: `((?:[\x{0300}-\x{036F}\x{0370}-\x{03FF}\x{1F00}-\x{1FFF}\x{20D0}-\x{20FF}\x{FE20}-\x{FE2F}]+[,. ]*)+)`
+* **lang-grc (2)**: Find instances of Greek<br>F: `([\p{Greek}][\p{Greek} ́¨ˆ̂˘̆̑̃ˋ̔̓ ͂.,’“;]+\b)`
 * **apparatus symbols**: Find apparatus symbols.<br>F: `([ℵ]|&#x(?:2135;|E(?:00[021];|5(?:0[45E6FA];|1[034679];))))`
 * **check lang**: Find special `lang` characters<br>F: `<span class="([^"]+)">([^A-Z][^<]*[āåâêëėèēîīôöòōûüū][^<]*)</span>`
 * **extract lang**: Choose <mark>'Extract'</mark> to create a list of italicized words. Use this list to look for untagged lang or translit<br>F: `<span class="(italic|i)">([^<]*)</span>`
@@ -96,7 +97,7 @@ title: Regex Library
 <summary>Abbreviations</summary>
 
 * **tables to ABBR 1**: convert tables to abbreviation lists<br>F: `<tr>\s*<td>(.*?)</td>\s*<td>(.*?)</td>\s*</tr>`<br>R: `<dt epub:type="glossterm"><dfn>\1</dfn></dt><dd epub:type="glossdef">\2</dd>`
-* **tables to ABBR 2**: after running tables to ABBR 1 use this regex to format the lists new lines<br>F: `<dfn>(.*?)</dfn></dt><dd epub:type="glossdef">(.*?)</dd>`<br>R: `\n\s\s\s\s\s\s\s\s\s\s\s\s<dfn>\1</dfn>\n\s\s\s\s\s\s\s\s\s\s</dt>\n\s\s\s\s\s\s\s\s\s\s<dd epub:type="glossdef">\2</dd>`
+* **tables to ABBR 2**: after running tables to ABBR 1 use this regex to format the lists new lines<br>F: `<dfn>(.*?)</dfn></dt><dd epub:type="glossdef">(.*?)</dd>`<br>R: `\n            <dfn>\1</dfn>\n          </dt>\n          <dd epub:type="glossdef">\2</dd>`
 
 </details>
 
@@ -104,7 +105,7 @@ title: Regex Library
 
 <summary>Footnotes</summary>
 
-* **footnote references: **for footnotes _not_ in `backmatter` use this find and replace to format footnote refs in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: `<p>(\d)\. (.*?)</p>`<br>R: `<div epub:type="footnote" id="\1">\n\s\s\s\s\s\s\s\s\s\s<p><sup><a href="#FILENAME##backlink-\1">\1</a></sup>\&#160;<span class="note">\2</span></p>\n\s\s\s\s\s\s\s\s</div>`
+* **footnote references: **for footnotes _not_ in `backmatter` use this find and replace to format footnote refs in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: `<p>(\d)\. (.*?)</p>`<br>R: `<div epub:type="footnote" id="\1">\n          <p><sup><a href="#FILENAME##backlink-\1">\1</a></sup>\&#160;<span class="note">\2</span></p>\n        </div>`
 * **footnote indicators: **for footnotes _not_ in `backmatter` use this find and replace to format footnote indicators in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: `<sup>(\d+)</sup>`<br>R: `<sup class="fn" id="backlink-intro-\1"><a epub:type="noteref" href="#FILENAME##intro-\1">[\1]</a></sup>`
 * **unique footnote reference id**: use filename to make footnote reference id unique<br>F: `<sup class="fn" id="note-backlink-(\d+)"><a epub:type="noteref" href="([^#]+)_([^#]*?).xhtml#note-(\d+)">\[(\d+)\]</a></sup>`<br>R: `<sup class="fn" id="note-backlink-\3-\1"><a epub:type="noteref" href="\2_\3.xhtml#note-\3-\4">[\5]</a></sup>`
 * **unique footnote indicator id**: use filename to make footnote id unique<br>F: `<div id="note-(\d+)" epub:type="footnote">\s*<p><sup><a href="([^#]+)_([^#]*?)\.xhtml#note-backlink-(\d+)">`<br>R: `<div id="note-\3-\1" epub:type="footnote"><p><sup><a href="\2_\3.xhtml#note-backlink-\3-\4">`
@@ -125,6 +126,11 @@ title: Regex Library
 <summary>Links</summary>
 
 * **add `target="_blank"` to links**: Add `target="_blank"` attribute to existing external links<br>F: `<a href="http([^"]+)"><br>R: <a href="http\1" target="_blank" rel="noopener">`<br>R: `<a href="http\1" target="_blank" rel="noopener">`
+  > Links to our own hosted videos should not have 
+  >
+  > `target=_blank or rel="noopener"`
+  >
+  >  attributes, but this RegEx will add them, so avoid using this RegEx unmodified on books with videos.
 * **URLs**: Add links to URLs (Does not capture every instance)<br>F: `\shttp(.+?)([;|\.|,|\)][\s|<])`<br>R: `\s<a href="http\1" target="_blank" rel="noopener">http\1</a>\2\3`
 * **tag hyperlinks:** find and replace to tag hyperlinks<br>F: `<a (?:class="[^"]*"\s*)*href="((?:mail[^"]*)|(?:http[^"]*))">([^<]*)</a>`<br>R: `<a href="\1" target="_blank" rel="noopener">\2</a>`
 * **link chapters**: Find potential instances where chapters can be linked. Adjust the word `first` to `second` and the number `1` to `2` etc., to find all chapters<br>F: `(first chap(\.|ters?)|chap(s?\.|ters?) 1)(?!\d)`
@@ -146,14 +152,6 @@ title: Regex Library
 
 * **headings `data-context`**: add `data-context` tags before headings. Adjust `h3` to capture desired heading<br>F: `^(\s+)<(h3)>(.*?<a data-ref="(.*?)">.*?</a>.*?)</\2>`<br>R: `\1<hr data-context="\4" />\n\1<\2>\3</\2>`
 
-</details>
-
-<details close>
-
-<summary>LESSON\_maker\_ Markup</summary>
-
-* **panic LESSON_maker_**: add the `panic` attribute to list items with `data-refs`<br>F: `<li( value="\d+")? data-question(="\d+">.*?<a data-ref=")`<br>R: `<li\1 data-panic\2`
-
 </details></blockquote>
 
 </details>
@@ -168,7 +166,7 @@ title: Regex Library
 * **remove space before footnote**: find and replace extra space before a footnote indicator<br>F: `\s<sup class="fn"`<br>R: `<sup class="fn"`
 * **special chars spacing: **review special character spacing<br>F: `\s+(\{|\$|\&|\,|\:|\;|\?|\@|\#|\||\'|\<|\>|\-|\^|\*|\(|\)|\%|\!|\]|\"|”|“)\s+`<br>R: `\2 \1`
 * **special chars spans: **review special characters in spans and replace the character without the span<br>F: `<span[^>]>({|$|&|,|:|;|?|@|#|||'|.|-|^||(|)|%|!|]|"|”|“|—)+</span>`<br>R: `\1`
-* **non-english chars spans: **review non-english characters in spans that could be tagged as `lang`<br>F: `<span class="i">([^a-zA-Z0-9\s]+)</span>`
+* **non-english chars spans: **review non-english characters in spans that could be tagged as `lang`<br>F: `<span class="i(?:talic)?">([^a-zA-Z0-9\s]+)</span>`
 * **missed verses (1): **review potentially missed verses<br>F: `(?<!</abbr>|</span>)(?<!'>|[a-z]|\d|\.)(?:\(| )\d+:\d{1,2}(?!</a)'`
 * **missed verses (2):** review potentially missed verses<br>F: `(?<!</abbr>|</span>)(?<!'>|[a-z]|\d|\.)(?:\(| )\d+:\d{1,2}(?!</a)`
 
