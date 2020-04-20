@@ -206,11 +206,7 @@ title: Regex Library
   >
   > `(`
   >
-  > and
-  >
   > `:`
-  >
-  > and
   >
   > `$`
 * **special chars spans: **review special characters in spans and replace the character without the span<br>F: `<span[^>]>({|$|&|,|:|;|?|@|#|||'|.|-|^||(|)|%|!|]|"|”|“|—)+</span>`<br>R: `\1`
@@ -218,13 +214,11 @@ title: Regex Library
   >
   > `<span class="i">)</span>`
   >
-  > and
-  >
   > `<span class="b">.</span>`
 * **non-english chars spans: **review non-english characters in spans that could be tagged as `lang`<br>F: `<span class="i(?:talic)?">([^a-zA-Z0-9\s]+)</span>`
 * **missed verses: **Find digits with a colon in between and no tag that could potentially be missed scripture verses<br>F: `(?<!</abbr>|</span>)(?<!'>|[a-z]|\d|\.)(?:\(| )\d+:\d{1,2}(?!</a)`
   > Example finds: 
   >
-  > `106:9 and 10:10`
+  > `106:9`  `10:10`
 
 </details>
