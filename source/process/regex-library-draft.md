@@ -39,8 +39,17 @@ title: Regex Library
 <summary>Page Breaks and Paragraphs</summary>
 
 * **pagebreak breaking words**: Find pagebreaks that are in between words.<br>F: `([a-z]+)-\s*(<span epub:type="pagebreak" id="[^"]*" title="[^"]*"></span>)`<br>R: `\2 \1`
+  > Example find: 
+  >
+  > `left-<span epub:type="pagebreak" id="page1" title="1"></span>hand`
 * **pagebreak with no space**: Find page breaks that have no space on either side.<br>F: `(\w+<span epub:type="pagebreak" id="[^"]*" title="[^"]*"></span>)(\w+)`<br>R: `\1 \2`
+  > Example find: 
+  >
+  > `I<span epub:type="pagebreak" id="page1" title="1"></span>have`
 * **pagebreak begin line space**: Find a pagebreak that has a space at the beginning of a line<br>F: `(<[^>]*><span epub:type="pagebreak"[^>]*></span>)\s`<br>R: `\1`
+  > Example find: 
+  >
+  > `<p><span epub:type="pagebreak" id="page1" title="1"></span> All`
 * **find broken paragraphs (1)**: Find potential broken paragraphs<br>F: `([^\.|!|”|?|"|>|)|:])</p>\s*<p[^>]*>\s*(<span epub:type="pagebreak" id="page.+?" title="[^>]*></span>)`<br>R: `\1 \2`
 * **find broken paragraphs (2)**: Find potential broken paragraphs. <mark>Case sensitive</mark><br>F: `<p([^>]*)>\s*(<span epub:type="pagebreak" id="page.+?" title="[^>]*></span>)([a-z]+)`
 
@@ -60,11 +69,29 @@ title: Regex Library
 <summary>Spacing</summary>
 
 * **no space between words**: Find and replace words with no space in between<br>F: `(<span class="(?!label)[^"]*">[^<]*</span>)(\w)`<br>R: `\1 \2`
+  > Example find: 
+  >
+  > `A <span class="i">100 foot</span>drop`
 * **no space between spans**: Find and replace span tags with no space in between(<mark>Check before using _span combine_</mark>)<br>F: `(<span class="(?!label)[^"]*">[^<]*</span>)(<span class="(?!label)[^"]*">\w+[^<]*</span>)`<br>R: `\1 \2`
+  > Example find: 
+  >
+  > `A <span class="i">100 foot</span><span class="i">drop</span>`
 * **no space open parens**: Find and replace an opening parenthesis with no space before<br>F: `(\w</span>)(\()`<br>R: `\1 \2`
+  > Example find: 
+  >
+  > `<span class="i">100 foot drop</span>(30 meters).`
 * **begin span spacing**: Find spans lacking a space before<br> F: `([a-z]+)(<span)`<br>R: `\1 \2`
+  > Example find: 
+  >
+  > `A<span class="i">100 foot drop</span>`
 * **space after first tag**: Find and replace opening tags with a space after<br>F: `<([^>])> (.*?)`<br>R: `<\1>\2`
+  > Example find: 
+  >
+  > `<p> A <span class="i">100 foot drop</span>`
 * **space before last tag**: Find and replace closing tags with a space before<br>F: `</(p|td|h1|h2|h3)>`<br>R: `</\1>`
+  > Example find: 
+  >
+  > `drop. </p>`
 * **dash spacing**: Find dashes with potential spacing issues<br>F: `(\s[^>/= ]*\s[-–][^</= ]*\s|\s[^>/= ]*[-–]\s[^</= ]*\s)`
 * **space after comma**: Find a comma with no space after<br>F: `,([^"’”'<0-9 —\)]+)<br>R: , \1`
 
@@ -77,6 +104,13 @@ title: Regex Library
 * **span combine (1)**: In this Regex Library navigate to _Clean and Code > Spacing > **no space between spans**_ and check before running span combine. Find and replace to combine the content of spans with the same class<br>F: `<span class="([^"]*)">([^<]*)</span>(\s*)<span class="\1">([^<]*)</span>`<br>R: `<span class="\1">\2\3\4</span>`
 * **span combine (2)**: Find and replace spans that can be combined into a single class<br>F: `<span class="([^"]*)"><span class="([^"]*)">([^<]*)</span></span>`<br>R: `<span class="\1 \2">\3</span>`
 * **remove spans from headings**: Find spans in headings that are potentially not needed<br>F: `(<h\d[^>]*>.*?)<span(\s*class="(?!label)[^"]*")*>([^<]*)</span>(.*?</h\d>)`<br>R: `\1\3\4`
+  > Example find: 
+  >
+  > `<h1><span class="i">Foreword</span></h1>`
+  >
+  >   
+  >
+  > `<h2>The <span class="i">Rock-Star</span> Complex</h2>`
 * **remove space within spans**: Find spans with a space inside<br>F: `<span class="([^"]+)"> ([^<]+)</span>`<br>R: `<span class="\1">\2</span>` (include the space _before_ the span)<br><br>F: `<span class="([^"]+)">([^<]+) </span>`<br>R: `<span class="\1">\2</span>` (include the space _after_ the span)
 * **move non-english chars in span**: Find and replace the class of a span containing non-english characters<br>F: `<span class="(italic|i)">([^a-zA-Z0-9\s]+)</span>`<br>R: `<span class="\1">\2</span>`
 * **remove unnecessary span**: Find spans around punctuation and replace without the span<br>F: `<span class="[^"]*">(‘|“|’|”|\.|\)|\(|\?|!|,)+</span>`<br>R: `\1`
@@ -158,7 +192,7 @@ title: Regex Library
 
 <br>
 
-<details open>
+<details close>
 
 <summary>Review</summary>
 
@@ -170,27 +204,27 @@ title: Regex Library
 * **special chars spacing: **find special characters with extra spacing on either side of it<br>F: `\s+(\{|\$|\&|\,|\:|\;|\?|\@|\#|\||\'|\<|\>|\-|\^|\*|\(|\)|\%|\!|\]|\"|”|“)\s+`<br>R: `\2 \1`
   > Example finds: 
   >
-  > ` ( `
+  > `(`
   >
   > and
   >
-  > ` : `
+  > `:`
   >
   > and
   >
-  > ` $ `
+  > `$`
 * **special chars spans: **review special characters in spans and replace the character without the span<br>F: `<span[^>]>({|$|&|,|:|;|?|@|#|||'|.|-|^||(|)|%|!|]|"|”|“|—)+</span>`<br>R: `\1`
   > Example finds: 
   >
-  > `<span class="i">)</span> `
+  > `<span class="i">)</span>`
   >
   > and
   >
-  > ` <span class="b">.</span>`
+  > `<span class="b">.</span>`
 * **non-english chars spans: **review non-english characters in spans that could be tagged as `lang`<br>F: `<span class="i(?:talic)?">([^a-zA-Z0-9\s]+)</span>`
 * **missed verses: **Find digits with a colon in between and no tag that could potentially be missed scripture verses<br>F: `(?<!</abbr>|</span>)(?<!'>|[a-z]|\d|\.)(?:\(| )\d+:\d{1,2}(?!</a)`
   > Example finds: 
   >
-  > ` 106:9 and 10:10`
+  > `106:9 and 10:10`
 
 </details>
