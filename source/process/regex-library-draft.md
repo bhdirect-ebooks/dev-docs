@@ -158,16 +158,39 @@ title: Regex Library
 
 <br>
 
-<details close>
+<details open>
 
 <summary>Review</summary>
 
 * **remove pagebreaks from headings: **find and replace to move pagebreaks out of headings<br>F: `(<h\d>.*?)(<span epub:type="pagebreak[^>]*></span>)`<br>R: `\2\1`
+  > Example find: 
+  >
+  > `<h1><span epub:type=”pagebreak” id=”page1” title=”1”></span>Chapter 1</h1>`
 * **remove space before footnote**: find and replace extra space before a footnote indicator<br>F: `\s<sup class="fn"`<br>R: `<sup class="fn"`
-* **special chars spacing: **review special character spacing<br>F: `\s+(\{|\$|\&|\,|\:|\;|\?|\@|\#|\||\'|\<|\>|\-|\^|\*|\(|\)|\%|\!|\]|\"|”|“)\s+`<br>R: `\2 \1`
+* **special chars spacing: **find special characters with extra spacing on either side of it<br>F: `\s+(\{|\$|\&|\,|\:|\;|\?|\@|\#|\||\'|\<|\>|\-|\^|\*|\(|\)|\%|\!|\]|\"|”|“)\s+`<br>R: `\2 \1`
+  > Example finds: 
+  >
+  > ` ( `
+  >
+  > and
+  >
+  > ` : `
+  >
+  > and
+  >
+  > ` $ `
 * **special chars spans: **review special characters in spans and replace the character without the span<br>F: `<span[^>]>({|$|&|,|:|;|?|@|#|||'|.|-|^||(|)|%|!|]|"|”|“|—)+</span>`<br>R: `\1`
+  > Example finds: 
+  >
+  > `<span class="i">)</span> `
+  >
+  > and
+  >
+  > ` <span class="b">.</span>`
 * **non-english chars spans: **review non-english characters in spans that could be tagged as `lang`<br>F: `<span class="i(?:talic)?">([^a-zA-Z0-9\s]+)</span>`
-* **missed verses (1): **review potentially missed verses<br>F: `(?<!</abbr>|</span>)(?<!'>|[a-z]|\d|\.)(?:\(| )\d+:\d{1,2}(?!</a)'`
-* **missed verses (2):** review potentially missed verses<br>F: `(?<!</abbr>|</span>)(?<!'>|[a-z]|\d|\.)(?:\(| )\d+:\d{1,2}(?!</a)`
+* **missed verses: **Find digits with a colon in between and no tag that could potentially be missed scripture verses<br>F: `(?<!</abbr>|</span>)(?<!'>|[a-z]|\d|\.)(?:\(| )\d+:\d{1,2}(?!</a)`
+  > Example finds: 
+  >
+  > ` 106:9 and 10:10`
 
 </details>
