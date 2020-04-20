@@ -222,6 +222,8 @@ title: Regex Library
 * **missed verses: **Find digits with a colon in between and no tag that could potentially be missed scripture verses<br>F: `(?<!</abbr>|</span>)(?<!'>|[a-z]|\d|\.)(?:\(| )\d+:\d{1,2}(?!</a)`
   > Example finds: 
   >
-  > `106:9`  `10:10`
+  > `106:9`
+  >
+  > `10:10`
 
 </details>
