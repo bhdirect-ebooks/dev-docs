@@ -96,13 +96,29 @@ Strictly keep structure (markup) and presentation (styling) apart. That is, make
 
 ## Entity References
 
-Use entity references where necessary. Use numeric entities only.
+Use entity references where necessary. Use numeric entities only. Examples:
 
 * Use <code class="rec">&#38;#169;</code>, not <code class="not">&#38;copy;</code>
 * Use <code class="rec">&#38;#38;</code>, not <code class="not">&#38;amp;</code>
 * Use <code class="rec">&#38;#160;</code>, not <code class="not">&#38;nbsp;</code>
 * Use <code class="rec">&#38;#8212;</code>, not <code class="not">&#38;mdash;</code>
 * etc.
+
+The following characters *must* be converted to html entities:
+* `&` (`&#38;`)
+* `>` (`&#62;`)
+* `<` (`&#60;`)
+
+During the clean and code process, you may find it helpful to replace hex code and and decimal code html entities with the corresponding characters. Some commonly occurring entities in our ePub source files include:
+* Em dash (`—`) - Find `&#x2014;` or `&mdash;` or `&#151`
+* En dash (`–`) - Find `&#x2013;` or `&ndash;` or `&#150;`
+* Copyright symbol (`©`) - Find `&#x00A9;` or `&#169;`
+* Right single quote (`’`) - Find `&#x2019;` or `&#8217;`
+* Right double quote (`”`) - Find `&#x201D;` or `&#8221;`
+* Left single quote(`‘`) - Find `&#x2018;` or `&#8216;`
+* Left double quote (`“`) - Find `&#x201C;` or `&#8220;`
+
+A helpful source for locating html entities and unicode characters can be found at [&what](http://www.amp-what.com/). 
 
 <aside class="tip">In BBEdit, you can easily add a numeric character reference by using the Entity palette window.<ul><li>Window --> Palettes --> Entities (under HTML Markup Tools).</li></ul></aside>
 
