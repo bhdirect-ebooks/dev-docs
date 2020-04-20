@@ -114,6 +114,13 @@ title: Regex Library
 * **remove space within spans**: Find spans with a space inside<br>F: `<span class="([^"]+)"> ([^<]+)</span>`<br>R: `<span class="\1">\2</span>` (include the space _before_ the span)<br><br>F: `<span class="([^"]+)">([^<]+) </span>`<br>R: `<span class="\1">\2</span>` (include the space _after_ the span)
 * **move non-english chars in span**: Find and replace the class of a span containing non-english characters<br>F: `<span class="(italic|i)">([^a-zA-Z0-9\s]+)</span>`<br>R: `<span class="\1">\2</span>`
 * **remove unnecessary span**: Find spans around punctuation and replace without the span<br>F: `<span class="[^"]*">(‘|“|’|”|\.|\)|\(|\?|!|,)+</span>`<br>R: `\1`
+  > Example find: 
+  >
+  > `<span class="i">(</span>`
+  >
+  >  
+  >
+  > `<span class="b">.</span>`
 * **repeating spans**: Find and replace adjacent spans that repeat<br>F: `<span class="([^\n<>]+)">([^\n<>]+)</span><span class="\1">`<br>R: `<span class="\1">\2`
 
 </details></blockquote>
@@ -160,11 +167,7 @@ title: Regex Library
 <summary>Links</summary>
 
 * **add `target="_blank"` to links**: Add `target="_blank"` attribute to existing external links<br>F: `<a href="http([^"]+)"><br>R: <a href="http\1" target="_blank" rel="noopener">`<br>R: `<a href="http\1" target="_blank" rel="noopener">`
-  > Links to our own hosted videos should not have 
-  >
-  > `target=_blank or rel="noopener"`
-  >
-  >  attributes, but this RegEx will add them, so avoid using this RegEx unmodified on books with videos.
+  > Links to our own hosted videos should not have `target=_blank or rel="noopener"` attributes, but this RegEx will add them, so avoid using this RegEx unmodified on books with videos.
 * **URLs**: Add links to URLs (Does not capture every instance)<br>F: `\shttp(.+?)([;|\.|,|\)][\s|<])`<br>R: `\s<a href="http\1" target="_blank" rel="noopener">http\1</a>\2\3`
 * **tag hyperlinks:** find and replace to tag hyperlinks<br>F: `<a (?:class="[^"]*"\s*)*href="((?:mail[^"]*)|(?:http[^"]*))">([^<]*)</a>`<br>R: `<a href="\1" target="_blank" rel="noopener">\2</a>`
 * **link chapters**: Find potential instances where chapters can be linked. Adjust the word `first` to `second` and the number `1` to `2` etc., to find all chapters<br>F: `(first chap(\.|ters?)|chap(s?\.|ters?) 1)(?!\d)`
