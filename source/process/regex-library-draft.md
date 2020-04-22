@@ -163,7 +163,7 @@ title: Regex Library
 <summary>Links</summary>
 
 * **add `target="_blank"` to links**: Add `target="_blank"` attribute to existing external links<br>F: `<a href="http([^"]+)"><br>R: <a href="http\1" target="_blank" rel="noopener">`<br>R: `<a href="http\1" target="_blank" rel="noopener">`
-  <aside class="caution">Links to our own hosted videos should not have `target=_blank or rel="noopener"` attributes, but this RegEx will add them, so avoid using this RegEx unmodified on books with videos.</aside>
+  <aside class="caution">Links to our own hosted videos should not have `target="_blank" rel="noopener"` attributes, but this RegEx will add them, so avoid using this RegEx unmodified on books with videos.</aside>
 * **URLs**: Add links to URLs (Does not capture every instance)<br>F: `\shttp(.+?)([;|\.|,|\)][\s|<])`<br>R: `\s<a href="http\1" target="_blank" rel="noopener">http\1</a>\2\3`
 * **tag hyperlinks:** find and replace to tag hyperlinks<br>F: `<a (?:class="[^"]*"\s*)*href="((?:mail[^"]*)|(?:http[^"]*))">([^<]*)</a>`<br>R: `<a href="\1" target="_blank" rel="noopener">\2</a>`
 * **link chapters**: Find potential instances where chapters can be linked. Adjust the word `first` to `second` and the number `1` to `2` etc., to find all chapters<br>F: `(first chap(\.|ters?)|chap(s?\.|ters?) 1)(?!\d)`
