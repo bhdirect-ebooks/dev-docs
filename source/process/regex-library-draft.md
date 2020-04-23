@@ -50,8 +50,8 @@ title: Regex Library
   > Example find: 
   >
   > <code>&#60;p&#62;&#60;span epub:type="pagebreak" id="page1" title="1"&#62;&#60;/span&#62; All</code>
-* **find broken paragraphs (1)**: Find potential broken paragraphs<br>F: `([^\.|!|”|?|"|>|)|:])</p>\s*<p[^>]*>\s*(<span epub:type="pagebreak" id="page.+?" title="[^>]*></span>)`<br>R: `\1 \2`
-* **find broken paragraphs (2)**: Find potential broken paragraphs. <mark>Case sensitive</mark><br>F: `<p([^>]*)>\s*(<span epub:type="pagebreak" id="page.+?" title="[^>]*></span>)([a-z]+)`
+* **find broken paragraphs (1)**: Find potential broken paragraphs<br>F: <code>(\[^\.|!|”|?|"|>|)|:])&#60;/p&#62;\s\*&#60;p\[^>]\*>\s\*(&#60;span epub:type="pagebreak" id="page.+?" title="\[^>]\*&#62;&#60;/span&#62;)</code><br>R: <code>\1 \2</code>
+* **find broken paragraphs (2)**: Find potential broken paragraphs. <mark>Case sensitive</mark><br>F: <code>&#60;p(\[^>]\*)&#62;\s\*(&#60;span epub:type="pagebreak" id="page.+?" title="\[^>]*&#62;&#60;/span&#62;)(\[a-z]+)</code>
 
 </details>
 
