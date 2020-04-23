@@ -30,7 +30,7 @@ title: Regex Library
 * **check lang**: Find special `lang` characters<br>F: <code><&#60;span class="(\[^"]+)"&#62;(\[^A-Z]\[^<]&#42;\[āåâêëėèēîīôöòōûüū]\[^<]&#42;)&#60;/span&#62;</code>
 * **extract lang**: Choose <mark>'Extract'</mark> to create a list of italicized words. Use this list to look for untagged lang or translit<br>F: <code>&#60;span class="(italic|i)"&#62;(\[^<]&#42;)&#60;/span&#62;</code>
 * **ampersands**: replace ampersands<br>F: <code>(\[a-z]+\s&#42;)&(\s&#42;\[a-z]+)</code><br>R: <code>\1\&#38;\2</code>
-* **unsafe chars: **find characters that are unsafe to use within HTML attribute values<br>F: <code>\[a-z-]+="\[^"]*?\[\x{0000}-\x{0009}\x{000b}\x{000c}\x{000e}-\x{001f}\x{007f}-\x{009f}\x{00ad}\x{0600}-\x{0604}\x{070f}\x{17b4}\x{17b5}\x{200c}-\x{200f}\x{2028}-\x{202f}\x{2060}-\x{206f}\x{feff}\x{fff0}-\x{ffff}]+?\[^"]&#42;"</code>
+* **unsafe chars: **find characters that are unsafe to use within HTML attribute values<br>F: <code>\[a-z-]+="\[^"]&#42;?\[\x{0000}-\x{0009}\x{000b}\x{000c}\x{000e}-\x{001f}\x{007f}-\x{009f}\x{00ad}\x{0600}-\x{0604}\x{070f}\x{17b4}\x{17b5}\x{200c}-\x{200f}\x{2028}-\x{202f}\x{2060}-\x{206f}\x{feff}\x{fff0}-\x{ffff}]+?\[^"]&#42;"</code>
 
 </details>
 
@@ -59,7 +59,7 @@ title: Regex Library
 
 <summary>Scriptext</summary>
 
-* **scriptext finder (1)**: Find blockquotes that have data-ref tags in them. (<mark>Use _after_ running Percival</mark>)<br>F: <code>&#60;blockquote&#62;(\s&#42;(&#60;p\[^>]&#42;&#62;.&#42;?&#60;/p&#62;\s&#42;)&#42;&#60;p\[^>]&#42;&#62;.&#42;?(&#60;a data-ref="\[^"]&#42;"&#62;\[^<]&#42;&#60;/a&#62;.&#42;?&#60;/p&#62;\s*&#60;/blockquote&#62;))</code><br>R: <code>&#60;blockquote class="scriptext"&#62;\1</code>
+* **scriptext finder (1)**: Find blockquotes that have data-ref tags in them. (<mark>Use _after_ running Percival</mark>)<br>F: <code>&#60;blockquote&#62;(\s&#42;(&#60;p\[^>]&#42;&#62;.&#42;?&#60;/p&#62;\s&#42;)&#42;&#60;p\[^>]&#42;&#62;.&#42;?(&#60;a data-ref="\[^"]&#42;"&#62;\[^<]&#42;&#60;/a&#62;.&#42;?&#60;/p&#62;\s&#42;&#60;/blockquote&#62;))</code><br>R: <code>&#60;blockquote class="scriptext"&#62;\1</code>
 * **scriptext finder (2)**: Find blockquotes that have a data-ref before it. (<mark>Use _after_ running Percival</mark>)<br>F: <code>(&#60;a data-ref="\[^"]&#42;"&#62;(\[^<]&#42;)&#60;/a&#62;(:|.)&#60;/p&#62;\s&#42;)&#60;blockquote&#62;</code><br>R: <code>\1&#60;blockquote class="scriptext"&#62;</code>
 
 </details>
@@ -84,7 +84,7 @@ title: Regex Library
   > Example find: 
   >
   > <code>A&#60;span class="i"&#62;100 foot drop&#60;/span&#62;</code>
-* **space after first tag**: Find and replace opening tags with a space after<br>F: <code>&#60;(\[^>])&#62; (.*?)</code><br>R: <code><\1>\2</code>
+* **space after first tag**: Find and replace opening tags with a space after<br>F: <code>&#60;(\[^>])&#62; (.&#42;?)</code><br>R: <code><\1>\2</code>
   > Example find: 
   >
   > <code>&#60;p&#62; A &#60;span class="i"&#62;100 foot drop&#60;/span&#62;</code>
@@ -103,7 +103,7 @@ title: Regex Library
 
 * **span combine (1)**: In this Regex Library navigate to _Clean and Code > Spacing > **no space between spans**_ and check before running span combine. Find and replace to combine the content of spans with the same class<br>F: <code>&#60;span class="(\[^"]&#42;)"&#62;(\[^<]&#42;)&#60;/span&#62;(\s&#42;)&#60;span class="\1"&#62;(\[^<]&#42;)&#60;/span&#62;</code><br>R: <code>&#60;span class="\1"&#62;\2\3\4&#60;/span&#62;</code>
 * **span combine (2)**: Find and replace spans that can be combined into a single class<br>F: <code>&#60;span class="(\[^"]&#42;)"&#62;&#60;span class="(\[^"]&#42;)"&#62;(\[^<]&#42;)&#60;/span&#62;&#60;/span&#62;</code><br>R: <code>&#60;span class="\1 \2"&#62;\3&#60;/span&#62;</code>
-* **remove spans from headings**: Find spans in headings that are potentially not needed<br>F: <code>(&#60;h\d\[^>]&#42;&#62;.\*?)&#60;span(\s&#42;class="(?!label)\[^"]&#42;")\*&#62;(\[^<]&#42;)&#60;/span&#62;(.&#42;?&#60;/h\d&#62;)</code><br>R: <code>\1\3\4</code>
+* **remove spans from headings**: Find spans in headings that are potentially not needed<br>F: <code>(&#60;h\d\[^>]&#42;&#62;.&#42;?)&#60;span(\s&#42;class="(?!label)\[^"]&#42;")&#42;&#62;(\[^<]&#42;)&#60;/span&#62;(.&#42;?&#60;/h\d&#62;)</code><br>R: <code>\1\3\4</code>
   > Example find: 
   >
   > <code>&#60;h1&#62;&#60;span class="i"&#62;Foreword&#60;/span&#62;&#60;/h1&#62;</code>
@@ -144,7 +144,7 @@ title: Regex Library
 
 * **footnote references: **for footnotes _not_ in `backmatter` use this find and replace to format footnote refs in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: <code>&#60;p&#62;(\d)\. (.&#42;?)&#60;/p&#62;</code><br>R: <code>&#60;div epub:type="footnote" id="\1"&#62;\n          &#60;p&#62;&#60;sup&#62;&#60;a href="#FILENAME##backlink-\1"&#62;\1&#60;/a&#62;&#60;/sup&#62;&#38;#160;&#60;span class="note"&#62;\2&#60;/span&#62;&#60;/p&#62;\n        &#60;/div&#62;</code>
 * **footnote indicators: **for footnotes _not_ in `backmatter` use this find and replace to format footnote indicators in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: <code>&#60;sup&#62;(\d+)&#60;/sup&#62;</code><br>R: <code>&#60;sup class="fn" id="backlink-intro-\1"&#62;&#60;a epub:type="noteref" href="#FILENAME##intro-\1"&#62;\[\1]&#60;/a&#62;&#60;/sup&#62;</code>
-* **unique footnote reference id**: use filename to make footnote reference id unique<br>F: <code>&#60;sup class="fn" id="note-backlink-(\d+)"&#62;&#60;a epub:type="noteref" href="(\[^#]+)_(\[^#]&#42;?).xhtml#note-(\d+)"&#62;\\[(\d+)\]&#60;/a&#62;&#60;/sup&#62;</code><br>R: <code>&#60;sup class="fn" id="note-backlink-\3-\1"&#62;&#60;a epub:type="noteref" href="\2_\3.xhtml#note-\3-\4"&#62;\[\5]&#60;/a&#62;&#60;/sup&#62;</code>
+* **unique footnote reference id**: use filename to make footnote reference id unique<br>F: <code>&#60;sup class="fn" id="note-backlink-(\d+)"&#62;&#60;a epub:type="noteref" href="(\[^#]+)_(\[^#]&#42;?).xhtml#note-(\d+)"&#62;\\[(\d+)\]&#60;/a&#62;&#60;/sup&#62;</code><br>R: <code>&#60;sup class="fn" id="note-backlink-\3-\1"&#62;&#60;a epub:type="noteref" href="\2&#95;\3.xhtml#note-\3-\4"&#62;\[\5]&#60;/a&#62;&#60;/sup&#62;</code>
 * **unique footnote indicator id**: use filename to make footnote id unique<br>F: <code>&#60;div id="note-(\d+)" epub:type="footnote"&#62;\s&#42;&#60;p&#62;&#60;sup&#62;&#60;a href="(\[^#]+)_(\[^#]&#42;?)\.xhtml#note-backlink-(\d+)"&#62;</code><br>R: <code>&#60;div id="note-\3-\1" epub:type="footnote"&#62;&#60;p&#62;&#60;sup&#62;&#60;a href="\2_\3.xhtml#note-backlink-\3-\4"&#62;</code>
 * **remove Ibids: **make sure footnotes are formatted correctly according to the style guide and then use to replace Ibids<br>F: <code>(&#60;p class="\[^"]&#42;"&#62;&#60;sup&#62;(\d+)&#60;/sup&#62;(.&#42;?&#60;span class="i"&#62;.&#42;?&#60;/span&#62;).&#42;?&#60;/p&#62;\s&#42;&#60;p class="\[^"]&#42;"&#62;&#60;sup&#62;\d+&#60;/sup&#62;)Ibid\.(,.&#42;?)&#42;&#60;/p&#62;</code><br>R: <code>\1\3\4</p></code>
 
