@@ -5,9 +5,9 @@ title: Regex Library
 
 <summary>General</summary>
 
-* **extract text:** in the Find window, choose <mark>'Extract'</mark> to pull contents from a file or project<br>F: `<body(?msi)(.*?)</body>`
-* **extract classes:** choose <mark>'Extract'</mark> to pull classes from a file or project<br>F: `\sclass="[^"]+"`
-* **remove divs:** Find divs and replace with only the div content<br>F: `<div(?: class="[^"]+")?>((?:.|\s)*?)</div>`<br>R: `\1`
+* **extract text:** in the Find window, choose <mark>'Extract'</mark> to pull contents from a file or project<br>F: <code><body(?msi)(.*?)</body></code>
+* **extract classes:** choose <mark>'Extract'</mark> to pull classes from a file or project<br>F: <code>\sclass="\[^"]+"</code>
+* **remove divs:** Find divs and replace with only the div content<br>F: <code><div(?: class="\[^"]+")?>((?:.|\s)*?)</div></code><br>R: <code>\1</code>
 
 </details>
 
@@ -23,14 +23,14 @@ title: Regex Library
 
 <summary>Languages, Apparatus and Symbols</summary>
 
-* **lang-hbo**: Find instances of Hebrew<br>F: (`([ְֱֲֳִֵֶַָֹֺֻּֽ֑֖֛֢֣֤֥֦֧֪֚֭֮֒֓֔֕֗֘֙֜֝֞֟֠֡֨֩֫֬֯־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״]+-? ?)+)`
-* **lang-grc: **Find instances of Greek<br>F: `((?:[\x{0300}-\x{036F}\x{0370}-\x{03FF}\x{1F00}-\x{1FFF}\x{20D0}-\x{20FF}\x{FE20}-\x{FE2F}]+[,. ]*)+)`
-* **lang-grc (2)**: Find instances of Greek<br>F: `([\p{Greek}][\p{Greek} ́¨ˆ̂˘̆̑̃ˋ̔̓ ͂.,’“;]+\b)`
-* **apparatus symbols**: Find apparatus symbols.<br>F: `([ℵ]|&#x(?:2135;|E(?:00[021];|5(?:0[45E6FA];|1[034679];))))`
-* **check lang**: Find special `lang` characters<br>F: `<span class="([^"]+)">([^A-Z][^<]*[āåâêëėèēîīôöòōûüū][^<]*)</span>`
-* **extract lang**: Choose <mark>'Extract'</mark> to create a list of italicized words. Use this list to look for untagged lang or translit<br>F: `<span class="(italic|i)">([^<]*)</span>`
-* **ampersands**: replace ampersands<br>F: `([a-z]+\s*)&(\s*[a-z]+)`<br>R: `\1\&#38;\2`
-* **unsafe chars: **find characters that are unsafe to use within HTML attribute values<br>F: `[a-z-]+="[^"]*?[\x{0000}-\x{0009}\x{000b}\x{000c}\x{000e}-\x{001f}\x{007f}-\x{009f}\x{00ad}\x{0600}-\x{0604}\x{070f}\x{17b4}\x{17b5}\x{200c}-\x{200f}\x{2028}-\x{202f}\x{2060}-\x{206f}\x{feff}\x{fff0}-\x{ffff}]+?[^"]*"`
+* **lang-hbo**: Find instances of Hebrew<br>F: (<code>(\[ְֱֲֳִֵֶַָֹֺֻּֽ֑֖֛֢֣֤֥֦֧֪֚֭֮֒֓֔֕֗֘֙֜֝֞֟֠֡֨֩֫֬֯־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״]+-? ?)+)</code>
+* **lang-grc: **Find instances of Greek<br>F: <code>((?:\[\x{0300}-\x{036F}\x{0370}-\x{03FF}\x{1F00}-\x{1FFF}\x{20D0}-\x{20FF}\x{FE20}-\x{FE2F}]+\[,. ]*)+)</code>
+* **lang-grc (2)**: Find instances of Greek<br>F: <code>(\[\p{Greek}]\[\p{Greek} ́¨ˆ̂˘̆̑̃ˋ̔̓ ͂.,’“;]+\b)</code>
+* **apparatus symbols**: Find apparatus symbols.<br>F: <code>(\[ℵ]|&#x(?:2135;|E(?:00\[021];|5(?:0\[45E6FA];|1\[034679];))))</code>
+* **check lang**: Find special `lang` characters<br>F: <code><span class="(\[^"]+)">(\[^A-Z]\[^<]\*\[āåâêëėèēîīôöòōûüū]\[^<]\*)</span></code>
+* **extract lang**: Choose <mark>'Extract'</mark> to create a list of italicized words. Use this list to look for untagged lang or translit<br>F: <code><span class="(italic|i)">(\[^<]*)</span></code>
+* **ampersands**: replace ampersands<br>F: <code>(\[a-z]+\s\*)&(\s\*\[a-z]+)</code><br>R: <code>\1\&#38;\2</code>
+* **unsafe chars: **find characters that are unsafe to use within HTML attribute values<br>F: <code>\[a-z-]+="\[^"]\*?\[\x{0000}-\x{0009}\x{000b}\x{000c}\x{000e}-\x{001f}\x{007f}-\x{009f}\x{00ad}\x{0600}-\x{0604}\x{070f}\x{17b4}\x{17b5}\x{200c}-\x{200f}\x{2028}-\x{202f}\x{2060}-\x{206f}\x{feff}\x{fff0}-\x{ffff}]+?\[^"]\*"</code>
 
 </details>
 
@@ -38,20 +38,20 @@ title: Regex Library
 
 <summary>Page Breaks and Paragraphs</summary>
 
-* **pagebreak breaking words**: Find pagebreaks that are in between words.<br>F: `([a-z]+)-\s*(<span epub:type="pagebreak" id="[^"]*" title="[^"]*"></span>)`<br>R: `\2 \1`
+* **pagebreak breaking words**: Find pagebreaks that are in between words.<br>F: <code>(\[a-z]+)-\s\*(<span epub:type="pagebreak" id="\[^"]\*" title="\[^"]*"></span>)</code><br>R: <code>\2 \1</code>
   > Example find: 
   >
-  > `left-<span epub:type="pagebreak" id="page1" title="1"></span>hand`
-* **pagebreak with no space**: Find page breaks that have no space on either side.<br>F: `(\w+<span epub:type="pagebreak" id="[^"]*" title="[^"]*"></span>)(\w+)`<br>R: `\1 \2`
+  > <code>left-&#60;span epub:type="pagebreak" id="page1" title="1"&#62;&#60;/span&#62;hand</code>
+* **pagebreak with no space**: Find page breaks that have no space on either side.<br>F: <code>(\w+<span epub:type="pagebreak" id="\[^"]\*" title="\[^"]\*"></span>)(\w+)</code><br>R: <code>\1 \2</code>
   > Example find: 
   >
-  > `I<span epub:type="pagebreak" id="page1" title="1"></span>have`
-* **pagebreak begin line space**: Find a pagebreak that has a space at the beginning of a line<br>F: `(<[^>]*><span epub:type="pagebreak"[^>]*></span>)\s`<br>R: `\1`
+  > <code>I&#60;span epub:type="pagebreak" id="page1" title="1"&#62;&#60;/span&#62;have</code>
+* **pagebreak begin line space**: Find a pagebreak that has a space at the beginning of a line<br>F: <code>(<\[^>]\*><span epub:type="pagebreak"\[^>]\*></span>)\s</code><br>R: <code>\1</code>
   > Example find: 
   >
-  > `<p><span epub:type="pagebreak" id="page1" title="1"></span> All`
-* **find broken paragraphs (1)**: Find potential broken paragraphs<br>F: `([^\.|!|”|?|"|>|)|:])</p>\s*<p[^>]*>\s*(<span epub:type="pagebreak" id="page.+?" title="[^>]*></span>)`<br>R: `\1 \2`
-* **find broken paragraphs (2)**: Find potential broken paragraphs. <mark>Case sensitive</mark><br>F: `<p([^>]*)>\s*(<span epub:type="pagebreak" id="page.+?" title="[^>]*></span>)([a-z]+)`
+  > <code>&#60;p&#62;&#60;span epub:type="pagebreak" id="page1" title="1"&#62;&#60;/span&#62; All</code>
+* **find broken paragraphs (1)**: Find potential broken paragraphs<br>F: <code>(\[^\.|!|”|?|"|>|)|:])&#60;/p&#62;\s\*&#60;p\[^>]\*>\s\*(&#60;span epub:type="pagebreak" id="page.+?" title="\[^>]\*&#62;&#60;/span&#62;)</code><br>R: <code>\1 \2</code>
+* **find broken paragraphs (2)**: Find potential broken paragraphs. <mark>Case sensitive</mark><br>F: <code>&#60;p(\[^>]\*)&#62;\s\*(&#60;span epub:type="pagebreak" id="page.+?" title="\[^>]*&#62;&#60;/span&#62;)(\[a-z]+)</code>
 
 </details>
 
@@ -163,7 +163,6 @@ title: Regex Library
 <summary>Links</summary>
 
 * **add `target="_blank"` to links**: Add `target="_blank"` attribute to existing external links<br>F: `<a href="http([^"]+)"><br>R: <a href="http\1" target="_blank" rel="noopener">`<br>R: `<a href="http\1" target="_blank" rel="noopener">`
-  <aside class="caution">Links to our own hosted videos should not have `target="_blank" rel="noopener"` attributes, but this RegEx will add them, so avoid using this RegEx unmodified on books with videos.</aside>
 * **URLs**: Add links to URLs (Does not capture every instance)<br>F: `\shttp(.+?)([;|\.|,|\)][\s|<])`<br>R: `\s<a href="http\1" target="_blank" rel="noopener">http\1</a>\2\3`
 * **tag hyperlinks:** find and replace to tag hyperlinks<br>F: `<a (?:class="[^"]*"\s*)*href="((?:mail[^"]*)|(?:http[^"]*))">([^<]*)</a>`<br>R: `<a href="\1" target="_blank" rel="noopener">\2</a>`
 * **link chapters**: Find potential instances where chapters can be linked. Adjust the word `first` to `second` and the number `1` to `2` etc., to find all chapters<br>F: `(first chap(\.|ters?)|chap(s?\.|ters?) 1)(?!\d)`
