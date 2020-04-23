@@ -38,20 +38,20 @@ title: Regex Library
 
 <summary>Page Breaks and Paragraphs</summary>
 
-* **pagebreak breaking words**: Find pagebreaks that are in between words.<br>F: `([a-z]+)-\s*(<span epub:type="pagebreak" id="[^"]*" title="[^"]*"></span>)`<br>R: `\2 \1`
+* **pagebreak breaking words**: Find pagebreaks that are in between words.<br>F: `([a-z]+)-\s*(&#60;span epub:type="pagebreak" id="[^"]*" title="[^"]*"&#62;&#60;/span&#62;)`<br>R: `\2 \1`
   > Example find: 
   >
-  > `left-<span epub:type="pagebreak" id="page1" title="1"></span>hand`
-* **pagebreak with no space**: Find page breaks that have no space on either side.<br>F: `(\w+<span epub:type="pagebreak" id="[^"]*" title="[^"]*"></span>)(\w+)`<br>R: `\1 \2`
+  > `left-&#60;span epub:type="pagebreak" id="page1" title="1"&#62;&#60;/span&#62;hand`
+* **pagebreak with no space**: Find page breaks that have no space on either side.<br>F: `(\w+&#60;span epub:type="pagebreak" id="[^"]*" title="[^"]*"&#62;&#60;/span&#62;)(\w+)`<br>R: `\1 \2`
   > Example find: 
   >
-  > `I<span epub:type="pagebreak" id="page1" title="1"></span>have`
-* **pagebreak begin line space**: Find a pagebreak that has a space at the beginning of a line<br>F: `(<[^>]*><span epub:type="pagebreak"[^>]*></span>)\s`<br>R: `\1`
+  > `I&#60;span epub:type="pagebreak" id="page1" title="1"&#62;&#60;/span&#62;have`
+* **pagebreak begin line space**: Find a pagebreak that has a space at the beginning of a line<br>F: `(&#60;[^>]*&#62;&#60;span epub:type="pagebreak"[^>]*&#62;&#60;/span&#62;)\s`<br>R: `\1`
   > Example find: 
   >
-  > `<p><span epub:type="pagebreak" id="page1" title="1"></span> All`
-* **find broken paragraphs (1)**: Find potential broken paragraphs<br>F: `([^\.|!|”|?|"|>|)|:])</p>\s*<p[^>]*>\s*(<span epub:type="pagebreak" id="page.+?" title="[^>]*></span>)`<br>R: `\1 \2`
-* **find broken paragraphs (2)**: Find potential broken paragraphs. <mark>Case sensitive</mark><br>F: `<p([^>]*)>\s*(<span epub:type="pagebreak" id="page.+?" title="[^>]*></span>)([a-z]+)`
+  > `&#60;p&#62;&#60;span epub:type="pagebreak" id="page1" title="1"&#62;&#60;/span&#62; All`
+* **find broken paragraphs (1)**: Find potential broken paragraphs<br>F: `([^\.|!|”|?|"|>|)|:])&#60;/p&#62;\s*&#60;p[^>]*&#62;\s*(&#60;span epub:type="pagebreak" id="page.+?" title="[^>]*&#62;&#60;/span&#62;)`<br>R: `\1 \2`
+* **find broken paragraphs (2)**: Find potential broken paragraphs. <mark>Case sensitive</mark><br>F: `&#60;p([^>]*)&#62;\s*(&#60;span epub:type="pagebreak" id="page.+?" title="[^>]*&#62;&#60;/span&#62;)([a-z]+)`
 
 </details>
 
