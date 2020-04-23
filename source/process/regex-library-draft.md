@@ -11,13 +11,9 @@ title: Regex Library
 
 </details>
 
-<br>
-
 <details close>
 
 <summary>Clean and Code</summary><blockquote>
-
-<br>
 
 <details close>
 
@@ -87,8 +83,6 @@ title: Regex Library
 
 </details>
 
-<br>
-
 <details close>
 
 <summary>Enhance</summary><blockquote>
@@ -151,8 +145,6 @@ title: Regex Library
 </details></blockquote>
 
 </details>
-
-<br>
 
 <details close>
 
