@@ -6,8 +6,8 @@ title: Regex Library
 <summary>General</summary>
 
 * **extract text:** in the Find window, choose <mark>'Extract'</mark> to pull contents from a file or project<br>F: <code><body(?msi)(.*?)</body></code>
-* **extract classes:** choose <mark>'Extract'</mark> to pull classes from a file or project<br>F: `\sclass="[^"]+"`
-* **remove divs:** Find divs and replace with only the div content<br>F: `<div(?: class="[^"]+")?>((?:.|\s)*?)</div>`<br>R: `\1`
+* **extract classes:** choose <mark>'Extract'</mark> to pull classes from a file or project<br>F: <code>\sclass="\[^"]+"</code>
+* **remove divs:** Find divs and replace with only the div content<br>F: <code><div(?: class="\[^"]+")?>((?:.|\s)*?)</div></code><br>R: <code>\1</code>
 
 </details>
 
