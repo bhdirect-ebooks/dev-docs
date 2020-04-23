@@ -59,8 +59,8 @@ title: Regex Library
 
 <summary>Scriptext</summary>
 
-* **scriptext finder (1)**: Find blockquotes that have data-ref tags in them. (<mark>Use _after_ running Percival</mark>)<br>F: `<blockquote>(\s*(<p[^>]*>.*?</p>\s*)*<p[^>]*>.*?(<a data-ref="[^"]*">[^<]*</a>.*?</p>\s*</blockquote>))`<br>R: `<blockquote class="scriptext">\1`
-* **scriptext finder (2)**: Find blockquotes that have a data-ref before it. (<mark>Use _after_ running Percival</mark>)<br>F: `(<a data-ref="[^"]*">([^<]*)</a>(:|.)</p>\s*)<blockquote>`<br>R: `\1<blockquote class="scriptext">`
+* **scriptext finder (1)**: Find blockquotes that have data-ref tags in them. (<mark>Use _after_ running Percival</mark>)<br>F: `&#60;blockquote&#62;(\s*(&#60;p[^>]*&#62;.*?&#60;/p&#62;\s*)*&#60;p[^>]*&#62;.*?(&#60;a data-ref="[^"]*"&#62;[^<]*&#60;/a&#62;.*?&#60;/p&#62;\s*&#60;/blockquote&#62;))`<br>R: `&#60;blockquote class="scriptext"&#62;\1`
+* **scriptext finder (2)**: Find blockquotes that have a data-ref before it. (<mark>Use _after_ running Percival</mark>)<br>F: `(&#60;a data-ref="[^"]*"&#62;([^<]*)&#60;/a&#62;(:|.)&#60;/p&#62;\s*)&#60;blockquote&#62;`<br>R: `\1&#60;blockquote class="scriptext"&#62;`
 
 </details>
 
