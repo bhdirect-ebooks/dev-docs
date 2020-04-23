@@ -21,7 +21,7 @@ Become familiar with the project directory structure:
      * .git
      * .editorconfig
      * .gitignore
-4. Next create a `src` folder
+4. Next create a `src` folder inside the project folder
    * copy any source files from Trello here
    * i.e. cover images, epubs, .docx files, inDesign files, PDFs etc.
 5. Inside the **dev > epub > ISBN** folder:
