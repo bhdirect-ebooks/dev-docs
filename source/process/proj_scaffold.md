@@ -9,7 +9,9 @@ Become familiar with the project directory structure:
 
 ![Screen shot of our project directory structure.](../assets/images/project-dir.png)
 
-The video below briefly describes each part of the structure.
+1. Each project
+
+The video below briefly describes each part of the structure:
 
 <iframe width="560" height="315" src="https://youtu.be/RDhEy5iD6i8" frameborder="0" allowfullscreen></iframe>
 
