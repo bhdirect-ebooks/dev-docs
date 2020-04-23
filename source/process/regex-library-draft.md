@@ -68,30 +68,30 @@ title: Regex Library
 
 <summary>Spacing</summary>
 
-* **no space between words**: Find and replace words with no space in between<br>F: `(<span class="(?!label)[^"]*">[^<]*</span>)(\w)`<br>R: `\1 \2`
+* **no space between words**: Find and replace words with no space in between<br>F: `(&#60;span class="(?!label)[^"]*"&#62;[^<]*&#60;/span&#62;)(\w)`<br>R: `\1 \2`
   > Example find: 
   >
-  > `A <span class="i">100 foot</span>drop`
-* **no space between spans**: Find and replace span tags with no space in between(<mark>Check before using _span combine_</mark>)<br>F: `(<span class="(?!label)[^"]*">[^<]*</span>)(<span class="(?!label)[^"]*">\w+[^<]*</span>)`<br>R: `\1 \2`
+  > `A &#60;span class="i"&#62;100 foot&#60;/span&#62;drop`
+* **no space between spans**: Find and replace span tags with no space in between(<mark>Check before using _span combine_</mark>)<br>F: `(&#60;span class="(?!label)[^"]*"&#62;[^<]*&#60;/span&#62;)(&#60;span class="(?!label)[^"]*"&#62;\w+[^<]*&#60;/span&#62;)`<br>R: `\1 \2`
   > Example find: 
   >
-  > `A <span class="i">100 foot</span><span class="i">drop</span>`
-* **no space open parens**: Find and replace an opening parenthesis with no space before<br>F: `(\w</span>)(\()`<br>R: `\1 \2`
+  > `A &#60;span class="i"&#62;100 foot&#60;/span&#62;&#60;span class="i"&#62;drop&#60;/span&#62;`
+* **no space open parens**: Find and replace an opening parenthesis with no space before<br>F: `(\w&#60;/span&#62;)(\()`<br>R: `\1 \2`
   > Example find: 
   >
-  > `<span class="i">100 foot drop</span>(30 meters).`
-* **begin span spacing**: Find spans lacking a space before<br> F: `([a-z]+)(<span)`<br>R: `\1 \2`
+  > `&#60;span class="i"&#62;100 foot drop&#60;/span&#62;(30 meters).`
+* **begin span spacing**: Find spans lacking a space before<br> F: `([a-z]+)(&#60;span)`<br>R: `\1 \2`
   > Example find: 
   >
-  > `A<span class="i">100 foot drop</span>`
-* **space after first tag**: Find and replace opening tags with a space after<br>F: `<([^>])> (.*?)`<br>R: `<\1>\2`
+  > `A&#60;span class="i"&#62;100 foot drop&#60;/span&#62;`
+* **space after first tag**: Find and replace opening tags with a space after<br>F: `&#60;([^>])&#62; (.*?)`<br>R: `<\1>\2`
   > Example find: 
   >
-  > `<p> A <span class="i">100 foot drop</span>`
-* **space before last tag**: Find and replace closing tags with a space before<br>F: `</(p|td|h1|h2|h3)>`<br>R: `</\1>`
+  > `&#60;p&#62; A &#60;span class="i"&#62;100 foot drop&#60;/span&#62;`
+* **space before last tag**: Find and replace closing tags with a space before<br>F: `&#60;/(p|td|h1|h2|h3)&#62;`<br>R: `</\1>`
   > Example find: 
   >
-  > `drop. </p>`
+  > `drop. &#60;/p&#62;`
 * **dash spacing**: Find dashes with potential spacing issues<br>F: `(\s[^>/= ]*\s[-–][^</= ]*\s|\s[^>/= ]*[-–]\s[^</= ]*\s)`
 * **space after comma**: Find a comma with no space after<br>F: `,([^"’”'<0-9 —\)]+)<br>R: , \1`
 
