@@ -50,7 +50,7 @@ title: Regex Library
 
 - **pagebreak begin line space**: Find a pagebreak that has a space at the beginning of a line<br>F: <code>(&#60;\[^>]&#42;&#62;&#60;span epub:type="pagebreak"\[^>]&#42;&#62;&#60;/span&#62;)\s</code><br>R: <code>\1</code><blockquote>Example find: <br><code>&#60;p&#62;&#60;span epub:type="pagebreak" id="page1" title="1"&#62;&#60;/span&#62; All</code></blockquote>
 
-- **find broken paragraphs (1)**: Find potential broken paragraphs<br>F: <code>(\[^.|!|”|?|"|>|)|:])&#60;/p&#62;\s&#42;&#60;p\[^>]*&#62;\s&#42;(&#60;span epub:type="pagebreak" id="page.+?" title="\[^>]&#42;&#62;&#60;/span&#62;)</code><br>R: <code>\1 \2</code>
+- **find broken paragraphs (1)**: Find potential broken paragraphs<br>F: <code>(\[^.|!|”|?|"|>|)|:])&#60;/p&#62;\s&#42;&#60;p\[^>]&#42;&#62;\s&#42;(&#60;span epub:type="pagebreak" id="page.+?" title="\[^>]&#42;&#62;&#60;/span&#62;)</code><br>R: <code>\1 \2</code>
 
 - **find broken paragraphs (2)**: Find potential broken paragraphs. <mark>Case sensitive</mark><br>F: <code>&#60;p(\[^>]*)&#62;\s&#42;(&#60;span epub:type="pagebreak" id="page.+?" title="\[^>]&#42;&#62;&#60;/span&#62;)(\[a-z]+)</code>
 
@@ -132,12 +132,11 @@ title: Regex Library
 
 - **footnote indicators**: for footnotes _not_ in `backmatter` use this find and replace to format footnote indicators in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: <code>&#60;sup&#62;(\d+)&#60;/sup&#62;</code><br>R: <code>&#60;sup class="fn" id="backlink-intro-\1"&#62;&#60;a epub:type="noteref" href="#FILENAME##intro-\1"&#62;\[\1]&#60;/a&#62;&#60;/sup&#62;</code>
 
-- **unique footnote reference id**: use filename to make footnote reference id unique<br>F: <code>&#60;sup class="fn" id="note-backlink-(\d+)"&#62;&#60;a epub:type="noteref" href="(\[^#]+)_(\[^#]&#42;?).xhtml#note-(\d+)"&#62;\\[(\d+)]&#60;/a&#62;&#60;/sup&#62;</code><br>R: <code>&#60;sup class="fn" id="note-backlink-\3-\1"&#62;&#60;a epub:type="noteref" href="\2&#95;\3.xhtml#note-\3-\4"&#62;\[\5]&#60;/a&#62;&#60;/sup&#62;</code>
+- **unique footnote reference id**: use filename to make footnote reference id unique<br>F: <code>&#60;sup class="fn" id="note-backlink-(\d+)"&#62;&#60;a epub:type="noteref" href="(\[^#]+)&#95;(\[^#]&#42;?).xhtml#note-(\d+)"&#62;\\[(\d+)]&#60;/a&#62;&#60;/sup&#62;</code><br>R: <code>&#60;sup class="fn" id="note-backlink-\3-\1"&#62;&#60;a epub:type="noteref" href="\2&#95;\3.xhtml#note-\3-\4"&#62;\[\5]&#60;/a&#62;&#60;/sup&#62;</code>
 
-- **unique footnote indicator id**: use filename to make footnote id unique<br>F: <code>&#60;div id="note-(\d+)" epub:type="footnote"&#62;\s&#42;&#60;p&#62;&#60;sup&#62;&#60;a href="(\[^#]+)_(\[^#]&#42;?).xhtml#note-backlink-(\d+)"&#62;</code><br>R: <code>&#60;div id="note-\3-\1" epub:type="footnote"&#62;&#60;p&#62;&#60;sup&#62;&#60;a href="\2_\3.xhtml#note-backlink-\3-\4"&#62;</code>
+- **unique footnote indicator id**: use filename to make footnote id unique<br>F: <code>&#60;div id="note-(\d+)" epub:type="footnote"&#62;\s&#42;&#60;p&#62;&#60;sup&#62;&#60;a href="(\[^#]+)&#95;(\[^#]&#42;?).xhtml#note-backlink-(\d+)"&#62;</code><br>R: <code>&#60;div id="note-\3-\1" epub:type="footnote"&#62;&#60;p&#62;&#60;sup&#62;&#60;a href="\2&#95;\3.xhtml#note-backlink-\3-\4"&#62;</code>
 
 - **remove Ibids**: make sure footnotes are formatted correctly according to the style guide and then use to replace Ibids<br>F: <code>(&#60;p class="\[^"]&#42;"&#62;&#60;sup&#62;(\d+)&#60;/sup&#62;(.&#42;?&#60;span class="i"&#62;.&#42;?&#60;/span&#62;).&#42;?&#60;/p&#62;\s&#42;&#60;p class="\[^"]&#42;"&#62;&#60;sup&#62;\d+&#60;/sup&#62;)Ibid.(,.&#42;?)&#42;&#60;/p&#62;</code><br>R: <code>\1\3\4</p></code>
-
 </details>
 
 <details close>
