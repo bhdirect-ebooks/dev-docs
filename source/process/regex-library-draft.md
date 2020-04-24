@@ -5,11 +5,11 @@ title: Regex Library
 
 <summary>General</summary>
 
-* **extract text:** in the Find window, choose <mark>'Extract'</mark> to pull contents from a file or project<br>F: <code>&#60;body(?msi)(.&#42;?)&#60;/body&#62;</code>
+* **extract text**: in the Find window, choose <mark>'Extract'</mark> to pull contents from a file or project<br>F: <code>&#60;body(?msi)(.&#42;?)&#60;/body&#62;</code>
 
-* **extract classes:** choose <mark>'Extract'</mark> to pull classes from a file or project<br>F: <code>\sclass="\[^"]+"</code>
+* **extract classes**: choose <mark>'Extract'</mark> to pull classes from a file or project<br>F: <code>\sclass="\[^"]+"</code>
 
-* **remove divs:** Find divs and replace with only the div content<br>F: <code>&#60;div(?: class="\[^"]+")?>((?:.|\s)*?)&#60;/div&#62;</code><br>R: <code>\1</code>
+* **remove divs**: Find divs and replace with only the div content<br>F: <code>&#60;div(?: class="\[^"]+")?>((?:.|\s)*?)&#60;/div&#62;</code><br>R: <code>\1</code>
 
 </details>
 
@@ -23,7 +23,7 @@ title: Regex Library
 
 * **lang-hbo**: Find instances of Hebrew<br>F: (<code>(\[ְֱֲֳִֵֶַָֹֺֻּֽ֑֖֛֢֣֤֥֦֧֪֚֭֮֒֓֔֕֗֘֙֜֝֞֟֠֡֨֩֫֬֯־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״]+-? ?)+)</code>
 
-* **lang-grc: **Find instances of Greek<br>F: <code>((?:\[\x{0300}-\x{036F}\x{0370}-\x{03FF}\x{1F00}-\x{1FFF}\x{20D0}-\x{20FF}\x{FE20}-\x{FE2F}]+\[,. ]*)+)</code>
+* **lang-grc**: Find instances of Greek<br>F: <code>((?:\[\x{0300}-\x{036F}\x{0370}-\x{03FF}\x{1F00}-\x{1FFF}\x{20D0}-\x{20FF}\x{FE20}-\x{FE2F}]+\[,. ]*)+)</code>
 
 * **lang-grc (2)**: Find instances of Greek<br>F: <code>(\[\p{Greek}]\[\p{Greek} ́¨ˆ̂˘̆̑̃ˋ̔̓ ͂.,’“;]+\b)</code>
 * **apparatus symbols**: Find apparatus symbols.<br>F: <code>(\[ℵ]|&#x(?:2135;|E(?:00\[021];|5(?:0\[45E6FA];|1\[034679];))))</code>
@@ -34,7 +34,7 @@ title: Regex Library
 
 * **ampersands**: replace ampersands<br>F: <code>(\[a-z]+\s&#42;)&(\s&#42;\[a-z]+)</code><br>R: <code>\1&#38;\2</code>
 
-* **unsafe chars: **find characters that are unsafe to use within HTML attribute values<br>F: <code>\[a-z-]+="\[^"]&#42;?\[\x{0000}-\x{0009}\x{000b}\x{000c}\x{000e}-\x{001f}\x{007f}-\x{009f}\x{00ad}\x{0600}-\x{0604}\x{070f}\x{17b4}\x{17b5}\x{200c}-\x{200f}\x{2028}-\x{202f}\x{2060}-\x{206f}\x{feff}\x{fff0}-\x{ffff}]+?\[^"]&#42;"</code>
+* **unsafe chars**: find characters that are unsafe to use within HTML attribute values<br>F: <code>\[a-z-]+="\[^"]&#42;?\[\x{0000}-\x{0009}\x{000b}\x{000c}\x{000e}-\x{001f}\x{007f}-\x{009f}\x{00ad}\x{0600}-\x{0604}\x{070f}\x{17b4}\x{17b5}\x{200c}-\x{200f}\x{2028}-\x{202f}\x{2060}-\x{206f}\x{feff}\x{fff0}-\x{ffff}]+?\[^"]&#42;"</code>
 
 </details>
 
@@ -127,15 +127,15 @@ title: Regex Library
 
 <summary>Footnotes</summary>
 
-* **footnote references: **for footnotes _not_ in `backmatter` use this find and replace to format footnote refs in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: <code>&#60;p&#62;(\d). (.&#42;?)&#60;/p&#62;</code><br>R: <code>&#60;div epub:type="footnote" id="\1"&#62;\n          &#60;p&#62;&#60;sup&#62;&#60;a href="#FILENAME##backlink-\1"&#62;\1&#60;/a&#62;&#60;/sup&#62;&#38;#160;&#60;span class="note"&#62;\2&#60;/span&#62;&#60;/p&#62;\n        &#60;/div&#62;</code>
+* **footnote references**: for footnotes _not_ in `backmatter` use this find and replace to format footnote refs in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: <code>&#60;p&#62;(\d). (.&#42;?)&#60;/p&#62;</code><br>R: <code>&#60;div epub:type="footnote" id="\1"&#62;\n          &#60;p&#62;&#60;sup&#62;&#60;a href="#FILENAME##backlink-\1"&#62;\1&#60;/a&#62;&#60;/sup&#62;&#38;#160;&#60;span class="note"&#62;\2&#60;/span&#62;&#60;/p&#62;\n        &#60;/div&#62;</code>
 
-* **footnote indicators: **for footnotes _not_ in `backmatter` use this find and replace to format footnote indicators in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: <code>&#60;sup&#62;(\d+)&#60;/sup&#62;</code><br>R: <code>&#60;sup class="fn" id="backlink-intro-\1"&#62;&#60;a epub:type="noteref" href="#FILENAME##intro-\1"&#62;\[\1]&#60;/a&#62;&#60;/sup&#62;</code>
+* **footnote indicators**: for footnotes _not_ in `backmatter` use this find and replace to format footnote indicators in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: <code>&#60;sup&#62;(\d+)&#60;/sup&#62;</code><br>R: <code>&#60;sup class="fn" id="backlink-intro-\1"&#62;&#60;a epub:type="noteref" href="#FILENAME##intro-\1"&#62;\[\1]&#60;/a&#62;&#60;/sup&#62;</code>
 
 * **unique footnote reference id**: use filename to make footnote reference id unique<br>F: <code>&#60;sup class="fn" id="note-backlink-(\d+)"&#62;&#60;a epub:type="noteref" href="(\[^#]+)_(\[^#]&#42;?).xhtml#note-(\d+)"&#62;\\[(\d+)]&#60;/a&#62;&#60;/sup&#62;</code><br>R: <code>&#60;sup class="fn" id="note-backlink-\3-\1"&#62;&#60;a epub:type="noteref" href="\2&#95;\3.xhtml#note-\3-\4"&#62;\[\5]&#60;/a&#62;&#60;/sup&#62;</code>
 
 * **unique footnote indicator id**: use filename to make footnote id unique<br>F: <code>&#60;div id="note-(\d+)" epub:type="footnote"&#62;\s&#42;&#60;p&#62;&#60;sup&#62;&#60;a href="(\[^#]+)_(\[^#]&#42;?).xhtml#note-backlink-(\d+)"&#62;</code><br>R: <code>&#60;div id="note-\3-\1" epub:type="footnote"&#62;&#60;p&#62;&#60;sup&#62;&#60;a href="\2_\3.xhtml#note-backlink-\3-\4"&#62;</code>
 
-* **remove Ibids: **make sure footnotes are formatted correctly according to the style guide and then use to replace Ibids<br>F: <code>(&#60;p class="\[^"]&#42;"&#62;&#60;sup&#62;(\d+)&#60;/sup&#62;(.&#42;?&#60;span class="i"&#62;.&#42;?&#60;/span&#62;).&#42;?&#60;/p&#62;\s&#42;&#60;p class="\[^"]&#42;"&#62;&#60;sup&#62;\d+&#60;/sup&#62;)Ibid.(,.&#42;?)&#42;&#60;/p&#62;</code><br>R: <code>\1\3\4</p></code>
+* **remove Ibids**: make sure footnotes are formatted correctly according to the style guide and then use to replace Ibids<br>F: <code>(&#60;p class="\[^"]&#42;"&#62;&#60;sup&#62;(\d+)&#60;/sup&#62;(.&#42;?&#60;span class="i"&#62;.&#42;?&#60;/span&#62;).&#42;?&#60;/p&#62;\s&#42;&#60;p class="\[^"]&#42;"&#62;&#60;sup&#62;\d+&#60;/sup&#62;)Ibid.(,.&#42;?)&#42;&#60;/p&#62;</code><br>R: <code>\1\3\4</p></code>
 
 </details>
 
@@ -155,7 +155,7 @@ title: Regex Library
 
 * **URLs**: Add links to URLs (Does not capture every instance)<br>F: <code>\shttp(.+?)(\[;|.|,|)]\[\s|<])</code><br>R: <code>\s&#60;a href="http\1" target="_blank" rel="noopener"&#62;http\1&#60;/a&#62;\2\3</code>
 
-* **tag hyperlinks:** find and replace to tag hyperlinks<br>F: <code>&#60;a (?:class="\[^"]&#42;"\s&#42;)&#42;href="((?:mail\[^"]&#42;)|(?:http\[^"]&#42;))"&#62;(\[^<]&#42;)&#60;/a&#62;</code><br>R: <code>&#60;a href="\1" target="_blank" rel="noopener"&#62;\2&#60;/a&#62;</code>
+* **tag hyperlinks**: find and replace to tag hyperlinks<br>F: <code>&#60;a (?:class="\[^"]&#42;"\s&#42;)&#42;href="((?:mail\[^"]&#42;)|(?:http\[^"]&#42;))"&#62;(\[^<]&#42;)&#60;/a&#62;</code><br>R: <code>&#60;a href="\1" target="_blank" rel="noopener"&#62;\2&#60;/a&#62;</code>
 
 * **link chapters**: Find potential instances where chapters can be linked. Adjust the word `first` to `second` and the number `1` to `2` etc., to find all chapters<br>F: <code>(first chap(.|ters?)|chap(s?.|ters?) 1)(?!\d)</code>
 
@@ -185,16 +185,16 @@ title: Regex Library
 
 <summary>Review</summary>
 
-* **remove pagebreaks from headings: **find and replace to move pagebreaks out of headings<br>F: <code>(&#60;h\d&#62;.&#42;?)(&#60;span epub:type="pagebreak\[^>]&#42;&#62;&#60;/span&#62;)</code><br>R: <code>\2\1</code><blockquote>Example find: <br><code>&#60;h1&#62;&#60;span epub:type=”pagebreak” id=”page1” title=”1”&#62;&#60;/span&#62;Chapter 1&#60;/h1&#62;</code></blockquote>
+* **remove pagebreaks from headings**: find and replace to move pagebreaks out of headings<br>F: <code>(&#60;h\d&#62;.&#42;?)(&#60;span epub:type="pagebreak\[^>]&#42;&#62;&#60;/span&#62;)</code><br>R: <code>\2\1</code><blockquote>Example find: <br><code>&#60;h1&#62;&#60;span epub:type=”pagebreak” id=”page1” title=”1”&#62;&#60;/span&#62;Chapter 1&#60;/h1&#62;</code></blockquote>
 
 * **remove space before footnote**: find and replace extra space before a footnote indicator<br>F: <code>\s&#60;sup class="fn"</code><br>R: <code>&#60;sup class="fn"</code>
 
-* **special chars spacing: **find special characters with extra spacing on either side of it<br>F: <code>\s+({|$|&#38;|,|:|;|?|@|#|||'|&#60;|&#62;|-|^|&#42;|(|)|%|!|]|"|”|“)\s+</code><br>R: <code>\2 \1</code><blockquote>Example finds: <br><code> ( </code><br><code> : </code><br><code> $ </code></blockquote>
+* **special chars spacing**: find special characters with extra spacing on either side of it<br>F: <code>\s+({|$|&#38;|,|:|;|?|@|#|||'|&#60;|&#62;|-|^|&#42;|(|)|%|!|]|"|”|“)\s+</code><br>R: <code>\2 \1</code><blockquote>Example finds: <br><code> ( </code><br><code> : </code><br><code> $ </code></blockquote>
 
-* **special chars spans: **review special characters in spans and replace the character without the span<br>F: <code>&#60;span\[^>]&#62;({|$|&#38;|,|:|;|?|@|#|||'|.|-|^||(|)|%|!|]|"|”|“|—)+&#60;/span&#62;</code><br>R: <code>\1</code><blockquote>Example finds: <br><code>&#60;span class="i"&#62;)&#60;/span&#62;</code><br><code>&#60;span class="b"&#62;.&#60;/span&#62;</code></blockquote>
+* **special chars spans**: review special characters in spans and replace the character without the span<br>F: <code>&#60;span\[^>]&#62;({|$|&#38;|,|:|;|?|@|#|||'|.|-|^||(|)|%|!|]|"|”|“|—)+&#60;/span&#62;</code><br>R: <code>\1</code><blockquote>Example finds: <br><code>&#60;span class="i"&#62;)&#60;/span&#62;</code><br><code>&#60;span class="b"&#62;.&#60;/span&#62;</code></blockquote>
 
-* **non-english chars spans: **review non-english characters in spans that could be tagged as `lang`<br>F: <code>&#60;span class="i(?:talic)?"&#62;(\[^a-zA-Z0-9\s]+)&#60;/span&#62;</code>
+* **non-english chars spans**: review non-english characters in spans that could be tagged as `lang`<br>F: <code>&#60;span class="i(?:talic)?"&#62;(\[^a-zA-Z0-9\s]+)&#60;/span&#62;</code>
 
-* **missed verses: **Find digits with a colon in between and no tag that could potentially be missed scripture verses<br>F: <code>(?&#60;!&#60;/abbr&#62;|&#60;/span&#62;)(?&#60;!'&#62;|\[a-z]|\d|.)(?:(| )\d+:\d{1,2}(?!&#60;/a&#62;)</code><blockquote>Example finds: <br><code>106:9</code><br><code>10:10</code></blockquote>
+* **missed verses**: Find digits with a colon in between and no tag that could potentially be missed scripture verses<br>F: <code>(?&#60;!&#60;/abbr&#62;|&#60;/span&#62;)(?&#60;!'&#62;|\[a-z]|\d|.)(?:(| )\d+:\d{1,2}(?!&#60;/a&#62;)</code><blockquote>Example finds: <br><code>106:9</code><br><code>10:10</code></blockquote>
 
 </details>
