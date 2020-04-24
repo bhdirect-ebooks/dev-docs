@@ -84,7 +84,7 @@ title: Regex Library
 
 - **dash spacing**: Find dashes with potential spacing issues<br>F: <code>(\s\[^>/= ]&#42;\s\[-–]\[^</= ]&#42;\s|\s\[^>/= ]*\[-–]\s\[^</= ]&#42;\s)</code>
 
-- **space after comma**: Find a comma with no space after<br>F: <code>,(\[^&#34;’”'<0-9 —)]+)<br>R: <code>, \1</code>
+- **space after comma**: Find a comma with no space after<br>F: <code>,(\[^&#34;’”'<0-9 —)]+)</code><br>R: <code>, \1</code>
 
 </details>
 
