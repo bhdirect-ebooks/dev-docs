@@ -21,7 +21,7 @@ title: Regex Library
 
 <summary>Languages, Apparatus and Symbols</summary>
 
-- **lang-hbo**: Find instances of Hebrew<br>F: (<code>(\[ְֱֲֳִֵֶַָֹֺֻּֽ֑֖֛֢֣֤֥֦֧֪֚֭֮֒֓֔֕֗֘֙֜֝֞֟֠֡֨֩֫֬֯־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״]+-? ?)+)</code>
+- **lang-hbo**: Find instances of Hebrew<br>F: <code>(\[ְֱֲֳִֵֶַָֹֺֻּֽ֑֖֛֢֣֤֥֦֧֪֚֭֮֒֓֔֕֗֘֙֜֝֞֟֠֡֨֩֫֬֯־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״]+-? ?)+)</code>
 
 - **lang-grc**: Find instances of Greek<br>F: <code>((?:\[\x{0300}-\x{036F}\x{0370}-\x{03FF}\x{1F00}-\x{1FFF}\x{20D0}-\x{20FF}\x{FE20}-\x{FE2F}]+\[,. ]*)+)</code>
 
@@ -29,13 +29,13 @@ title: Regex Library
 
 - **apparatus symbols**: Find apparatus symbols.<br>F: <code>(\[ℵ]|&#x(?:2135;|E(?:00\[021];|5(?:0\[45E6FA];|1\[034679];))))</code>
 
-- **check lang**: Find special `lang` characters<br>F: <code><&#60;span class=&#34;(\[^&#34;]+)&#34;&#62;(\[^A-Z]\[^<]&#42;\[āåâêëėèēîīôöòōûüū]\[^<]&#42;)&#60;/span&#62;</code>
+- **check lang**: Find special `lang` characters<br>F: <code>&#60;span class=&#34;(\[^&#34;]+)&#34;&#62;(\[^A-Z]\[^<]&#42;\[āåâêëėèēîīôöòōûüū]\[^<]&#42;)&#60;/span&#62;</code>
 
 - **extract lang**: Choose <mark>'Extract'</mark> to create a list of italicized words. Use this list to look for untagged lang or translit<br>F: <code>&#60;span class=&#34;(italic|i)&#34;&#62;(\[^<]&#42;)&#60;/span&#62;</code>
 
 - **ampersands**: replace ampersands<br>F: <code>(\[a-z]+\s&#42;)&(\s&#42;\[a-z]+)</code><br>R: <code>\1&#38;\2</code>
 
-- **unsafe chars**: find characters that are unsafe to use within HTML attribute values<br>F: <code>\[a-z-]+=&#34;\[^&#34;]&#42;?\[\x{0000}-\x{0009}\x{000b}\x{000c}\x{000e}-\x{001f}\x{007f}-\x{009f}\x{00ad}\x{0600}-\x{0604}\x{070f}\x{17b4}\x{17b5}\x{200c}-\x{200f}\x{2028}-\x{202f}\x{2060}-\x{206f}\x{feff}\x{fff0}-\x{ffff}]+?\[^&#34;]&#42;"</code>
+- **unsafe chars**: find characters that are unsafe to use within HTML attribute values<br>F: <code>\[a-z-]+=&#34;\[^&#34;]&#42;?\[\x{0000}-\x{0009}\x{000b}\x{000c}\x{000e}-\x{001f}\x{007f}-\x{009f}\x{00ad}\x{0600}-\x{0604}\x{070f}\x{17b4}\x{17b5}\x{200c}-\x{200f}\x{2028}-\x{202f}\x{2060}-\x{206f}\x{feff}\x{fff0}-\x{ffff}]+?\[^&#34;]&#42;&#34;</code>
 
 </details>
 
@@ -48,7 +48,7 @@ title: Regex Library
 
 - **pagebreak with no space**: Find page breaks that have no space on either side.<br>F: <code>(\w+&#60;span epub:type=&#34;pagebreak&#34; id=&#34;\[^&#34;]&#42;&#34; title=&#34;\[^&#34;]&#42;&#34;&#62;&#60;/span&#62;)(\w+)</code><br>R: <code>\1 \2</code><blockquote>Example find: <br><code>I&#60;span epub:type=&#34;pagebreak&#34; id=&#34;page1&#34; title=&#34;1&#34;&#62;&#60;/span&#62;have</code></blockquote>
 
-- **pagebreak begin line space**: Find a pagebreak that has a space at the beginning of a line<br>F: <code>(&#60;\[^>]&#42;&#62;&#60;span epub:type="pagebreak"\[^>]&#42;&#62;&#60;/span&#62;)\s</code><br>R: <code>\1</code><blockquote>Example find: <br><code>&#60;p&#62;&#60;span epub:type=&#34;pagebreak&#34; id=&#34;page1&#34; title=&#34;1&#34;&#62;&#60;/span&#62; All</code></blockquote>
+- **pagebreak begin line space**: Find a pagebreak that has a space at the beginning of a line<br>F: <code>(&#60;\[^>]&#42;&#62;&#60;span epub:type=&#34;pagebreak&#34;\[^>]&#42;&#62;&#60;/span&#62;)\s</code><br>R: <code>\1</code><blockquote>Example find: <br><code>&#60;p&#62;&#60;span epub:type=&#34;pagebreak&#34; id=&#34;page1&#34; title=&#34;1&#34;&#62;&#60;/span&#62; All</code></blockquote>
 
 - **find broken paragraphs (1)**: Find potential broken paragraphs<br>F: <code>(\[^.|!|”|?|"|>|)|:])&#60;/p&#62;\s&#42;&#60;p\[^>]&#42;&#62;\s&#42;(&#60;span epub:type=&#34;pagebreak&#34; id=&#34;page.+?&#34; title=&#34;\[^>]&#42;&#62;&#60;/span&#62;)</code><br>R: <code>\1 \2</code>
 
@@ -84,7 +84,7 @@ title: Regex Library
 
 - **dash spacing**: Find dashes with potential spacing issues<br>F: <code>(\s\[^>/= ]&#42;\s\[-–]\[^</= ]&#42;\s|\s\[^>/= ]*\[-–]\s\[^</= ]&#42;\s)</code>
 
-- **space after comma**: Find a comma with no space after<br>F: <code>,(\[^&#34;’”'<0-9 —)]+)<br>R: , \1</code>
+- **space after comma**: Find a comma with no space after<br>F: <code>,(\[^&#34;’”'<0-9 —)]+)<br>R: <code>, \1</code>
 
 </details>
 
@@ -118,7 +118,7 @@ title: Regex Library
 
 <summary>Abbreviations</summary>
 
-- **tables to ABBR 1**: convert tables to abbreviation lists<br>F: <code>&#60;tr&#62;\s&#42;&#60;td&#62;(.&#42;?)&#60;/td&#62;\s&#42;&#60;td&#62;(.&#42;?)&#60;/td&#62;\s&#42;&#60;/tr&#62;</code><br>R: <code>&#60;dt epub:type="glossterm"&#62;&#60;dfn&#62;\1&#60;/dfn&#62;&#60;/dt&#62;&#60;dd epub:type="glossdef"&#62;\2&#60;/dd&#62;</code>
+- **tables to ABBR 1**: convert tables to abbreviation lists<br>F: <code>&#60;tr&#62;\s&#42;&#60;td&#62;(.&#42;?)&#60;/td&#62;\s&#42;&#60;td&#62;(.&#42;?)&#60;/td&#62;\s&#42;&#60;/tr&#62;</code><br>R: <code>&#60;dt epub:type=&#34;glossterm&#34;&#62;&#60;dfn&#62;\1&#60;/dfn&#62;&#60;/dt&#62;&#60;dd epub:type=&#34;glossdef&#34;&#62;\2&#60;/dd&#62;</code>
 
 - **tables to ABBR 2**: after running tables to ABBR 1 use this regex to format the lists new lines<br>F: <code>&#60;dfn&#62;(.&#42;?)&#60;/dfn&#62;&#60;/dt&#62;&#60;dd epub:type=&#34;glossdef&#34;&#62;(.&#42;?)&#60;/dd&#62;</code><br>R: <code>\n            &#60;dfn&#62;\1&#60;/dfn&#62;\n          &#60;/dt&#62;\n          &#60;dd epub:type=&#34;glossdef&#34;&#62;\2&#60;/dd&#62;</code>
 
