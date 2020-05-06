@@ -3,13 +3,11 @@ title: Regex Library
 ---
 <details close>
 <summary>General</summary>
-
 - **extract text**: in the Find window, choose <mark>'Extract'</mark> to pull contents from a file or project<br>F: <code>&#60;body(?msi)(.&#42;?)&#60;/body&#62;</code>
 
 - **extract classes**: choose <mark>'Extract'</mark> to pull classes from a file or project<br>F: <code>\sclass=&#34;\[^&#34;]+&#34;</code>
 
 - **remove divs**: Find divs and replace with only the div content<br>F: <code>&#60;div(?: class=&#34;\[^&#34;]+&#34;)?>((?:.|\s)*?)&#60;/div&#62;</code><br>R: <code>\1</code>
-
 </details>
 <details close>
 <summary>Clean and Code</summary><blockquote>
