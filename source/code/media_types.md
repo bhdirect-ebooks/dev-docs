@@ -71,7 +71,7 @@ The link can be either text, or an image (icon):
 
 ```html
 <!-- Worded link -->
-<a href="../videos/everyday-theology-043.xhtml#video-043">Adoption</a>
+<a href="../videos/everyday-theology-043.xhtml#video-043">Video on Adoption</a>
 
 <!-- Icon link -->
 <a href="../videos/everyday-theology-043.xhtml#video-043"><img alt="Play Video" src="../images/video.png" /></a>
@@ -110,7 +110,7 @@ Here is an example video file:
 Manifest entries for these XHTML files in content.opf must include the `remote-resources` property.
 
 <aside class="notice">
-It is not necessary to add `property="remote-resources"` to manifest entries for files which only contain a link *to* a video XHTML file. Only files which contain the <code>&lt;video&gt;</code> (or <code>&lt;audio&gt;</code>) element with a remotely hosted media require that attribute.
+It is not necessary to add `property="remote-resources"` to manifest entries for files which only contain a link *to* a video XHTML file. Only files which contain the <code>&lt;video&gt;</code> (or <code>&lt;audio&gt;</code>) element with remotely hosted media require that attribute.
 </aside>
 
 ### Audio Files
