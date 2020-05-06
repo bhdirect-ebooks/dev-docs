@@ -109,7 +109,7 @@ Here is an example video file:
 
 Manifest entries for these XHTML files in content.opf must include the `remote-resources` property.
 
-<aside class="info">
+<aside class="notice">
 It is not necessary to add `property="remote-resources"` to manifest entries for files which only contain a link *to* a video XHTML file. Only files which contain the <code>&lt;video&gt;</code> (or <code>&lt;audio&gt;</code>) element with a remotely hosted media require that attribute.
 </aside>
 
