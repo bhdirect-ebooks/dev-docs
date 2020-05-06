@@ -57,7 +57,7 @@ The content.opf should also include a manifest entry for each video file.
 <item href="https://epub-remote-resources.mywsb.com/9781433644443/AmerHist2-001.webm" id="AmerHist2-001" media-type="video/webm" />
 ```
 
-Each HTML file that includes a video must have the `remote-resources` property included in the manifest entry for that file.
+Each XHTML file that includes a video must have the `remote-resources` property included in the manifest entry for that file.
 
 ```html
 <item id="AmerHist202_body01_chapter01" href="text/AmerHist202_body01_chapter01.xhtml" media-type="application/xhtml+xml" properties="remote-resources" />
@@ -65,24 +65,53 @@ Each HTML file that includes a video must have the `remote-resources` property i
 
 ### Linked Videos
 
-For Linked videos, including all glossary and notes videos, the video markup must be placed in individual XHTML documents (one per video) in a video folder.
+Linked Videos can be used in places where an embedded video is impractical, such as within footnotes or glossary definitions.
 
-Make sure each video has a unique `id` in order to link from the text.
+The link can be either text, or an image (icon):
+
+```html
+<!-- Worded link -->
+<a href="../videos/everyday-theology-043.xhtml#video-043">Adoption</a>
+
+<!-- Icon link -->
+<a href="../videos/everyday-theology-043.xhtml#video-043"><img alt="Play Video" src="../images/video.png" /></a>
+```
+
+This is our standard video icon: ![video.png icon](/assets/images/uploads/video.png) Right-click and "Save Image As..." to download and use it in your book.
+
+For Linked videos, the video markup must be placed in individual XHTML files (one per video) in a **videos** folder.
+
+![OEBPS/videos folder](/assets/images/uploads/videos-folder.png)
 
 For consistency, the XHTML file name should be the same as the MP4 and WEBM file names (which, in turn, should be the same as the SVG file name).
 
-**_Note the differences below for non-glossaries vs. glossaries._**
+The only difference in the markup from [Embedded Videos](#Embedded-Videos) is the addition of an `id` attribute to the `video` element for linking to from the text. Each `id` value must be unique.
+
+Here is an example video file:
 
 ```html
-<!-- Link from non-glossary file -->
-<a href="../videos/everyday-theology-123.xhtml">Watch the interview with Soandso.</a>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <title>Everyday Theology</title>
+    <link href="../styles/mywsb-dev.css" rel="stylesheet" type="text/css" />
 
-<!-- Link from a glossary file -->
-<dd epub:type="glossdef">
-  <a class="video-glyph" href="../videos/everyday-theology-123.xhtml"></a>
-  <p>A view of the millennium that...</p>
-</dd>
+  </head>
+  <body epub:type="learning-resource">
+    <video poster="../images/everyday-theology-043.svg" controls="controls" preload="none" id="video-043">
+      <source src="https://epub-remote-resources.mywsb.com/9781433651090/everyday-theology-043.mp4" type="video/mp4" />
+      <source src="https://epub-remote-resources.mywsb.com/9781433651090/everyday-theology-043.webm" type="video/webm" />
+    </video>
+  </body>
+</html>
 ```
+
+Manifest entries for these XHTML files in content.opf must include the `remote-resources` property.
+
+<aside class="info">
+It is not necessary to add `property="remote-resources"` to manifest entries for files which only contain a link *to* a video XHTML file. Only files which contain the <code>&lt;video&gt;</code> (or <code>&lt;audio&gt;</code>) element with a remotely hosted media require that attribute.
+</aside>
 
 ### Audio Files
 
