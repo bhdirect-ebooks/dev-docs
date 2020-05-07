@@ -74,6 +74,7 @@ sidebar:
   process:
     dev: Dev Process
     overview: Overview
+    regex-library: RegEx Library
     prep: Prep
     admin: Project Admin
     scaffold: Project Scaffolding
@@ -107,4 +108,3 @@ sidebar:
     step_five: Step Five
     review: Review
     misc: Miscellaneous
-    
