@@ -242,7 +242,11 @@ Abbreviation lists should appear wherever they appear in the content, and the on
 
 ### Abbreviation Terms
 
-Abbreviation terms must also be tagged throughout the content. See [Abbreviations](general_types.html#Abbreviations).
+Abbreviation terms must also be tagged throughout the content and should follow the HTML specification. See [Abbreviations](general_types.html#Abbreviations).
+
+```html
+<abbr title="Abbreviation Definition">ABBRD</abbr>
+```
 
 ### Actual Glossaries
 
