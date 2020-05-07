@@ -1,5 +1,5 @@
 ---
-title: Regex Library
+title: RegEx Library
 ---
 <details close>
 <summary>General</summary>
