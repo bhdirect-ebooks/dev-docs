@@ -2,223 +2,144 @@
 title: Regex Library
 ---
 <details close>
-
 <summary>General</summary>
+- **extract text**: in the Find window, choose <mark>'Extract'</mark> to pull contents from a file or project<br>F: <code>&#60;body(?msi)(.&#42;?)&#60;/body&#62;</code>
 
-* **extract text:** in the Find window, choose <mark>'Extract'</mark> to pull contents from a file or project<br>F: <code><body(?msi)(.*?)</body></code>
-* **extract classes:** choose <mark>'Extract'</mark> to pull classes from a file or project<br>F: <code>\sclass="\[^"]+"</code>
-* **remove divs:** Find divs and replace with only the div content<br>F: <code><div(?: class="\[^"]+")?>((?:.|\s)*?)</div></code><br>R: <code>\1</code>
+- **extract classes**: choose <mark>'Extract'</mark> to pull classes from a file or project<br>F: <code>\sclass=&#34;\[^&#34;]+&#34;</code>
 
+- **remove divs**: Find divs and replace with only the div content<br>F: <code>&#60;div(?: class=&#34;\[^&#34;]+&#34;)?>((?:.|\s)&#42;?)&#60;/div&#62;</code><br>R: <code>\1</code>
 </details>
-
-<br>
-
 <details close>
-
 <summary>Clean and Code</summary><blockquote>
-
-<br>
-
 <details close>
-
 <summary>Languages, Apparatus and Symbols</summary>
+- **lang-hbo**: Find instances of Hebrew<br>F: <code>(\[ְֱֲֳִֵֶַָֹֺֻּֽ֑֖֛֢֣֤֥֦֧֪֚֭֮֒֓֔֕֗֘֙֜֝֞֟֠֡֨֩֫֬֯־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״]+-? ?)+)</code>
 
-* **lang-hbo**: Find instances of Hebrew<br>F: (<code>(\[ְֱֲֳִֵֶַָֹֺֻּֽ֑֖֛֢֣֤֥֦֧֪֚֭֮֒֓֔֕֗֘֙֜֝֞֟֠֡֨֩֫֬֯־ֿ׀ׁׂ׃ׅׄ׆ׇאבגדהוזחטיךכלםמןנסעףפץצקרשתװױײ׳״]+-? ?)+)</code>
-* **lang-grc: **Find instances of Greek<br>F: <code>((?:\[\x{0300}-\x{036F}\x{0370}-\x{03FF}\x{1F00}-\x{1FFF}\x{20D0}-\x{20FF}\x{FE20}-\x{FE2F}]+\[,. ]*)+)</code>
-* **lang-grc (2)**: Find instances of Greek<br>F: <code>(\[\p{Greek}]\[\p{Greek} ́¨ˆ̂˘̆̑̃ˋ̔̓ ͂.,’“;]+\b)</code>
-* **apparatus symbols**: Find apparatus symbols.<br>F: <code>(\[ℵ]|&#x(?:2135;|E(?:00\[021];|5(?:0\[45E6FA];|1\[034679];))))</code>
-* **check lang**: Find special `lang` characters<br>F: <code><span class="(\[^"]+)">(\[^A-Z]\[^<]\*\[āåâêëėèēîīôöòōûüū]\[^<]\*)</span></code>
-* **extract lang**: Choose <mark>'Extract'</mark> to create a list of italicized words. Use this list to look for untagged lang or translit<br>F: <code><span class="(italic|i)">(\[^<]*)</span></code>
-* **ampersands**: replace ampersands<br>F: <code>(\[a-z]+\s\*)&(\s\*\[a-z]+)</code><br>R: <code>\1\&#38;\2</code>
-* **unsafe chars: **find characters that are unsafe to use within HTML attribute values<br>F: <code>\[a-z-]+="\[^"]\*?\[\x{0000}-\x{0009}\x{000b}\x{000c}\x{000e}-\x{001f}\x{007f}-\x{009f}\x{00ad}\x{0600}-\x{0604}\x{070f}\x{17b4}\x{17b5}\x{200c}-\x{200f}\x{2028}-\x{202f}\x{2060}-\x{206f}\x{feff}\x{fff0}-\x{ffff}]+?\[^"]\*"</code>
+- **lang-grc**: Find instances of Greek<br>F: <code>((?:\[\x{0300}-\x{036F}\x{0370}-\x{03FF}\x{1F00}-\x{1FFF}\x{20D0}-\x{20FF}\x{FE20}-\x{FE2F}]+\[,. ]&#42;)+)</code>
 
+- **lang-grc (2)**: Find instances of Greek<br>F: <code>(\[\p{Greek}]\[\p{Greek} ́¨ˆ̂˘̆̑̃ˋ̔̓ ͂.,’“;]+\b)</code>
+
+- **apparatus symbols**: Find apparatus symbols.<br>F: <code>(\[ℵ]|&#x(?:2135;|E(?:00\[021];|5(?:0\[45E6FA];|1\[034679];))))</code>
+
+- **check lang**: Find special `lang` characters<br>F: <code>&#60;span class=&#34;(\[^&#34;]+)&#34;&#62;(\[^A-Z]\[^<]&#42;\[āåâêëėèēîīôöòōûüū]\[^<]&#42;)&#60;/span&#62;</code>
+
+- **extract lang**: Choose <mark>'Extract'</mark> to create a list of italicized words. Use this list to look for untagged lang or translit<br>F: <code>&#60;span class=&#34;(italic|i)&#34;&#62;(\[^<]&#42;)&#60;/span&#62;</code>
+
+- **ampersands**: replace ampersands<br>F: <code>(\[a-z]+\s&#42;)&(\s&#42;\[a-z]+)</code><br>R: <code>\1&#38;\2</code>
+
+- **unsafe chars**: find characters that are unsafe to use within HTML attribute values<br>F: <code>\[a-z-]+=&#34;\[^&#34;]&#42;?\[\x{0000}-\x{0009}\x{000b}\x{000c}\x{000e}-\x{001f}\x{007f}-\x{009f}\x{00ad}\x{0600}-\x{0604}\x{070f}\x{17b4}\x{17b5}\x{200c}-\x{200f}\x{2028}-\x{202f}\x{2060}-\x{206f}\x{feff}\x{fff0}-\x{ffff}]+?\[^&#34;]&#42;&#34;</code>
 </details>
-
 <details close>
-
 <summary>Page Breaks and Paragraphs</summary>
+- **pagebreak breaking words**: Find pagebreaks that are in between words.<br>F: <code>(\[a-z]+)-\s&#42;(&#60;span epub:type=&#34;pagebreak&#34; id=&#34;\[^&#34;]&#42;&#34; title=&#34;\[^&#34;]&#42;&#34;&#62;&#60;/span&#62;)</code><br>R: <code>\2 \1</code>
+<blockquote>Example find: <br><code>left-&#60;span epub:type=&#34;pagebreak&#34; id=&#34;page1&#34; title=&#34;1&#34;&#62;&#60;/span&#62;hand</code></blockquote>
+- **pagebreak with no space**: Find page breaks that have no space on either side.<br>F: <code>(\w+&#60;span epub:type=&#34;pagebreak&#34; id=&#34;\[^&#34;]&#42;&#34; title=&#34;\[^&#34;]&#42;&#34;&#62;&#60;/span&#62;)(\w+)</code><br>R: <code>\1 \2</code>
+<blockquote>Example find: <br><code>I&#60;span epub:type=&#34;pagebreak&#34; id=&#34;page1&#34; title=&#34;1&#34;&#62;&#60;/span&#62;have</code></blockquote>
+- **pagebreak begin line space**: Find a pagebreak that has a space at the beginning of a line<br>F: <code>(&#60;\[^>]&#42;&#62;&#60;span epub:type=&#34;pagebreak&#34;\[^>]&#42;&#62;&#60;/span&#62;)\s</code><br>R: <code>\1</code>
+<blockquote>Example find: <br><code>&#60;p&#62;&#60;span epub:type=&#34;pagebreak&#34; id=&#34;page1&#34; title=&#34;1&#34;&#62;&#60;/span&#62; All</code></blockquote>
+- **find broken paragraphs (1)**: Find potential broken paragraphs<br>F: <code>(\[^.|!|”|?|"|>|)|:])&#60;/p&#62;\s&#42;&#60;p\[^>]&#42;&#62;\s&#42;(&#60;span epub:type=&#34;pagebreak&#34; id=&#34;page.+?&#34; title=&#34;\[^>]&#42;&#62;&#60;/span&#62;)</code><br>R: <code>\1 \2</code>
 
-* **pagebreak breaking words**: Find pagebreaks that are in between words.<br>F: <code>(\[a-z]+)-\s\*(<span epub:type="pagebreak" id="\[^"]\*" title="\[^"]*"></span>)</code><br>R: <code>\2 \1</code>
-  > Example find: 
-  >
-  > <code>left-&#60;span epub:type="pagebreak" id="page1" title="1"&#62;&#60;/span&#62;hand</code>
-* **pagebreak with no space**: Find page breaks that have no space on either side.<br>F: <code>(\w+<span epub:type="pagebreak" id="\[^"]\*" title="\[^"]\*"></span>)(\w+)</code><br>R: <code>\1 \2</code>
-  > Example find: 
-  >
-  > <code>I&#60;span epub:type="pagebreak" id="page1" title="1"&#62;&#60;/span&#62;have</code>
-* **pagebreak begin line space**: Find a pagebreak that has a space at the beginning of a line<br>F: <code>(<\[^>]\*><span epub:type="pagebreak"\[^>]\*></span>)\s</code><br>R: <code>\1</code>
-  > Example find: 
-  >
-  > <code>&#60;p&#62;&#60;span epub:type="pagebreak" id="page1" title="1"&#62;&#60;/span&#62; All</code>
-* **find broken paragraphs (1)**: Find potential broken paragraphs<br>F: <code>(\[^\.|!|”|?|"|>|)|:])&#60;/p&#62;\s\*&#60;p\[^>]\*>\s\*(&#60;span epub:type="pagebreak" id="page.+?" title="\[^>]\*&#62;&#60;/span&#62;)</code><br>R: <code>\1 \2</code>
-* **find broken paragraphs (2)**: Find potential broken paragraphs. <mark>Case sensitive</mark><br>F: <code>&#60;p(\[^>]\*)&#62;\s\*(&#60;span epub:type="pagebreak" id="page.+?" title="\[^>]*&#62;&#60;/span&#62;)(\[a-z]+)</code>
-
+- **find broken paragraphs (2)**: Find potential broken paragraphs. <mark>Case sensitive</mark><br>F: <code>&#60;p(\[^>]&#42;)&#62;\s&#42;(&#60;span epub:type=&#34;pagebreak&#34; id=&#34;page.+?&#34; title=&#34;\[^>]&#42;&#62;&#60;/span&#62;)(\[a-z]+)</code>
 </details>
-
 <details close>
-
 <summary>Scriptext</summary>
+- **scriptext finder (1)**: Find blockquotes that have data-ref tags in them. (<mark>Use _after_ running Percival</mark>)<br>F: <code>&#60;blockquote&#62;(\s&#42;(&#60;p\[^>]&#42;&#62;.&#42;?&#60;/p&#62;\s&#42;)&#42;&#60;p\[^>]&#42;&#62;.&#42;?(&#60;a data-ref=&#34;\[^&#34;]&#42;&#34;&#62;\[^<]&#42;&#60;/a&#62;.&#42;?&#60;/p&#62;\s&#42;&#60;/blockquote&#62;))</code><br>R: <code>&#60;blockquote class=&#34;scriptext&#34;&#62;\1</code>
 
-* **scriptext finder (1)**: Find blockquotes that have data-ref tags in them. (<mark>Use _after_ running Percival</mark>)<br>F: `<blockquote>(\s*(<p[^>]*>.*?</p>\s*)*<p[^>]*>.*?(<a data-ref="[^"]*">[^<]*</a>.*?</p>\s*</blockquote>))`<br>R: `<blockquote class="scriptext">\1`
-* **scriptext finder (2)**: Find blockquotes that have a data-ref before it. (<mark>Use _after_ running Percival</mark>)<br>F: `(<a data-ref="[^"]*">([^<]*)</a>(:|.)</p>\s*)<blockquote>`<br>R: `\1<blockquote class="scriptext">`
-
+- **scriptext finder (2)**: Find blockquotes that have a data-ref before it. (<mark>Use _after_ running Percival</mark>)<br>F: <code>(&#60;a data-ref=&#34;\[^&#34;]&#42;&#34;&#62;(\[^<]&#42;)&#60;/a&#62;(:|.)&#60;/p&#62;\s&#42;)&#60;blockquote&#62;</code><br>R: <code>\1&#60;blockquote class=&#34;scriptext&#34;&#62;</code>
 </details>
-
 <details close>
-
 <summary>Spacing</summary>
+- **no space between words**: Find and replace words with no space in between<br>F: <code>(&#60;span class=&#34;(?!label)\[^&#34;]&#42;&#34;&#62;\[^<]&#42;&#60;/span&#62;)(\w)</code><br>R: <code>\1 \2</code>
+<blockquote>Example find: <br><code>A &#60;span class=&#34;i&#34;&#62;100 foot&#60;/span&#62;drop</code></blockquote>
+- **no space between spans**: Find and replace span tags with no space in between(<mark>Check before using _span combine_</mark>)<br>F: <code>(&#60;span class=&#34;(?!label)\[^&#34;]&#42;&#34;&#62;\[^<]&#42;&#60;/span&#62;)(&#60;span class=&#34;(?!label)\[^&#34;]&#42;&#34;&#62;\w+\[^<]&#42;&#60;/span&#62;)</code><br>R: <code>\1 \2</code>
+<blockquote>Example find: <br><code>A &#60;span class=&#34;i&#34;&#62;100 foot&#60;/span&#62;&#60;span class=&#34;i&#34;&#62;drop&#60;/span&#62;</code></blockquote>
+- **no space open parens**: Find and replace an opening parenthesis with no space before<br>F: <code>(\w&#60;/span&#62;)(()</code><br>R: <code>\1 \2</code>
+<blockquote>Example find: <br><code>&#60;span class=&#34;i&#34;&#62;100 foot drop&#60;/span&#62;(30 meters).</code></blockquote>
+- **begin span spacing**: Find spans lacking a space before<br> F: <code>(\[a-z]+)(&#60;span)</code><br>R: <code>\1 \2</code>
+<blockquote>Example find: <br><code>A&#60;span class=&#34;i&#34;&#62;100 foot drop&#60;/span&#62;</code></blockquote>
+- **space after first tag**: Find and replace opening tags with a space after<br>F: <code>&#60;(\[^>])&#62; (.&#42;?)</code><br>R: <code><\1>\2</code>
+<blockquote>Example find: <br><code>&#60;p&#62; A &#60;span class=&#34;i&#34;&#62;100 foot drop&#60;/span&#62;</code></blockquote>
+- **space before last tag**: Find and replace closing tags with a space before<br>F: <code>&#60;/(p|td|h1|h2|h3)&#62;</code><br>R: <code></\1></code>
+<blockquote>Example find: <br><code>drop. &#60;/p&#62;</code></blockquote>
+- **dash spacing**: Find dashes with potential spacing issues<br>F: <code>(\s\[^>/= ]&#42;\s\[-–]\[^</= ]&#42;\s|\s\[^>/= ]*\[-–]\s\[^</= ]&#42;\s)</code>
 
-* **no space between words**: Find and replace words with no space in between<br>F: `(<span class="(?!label)[^"]*">[^<]*</span>)(\w)`<br>R: `\1 \2`
-  > Example find: 
-  >
-  > `A <span class="i">100 foot</span>drop`
-* **no space between spans**: Find and replace span tags with no space in between(<mark>Check before using _span combine_</mark>)<br>F: `(<span class="(?!label)[^"]*">[^<]*</span>)(<span class="(?!label)[^"]*">\w+[^<]*</span>)`<br>R: `\1 \2`
-  > Example find: 
-  >
-  > `A <span class="i">100 foot</span><span class="i">drop</span>`
-* **no space open parens**: Find and replace an opening parenthesis with no space before<br>F: `(\w</span>)(\()`<br>R: `\1 \2`
-  > Example find: 
-  >
-  > `<span class="i">100 foot drop</span>(30 meters).`
-* **begin span spacing**: Find spans lacking a space before<br> F: `([a-z]+)(<span)`<br>R: `\1 \2`
-  > Example find: 
-  >
-  > `A<span class="i">100 foot drop</span>`
-* **space after first tag**: Find and replace opening tags with a space after<br>F: `<([^>])> (.*?)`<br>R: `<\1>\2`
-  > Example find: 
-  >
-  > `<p> A <span class="i">100 foot drop</span>`
-* **space before last tag**: Find and replace closing tags with a space before<br>F: `</(p|td|h1|h2|h3)>`<br>R: `</\1>`
-  > Example find: 
-  >
-  > `drop. </p>`
-* **dash spacing**: Find dashes with potential spacing issues<br>F: `(\s[^>/= ]*\s[-–][^</= ]*\s|\s[^>/= ]*[-–]\s[^</= ]*\s)`
-* **space after comma**: Find a comma with no space after<br>F: `,([^"’”'<0-9 —\)]+)<br>R: , \1`
-
+- **space after comma**: Find a comma with no space after<br>F: <code>,(\[^&#34;’”'<0-9 —)]+)</code><br>R: <code>, \1</code>
 </details>
-
 <details close>
-
 <summary>Spans</summary>
+- **span combine (1)**: In this Regex Library navigate to _Clean and Code > Spacing > **no space between spans**_ and check before running span combine. Find and replace to combine the content of spans with the same class<br>F: <code>&#60;span class=&#34;(\[^&#34;]&#42;)&#34;&#62;(\[^<]&#42;)&#60;/span&#62;(\s&#42;)&#60;span class=&#34;\1&#34;&#62;(\[^<]&#42;)&#60;/span&#62;</code><br>R: <code>&#60;span class=&#34;\1&#34;&#62;\2\3\4&#60;/span&#62;</code>
 
-* **span combine (1)**: In this Regex Library navigate to _Clean and Code > Spacing > **no space between spans**_ and check before running span combine. Find and replace to combine the content of spans with the same class<br>F: `<span class="([^"]*)">([^<]*)</span>(\s*)<span class="\1">([^<]*)</span>`<br>R: `<span class="\1">\2\3\4</span>`
-* **span combine (2)**: Find and replace spans that can be combined into a single class<br>F: `<span class="([^"]*)"><span class="([^"]*)">([^<]*)</span></span>`<br>R: `<span class="\1 \2">\3</span>`
-* **remove spans from headings**: Find spans in headings that are potentially not needed<br>F: `(<h\d[^>]*>.*?)<span(\s*class="(?!label)[^"]*")*>([^<]*)</span>(.*?</h\d>)`<br>R: `\1\3\4`
-  > Example find: 
-  >
-  > `<h1><span class="i">Foreword</span></h1>`
-  >
-  > `<h2>The <span class="i">Rock-Star</span> Complex</h2>`
-* **remove space within spans**: Find spans with a space inside<br>F: `<span class="([^"]+)"> ([^<]+)</span>`<br>R: `<span class="\1">\2</span>` (include the space _before_ the span)<br><br>F: `<span class="([^"]+)">([^<]+) </span>`<br>R: `<span class="\1">\2</span>` (include the space _after_ the span)
-* **move non-english chars in span**: Find and replace the class of a span containing non-english characters<br>F: `<span class="(italic|i)">([^a-zA-Z0-9\s]+)</span>`<br>R: `<span class="\1">\2</span>`
-* **remove unnecessary span**: Find spans around punctuation and replace without the span<br>F: `<span class="[^"]*">(‘|“|’|”|\.|\)|\(|\?|!|,)+</span>`<br>R: `\1`
-  > Example find: 
-  >
-  > `<span class="i">(</span>`
-  >
-  > `<span class="b">.</span>`
-* **repeating spans**: Find and replace adjacent spans that repeat<br>F: `<span class="([^\n<>]+)">([^\n<>]+)</span><span class="\1">`<br>R: `<span class="\1">\2`
+- **span combine (2)**: Find and replace spans that can be combined into a single class<br>F: <code>&#60;span class=&#34;(\[^&#34;]&#42;)&#34;&#62;&#60;span class=&#34;(\[^&#34;]&#42;)&#34;&#62;(\[^<]&#42;)&#60;/span&#62;&#60;/span&#62;</code><br>R: <code>&#60;span class=&#34;\1 \2&#34;&#62;\3&#60;/span&#62;</code>
 
+- **remove spans from headings**: Find spans in headings that are potentially not needed<br>F: <code>(&#60;h\d\[^>]&#42;&#62;.&#42;?)&#60;span(\s&#42;class=&#34;(?!label)\[^&#34;]&#42;&#34;)&#42;&#62;(\[^<]&#42;)&#60;/span&#62;(.&#42;?&#60;/h\d&#62;)</code><br>R: <code>\1\3\4</code>
+<blockquote>Example find: <br><code>&#60;h1&#62;&#60;span class=&#34;i&#34;&#62;Foreword&#60;/span&#62;&#60;/h1&#62;</code><br><code>&#60;h2&#62;The &#60;span class=&#34;i&#34;&#62;Rock-Star&#60;/span&#62; Complex&#60;/h2&#62;</code></blockquote>
+- **remove space within spans**: Find spans with a space inside<br>F: <code>&#60;span class=&#34;(\[^&#34;]+)&#34;&#62; (\[^<]+)&#60;/span&#62;</code><br>R: <code>&#60;span class=&#34;\1&#34;&#62;\2&#60;/span&#62;</code> (include the space _before_ the span)<br><br>F: <code>&#60;span class=&#34;(\[^&#34;]+)&#34;>(\[^<]+) &#60;/span&#62;</code><br>R: <code>&#60;span class=&#34;\1&#34;&#62;\2&#60;/span&#62;</code> (include the space _after_ the span)
+
+- **move non-english chars in span**: Find and replace the class of a span containing non-english characters<br>F: <code>&#60;span class=&#34;(italic|i)&#34;&#62;(\[^a-zA-Z0-9\s]+)&#60;/span&#62;</code><br>R: <code>&#60;span class=&#34;\1&#34;&#62;\2&#60;/span&#62;</code>
+
+- **remove unnecessary span**: Find spans around punctuation and replace without the span<br>F: <code>&#60;span class=&#34;\[^&#34;]&#42;&#34;&#62;(‘|“|’|”|.|)|(|?|!|,)+&#60;/span&#62;</code><br>R: <code>\1</code>
+<blockquote>Example find: <br><code>&#60;span class=&#34;i&#34;&#62;(&#60;/span&#62;</code><br><code>&#60;span class=&#34;b&#34;&#62;.&#60;/span&#62;</code></blockquote>
+- **repeating spans**: Find and replace adjacent spans that repeat<br>F: <code>&#60;span class=&#34;(\[^\n<>]+)&#34;&#62;(\[^\n<>]+)&#60;/span&#62;&#60;span class=&#34;\1&#34;&#62;</code><br>R: <code>&#60;span class=&#34;\1&#34;>\2</code>
 </details></blockquote>
-
 </details>
-
-<br>
-
 <details close>
-
-<summary>Enhance</summary><blockquote>
-
+<summary>Enhance</summary>
+<blockquote>
 <details close>
-
 <summary>Abbreviations</summary>
+- **tables to ABBR 1**: convert tables to abbreviation lists<br>F: <code>&#60;tr&#62;\s&#42;&#60;td&#62;(.&#42;?)&#60;/td&#62;\s&#42;&#60;td&#62;(.&#42;?)&#60;/td&#62;\s&#42;&#60;/tr&#62;</code><br>R: <code>&#60;dt epub:type=&#34;glossterm&#34;&#62;&#60;dfn&#62;\1&#60;/dfn&#62;&#60;/dt&#62;&#60;dd epub:type=&#34;glossdef&#34;&#62;\2&#60;/dd&#62;</code>
 
-* **tables to ABBR 1**: convert tables to abbreviation lists<br>F: `<tr>\s*<td>(.*?)</td>\s*<td>(.*?)</td>\s*</tr>`<br>R: `<dt epub:type="glossterm"><dfn>\1</dfn></dt><dd epub:type="glossdef">\2</dd>`
-* **tables to ABBR 2**: after running tables to ABBR 1 use this regex to format the lists new lines<br>F: `<dfn>(.*?)</dfn></dt><dd epub:type="glossdef">(.*?)</dd>`<br>R: `\n            <dfn>\1</dfn>\n          </dt>\n          <dd epub:type="glossdef">\2</dd>`
-
+- **tables to ABBR 2**: after running tables to ABBR 1 use this regex to format the lists new lines<br>F: <code>&#60;dfn&#62;(.&#42;?)&#60;/dfn&#62;&#60;/dt&#62;&#60;dd epub:type=&#34;glossdef&#34;&#62;(.&#42;?)&#60;/dd&#62;</code><br>R: <code>\n            &#60;dfn&#62;\1&#60;/dfn&#62;\n          &#60;/dt&#62;\n          &#60;dd epub:type=&#34;glossdef&#34;&#62;\2&#60;/dd&#62;</code>
 </details>
-
 <details close>
-
 <summary>Footnotes</summary>
+- **footnote references**: for footnotes _not_ in `backmatter` use this find and replace to format footnote refs in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: <code>&#60;p&#62;(\d). (.&#42;?)&#60;/p&#62;</code><br>R: <code>&#60;div epub:type=&#34;footnote&#34; id=&#34;\1&#34;&#62;\n          &#60;p&#62;&#60;sup&#62;&#60;a href=&#34;#FILENAME##backlink-\1&#34;&#62;\1&#60;/a&#62;&#60;/sup&#62;&#38;#160;&#60;span class=&#34;note&#34;&#62;\2&#60;/span&#62;&#60;/p&#62;\n        &#60;/div&#62;</code>
 
-* **footnote references: **for footnotes _not_ in `backmatter` use this find and replace to format footnote refs in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: `<p>(\d)\. (.*?)</p>`<br>R: `<div epub:type="footnote" id="\1">\n          <p><sup><a href="#FILENAME##backlink-\1">\1</a></sup>\&#160;<span class="note">\2</span></p>\n        </div>`
-* **footnote indicators: **for footnotes _not_ in `backmatter` use this find and replace to format footnote indicators in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: `<sup>(\d+)</sup>`<br>R: `<sup class="fn" id="backlink-intro-\1"><a epub:type="noteref" href="#FILENAME##intro-\1">[\1]</a></sup>`
-* **unique footnote reference id**: use filename to make footnote reference id unique<br>F: `<sup class="fn" id="note-backlink-(\d+)"><a epub:type="noteref" href="([^#]+)_([^#]*?).xhtml#note-(\d+)">\[(\d+)\]</a></sup>`<br>R: `<sup class="fn" id="note-backlink-\3-\1"><a epub:type="noteref" href="\2_\3.xhtml#note-\3-\4">[\5]</a></sup>`
-* **unique footnote indicator id**: use filename to make footnote id unique<br>F: `<div id="note-(\d+)" epub:type="footnote">\s*<p><sup><a href="([^#]+)_([^#]*?)\.xhtml#note-backlink-(\d+)">`<br>R: `<div id="note-\3-\1" epub:type="footnote"><p><sup><a href="\2_\3.xhtml#note-backlink-\3-\4">`
-* **remove Ibids: **make sure footnotes are formatted correctly according to the style guide and then use to replace Ibids<br>F: `(<p class="[^"]*"><sup>(\d+)</sup>(.*?<span class="i">.*?</span>).*?</p>\s*<p class="[^"]*"><sup>\d+</sup>)Ibid\.(,.*?)*</p>`<br>R: `\1\3\4</p>`
+- **footnote indicators**: for footnotes _not_ in `backmatter` use this find and replace to format footnote indicators in each file. Adjust the find to match source file markup, if necessary, and edit the replace to ensure unique IDs. After replacing in BBEdit use _Markup > Update > Document_ to change `#FILENAME#` to document filename<br>F: <code>&#60;sup&#62;(\d+)&#60;/sup&#62;</code><br>R: <code>&#60;sup class=&#34;fn&#34; id=&#34;backlink-intro-\1&#34;&#62;&#60;a epub:type=&#34;noteref&#34; href=&#34;#FILENAME##intro-\1&#34;&#62;\[\1]&#60;/a&#62;&#60;/sup&#62;</code>
 
+- **unique footnote reference id**: use filename to make footnote reference id unique<br>F: <code>&#60;sup class=&#34;fn&#34; id=&#34;note-backlink-(\d+)&#34;&#62;&#60;a epub:type=&#34;noteref&#34; href=&#34;(\[^#]+)&#95;(\[^#]&#42;?).xhtml#note-(\d+)&#34;&#62;\\[(\d+)]&#60;/a&#62;&#60;/sup&#62;</code><br>R: <code>&#60;sup class=&#34;fn&#34; id=&#34;note-backlink-\3-\1&#34;&#62;&#60;a epub:type=&#34;noteref&#34; href=&#34;\2&#95;\3.xhtml#note-\3-\4&#34;&#62;\[\5]&#60;/a&#62;&#60;/sup&#62;</code>
+
+- **unique footnote indicator id**: use filename to make footnote id unique<br>F: <code>&#60;div id=&#34;note-(\d+)&#34; epub:type=&#34;footnote&#34;&#62;\s&#42;&#60;p&#62;&#60;sup&#62;&#60;a href=&#34;(\[^#]+)&#95;(\[^#]&#42;?).xhtml#note-backlink-(\d+)&#34;&#62;</code><br>R: <code>&#60;div id=&#34;note-\3-\1&#34; epub:type=&#34;footnote&#34;&#62;&#60;p&#62;&#60;sup&#62;&#60;a href=&#34;\2&#95;\3.xhtml#note-backlink-\3-\4&#34;&#62;</code>
+
+- **remove Ibids**: make sure footnotes are formatted correctly according to the style guide and then use to replace Ibids<br>F: <code>(&#60;p class=&#34;\[^&#34;]&#42;&#34;&#62;&#60;sup&#62;(\d+)&#60;/sup&#62;(.&#42;?&#60;span class=&#34;i&#34;&#62;.&#42;?&#60;/span&#62;).&#42;?&#60;/p&#62;\s&#42;&#60;p class=&#34;\[^&#34;]&#42;&#34;&#62;&#60;sup&#62;\d+&#60;/sup&#62;)Ibid.(,.&#42;?)&#42;&#60;/p&#62;</code><br>R: <code>\1\3\4</p></code>
 </details>
-
 <details close>
-
 <summary>Index</summary>
-
-* **move pagebreaks up top**: find pagebreaks in a file and move them before the h1. (<mark>Run multiple times until there are no new finds</mark>)<br>F: `(<h1[^>]*>.*?</h1>(?msi)(.*?))(<span epub:type="pagebreak"[^>]*></span>)`<br>R: `\3\1`
-
+- **move pagebreaks up top**: find pagebreaks in a file and move them before the h1. (<mark>Run multiple times until there are no new finds</mark>)<br>F: <code>(&#60;h1\[^>]&#42;&#62;.&#42;?&#60;/h1&#62;(?msi)(.&#42;?))(&#60;span epub:type=&#34;pagebreak&#34;\[^>]&#42;&#62;&#60;/span&#62;)</code><br>R: <code>\3\1</code>
 </details>
-
 <details close>
-
 <summary>Links</summary>
+- **add `target="_blank"` to links**: Add `target="_blank"` attribute to existing external links<br>F: <code>&#60;a href=&#34;http(\[^&#34;]+)&#34;&#62;</code><br>R: <code>&#60;a href=&#34;http\1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&#62;</code>
 
-* **add `target="_blank"` to links**: Add `target="_blank"` attribute to existing external links<br>F: `<a href="http([^"]+)"><br>R: <a href="http\1" target="_blank" rel="noopener">`<br>R: `<a href="http\1" target="_blank" rel="noopener">`
-* **URLs**: Add links to URLs (Does not capture every instance)<br>F: `\shttp(.+?)([;|\.|,|\)][\s|<])`<br>R: `\s<a href="http\1" target="_blank" rel="noopener">http\1</a>\2\3`
-* **tag hyperlinks:** find and replace to tag hyperlinks<br>F: `<a (?:class="[^"]*"\s*)*href="((?:mail[^"]*)|(?:http[^"]*))">([^<]*)</a>`<br>R: `<a href="\1" target="_blank" rel="noopener">\2</a>`
-* **link chapters**: Find potential instances where chapters can be linked. Adjust the word `first` to `second` and the number `1` to `2` etc., to find all chapters<br>F: `(first chap(\.|ters?)|chap(s?\.|ters?) 1)(?!\d)`
-* **link parts**: Find potential instances where parts can be linked. Adjust the word `first` to `second` and the number `1` to `2` etc., to find all parts<br>F: `(first part|parts? 1)(?!\d)`
+- **URLs**: Add links to URLs (Does not capture every instance)<br>F: <code>\shttp(.+?)(\[;|.|,|)]\[\s|<])</code><br>R: <code>\s&#60;a href=&#34;http\1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&#62;http\1&#60;/a&#62;\2\3</code>
 
+- **tag hyperlinks**: find and replace to tag hyperlinks<br>F: <code>&#60;a (?:class=&#34;\[^&#34;]&#42;&#34;\s&#42;)&#42;href=&#34;((?:mail\[^&#34;]&#42;)|(?:http\[^&#34;]&#42;))&#34;&#62;(\[^<]&#42;)&#60;/a&#62;</code><br>R: <code>&#60;a href=&#34;\1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&#62;\2&#60;/a&#62;</code>
+
+- **link chapters**: Find potential instances where chapters can be linked. Adjust the word `first` to `second` and the number `1` to `2` etc., to find all chapters<br>F: <code>(first chap(.|ters?)|chap(s?.|ters?) 1)(?!\d)</code>
+
+- **link parts**: Find potential instances where parts can be linked. Adjust the word `first` to `second` and the number `1` to `2` etc., to find all parts<br>F: <code>(first part|parts? 1)(?!\d)</code>
 </details>
-
 <details close>
-
 <summary>Percival</summary>
-
-* **percival parsing**: add parsing tags before headings containing scripture. Replace `Gen` with Bible book needed<br>F: `^(\s+)<(h\d)>(.*?)(\d+):(.*?)</\2>`<br>R: `\1<span data-parsing="Gen.\4"></span>\n\1<\2>\3\4:\5</\2>`
-
+- **percival parsing**: add parsing tags before headings containing scripture. Replace `Gen` with Bible book needed<br>F: <code>^(\s+)&#60;(h\d)&#62;(.&#42;?)(\d+):(.&#42;?)&#60;/\2&#62;</code><br>R: <code>&#60;span data-parsing=&#34;Gen.\4&#34;&#62;&#60;/span&#62;\n\1&#60;\2&#62;\3\4:\5&#60;/\2&#62;</code>
 </details>
-
 <details close>
-
 <summary>Commentary Markup</summary>
-
-* **headings `data-context`**: add `data-context` tags before headings. Adjust `h3` to capture desired heading<br>F: `^(\s+)<(h3)>(.*?<a data-ref="(.*?)">.*?</a>.*?)</\2>`<br>R: `\1<hr data-context="\4" />\n\1<\2>\3</\2>`
-
+- **headings `data-context`**: add `data-context` tags before headings. Adjust `h3` to capture desired heading<br>F: <code>^(\s+)&#60;(h3)&#62;(.&#42;?&#60;a data-ref=&#34;(.&#42;?)&#34;&#62;.&#42;?&#60;/a&#62;.&#42;?)&#60;/\2&#62;</code><br>R: <code>\1&#60;hr data-context=&#34;\4&#34; /&#62;\n\1&#60;\2&#62;\3&#60;/\2&#62;</code>
 </details></blockquote>
-
 </details>
-
-<br>
-
 <details close>
-
 <summary>Review</summary>
+- **remove pagebreaks from headings**: find and replace to move pagebreaks out of headings<br>F: <code>(&#60;h\d&#62;.&#42;?)(&#60;span epub:type=&#34;pagebreak\[^>]&#42;&#62;&#60;/span&#62;)</code><br>R: <code>\2\1</code>
+<blockquote>Example find: <br><code>&#60;h1&#62;&#60;span epub:type=&#34;pagebreak&#34; id=&#34;page1&#34; title=&#34;1&#34;&#62;&#60;/span&#62;Chapter 1&#60;/h1&#62;</code></blockquote>
+- **remove space before footnote**: find and replace extra space before a footnote indicator<br>F: <code>\s&#60;sup class=&#34;fn&#34;</code><br>R: <code>&#60;sup class=&#34;fn&#34;</code>
 
-* **remove pagebreaks from headings: **find and replace to move pagebreaks out of headings<br>F: `(<h\d>.*?)(<span epub:type="pagebreak[^>]*></span>)`<br>R: `\2\1`
-  > Example find: 
-  >
-  > `<h1><span epub:type=”pagebreak” id=”page1” title=”1”></span>Chapter 1</h1>`
-* **remove space before footnote**: find and replace extra space before a footnote indicator<br>F: `\s<sup class="fn"`<br>R: `<sup class="fn"`
-* **special chars spacing: **find special characters with extra spacing on either side of it<br>F: `\s+(\{|\$|\&|\,|\:|\;|\?|\@|\#|\||\'|\<|\>|\-|\^|\*|\(|\)|\%|\!|\]|\"|”|“)\s+`<br>R: `\2 \1`
-  > Example finds: 
-  >
-  > `(`
-  >
-  > `:`
-  >
-  > `$`
-* **special chars spans: **review special characters in spans and replace the character without the span<br>F: `<span[^>]>({|$|&|,|:|;|?|@|#|||'|.|-|^||(|)|%|!|]|"|”|“|—)+</span>`<br>R: `\1`
-  > Example finds: 
-  >
-  > `<span class="i">)</span>`
-  >
-  > `<span class="b">.</span>`
-* **non-english chars spans: **review non-english characters in spans that could be tagged as `lang`<br>F: `<span class="i(?:talic)?">([^a-zA-Z0-9\s]+)</span>`
-* **missed verses: **Find digits with a colon in between and no tag that could potentially be missed scripture verses<br>F: `(?<!</abbr>|</span>)(?<!'>|[a-z]|\d|\.)(?:\(| )\d+:\d{1,2}(?!</a)`
-  > Example finds: 
-  >
-  > `106:9`
-  >
-  > `10:10`
+- **special chars spacing**: find special characters with extra spacing on either side of it<br>F: <code>\s+({|$|&#38;|,|:|;|?|@|#|||'|&#60;|&#62;|-|^|&#42;|(|)|%|!|]|&#34;|”|“)\s+</code><br>R: <code>\2 \1</code>
+<blockquote>Example finds: <br><code> ( </code><br><code> : </code><br><code> $ </code></blockquote>
+- **special chars spans**: review special characters in spans and replace the character without the span<br>F: <code>&#60;span\[^>]&#62;({|$|&#38;|,|:|;|?|@|#|||'|.|-|^||(|)|%|!|]|&#34;|”|“|—)+&#60;/span&#62;</code><br>R: <code>\1</code>
+<blockquote>Example finds: <br><code>&#60;span class=&#34;i&#34;&#62;)&#60;/span&#62;</code><br><code>&#60;span class=&#34;b&#34;&#62;.&#60;/span&#62;</code></blockquote>
+- **non-english chars spans**: review non-english characters in spans that could be tagged as `lang`<br>F: <code>&#60;span class=&#34;i(?:talic)?&#34;&#62;(\[^a-zA-Z0-9\s]+)&#60;/span&#62;</code>
 
+- **missed verses**: Find digits with a colon in between and no tag that could potentially be missed scripture verses<br>F: <code>(?&#60;!&#60;/abbr&#62;|&#60;/span&#62;)(?&#60;!'&#62;|\[a-z]|\d|.)(?:(| )\d+:\d{1,2}(?!&#60;/a&#62;)</code>
+<blockquote>Example finds: <br><code>106:9</code><br><code>10:10</code></blockquote>
 </details>
