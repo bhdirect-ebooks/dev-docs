@@ -14,26 +14,26 @@ Become familiar with the project directory structure:
    * metadata.xlsb
    * README.md
 3. Next run `start-project`:
-   * creates /dev/epub/ containing skeleton EPUBs for each volume listed in the metadata.xlsb file
+   * creates **/dev/epub/** folder containing skeleton EPUBs for each volume listed in the metadata.xlsb file
    * creates package.json
    * creates projectdb.json
-   * updates READ.me
+   * updates README.md
    * creates hidden files
-     * .gitattributes
      * .editorconfig
+     * .gitattributes
      * .gitignore
 4. Next create a `src` folder inside the project folder
-   * copy any source files from Trello here
-   * i.e. cover images, epubs, .docx files, inDesign files, PDFs etc.
-5. Inside the **dev > epub > ISBN** folder:
-   * contains epub file structure
-   * create epubs here following the \[Dev Process](https://style.bhdirect-ebooks.org/process/)
-6. After epub passes the [Review Process](https://style.bhdirect-ebooks.org/process/review.html) it is time to [build](https://style.bhdirect-ebooks.org/process/convert.html#The-Basic-Upload-Process) the project
-   * running `npm run build` creates a `cross` folder inside the `dev` folder
-   * a `dist` folder is created under the `dev` folder. The `dist` folder includes:
-     * `content_platform` folder
+   * copy any source files from Trello or elsewhere to here
+   * i.e. cover images, EPUBs, .docx files, inDesign files, PDFs etc.
+5. Each folder inside **dev/epub/**:
+   * contains EPUB file structure
+   * create EPUBs here following the [Dev Process](https://style.bhdirect-ebooks.org/process/)
+6. After EPUB passes the [Review Process](https://style.bhdirect-ebooks.org/process/review.html) it is time to [build](https://style.bhdirect-ebooks.org/process/convert.html#The-Basic-Upload-Process) the project
+   * running `npm run build` creates a **cross** folder under **dev/** containing CROSS book source and compiler files and folders for each volume
+   * a **dist** folder is created under **dev/**. The **dist** folder includes:
+     * `content_platform` folder with CP EPUBs
      * `cross_compiled` folder
-       * created when running `npm run moveit`
+       * created when running `npm run moveit`, containing compiled CROSS book folders and files
      * `scene7` folder
        * contains cover images that need to be uploaded to **Alfresco > Shared Files > Covers Database**
      * `ws_marketing` folder
