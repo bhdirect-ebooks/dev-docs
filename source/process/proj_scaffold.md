@@ -1,7 +1,6 @@
 ---
 title: Project Scaffolding
 ---
-
 Scaffoldin'? Aw yeeeah.
 
 ## Project Directory
@@ -10,21 +9,47 @@ Become familiar with the project directory structure:
 
 ![Screen shot of our project directory structure.](../assets/images/project-dir.png)
 
-The video below briefly describes each part of the structure. The video describes a prior iteration of the project directory. Changes since the video:
-* The `e2c` folder has been moved out of the `dev` folder and is now a hidden folder (`.e2c`) in the root project directory.
-* Two new folders have been added:
-  * `dist/scene7` now holds the cover images for Scene7 (and `dist/content_platform` has only EPUBs)
-  * `dist/ws_marketing` now holds the WORDsearch cover images and sample html files for the WS website
+1. Each project is a folder with the project short name
+2. After cloning a project from GitHub the project folder contains:
+   * metadata.xlsb
+   * README.md
+3. Next run `start-project`:
+   * creates **/dev/epub/** folder containing skeleton EPUBs for each volume listed in the metadata.xlsb file
+   * creates package.json
+   * creates projectdb.json
+   * updates README.md
+   * creates hidden files
+     * .editorconfig
+     * .gitattributes
+     * .gitignore
+4. Next create a `src` folder inside the project folder
+   * copy any source files from Trello or elsewhere to here
+   * i.e. cover images, EPUBs, .docx files, inDesign files, PDFs etc.
+5. Each folder inside **dev/epub/**:
+   * contains EPUB file structure
+   * create EPUBs here following the [Dev Process](https://style.bhdirect-ebooks.org/process/)
+6. After EPUB passes the [Review Process](https://style.bhdirect-ebooks.org/process/review.html) it is time to [build](https://style.bhdirect-ebooks.org/process/convert.html#The-Basic-Upload-Process) the project
+   * running `npm run build` creates a **cross** folder under **dev/** containing CROSS book source and compiler files and folders for each volume
+   * a **dist** folder is created under **dev/**. The **dist** folder includes:
+     * `content_platform` folder with CP EPUBs
+     * `cross_compiled` folder
+       * created when running `npm run moveit`, containing compiled CROSS book folders and files
+     * `scene7` folder
+       * contains cover images that need to be uploaded to **Alfresco > Shared Files > Covers Database**
+     * `ws_marketing` folder
+       * contains covers for Wordsearch
+       * contains sample html files
 
+The video below briefly describes each part of the structure:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lT9YCsChMSM" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RDhEy5iD6i8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Related Tools/Scripts
 
 [start-project (node)](https://github.com/bhdirect-ebooks/start-project)
 
-* Install globally with npm and use with every project (`sudo npm install -g @bhdirect/start-project`).
+* Install globally with npm and use with every project (`npm i -g @bhdirect/toolkit`).
 * Usage info:
   * Clone your project repo.
-  * Create the `src` directory and add the source files to it.
-  * Then, `cd` into the project folder and enter `start-project`. The script will prompt you for some info and return some important project information.
+  * `cd` into the project folder and enter `start-project` The script will prompt you for some info and return some important project information.
+  * Create the **src** directory and add the source files to it.
