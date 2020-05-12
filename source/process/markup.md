@@ -22,10 +22,12 @@ The question is not "How can I recreate this style?" but "What actually is this 
 
 ### For changing heading case
 
-[change-case.zip](https://cms.lifeway.com/share/page/site/bh-academic/document-details?nodeRef=workspace://SpacesStore/cb167b82-de3c-48e3-96de-66dcfbd5e9da)
+Run `titlecase` to make all headings titlecase. Use `titlecase --help` for more options:
 
-* Place the `.textfactory` file in Library --> Application Support --> BBEdit --> Text Filters
-* Then, run the script, following its instructions
+* Use `titlecase -1` to make only `<h1>s` titlecase. Continue incrementing the digit flag to titlecase headings up to `<h6>s`
+* Use `titlecase -c` to choose which project ePubs on which to run `titlecase`
+* Use `titlecase -all` to run on all ePubs in a project
+* Use `titlecase -i` to include a comma-delimited list of ePubs on which to run
 
 ## Recommended Code
 
