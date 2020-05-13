@@ -16,9 +16,9 @@ Run `pretty` to format markup in XHTML files of project ePubs (works only on `OE
 
 * Run the script within an un-zipped ePub to format just that ePub's files
 * Run at the project root level, or within the `dev/epub` folder to format all ePubs in the project.
-* Run with `-c` to choose which ePubs to format. Your selection will persist for subsequent runs until you reselect, or override with `-a`
-* Run with `-w` to keep `pretty` actively formatting files when a change is detected
-* Run `toolkit pretty` to see more options and usage info
+* Use `pretty -c` to choose which ePubs to format. Your selection will persist for subsequent runs until you reselect, or override with the all flag `-a`
+* Use `pretty -w` to keep `pretty` actively formatting files when a change is detected
+* Use `toolkit pretty` to see more options and usage info
 
 #### "Prettify" Textfactory and AppleScript
 
@@ -36,8 +36,10 @@ Run `pretty` to format markup in XHTML files of project ePubs (works only on `OE
 
 Run `titlecase` to make all headings titlecase. Use `titlecase --help` or `toolkit titlecase` for more options and usage info:
 
+* Run the script within an un-zipped ePub to format just that ePub's files
+* When run at a higher level within the project, the script will give you the option to choose which project ePubs on which to run
 * Use `titlecase -1` to make only `<h1>s` titlecase. Continue incrementing the digit flag to titlecase headings up to `<h6>s`
-* Use `titlecase -c` to choose which project ePubs on which to run `titlecase`
+* Use `titlecase -c` to choose which project ePubs on which to run
 * Use `titlecase -all` to run on all ePubs in a project
 * Use `titlecase -i` to include a comma-delimited list of ePubs on which to run
 
