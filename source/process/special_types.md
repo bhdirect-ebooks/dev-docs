@@ -5,6 +5,8 @@ That's right. Particular. Special. Unique. Like a snowflake.
 
 ## LESSON<em>maker</em> Content
 
+Recommended Code for [Lesson<em>maker</em> Content](/code/data_types.html#LESSONmaker-Content)
+
 LESSON<em>maker</em> is a feature in Wordsearch desktop enabling users to quickly create lessons by entering a Bible passage or topic, and selecting from the lesson materials they have in their library. It is intended for responsive devotionals or study guides that specifically focus on passages or books of Scripture.
 
 Here's a short explanatory video outlining LESSON<em>maker</em> features:
@@ -18,7 +20,7 @@ There are three things to think about for LESSON<em>maker</em> content:
 
 What **Scripture passages and references** a lesson covers will be automatically detected from the tagged Scripture references within the content. No additional markup is necessary.
 
-The **Topics** a lesson covers are not automatically identified by Wordsearch, and should be specifically [included in the code](/code/data_types.html#Lesson-Topics).
+The **Topics** a lesson covers are not automatically identified by Wordsearch, and should be [specifically included in the code](/code/data_types.html#Lesson-Topics).
 
 **Main content and questions** can be designated with a [specifically-coded asterisk (*)](/code/data_types.html#Lesson-Main-Content-and-Questions) in the left margin. All such content can be quickly copied into the word processor using LESSON<em>maker</em>'s "Panic" button. The user will also be given the option to choose other books in their library from which to include text that covers the verses discussed in the open lesson. If no content is designated as "main" with this asterisk, the "Panic" button will copy the entire open lesson. If no Scripture references are tagged in the lesson, the "Panic" button is disabled, regardless of whether there is "main" content or not. Because of this functionality, **we recommend designating content as "main" which relates directly to a Scripture verse or passage, and focuses on textual analysis or themes within that passage** (rather than feelings or experiential connections of the reader).
  
@@ -30,6 +32,8 @@ However, volumes in other categories can have LESSON<em>maker</em> content, but 
 </aside> 
 
 ## Workbook Enhancements (In Content Platform)
+
+Recommended Code for [Workbook Questions and Answers](/code/data_types.html#Workbook-Questions-and-Answers)
 
 Workbook enhancements are a feature in Content Platform (Wordsearch web app), and can be used wherever it is desirable to give the user a text box in which to record their answer to a specific question.
 
