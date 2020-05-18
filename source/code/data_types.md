@@ -236,7 +236,7 @@ If the study has a topical index, it can be used to help discover topics covered
 
 #### Main (Panic) Lesson Content and Questions
 
-LESSON<em>maker</em> has a special "Panic!" feature which will copy specifically-marked portions of the lesson along with related materials selected from the users' library to the word processing window. See [](/process/special_types.html#LESSONmaker-Content) for more info on how this feature works.
+LESSON<em>maker</em> has a special "Panic!" feature which will copy specifically-marked portions of the lesson along with related materials selected from the users' library to the word processing window. See [Dev Process > LESSON<em>maker</em>](/process/special_types.html#LESSONmaker-Content) for more info on how this feature works.
 
 In order for questions to be included when the "Panic!" button is pressed, the element should be marked with `data-panic=""` attribute.  
 When considering what questions to mark as "panic", **choose content which relates directly to the central Scripture verse(s) or passage(s) covered in the lesson, and focuses on textual analysis or themes within that passage** (rather than feelings or experiential connections of the reader).
