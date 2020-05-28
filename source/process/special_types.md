@@ -5,22 +5,47 @@ That's right. Particular. Special. Unique. Like a snowflake.
 
 ## LESSON<em>maker</em> Content
 
-LESSON<em>maker</em> questions are most often found in Bible studies, study guides, and other titles that allow the user to enter their own notes or responses to questions in a (usually) weekly study format.
+\> See Recommended Code for [Lesson<em>maker</em> Content](/code/data_types.html#LESSONmaker-Content)
 
-When creating markup, there are two broad categories of questions:
+LESSON<em>maker</em> is a feature in Wordsearch desktop enabling users to quickly create lessons by entering a Bible passage or topic, and selecting from the lesson materials they have in their library. It is intended for responsive devotionals or study guides that specifically focus on passages or books of Scripture.
 
-1. Panic questions: Panic questions are explicitly about the content of a verse or section of Scripture and relate directly to the text itself.
+Here's a short explanatory video outlining LESSON<em>maker</em> features:
 
-* _Example: "What does Paul say about the promise of God in verse 1?"_
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PDQ9-2Tul4w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ 
+<aside class="notice">
+Project volumes intended to have LESSON<em>maker</em> content will most likely be in the "Lessons" category and have a type of "Lesson" specified in **crossrc.json**.
 
-2. General questions: General questions, on the other hand, can also be about Scripture but deal with a reader's own reflections or thoughts on application. A general question would also, as the term implies, pertain to any other subject besides direct mention of Scripture.
+However, volumes in other categories can have LESSON<em>maker</em> content, but in order to work with Wordsearch's LESSON<em>maker</em> features, the book must be compiled with the "Lesson" type.
+</aside> 
 
-* _Example: "How might you apply the lessons of verse 5 in your life, this coming week?"_
+There are three things to think about for LESSON<em>maker</em> content:
+- Scripture passages and references
+- Topics
+- Main content and questions
 
-## WORKBOOK Enhancements (In Content Platform)
+What **Scripture passages and references** a lesson covers will be automatically detected from the tagged Scripture references within the content. No additional markup is necessary. However, it is good to take note of what is the primary passage of Scripture on which the lesson focuses. This will help with identifying topics and main content to specify.
 
-For some initial steps in creating Workbook Enhancements, try checking out this [Google Doc](https://docs.google.com/document/d/1PHt7vAiTYnLbqnVne_HH8RrRO16PZGkagGWd8FLG7W8/edit?usp=sharing).
+The **Topics** a lesson covers are not automatically identified by Wordsearch, and should be [specifically included in the code](/code/data_types.html#Lesson-Topics). For many lessons, gleaning the topics from the text of the main heading and an introductory sentence/paragraph is sufficient. If the study has a topical index, it can be used to help discover topics covered in a lesson.
 
-## Recommended Code
+**Main (panic) content and questions** can be designated by adding a ['panic' data attribute](/code/data_types.html#Main-Panic-Lesson-Content-and-Questions). All such content can be quickly copied into the word processor using LESSON<em>maker</em>'s "Panic!" button. The user will also be given the option to choose other books in their library from which to include text that covers the verses discussed in the open lesson. If no content is designated as "panic", the "Panic!" button will copy the entire open lesson. If no Scripture references are tagged in the lesson, the "Panic!" button is disabled, regardless of whether there is "panic" content or not. Because of this functionality, **we recommend you consider designating content as "panic" if it relates directly to the central Scripture verse(s) or passage(s) covered in the lesson, and focuses on textual analysis or themes** (rather than feelings or experiential connections of the reader).
 
-[LESSON<em>maker</em> Markup](../code/data_types.html#LESSONmaker-Content)
+When viewed in Wordsearch, content marked in this way will have an asterisk (\*) in the left margin. Here is an example from *Adult Questions for LESSONmaker*
+
+![Panic button questions](/assets/images/uploads/panic-questions.png)
+
+## Workbook Enhancements (In Content Platform)
+
+\> See Recommended Code for [Workbook Questions and Answers](/code/data_types.html#Workbook-Questions-and-Answers)
+
+Workbook enhancements are a feature in Content Platform (Wordsearch web app), and can be used wherever it is desirable to give the user a text box in which to record their answer to a specific question.
+
+Here's an example of a Workbook-enhanced portion in an ePub:
+
+![Workbook enhancement user interface](/assets/images/uploads/workbook-enhancement.png)
+
+For instructions on markup which will inform Content Platform where to index and display Workbook enhancements, see [Workbook Questions and Answers](/code/data_types.html#Workbook-Questions-and-Answers) in Recommended Code
+
+We have established a shorthand-plus-script workflow to make adding workbook markup easier, see [expand-ws.js](https://github.com/bhdirect-ebooks/single-scripts/tree/master/expand-wb) for information.
+
+For instructions on creating Workbook Enhancements using the CP Manager interface, see [Getting Started with Workbook Enhancements in Content Platform](https://docs.google.com/document/d/1PHt7vAiTYnLbqnVne_HH8RrRO16PZGkagGWd8FLG7W8/edit?usp=sharing)

@@ -212,23 +212,142 @@ In Bibles (and **only** in Bibles), the words of Jesus must be tagged with the `
 
 ### LESSON<em>maker</em> Content
 
-LESSON<em>maker</em> markup is <em>**designated for responsive devotionals or study guides**</em> that specifically focus on passages or books of Scripture.
+LESSON<em>maker</em> markup is a Wordsearch desktop feature <em>**intended for responsive devotionals or study guides**</em> that specifically focus on passages or books of Scripture.
 
-In Bible studies, LESSON<em>maker</em> question `<li>` elements receive `data-question` or `data-panic` attributes, and each receives its `number` value <em>(this number value specifies where that question is positioned in that particular list of questions)</em>.
+#### Lesson Topics
 
-**`data-question` **questions tend to revolve around a reader's subjective experience or connection with an idea in the text of the book, or might be just about the reader's opinions.
+The main heading of a lesson should be marked with the `data-topics` attribute, where the value is a pipe-delimited list of topics covered in the lesson.
 
-**`data-panic`** questions relate directly to a Scripture verse or passage, and focus on textual analysis or themes within that passage (and are less related to feelings or experiential connections of the reader).
+This will most often be the `<h1>`, but could be another heading.
 
-<aside class="notice">Use whatever supported list class is appropriate on the `<ul>`</aside>
 
-Examples:
 
 ```html
-<ul class="digit">
-  <li>This is not a question.</li>
-  <li data-question="2">What was your favorite movie growing up?</li>
-  <li data-panic="3">In Acts 10:34-48, what was the core content of the message Peter preached? What exactly did he say about Jesus?</li>
-</ul>
+<h1 data-topics="Jesus Christ|Jesus|Christ|Arrival|Messiah|King">Week 2: The Arrival of Jesus the Messiah</h1>
+<p class="h1sub">Matthew 1-2</p>
 ```
 
+<aside class="tip">For now, we do not have any tooling to assist in determining topics covered in a lesson.
+
+For many lessons, gleaning the topics from the text of the main heading and an introductory sentence/paragraph is sufficient.
+
+If the study has a topical index, it can be used to help discover topics covered in a lesson.
+</aside>
+
+#### Main (Panic) Lesson Content and Questions
+
+LESSON<em>maker</em> has a special "Panic!" feature which will copy specifically-marked portions of the lesson along with related materials selected from the users' library to the word processing window. See [Dev Process > LESSON<em>maker</em>](/process/special_types.html#LESSONmaker-Content) for more info on how this feature works.
+
+In order for questions to be included when the "Panic!" button is pressed, the element should be marked with the `data-panic=""` attribute. 
+When considering what questions to mark as "panic", **choose content which relates directly to the central Scripture verse(s) or passage(s) covered in the lesson, and focuses on textual analysis or themes within that passage** (rather than feelings or experiential connections of the reader).
+
+```html
+<h2>Section VIII. Questions</h2>
+<ol class="digit">
+  <li data-panic="">Name three general lessons taught in the book about suffering.</li>
+  <li data-panic="">What two general statements about man does Job make? 14:1.</li>
+  <li>Read Chapter 38 and write out your impressions of it in concise statements, using fifty words.</li>
+</ol>
+```
+
+Ensure the `data-panic=""` attribute is on the element directly containing the text, not a higher-level element:
+
+```html
+<!-- Wrong! -->
+<ol data-panic="" class="digit">
+  <li>On the third day, what does God say, or <span class="i">command</span> (1:9)?</li>
+  <li>What does God command in Genesis 1:14?</li>
+</ol>
+
+<!-- Right! -->
+<ol class="digit">
+  <li data-panic="">On the third day, what does God say, or <span class="i">command</span> (1:9)?</li>
+  <li data-panic="">What does God command in Genesis 1:14?</li>
+</ol>
+
+```
+
+<aside class="caution">While the `data-panic=""` attribute will work on any element, it is intended for questions tagged as list items (<code>&lt;li&gt;</code>)
+</aside>
+
+<aside class="notice">If no content in the lesson is marked with `data-panic=""` the entire lesson will be copied over when the "Panic!" feature is used.
+
+If the lesson does not have any tagged Scripture references, the "Panic!" button will be disabled, whether or not the lesson contains content marked as 'panic'.
+</aside>
+
+#### Avoid Nested Lists
+
+Because of a quirk in the platform, nested lists should be avoided in LESSON<em>maker</em> content, especially for questions. Use paragraphs (with indentation classes if necessary) to accomplish a similar visual effect.
+
+```html
+<!-- Wrong! -->
+<ol class="digit">
+  <li>After the flood had destroyed every living thing on earth, except for Noah's family, the world would be repopulated by Noah's sons.
+    <ol class="lower-alpha">
+      <li data-panic="">Which of Noah's sons would beget a man named Terah? (See <a data-ref="Gen.11.10">chapter 11:10</a>)
+      <li data-panic="">Who was born to Terah? (See <a data-ref="Gen.11.27">verse 27</a>)
+      <li>Why is this genealogy of Shem listed in <a data-ref="Gen.11.1-Gen.11.32">Genesis chapter 11</a> significant?</li>
+    </ol>
+  </li>
+</ol>
+
+<!-- Right! -->
+<p>1. After the flood had destroyed every living thing on earth, except for Noah's family, the world would be repopulated by Noah's sons.</p>
+<ol class="lower-alpha">
+  <li data-panic="">Which of Noah's sons would beget a man named Terah? (See <a data-ref="Gen.11.10">chapter 11:10</a>)
+  <li data-panic="">Who was born to Terah? (See <a data-ref="Gen.11.27">verse 27</a>)
+  <li>Why is this genealogy of Shem listed in <a data-ref="Gen.11.1-Gen.11.32">Genesis chapter 11</a> significant?</li>
+</ol>
+```
+
+### Workbook Questions and Answers
+
+Workbook enhancements are a Content Platform (Wordsearch web app) feature, used for marking question text and answer locations wherever it is desirable to give the user a text box in which to record their answer to a question or exercise. See [Dev Process > Workbook Enhancements](/process/special_types.html#Workbook-Enhancements-In-Content-Platform) for more info on this feature.
+
+The element containing the question text should receive the `data-wb-question` attribute where the value is an identifier unique to that question. (Each `data-wb-question` value must be unique within the EPUB)
+
+```html
+<p class="ind1" data-wb-question="chap14-1">1.  How does Luke describe Athens and its people (17:16, 21)?</p>
+<p class="ind1" data-wb-question="chap14-2">2.  What did the cultured men think of Paul, and why (17:18, 32)?</p>
+
+<!-- OR -->
+
+<p>Abraham believed two things about God that convinced him God could keep His promise (4:17)</p>
+<ol class="lower-alpha">
+  <li data-wb-question="chap06-9">In what ways does God give "life to the dead" (4:17)? </li>
+  <li data-wb-question="chap06-10"> How does God call "things that are not as though they were" (4:17)?</li>
+</ol>
+```
+
+Workbook and LESSON<em>maker</em> markup can be used on the same element:
+
+```html
+  <li data-wb-question="chap27-3" data-panic="">What did Daniel and his friends ask of God in the midst of a desperate situation? (2:17-18)</li>
+```
+
+Normally, the app will insert the answer UI directly after the question element. But, you can optionally use the `data-wb-answer` attribute to specify where the answer UI should be placed. The reading application will replace the indicated element with the answer UI and ultimately the answer text.
+
+The `data-wb-answer` value must match the value of the question to which it corresponds
+
+```html
+<p class="br-before" data-wb-question="chap04-22"><span class="b">1.</span> Which of the following did the risen Jesus say in Matthew’s gospel?</p>
+<ol class="lower-alpha">
+  <li>‘All authority is given to the holy books you shall write about me.’</li>
+  <li>‘All authority is given to Peter and his successors.’</li>
+  <li>‘All authority in heaven and on earth has been given to me.’</li>
+  <li>‘All authority belongs to the politicians who sound the most like me.’</li>
+</ol>
+<p data-wb-answer="chap04-22"></p>
+
+<!-- OR -->
+
+<p class="br-before" data-wb-question="chap34-314"><span class="b">8.</span> Do you AGREE or DISAGREE with this statement:</p>
+<blockquote>
+  <p>John’s pastoral purpose is as much to exhort his hearers to endurance as to assure them of God’s ultimate victory over their adversaries. He therefore provides a God’s-eye view of the plight of the Asian churches and explains how Jesus’ people are destined to reign with him in the new creation. Along the way there are exhortations and prophecies, warnings and judgments, triumphs mixed with tears, old adversaries and a new world. For all the (to us) vagueness of John’s vision, and the vagaries of his language, the book of Revelation gives its audience the confidence and hope that the Lamb has triumphed, and will yet triumph, over the evils of the world.</p>
+</blockquote>
+<p class="ind1">Why?</p>
+<p data-wb-answer="chap34-314">[Your Response Here]</p>
+```
+
+<aside class="tip">We have established a shorthand-plus-script workflow to make adding workbook markup easier, see [expand-ws.js](https://github.com/bhdirect-ebooks/single-scripts/tree/master/expand-wb) for information.
+</aside>
