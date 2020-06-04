@@ -3,7 +3,7 @@ title: General Content Types
 ---
 ## Abbreviations
 
-Abbreviations should follow the HTML specification.
+Abbreviations should follow the HTML specification. See [Abbreviations and Glossaries](https://style.bhdirect-ebooks.org/code/structural_types.html#Abbreviations-and-Glossaries).
 
 ```html
 <abbr title="Abbreviation Definition">ABBRD</abbr>
