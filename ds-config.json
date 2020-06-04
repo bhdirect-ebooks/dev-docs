@@ -18,8 +18,8 @@
     "lvl2": ".article-content h2",
     "lvl3": ".article-content h3",
     "lvl4": ".article-content h4",
-    "text": ".article-content p"
+    "text": ".article-content p, .article-content details"
   },
   "min_indexed_level": 1,
-  "nb_hits": 820
+  "nb_hits": 815
 }
