@@ -94,6 +94,10 @@ Complicated? Yes. Thankfully, we have some processes to make this easier
 
 #### The `data-author` attribute and **create-opf**.
 
+(e.g.: `data-author="Craig G. Bartholomew`)
+
+(multiple-author value: `data-author="David G. Firth|Lindsey Wilson"`)
+
 #### When to use `data-author`
 
 ## Journal Metadata
