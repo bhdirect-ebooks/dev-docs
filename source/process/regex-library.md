@@ -136,9 +136,9 @@ title: RegEx Library
 <blockquote>Example find: <br><code>&#60;h1&#62;&#60;span epub:type=&#34;pagebreak&#34; id=&#34;page1&#34; title=&#34;1&#34;&#62;&#60;/span&#62;Chapter 1&#60;/h1&#62;</code></blockquote>
 - **remove space before footnote**: find and replace extra space before a footnote indicator<br>F: <code>\s&#60;sup class=&#34;fn&#34;</code><br>R: <code>&#60;sup class=&#34;fn&#34;</code>
 
-- **special chars spacing**: find special characters with extra spacing on either side of it<br>F: <code>\s+({|$|&#38;|,|:|;|?|@|#|||'|&#60;|&#62;|-|^|&#42;|(|)|%|!|]|&#34;|”|“)\s+</code><br>R: <code>\2 \1</code>
+- **special chars spacing**: find special characters with extra spacing on either side of it<br>F: <code>\s+(\&#123;|\&#36;|\&#38;|\,|\:|\;|\?|\@|\&#35;|\&#124;|\'|\&#60;|\&#62;|\&#45;|\^|\&#42;|\&#40;|\&#41;|\%|\&#33;|\&#93;|\&#34;|\”|\“)\s+</code><br>R: <code>\2 \1</code>
 <blockquote>Example finds: <br><code> ( </code><br><code> : </code><br><code> $ </code></blockquote>
-- **special chars spans**: review special characters in spans and replace the character without the span<br>F: <code>&#60;span\[^>]&#62;({|$|&#38;|,|:|;|?|@|#|||'|.|-|^||(|)|%|!|]|&#34;|”|“|—)+&#60;/span&#62;</code><br>R: <code>\1</code>
+- **special chars spans**: review special characters in spans and replace the character without the span<br>F: <code>&#60;span&#91;&#94;&#62;&#93;&#62;(\&#123;|\&#36;|\&#38;|\,|\:|\;|\?|\@|\&#35;|\&#124;|\'|\.|\&#45;|\^|\&#40;|\&#41;|\%|\&#33;|\&#93;|\&#34;|\”|\“|\—)+&#60;/span&#62;</code><br>R: <code>\1</code>
 <blockquote>Example finds: <br><code>&#60;span class=&#34;i&#34;&#62;)&#60;/span&#62;</code><br><code>&#60;span class=&#34;b&#34;&#62;.&#60;/span&#62;</code></blockquote>
 - **non-english chars spans**: review non-english characters in spans that could be tagged as `lang`<br>F: <code>&#60;span class=&#34;i(?:talic)?&#34;&#62;(\[^a-zA-Z0-9\s]+)&#60;/span&#62;</code>
 
