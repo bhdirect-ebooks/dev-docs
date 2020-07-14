@@ -26,7 +26,7 @@ title: RegEx Library
 
 - **extract lang**: Choose <mark>'Extract'</mark> to create a list of italicized words. Use this list to look for untagged lang or translit<br>F: <code>&#60;span class=&#34;(italic|i)&#34;&#62;(\[^<]\*)&#60;/span&#62;</code>
 
-- **ampersands**: replace ampersands<br>F: <code>(\[a-z]+\s\*)\*(\s\*\[a-z]+)</code><br>R: <code>\1&#38;\2</code>
+- **ampersands**: replace ampersands<br>F: <code>(\[a-z]+\s\*)&#38;(\s\*\[a-z]+)</code><br>R: <code>\1&#38;\2</code>
 
 - **unsafe chars**: find characters that are unsafe to use within HTML attribute values<br>F: <code>\[a-z-]+=&#34;\[^&#34;]\*?\[\x{0000}-\x{0009}\x{000b}\x{000c}\x{000e}-\x{001f}\x{007f}-\x{009f}\x{00ad}\x{0600}-\x{0604}\x{070f}\x{17b4}\x{17b5}\x{200c}-\x{200f}\x{2028}-\x{202f}\x{2060}-\x{206f}\x{feff}\x{fff0}-\x{ffff}]+?\[^&#34;]\*&#34;</code>
 </details>
@@ -90,7 +90,7 @@ title: RegEx Library
 <summary>Abbreviations</summary>
 - **tables to ABBR 1**: convert tables to abbreviation lists<br>F: <code>&#60;tr&#62;\s\*&#60;td&#62;(.\*?)&#60;/td&#62;\s\*&#60;td&#62;(.\*?)&#60;/td&#62;\s\*&#60;/tr&#62;</code><br>R: <code>&#60;dt epub:type=&#34;glossterm&#34;&#62;&#60;dfn&#62;\1&#60;/dfn&#62;&#60;/dt&#62;&#60;dd epub:type=&#34;glossdef&#34;&#62;\2&#60;/dd&#62;</code>
 
-- **tables to ABBR 2**: after running tables to ABBR 1 use this regex to format the lists new lines<br>F: <code>&#60;dfn&#62;(.\*?)&#60;/dfn&#62;&#60;/dt&#62;&#60;dd epub:type=&#34;glossdef&#34;&#62;(.\*?)&#60;/dd&#62;</code><br>R: <code>\n &#60;dfn&#62;\1&#60;/dfn&#62;\n &#60;/dt&#62;\n &#60;dd epub:type=&#34;glossdef&#34;&#62;\2&#60;/dd&#62;</code>
+- **tables to ABBR 2**: after running tables to ABBR 1 use this regex to format the lists new lines<br>F: <code>&#60;dfn&#62;(.&#42;?)&#60;/dfn&#62;&#60;/dt&#62;&#60;dd epub:type=&#34;glossdef&#34;&#62;(.&#42;?)&#60;/dd&#62;</code><br>R: <code>\n            &#60;dfn&#62;\1&#60;/dfn&#62;\n          &#60;/dt&#62;\n          &#60;dd epub:type=&#34;glossdef&#34;&#62;\2&#60;/dd&#62;</code>
 </details>
 <details close>
 <summary>Footnotes</summary>
