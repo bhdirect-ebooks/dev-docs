@@ -356,21 +356,25 @@ The `data-wb-answer` value must match the value of the question to which it corr
 
 Two different syntaxes work for creating links to other CROSS books:
 
-`<a data-link='{"pub":"0","book":"19768","bookmark":"page3"}'>`
+```
+<a data-link='{"pub":"0","book":"19768","bookmark":"page3"}'>
+```
 
 <ul>
   <li>"pub" is the CROSS ID number before the <code>-</code> (0 for Wordsearch)</li>
-  <li>"book" is the CROSS ID portion after the <coode>-</code></li>
+  <li>"book" is the CROSS ID portion after the <code>-</code></li>
   <li>"bookmark" is the <code>id</code> attribute of the tag at the position to link to (will be converted to a <code>name</code> attribute by **epub2cross**)</li>
 </ul>
 
-`<a data-link='{"book":"0-19768","page":"page3"}'>`
+```
+<a data-link='{"book":"0-19768","page":"page3"}'>
+```
 
 <ul>
   <li>"book" is the CROSS ID (only works with <code>0-</code> IDs)</li>
   <li>"page" is the <code>id</code> attribute of the tag at the position to link to (will be converted to <code>name</code> attribute by **epub2cross**).
-  <ul>
-  <li>"page", doesn't technically have to be a page id. any <code>id</code> will work.</li>
-  </ul>
+    <ul>
+      <li>"page", doesn't technically have to be a page id. any <code>id</code> will work.</li>
+    </ul>
   </li>
 </ul>
