@@ -356,7 +356,7 @@ The `data-wb-answer` value must match the value of the question to which it corr
 
 Two different syntaxes work for creating links to other CROSS books:
 
-```
+```html
 <a data-link='{"pub":"0","book":"19768","bookmark":"page3"}'>...</a>
 
 <!-- e.g. -->
@@ -370,7 +370,7 @@ Two different syntaxes work for creating links to other CROSS books:
   <li>"bookmark" is the <code>id</code> attribute of the tag at the position to link to (will be converted to a <code>name</code> attribute by **epub2cross**)</li>
 </ul>
 
-```
+```html
 <a data-link='{"book":"0-19768","page":"page3"}'>...</a>
 
 <!-- e.g. -->
