@@ -357,7 +357,11 @@ The `data-wb-answer` value must match the value of the question to which it corr
 Two different syntaxes work for creating links to other CROSS books:
 
 ```
-<a data-link='{"pub":"0","book":"19768","bookmark":"page3"}'>
+<a data-link='{"pub":"0","book":"19768","bookmark":"page3"}'>...</a>
+
+<!-- e.g. -->
+
+<a data-link='{"pub":"0","book":"19768","bookmark":"page3"}'>chapter 1</a>
 ```
 
 <ul>
@@ -367,7 +371,11 @@ Two different syntaxes work for creating links to other CROSS books:
 </ul>
 
 ```
-<a data-link='{"book":"0-19768","page":"page3"}'>
+<a data-link='{"book":"0-19768","page":"page3"}'>...</a>
+
+<!-- e.g. -->
+
+<a data-link='{"book":"0-19768","page":"page3"}'>chapter 1</a>
 ```
 
 <ul>
