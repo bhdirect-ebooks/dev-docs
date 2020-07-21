@@ -199,17 +199,17 @@ An `<h1>` with the `.nd` class should be added. This heading will not be display
 
 In this case, the part file's `<body>` tag should receive the `epub:type="dictionary"`.
 
-Each entry is still contained within an `<article epub:type="dictentry">`.
+Each entry is still contained within an `<article epub:type="dictentry">` with the added requirement that the `<article>` have a unique `id` attribute.
 
 But entry headings should use an `<h2>` with the `.nd` class, rather than an `<h1>`.
 ```html
 <body epub:type="dictionary">
   <h1>A</h1>
-  <article epub:type="dictentry">
+  <article epub:type="dictentry" id="aardvark">
     <h2 class="nd">aardvark</h2>
     <!-- entry content -->
   </article>
-  <article epub:type="dictentry">
+  <article epub:type="dictentry" id="abacus">
     <h2 class="nd">abacus</h2>
     <!--- entry content -->
   </article>
