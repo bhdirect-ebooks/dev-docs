@@ -351,3 +351,38 @@ The `data-wb-answer` value must match the value of the question to which it corr
 
 <aside class="tip">We have established a shorthand-plus-script workflow to make adding workbook markup easier, see [expand-ws.js](https://github.com/bhdirect-ebooks/single-scripts/tree/master/expand-wb) for information.
 </aside>
+
+### Links to CROSS Books
+
+Two different syntaxes work for creating links to other CROSS books:
+
+```html
+<a data-link='{"pub":"0","book":"19768","bookmark":"page3"}'>...</a>
+
+<!-- e.g. -->
+
+<a data-link='{"pub":"0","book":"19768","bookmark":"page3"}'>chapter 1</a>
+```
+
+<ul>
+  <li>"pub" is the CROSS ID number before the <code>-</code> (0 for Wordsearch)</li>
+  <li>"book" is the CROSS ID portion after the <code>-</code></li>
+  <li>"bookmark" is the <code>id</code> attribute of the tag at the position to link to (will be converted to a <code>name</code> attribute by **epub2cross**)</li>
+</ul>
+
+```html
+<a data-link='{"book":"0-19768","page":"page3"}'>...</a>
+
+<!-- e.g. -->
+
+<a data-link='{"book":"0-19768","page":"page3"}'>chapter 1</a>
+```
+
+<ul>
+  <li>"book" is the CROSS ID (only works with <code>0-</code> IDs)</li>
+  <li>"page" is the <code>id</code> attribute of the tag at the position to link to (will be converted to <code>name</code> attribute by **epub2cross**).
+    <ul>
+      <li>"page", doesn't technically have to be a page id. any <code>id</code> will work.</li>
+    </ul>
+  </li>
+</ul>
