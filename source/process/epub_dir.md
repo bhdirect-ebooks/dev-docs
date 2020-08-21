@@ -37,7 +37,7 @@ _If_ a title's sources are within InDesign files and don't have any sort of page
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/i3zzMRSPAUg" frameborder="0" allowfullscreen></iframe>
 
-<hr />
+
 
 Sometimes, we will receive multiple InDesign files from a publisher for a single title. When this happens, it can be helpful to combine the InDesign files into a single file before exporting. Here is a breakdown of the steps to combine multiple InDesign files, followed by a video tutorial. 
 
@@ -52,7 +52,7 @@ Sometimes, we will receive multiple InDesign files from a publisher for a single
 
 <iframe width="560" height="315" src="https://youtu.be/44w0TDlfjRI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+<hr />
 
 ### handle-ocr
 
