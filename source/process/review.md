@@ -45,6 +45,6 @@ Use stylecheck (in `/dev/epub/isbn/`): `stylecheck me`
   * **[Tables](../code/general_types.html#Tables)**: ensure tables render well in the smaller viewports provided by stylecheck. Look for anything out of sorts.
   * **[Quotes](../code/general_types.html#Scripture-Quotes)**: look for anything out of sorts here. Ensure scripture quotes and normal blockquotes were each tagged appropriately.
   * **[Asides](../code/general_types.html#Asides)**: look for anything out of sorts here. In general, asides should be brief and tangential. Long asides are an indication something should probably be tagged differently.
-  * **[Images](../code/media_types.html#Images)**: make sure the images are clear and sized properly. Check for any images in the image folder that aren’t used in the epub and can be removed for move space.
+  * **[Images](../code/media_types.html#Images)**: make sure the images are clear and sized properly. Check for any images in the image folder that aren’t used in the epub and can be removed for more space.
 
 * **Run review regexes** to find anything that was missed. Reference the [RegEx Library](../process/regex-library.html) for a list of helpful regexes.
