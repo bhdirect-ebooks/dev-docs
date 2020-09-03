@@ -16,9 +16,9 @@ Use stylecheck (in `/dev/epub/isbn/`): `stylecheck me`
 <aside class="caution"><strong>As the developer, it is your responsibility to ensure that the EPUBs you develop are completed according to the Style Guide by performing a thorough self-review.</strong>
 <ul><li>Do not move a card into "Ready for Review" unless you have completed the entire review process on your own project.</li><li>Peer Review is meant to be a "second set of eyes" because humans make mistakes. It should not be used as an error catch-all for projects that are not fully-developed. That approach is disrespectful towards your fellow team members and their time.</li><li>Placing a card in "Ready for Review" means you affirm that development is complete and ready for delivery to paying customers!</li></ul></aside>
 
-0. If the project passes a thorough self-review and you feel in good conscience that it is ready to be sold, move the Trello card to "Ready for Review"
-1. Once the card is in "Review Issue Resolution," resolve issues with commits **using 1 commit for each issue**, [following the commit style guidelines](../code/git_commit.html).
-2. When you are done with issue resolution, **move the card to "Ready for Review" (_not "In Review"_)**.
+1. If the project passes a thorough self-review and you feel in good conscience that it is ready to be sold, move the Trello card to "Ready for Review"
+2. Once the card is in "Review Issue Resolution," resolve issues with commits **using 1 commit for each issue**, [following the commit style guidelines](../code/git_commit.html).
+3. When you are done with issue resolution, **move the card to "Ready for Review" (_not "In Review"_)**.
 
 ### Reviewer
 
@@ -35,12 +35,16 @@ Use stylecheck (in `/dev/epub/isbn/`): `stylecheck me`
 ## What to Look For
 
 * **If any Structural or Markup Issues exist**, make sure they should. If any of them are issues that should have been addressed, follow the warning above and notify the developer.
+* **If there is missing Scripture Context markup**, make sure the epub content covers that Scripture passage before adding it to GitHub as an issue.
 
 
 * **Check all views in stylecheck** to ensure everything is on the up and up.
-  * **TOC**: ensure the toc accurately reflects the structure of the book. Click on a few links and verify they point to the correct locations.
-  * **Heading Outlines**: ensure each heading outline is correct.
+  * **TOC**: ensure the toc accurately reflects the structure of the book. Click on a few links and verify they point to the correct locations. Also look for any spelling or capitalization errors.
+  * **Heading Outlines**: ensure each heading outline is correct. Choose semantics over styling and check for spelling, capitalization, and punctuation errors.
   * **Lists**: ensure the lists render well and do not duplicate item indicators. _In the markup, make sure the `.none` class is used only where no item indicators are intended._
   * **Tables**: ensure tables render well in the smaller viewports provided by stylecheck. Look for anything out of sorts.
   * **Quotes**: look for anything out of sorts here. Ensure scripture quotes and normal blockquotes were each tagged appropriately.
   * **Asides**: look for anything out of sorts here. In general, asides should be brief and tangential. Long asides are an indication something should probably be tagged differently.
+  * **Images**: make sure the images are clear and sized properly. Check for any images in the image folder that aren’t used in the epub and can be removed for move space.
+
+* **Run review regexes** to find anything that was missed. Reference the [RegEx Library](../process/regex-library.html) for a list of helpful regexes.
