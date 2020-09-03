@@ -37,6 +37,21 @@ _If_ a title's sources are within InDesign files and don't have any sort of page
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/i3zzMRSPAUg" frameborder="0" allowfullscreen></iframe>
 
+
+
+Sometimes, we will receive multiple InDesign files from a publisher for a single title. When this happens, it can be helpful to combine the InDesign files into a single file before exporting. Here is a breakdown of the steps to combine multiple InDesign files, followed by a video tutorial. 
+
+1. Open all files you want to combine in InDesign.
+2. Make sure the first file you’d like to move is what you have selected.
+3. Go to Layout > Pages > Move Pages
+4. Select “All pages” in the “Move Pages” dropdown menu.
+5. Select which document you want to append those pages to in the “Move to” dropdown menu. (By default, those pages will be added after the last page of the document you choose.)
+6. Click OK.
+7. Repeat steps 2-6 until you have combined all of the files.
+8. Once you are finished, you can run pagestaker and export the combined file.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/44w0TDlfjRI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <hr />
 
 ### handle-ocr
@@ -54,16 +69,12 @@ Then, from the command line, `cd` into the folder containing the .docx file(s), 
 The **pretty** script doesn't dramatically alter the file structure or content, but very efficiently cleans up spacing in file markup to make it, well, pretty. It is a part of the node toolkit, and can be run on a whole set or just one volume. To use, run
 
 ```
-
 pretty
 ```
-
 
 in the command line directory of the set or volume you want to make pretty.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cv9wkDk-4As" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 
 <br />
 
