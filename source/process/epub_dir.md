@@ -50,7 +50,7 @@ Sometimes, we will receive multiple InDesign files from a publisher for a single
 7. Repeat steps 2-6 until you have combined all of the files.
 8. Once you are finished, you can run pagestaker and export the combined file.
 
-<iframe width="560" height="315" src="https://youtu.be/44w0TDlfjRI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/44w0TDlfjRI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <hr />
 
