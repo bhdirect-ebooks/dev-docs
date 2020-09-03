@@ -35,7 +35,7 @@ Use stylecheck (in `/dev/epub/isbn/`): `stylecheck me`
 ## What to Look For
 
 * **If any Structural or Markup Issues exist**, make sure they should. If any of them are issues that should have been addressed, follow the warning above and notify the developer.
-* **If there is missing Scripture Context markup**, make sure the epub content covers that Scripture passage before adding it to GitHub as an issue.
+* **In Commentaries or Bibles, if there is missing Scripture Context markup**, make sure the epub content covers that Scripture passage before adding it to GitHub as an issue.
 
 
 * **Check all views in stylecheck** to ensure everything is on the up and up.
