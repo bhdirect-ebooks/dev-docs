@@ -24,7 +24,7 @@ Use stylecheck (in `/dev/epub/isbn/`): `stylecheck me`
 
 1. Add yourself to the Harvest project and track time against "Review"
 2. Add yourself to the Trello card and move it to "In Review"
-3. Add any issues to the repo in GitHub ([20-second how-to GIF](../assets/images/githubissue.gif))
+3. Add any issues to the repo in GitHub ([20-second how-to GIF](../assets/images/githubissue.gif)). _Note_: Issues should be based on the styleguide and not personal preference. If you have suggestions for the developer, use the "enhancement" tag when you are creating the issue in GitHub.
 4. When complete (and if there are issues), move the card to "Review Issue Resolution"
 5. If there are no issues (usually 2nd or later review), move the card to "Ready for Release"
 
