@@ -39,12 +39,12 @@ Use stylecheck (in `/dev/epub/isbn/`): `stylecheck me`
 
 
 * **Check all views in stylecheck** to ensure everything is on the up and up.
-  * **TOC**: ensure the toc accurately reflects the structure of the book. Click on a few links and verify they point to the correct locations. Also look for any spelling or capitalization errors.
-  * **Heading Outlines**: ensure each heading outline is correct. Choose semantics over styling and check for spelling, capitalization, and punctuation errors.
-  * **Lists**: ensure the lists render well and do not duplicate item indicators. _In the markup, make sure the `.none` class is used only where no item indicators are intended._
-  * **Tables**: ensure tables render well in the smaller viewports provided by stylecheck. Look for anything out of sorts.
-  * **Quotes**: look for anything out of sorts here. Ensure scripture quotes and normal blockquotes were each tagged appropriately.
-  * **Asides**: look for anything out of sorts here. In general, asides should be brief and tangential. Long asides are an indication something should probably be tagged differently.
-  * **Images**: make sure the images are clear and sized properly. Check for any images in the image folder that aren’t used in the epub and can be removed for move space.
+  * **[TOC](../code/navigation.html#Table-of-Contents)**: ensure the toc accurately reflects the structure of the book. Click on a few links and verify they point to the correct locations. Also look for any spelling or capitalization errors.
+  * **[Heading Outlines](../code/structural_types.html#Headings)**: ensure each heading outline is correct. Choose semantics over styling and check for spelling, capitalization, and punctuation errors.
+  * **[Lists](../css_lib/lists.html)**: ensure the lists render well and do not duplicate item indicators. _In the markup, make sure the `.none` class is used only where no item indicators are intended._
+  * **[Tables](../code/general_types.html#Tables)**: ensure tables render well in the smaller viewports provided by stylecheck. Look for anything out of sorts.
+  * **[Quotes](../code/general_types.html#Scripture-Quotes)**: look for anything out of sorts here. Ensure scripture quotes and normal blockquotes were each tagged appropriately.
+  * **[Asides](../code/general_types.html#Asides)**: look for anything out of sorts here. In general, asides should be brief and tangential. Long asides are an indication something should probably be tagged differently.
+  * **[Images](../code/media_types.html#Images)**: make sure the images are clear and sized properly. Check for any images in the image folder that aren’t used in the epub and can be removed for move space.
 
 * **Run review regexes** to find anything that was missed. Reference the [RegEx Library](../process/regex-library.html) for a list of helpful regexes.
