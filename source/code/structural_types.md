@@ -33,10 +33,10 @@ The copyright page should be the third frontmatter document.
 
 On the copyright page, use a handful of special classes to indicate types of data:
 
-* `.permissions` - use with every paragraph that contains permissions/rights information
+* `.permissions` - use with every paragraph that contains permissions/rights/attribution information (i.e. "Cover design by...")
 * `.year` - use with `<span>` to tag the copyright year (or string of years)
 * `.copyright` - use with the paragraph or span that contains the whole copyright string; **must start with `©` `&#xA9;` or `&#169;`**
-* `.pub-place` - use with `<span>` or `<p>` to indicate the publisher's location
+* `.pub-place` - use with `<span>` or `<p>` to indicate the publisher's location. If this information is missing from the source file, search for the publisher's location online. If you are still unable to find the location, use "Nashville, TN" and make it non-display: `<p class="nd pub-place">Nashville, TN</p>`
 
 Note the use of those classes below:
 
