@@ -28,7 +28,7 @@ title: Dev Process Overview
 
 ### A. Identify and [markup content](../code/general_types.html) types and styles
 
-* Cover, title page, and [copyright page](../code/structural_types.html#Copyright-Page)
+* [Cover](https://style.bhdirect-ebooks.org/code/structural_types.html#Cover-Page), [title page](https://style.bhdirect-ebooks.org/code/structural_types.html#Title-Page), and [copyright page](../code/structural_types.html#Copyright-Page)
 * [Headings](../code/structural_types.html#Headings) (hierarchical)
 * [Lists and outlines](../css_lib/lists.html)
 * [Block & pull quotes](../css_lib/quotes.html)
