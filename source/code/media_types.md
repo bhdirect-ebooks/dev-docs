@@ -73,7 +73,7 @@ For Linked videos, the video markup must be placed in individual XHTML files (on
 For consistency, the XHTML file name should be the same as the MP4 and WEBM file names (which, in turn, should be the same as the SVG file name).
 
 The differences in the markup from [Embedded Videos](#Embedded-Videos) are:
-- the addition of an `id` attribute to the `video` element for linking to from the text. (Each `id` value must be unique.)
+- the addition of an `id` attribute to the `video` element (to which the link's `href` should point.)
 - changes in the source path to the video files, since they're in the same folder as the xhtml file in this case
 
 Here is an example video file:
