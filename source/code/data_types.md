@@ -67,8 +67,8 @@ The element containing the question text should receive the `data-wb-question` a
 
 <p>Abraham believed two things about God that convinced him God could keep His promise (4:17)</p>
 <ol class="lower-alpha">
-  <li data-wb-question="chap06-9">In what ways does God give "life to the dead" (4:17)? </li>
-  <li data-wb-question="chap06-10"> How does God call "things that are not as though they were" (4:17)?</li>
+  <li data-wb-question="chap06-9">In what ways does God give "life to the dead" (4:17)?</li>
+  <li data-wb-question="chap06-10">How does God call "things that are not as though they were" (4:17)?</li>
 </ol>
 ```
 
