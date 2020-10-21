@@ -17,7 +17,7 @@ Each data attribute follows the same pattern. The data attribute is `data-x`, wh
 
 ### Scripture Value Syntax (OSIS)
 
-All Scripture references that are values for Cross data attributes must be formatted according to OSIS book abbreviations and reference notation. OSIS is an entire specification for marking up Bibles in XML, but we are borrowing the spec only for Scripture references to use within our data attributes.
+All Scripture references that are values for data attributes must be formatted according to OSIS book abbreviations and reference notation. OSIS is an entire specification for marking up Bibles in XML, but we are borrowing the spec only for Scripture references to use within our data attributes.
 
 See [OSIS Bible Book Abbreviations](https://docs.google.com/spreadsheets/d/1wfT-28QC64y40YilNuVFEyZqNx5U15ldKxvBtto88dU/edit?usp=sharing).
 
