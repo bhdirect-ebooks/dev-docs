@@ -31,28 +31,6 @@ The title page section should be in the second frontmatter document, and it shou
 
 The copyright page should be the third frontmatter document.
 
-On the copyright page, use a handful of special classes to indicate types of data:
-
-* `.permissions` - use with every paragraph that contains permissions/rights information
-* `.year` - use with `<span>` to tag the copyright year (or string of years)
-* `.copyright` - use with the paragraph or span that contains the whole copyright string; **must start with `©` `&#xA9;` or `&#169;`**
-* `.pub-place` - use with `<span>` or `<p>` to indicate the publisher's location
-
-Note the use of those classes below:
-
-```html
-<body epub:type="frontmatter">
-  <section epub:type="copyright-page">
-    <p>Copyright <span class="copyright">© <span class="year">1996</span> John Knox Press</span></p>
-    <p>Copyright page content in &#60;p&#62; tags.</p>
-    <p>etc.</p>
-    <p class="pub-place">Louisville, Kentucky</p> <!-- Only city & state should be included in the tags -->
-    <p class="permissions">All rights reserved.</p>
-    <p class="permissions">Unless otherwise noted, Scripture is taken from the NIV, etc.</p>
-    <p>etc.</p>
-  </section>
-</body>
-```
 
 ## Headings
 
@@ -64,7 +42,10 @@ Since headings create an outline, heading tags should not be used for subheading
 
 For any headings that should not be included in the document outline (usually in `aside` elements), use `<p epub:type="bridgehead"></p>`. Also acceptable: `<p>` with `.h1sub`, `.h2sub`, or `.h3sub`.
 
-### Chapter Titles, Labels, and Numbers
+### Script-Specific Markup
+<aside class="caution">The following sections on <strong>Chapter Titles, Labels, and Numbers</strong>; <strong>Parts</strong>; and <strong>Sub-Parts</strong> are only necessary for the proper operation of the `toolkit` scripts `buildtoc` and `stylecheck`. These guidelines need not be followed if the developer does not intend to use those tools</aside>
+
+#### Chapter Titles, Labels, and Numbers
 
 As mentioned above, chapter titles should always be tagged as `<h1>` elements.
 
@@ -86,21 +67,21 @@ When a chapter has a label of some kind (e.g., "Chapter 1", "1", "A" "IV", etc.)
 <h1><span class="label">Section 1</span>Introduction to the Study of the Bible</h1>
 ```
 
-### Parts
+#### Parts
 
 Whenever a book has a part structure (hierarchical groupings of related chapters), at least one special class (`.top-level`) should be used with _any `<h1>` element in front, back, or body that does not belong in a part_.
 
-#### `.top-level` Example
+##### `.top-level` Example
 
 <aside class="notice">Let's imagine we have a book with the following structure. <strong>The bolded sections should have the `.top-level` class on their `<h1>` elements.</strong><ul style="list-style-type:none"><li><strong>Preface</strong></li><li><strong>Introduction</strong></li><li>Part 1<ul style="list-style-type:none"><li>Chapter 1</li><li>Chapter 2</li></ul></li><li><strong>Interlude</strong></li><li>Part 2<ul style="list-style-type:none"><li>Chapter 3</li><li>Chapter 4</li></ul></li><li><strong>Conclusion</strong></li><li><strong>Index</strong></li></ul><p>More specifically, the `<section epub:type="">` and `<h1>` conventions would be like so:</p><table><tr><th>Book Section</th><th>Section Epub Type</th><th>h1</th></tr><tr><td>Preface</td><td>`preface`</td><td>`<h1 class="top-level">Preface</h1>`</td></tr><tr><td>Introduction</td><td>`introduction`</td><td>`<h1 class="top-level">Introduction</h1>`</td></tr><tr><td>Part 1</td><td>`part`</td><td>`<h1>Part 1</h1>`</td></tr><tr><td>Chapter 1</td><td>`chapter`</td><td>`<h1>Chapter 1</h1>`</td></tr><tr><td>Chapter 2</td><td>`chapter`</td><td>`<h1>Chapter 2</h1>`</td></tr><tr><td>Interlude</td><td>`chapter`</td><td>`<h1 class="top-level">Interlude</h1>`</td></tr><tr><td>Part 2</td><td>`part`</td><td>`<h1>Part 2</h1>`</td></tr><tr><td>Chapter 3</td><td>`chapter`</td><td>`<h1>Chapter 3</h1>`</td></tr><tr><td>Chapter 4</td><td>`chapter`</td><td>`<h1>Chapter 4</h1>`</td></tr><tr><td>Conclusion</td><td>`conclusion`</td><td>`<h1 class="top-level">Conclusion</h1>`</td></tr><tr><td>Index</td><td>`index`</td><td>`<h1 class="top-level">Index</h1>`</td></tr></table></aside>
 
-#### Sub-Parts
+##### Sub-Parts
 
 When there are parts that consist of sub-parts, the special classes `.part-1`, `.part-2`, `.part-3`, `.part-4`, `.part-5`, and `.part-6` exist to help you represent the book's structural hierarchy.
 
 _**Note that the numbers 1-6 here indicate hierarchy level, not sequential order!**_ ([Just like h1-6 tags.](http://w3c.github.io/html/sections.html#outline))
 
-##### Sub-Parts Example
+###### Sub-Parts Example
 
 <aside class="notice">Let's imagine we have a book with the following structure.<ul style="list-style-type:none"><li>Preface</li><li>Introduction</li><li>Part A<ul style="list-style-type:none"><li>Part A-1<ul style="list-style-type:none"><li>Chapter 1</li><li>Chapter 2</li></ul></li><li>Part A-2<ul style="list-style-type:none"><li>Chapter 3</li></ul></li></ul></li><li>Interlude</li><li>Part B<ul style="list-style-type:none"><li>Chapter 4</li><li>Chapter 5</li></ul></li><li>Conclusion</li><li>Index</li></ul><p>In this case, the `<section epub:type="">` and `<h1>` conventions would be like so:</p><table><tr><th>Book Section</th><th>Section Epub Type</th><th>h1</th></tr><tr><td>Preface</td><td>`preface`</td><td>`<h1 class="top-level">Preface</h1>`</td></tr><tr><td>Introduction</td><td>`introduction`</td><td>`<h1 class="top-level">Introduction</h1>`</td></tr><tr><td>Part A</td><td>`part`</td><td>`<h1 class="part-1">Part A</h1>`</td></tr><tr><td>Part A-1</td><td>`part`</td><td>`<h1 class="part-2">Part A-1</h1>`</td></tr><tr><td>Chapter 1</td><td>`chapter`</td><td>`<h1>Chapter 1</h1>`</td></tr><tr><td>Chapter 2</td><td>`chapter`</td><td>`<h1>Chapter 2</h1>`</td></tr><tr><td>Part A-2</td><td>`part`</td><td>`<h1 class="part-2">Part A-2</h1>`</td></tr><tr><td>Chapter 3</td><td>`chapter`</td><td>`<h1>Chapter 3</h1>`</td></tr><tr><td>Interlude</td><td>`chapter`</td><td>`<h1 class="top-level">Interlude</h1>`</td></tr><tr><td>Part B</td><td>`part`</td><td>`<h1 class="part-1">Part B</h1>`</td></tr><tr><td>Chapter 4</td><td>`chapter`</td><td>`<h1>Chapter 4</h1>`</td></tr><tr><td>Chapter 5</td><td>`chapter`</td><td>`<h1>Chapter 5</h1>`</td></tr><tr><td>Conclusion</td><td>`conclusion`</td><td>`<h1 class="top-level">Conclusion</h1>`</td></tr><tr><td>Index</td><td>`index`</td><td>`<h1 class="top-level">Index</h1>`</td></tr></table></aside>
 
@@ -153,7 +134,7 @@ See the [Indexes](indexes.html) section.
 
 Each bibliography in the work should be tagged with `<section>` and the appropriate EPUB `bibliography` type. <em>If a bibliography appears after the final chapter, it should be placed in a</em> `backmatter` <em>document</em>. 
 
-Keep in mind that bibliographies contain <b>only sources that were actually used/cited</b> in that title, and not for 'recommended reading'-type lists. And so, only actual bibliographies should receive such said markup.
+Keep in mind that true bibliographies contain <b>only sources that were actually used/cited</b> in the work. Therefore the bibliography-specific `epub:type` attributes should not be used for 'recommended reading'-type lists.
 
 Each entry in a bibliography should be tagged with `<p epub:type="biblioentry" class="hang">`.
 
@@ -242,7 +223,11 @@ Abbreviation lists should appear wherever they appear in the content, and the on
 
 ### Abbreviation Terms
 
-Abbreviation terms must also be tagged throughout the content. See [Abbreviations](general_types.html#Abbreviations).
+Abbreviation terms must also be tagged throughout the content and should follow the HTML specification. See [Abbreviations](general_types.html#Abbreviations).
+
+```html
+<abbr title="Abbreviation Definition">ABBRD</abbr>
+```
 
 ### Actual Glossaries
 
