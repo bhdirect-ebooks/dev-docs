@@ -36,7 +36,7 @@ It is traditional to surround verse numbers in our Bibles with a `span.versenum`
 There are a few data attributes specific to Bibles which are required for Content Platform indexing.
 
 <aside class="caution">The examples here show attribute values in our "development" book.chapter.verse (B.C.V) format, but Content Platform will need the values to be in "Scripture Fragement Identifier" (SFI) format. SFIs are similar to the EPUB <a href="http://idpf.org/epub/linking/cfi/epub-cfi.html">"Canonical Fragment Identifier" (CFI)</a> format. The <b>toolkit</b> script <b>convert-epub</b> will convert B.C.V values to SFI. If you're not planning to use <b>convert-epub</b>, you will need to use SFI values. The document <a href="https://docs.google.com/document/d/1pArlqjQIDvZkPX49alvX9KdU0Wq6qVXaznErP6mi_K0/edit?usp=sharing">HTML Markup for Enhancing EPUB Content</a> provides guidance on the format.</aside>
-
+<p></p>
 <aside class="notice"><b>Convert-epub</b> is used in <code>npm run build</code>, <code>npm run publish</code>, <code>build-partial</code>, and <code>npm run publishpart</code></aside>
 
 ### Chapter Data Attributes
@@ -46,8 +46,7 @@ Each chapter requires a `data-scripture-chapter` attribute on the containing ele
 ```html
 <body epub:type="bodymatter">
 <section epub:type="chapter" data-scripture-chapter="Gen.1">
-<h1 class="bookname">Genesis</h1>
-<p class="h1">1</p>
+<h1 class="bookname">Genesis 1</h1>
 <h2>The Creation</h2>
 <!-- chapter content -->
 </section>
@@ -97,7 +96,7 @@ Where things get a little trickier is when a verse begins or ends part-way throu
 
 Notice in this example how verse 23 ends part-way into the next paragraph.
 
-![verse ends mid-paragraph](assets/images/uploads/verse-ends-mid-paragraph.png)
+![verse ends mid-paragraph](/assets/images/uploads/verse-ends-mid-paragraph.png)
 
 To accomplish this:
 
@@ -120,7 +119,7 @@ To accomplish this:
 
 In this example, notice how verse 3 begins toward the end of the paragraph also containing verses 1 and 2.
 
-![verse begins mid-paragraph](assets/images/uploads/verse-begins-mid-paragraph.png)
+![verse begins mid-paragraph](/assets/images/uploads/verse-begins-mid-paragraph.png)
 
 To achieve this rendering:
 
@@ -145,7 +144,7 @@ To achieve this rendering:
 
 This final example shows the most complicated scenario. Notice how verse 9 begins toward the end of one paragraph, and ends in the middle of the next:
 
-![verse begins and ends mid-paragraph](assets/images/uploads/verse-begins-and-ends-mid-paragraph.png)
+![verse begins and ends mid-paragraph](/assets/images/uploads/verse-begins-and-ends-mid-paragraph.png)
 
 To get this to render properly:
 
