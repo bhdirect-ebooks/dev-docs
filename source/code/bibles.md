@@ -79,10 +79,10 @@ Another scenario sees a verse spanning multiple elements. I those cases, a `<div
 
 ```html
 <div class="di" data-scripture-verse="Ps.1.1">
-<p class="poem1"><span class="versenum">1</span> How happy is the one who does not</p>
-<p class="poem2">walk in the advice of the wicked</p>
-<p class="poem1">or stand in the pathway with sinners</p>
-<p class="poem2">or sit in the company of mockers!</p>
+  <p class="poem1"><span class="versenum">1</span> How happy is the one who does not</p>
+  <p class="poem2">walk in the advice of the wicked</p>
+  <p class="poem1">or stand in the pathway with sinners</p>
+  <p class="poem2">or sit in the company of mockers!</p>
 </div>
 ```
 
@@ -107,10 +107,10 @@ To accomplish this:
 
 ```html
 <div class="di" data-scripture-verse="Matt.1.23">
-<p class="ind1"><span class="versenum">23</span> <span class="b">See, the virgin will become pregnant</span></p>
-<p class="b ind1">and give birth to a son,</p>
-<p class="b ind1">and they will name him Immanuel,</p>
-<p class="dib">which is translated “God is with us.”</p>
+  <p class="ind1"><span class="versenum">23</span> <span class="b">See, the virgin will become pregnant</span></p>
+  <p class="b ind1">and give birth to a son,</p>
+  <p class="b ind1">and they will name him Immanuel,</p>
+  <p class="dib">which is translated “God is with us.”</p>
 </div>
 <p class="di" data-scripture-verse="Matt.1.24"><span class="versenum">24</span> When Joseph woke up, he did as the Lord’s angel had commanded him. He married her</p>
 ```
@@ -133,10 +133,10 @@ To achieve this rendering:
 <p></p>
 <p class="di"><span data-scripture-verse="Matt.3.1"><span class="versenum">1</span> In those days John the Baptist came, preaching in the wilderness of Judea</span> <span data-scripture-verse="Matt.3.2"><span class="versenum">2</span> and saying, “Repent, because the kingdom of heaven has come near!”</span></p>
 <div class="di" data-scripture-verse="Matt.3.3">
-<p class="di"><span class="versenum">3</span> For he is the one spoken of through the prophet Isaiah, who said:</p>
-<p class="b ind1">A voice of one crying out in the wilderness:</p>
-<p class="b ind1">Prepare the way for the Lord;</p>
-<p class="b ind1">make his paths straight!</p>
+  <p class="di"><span class="versenum">3</span> For he is the one spoken of through the prophet Isaiah, who said:</p>
+  <p class="b ind1">A voice of one crying out in the wilderness:</p>
+  <p class="b ind1">Prepare the way for the Lord;</p>
+  <p class="b ind1">make his paths straight!</p>
 </div>
 ```
 
