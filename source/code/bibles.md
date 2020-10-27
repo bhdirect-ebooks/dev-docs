@@ -158,9 +158,9 @@ To get this to render properly:
 <p></p>
 <p class="di"><span data-scripture-verse="Matt.27.6"><span class="versenum">6</span> The chief priests took the silver and said, “It’s not permitted to put it into the temple treasury, since it is blood money.”</span> <span data-scripture-verse="Matt.27.7"><span class="versenum">7</span> They conferred together and bought the potter’s field with it as a burial place for foreigners.</span> <span data-scripture-verse="Matt.27.8"><span class="versenum">8</span> Therefore that field has been called “Field of Blood” to this day.</span></p>
 <div class="di" data-scripture-verse="Matt.27.9">
-<p class="di"><span class="versenum">9</span> Then what was spoken through the prophet Jeremiah was fulfilled:</p>
-<p></p>
-<p class="b di">They took the thirty pieces of silver, the price of him whose price was set by the Israelites,</p>
+  <p class="di"><span class="versenum">9</span> Then what was spoken through the prophet Jeremiah was fulfilled:</p>
+  <p></p>
+  <p class="b di">They took the thirty pieces of silver, the price of him whose price was set by the Israelites,</p>
 </div>
 <p class="di" data-scripture-verse="Matt.27.10"><span class="versenum">10</span> <span class="b">and they gave them for the potter’s field, as the Lord directed me.</span></p>
 ```
