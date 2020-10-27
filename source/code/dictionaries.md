@@ -123,7 +123,7 @@ Imagine the example Greek-English dictionary contains Greek headwords and some a
 When it comes to the dictionary specific language `<meta>` elements, however, `source-language` comes first, and refers to the language of the dictionary headwords, followed by `target-language` which identifies the language of the translations/definitions
 
 <aside class="caution">
-  <p>It is also possible to create a <i>bidirectional</i> bilingual dictionary, such as Greek-English/English-Greek. In such a case, the Greek-English and English-Greek sections would be separated into different <b>collection</b>s within the package file, as shown in the <a href="http://www.idpf.org/epub/dict/epub-dict.html#sec-2.5.4.4">EPUB Dictionary Specifications</a> from IDPF/W3C</p>
+  <p>It is also possible to create a <em>bidirectional</em> bilingual dictionary, such as Greek-English/English-Greek. In such a case, the Greek-English and English-Greek sections would be separated into different <b>collection</b>s within the package file, as shown in the <a href="http://www.idpf.org/epub/dict/epub-dict.html#sec-2.5.4.4">EPUB Dictionary Specifications</a> from IDPF/W3C</p>
   <p>Many of our automated scripts within <code>toolkit</code>, such as <code>manifest-and-spine</code>, <code>stylecheck</code>, <code>create-skmap</code>, and <code>epub2cross</code> do not yet support the use of <b>collection</b>s within EPUBs. If you believe this is necessary for your project, please talk to a tools developer.</p> 
 </aside>
 
