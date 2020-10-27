@@ -37,7 +37,7 @@ There are a few data attributes specific to Bibles which are required for Conten
 
 <aside class="caution">The examples here show attribute values in our "development" book.chapter.verse (B.C.V) format, but Content Platform will need the values to be in "Scripture Fragement Identifier" (SFI) format. SFIs are similar to the EPUB <a href="http://idpf.org/epub/linking/cfi/epub-cfi.html">"Canonical Fragment Identifier" (CFI)</a> format. The <b>toolkit</b> script <b>convert-epub</b> will convert B.C.V values to SFI. If you're not planning to use <b>convert-epub</b>, you will need to use SFI values. The document <a href="https://docs.google.com/document/d/1pArlqjQIDvZkPX49alvX9KdU0Wq6qVXaznErP6mi_K0/edit?usp=sharing">HTML Markup for Enhancing EPUB Content</a> provides guidance on the format.</aside>
 
-<aside class="note"><b>Convert-epub</b> is used in <code>npm run build</code>, <code>npm run publish</code>, <code>build-partial</code>, and <code>npm run publishpart</code></aside>
+<aside class="notice"><b>Convert-epub</b> is used in <code>npm run build</code>, <code>npm run publish</code>, <code>build-partial</code>, and <code>npm run publishpart</code></aside>
 
 ### Chapter Data Attributes
 
