@@ -1,6 +1,8 @@
 ---
 title: Dictionaries & Encyclopedias
 ---
+This spec is only a subset of the official [EPUB Dictionaries and Glossaries 1.0](http://idpf.org/epub/dict/) Recommended Specification. Portions of the spefification above and beyond what is outlined here *may* be used, but features are not required. This spec focuses on the minimum necessary in our EPUBs. 
+
 <hr />
 
 ## Dictionary File Naming
@@ -13,8 +15,8 @@ For the main content, however, there are two options:
 
 <small>* or other grouping used by the work itself</small> 
  
-Option 1 should be used in most cases.
-Option 2 should be considered if the average length of the entries is short.
+Option 1 is best used when the average length of entries is long.
+Option 2 should be considered when the average length of entries is short.
 
 ### Option 1 Example:
 
@@ -162,7 +164,7 @@ For other dictionary subtypes, simply use the appropriate subtype name in the `m
 
 ### Entries
 
-And entry is the organizational unit of EPUB Dictionary content, consisting of at least one headword and further information on it. An entry in an EPUB Dictionary is independently distributable, meaning it can be rendered to users outside of its EPUB Dictionary Publication context.
+An entry is the organizational unit of EPUB Dictionary content, consisting of at least one headword and further information on it. An entry in an EPUB Dictionary is independently distributable, meaning it can be rendered to users outside of its EPUB Dictionary Publication context.
 
 Semantic markup of the entry and its structure is detailed below. Refer to [Content Documents - Dictionaries](http://www.idpf.org/epub/dict/epub-dict.html#sec-2.2) from IDPF/W3C for full specifications.
 
@@ -179,13 +181,14 @@ Part files will be treated normally:
 
 Entry file `<body>` tags should receive an `epub:type` of `dictionary`.
 
-The entry content should be contained within an `<article>` element with an `epub:type` of `dictentry`.
+The entry content should be contained within an `<article>` element with an `epub:type` of `dictentry` and an `id` unique to the entry. The <abbr title="A word or phrase defined, translated, or otherwise treated in an entry">headword</abbr>(s) should be contained in `<dfn>`(s). See more on [Headwords](#Headwords) below
 
-An `<h1>` with the `.nd` class should be added. This heading will not be displayed in the rendered file, (due to CSS styling of `display: none;`) but the text of the heading will be shown in the Table of Contents, both for the EPUB and CROSS book.
+If you'd like to use **buildtoc** to create the Table of Contents, An `<h1>` with the `.nd` class should be added as the first child of the `<article>`. This heading will not be displayed in the rendered file, (due to CSS styling of `display: none;` in **mywsb.css**) but the text of the heading will be shown in the Table of Contents.
 ```html
 <body epub:type="dictionary">
-  <article epub:type="dictentry">
+  <article epub:type="dictentry" id="aardvark">
     <h1 class="nd">aardvark</h1>
+    <dfn>aardvark</dfn>
     <!-- entry content -->
   </article>
 </body>
@@ -201,16 +204,18 @@ In this case, the part file's `<body>` tag should receive the `epub:type="dictio
 
 Each entry is still contained within an `<article epub:type="dictentry">` with the added requirement that the `<article>` have a unique `id` attribute.
 
-But entry headings should use an `<h2>` with the `.nd` class, rather than an `<h1>`.
+If you're using entry headings, they should be an `<h2>` with the `.nd` class, rather than an `<h1>`.
 ```html
 <body epub:type="dictionary">
   <h1>A</h1>
   <article epub:type="dictentry" id="aardvark">
     <h2 class="nd">aardvark</h2>
+    <dfn>aardvark</dfn>
     <!-- entry content -->
   </article>
   <article epub:type="dictentry" id="abacus">
     <h2 class="nd">abacus</h2>
+    <dfn>abacus</dfn>
     <!--- entry content -->
   </article>
   <!-- additional entries -->
@@ -219,14 +224,27 @@ But entry headings should use an `<h2>` with the `.nd` class, rather than an `<h
 ```
 
 #### Headwords
-The <abbr title="A word or phrase defined, translated, or otherwise treated in an entry">headword</abbr> itself is placed in `<dfn></dfn>`;
+Per the official spec on [Headwords](http://idpf.org/epub/dict/#sec-2.2.3), There must be one or more <abbr title="A word or phrase defined, translated, or otherwise treated in an entry">headword</abbr> in each entry. Each headword is placed in its own `<dfn>`
 
 ```html
 <body epub:type="dictionary">
-  <article epub:type="dictentry">
-    <h1 class="nd">apple</h1>
-    <dfn>apple</dfn>
-    <!-- translations/definitions/content for "apple" -->
+  <article epub:type="dictentry" id="color">
+    <h1 class="nd">color</h1>
+    <dfn>color</dfn> <span class="i">or chiefly British</span> <dfn>colour</dfn>
+    <!-- translations/definitions/content for "color" -->
+  </article>
+</body>
+```
+
+The contents of the `<dfn>` are not always the same as the headword's canonical form, and may include other typographic and/or HTML elements. In such cases, a `title` attribute should be added to the `<dfn>` to specify the canonical form.
+
+```html
+<body epub:type="dictionary">
+  <article epub:type="dictentry" id="color">
+    <h1 class="nd">color</h1>
+    <dfn title="color">col·or<sup>1</sup></dfn>
+    <dfn title="colour">col·our</dfn>, <em>(British)</em>
+    <!-- translations/definitions/content for "color" -->
   </article>
 </body>
 ```
@@ -235,7 +253,9 @@ The <abbr title="A word or phrase defined, translated, or otherwise treated in a
 
 ## Search Key Map
 
-Make sure the EPUB includes a [Search Key Map](http://www.idpf.org/epub/dict/#sec-2.4) in the OEBPS folder, named `skmap.xml`.
+The EPUB must include a [Search Key Map Document](http://www.idpf.org/epub/dict/#sec-2.4) in the OEBPS folder, named `skmap.xml`.
+
+The **toolkit** script [create-skmap](https://github.com/bhdirect-ebooks/create-skmap) will greatly aid you in creating this document. **Create-skmap** correctly handles single and multiple entries per file, one or more headword per entry, and the presence or absence of `title` attributes.
 
 Add the following line to the `content.opf` `<manifest>` under the `<!-- Navigation -->` section.
 
@@ -243,14 +263,17 @@ Add the following line to the `content.opf` `<manifest>` under the `<!-- Navigat
   <item id="skmap" href="skmap.xml" media-type="application/vnd.epub.search-key-map+xml" properties="search-key-map dictionary" />
 ```
 
+<aside class="caution">If uploading the EPUB directly to Content Platform without running it though the <em>build</em> process (specifically <em>convert-epub</em>,) the <code>properties="search-key-map dictionary"</code> attribute must be removed from the <code>&lt;item&gt;</code> as it will cause an error in the ingestion process on CP. However, the EPUB will then fail to pass epubcheck. &#129335;&#127997;&#8205;&#9794;&#65039;</aside>
+
 A Search Key Map must include this markup for every entry:
 
 ```xml
-<!-- href should point to the entry xhtml file -->
-<search-key-group href="text/DictJesus202_body002_entry001.xhtml">
-<!-- match value should be the term itself -->
+<!-- href should point to the xhtml file containing the entry, and the id of the article element with the epub:type="dictentry" for that entry -->
+<search-key-group href="text/DictJesus202_body002_entry001.xhtml#abiding">
+<!-- match value should be the canonical form of the headword -->
   <match value="Abiding" />
+  <!-- more match elements if the entry has multiple headwords (<dfn>s) -->
 </search-key-group>
 ```
 
-Take a look at a [completed Search Key Map on GitHub](https://github.com/bhdirect-ebooks/JonEncyclopedia/blob/master/dev/epub/9781535942102/OEBPS/skmap.xml).
+Take a look at a [completed Search Key Map on GitHub](https://github.com/bhdirect-ebooks/ConDictTheoTerms/blob/master/dev/epub/9781535982245/OEBPS/skmap.xml).
