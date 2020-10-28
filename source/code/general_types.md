@@ -67,7 +67,7 @@ Sometimes a combination of Hebrew and non-Hebrew characters has trouble renderin
 Surrounding the entire phrase in an element with `dir="ltr"` and each series of Hebrew characters with an element having `dir="rtl"` can help.
 ```html
 <!-- doesn't always render correctly -->
-<p>1 <span class="lang-hbo"dir="rtl">(ה)חד</span></p>
+<p>1 <span class="lang-hbo" dir="rtl">(ה)חד</span></p>
 
 <!-- renders correctly -->
 <p dir="ltr">1 (<span class="lang-hbo" dir="rtl">ה</span>)<span class="lang-hbo" dir="rtl">חד</span></p>
