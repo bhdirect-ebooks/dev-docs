@@ -1,7 +1,7 @@
 ---
 title: Dictionaries & Encyclopedias
 ---
-This spec is only a subset of the official [EPUB Dictionaries and Glossaries 1.0](http://idpf.org/epub/dict/) Recommended Specification. Portions of the spefification above and beyond what is outlined here *may* be used, but features are not required. This spec focuses on the minimum necessary in our EPUBs. 
+This spec is only a subset of the official [EPUB Dictionaries and Glossaries 1.0](http://idpf.org/epub/dict/) Recommended Specification. Portions of the specification above and beyond what is outlined here *may* be used, but features are not required. This spec focuses on the minimum necessary in our EPUBs. 
 
 <hr />
 
@@ -147,7 +147,7 @@ The example shows how the metadata would look in such a book. For a multilingual
 
 ### Other Dictionary Types
 
-For other dictionary subtypes, simply use the appropriate subtype name in the `meta property="dictionary-type` element, along with the appropriate language elements
+For other dictionary subtypes, simply use the appropriate subtype name in the `meta property="dictionary-type"` element, along with the appropriate language elements
 
 ```html
 <dc:language>en</dc:language>
@@ -183,7 +183,7 @@ Entry file `<body>` tags should receive an `epub:type` of `dictionary`.
 
 The entry content should be contained within an `<article>` element with an `epub:type` of `dictentry` and an `id` unique to the entry. The <abbr title="A word or phrase defined, translated, or otherwise treated in an entry">headword</abbr>(s) should be contained in `<dfn>`(s). See more on [Headwords](#Headwords) below
 
-If you'd like to use **buildtoc** to create the Table of Contents, An `<h1>` with the `.nd` class should be added as the first child of the `<article>`. This heading will not be displayed in the rendered file, (due to CSS styling of `display: none;` in **mywsb.css**) but the text of the heading will be shown in the Table of Contents.
+If you'd like to use **buildtoc** to create the Table of Contents, an `<h1>` with the `.nd` class should be added as the first child of the `<article>`. This heading will not be displayed in the rendered file, (due to CSS styling of `display: none;` in **mywsb.css**) but the text of the heading will be shown in the Table of Contents.
 ```html
 <body epub:type="dictionary">
   <article epub:type="dictentry" id="aardvark">
