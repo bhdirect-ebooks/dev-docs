@@ -32,13 +32,12 @@ title: Dev Process Overview
 * [Headings](../code/structural_types.html#Headings) (hierarchical)
 * [Lists and outlines](../css_lib/lists.html)
 * [Block & pull quotes](../css_lib/quotes.html)
-* [Poetry](../css_lib/poetry.html)
+* [Poetry](../code/general_types.html#Poetry)
 * [Tables](../code/general_types.html#Tables)
-* [Languages & transliterations](../css_lib/languages.html)
-* [Non-decorative images](../code/media_types.html#Images)
+* [Languages & transliterations](../code/general_types.html#Languages-and-Transliterations)
+* [Figural images](../code/media_types.html#Images)
 * Convert existing [page breaks](../code/structural_types.html#Page-Breaks)
 * Bring code into compliance with [formatting rules](../code/general_format.html) and [style rules](../code/html_style.html)
-* Replace or remove all non-mywsb.css [classes](../code/css_style.html#Styling-Content)
 
 ### B. Create well-formed EPUB documents
 
@@ -63,21 +62,12 @@ title: Dev Process Overview
 * [Scripture references](scripture.html)
 * [Videos](videos.html)
 * [Images](https://style.bhdirect-ebooks.org/process/images)
-* Commentaries
-  * [Scripture context](../code/data_types.html#Scripture-Context)
 * Workbooks/Studies
-  * Workbook enhancement in CP
+  * [Workbook enhancements](../code/data_types.html#Workbook-Questions-and-Answers)
 * [Dictionaries](../code/dictionaries.html)
-  * Dictionary article markup
-  * Dictionary metadata
-  * Search Key Map
-* Journals
-  * [Journal article markup](../code/data_types.html#Journal-Articles)
-  * [Journal metadata](../code/metadata.html#Journal-Metadata)
-* Bible studies
-  * [LESSONmaker markup](../code/data_types.html#LESSONmaker-Content)
-* Date-aligned works
-  * [Date context](../code/data_types.html#Date-Context)
+  * [Dictionary metadata](../code/dictionaries.html#Dictionary-Metadata)
+  * [Dictionary markup](../code/dictionaries.html#Dictionary-Content)
+  * [Search Key Map](../code/dictionaries.html#Search-Key-Map)
 
 <hr>
 
@@ -89,7 +79,7 @@ title: Dev Process Overview
 
 ### Checkpoint!
 
-<aside class="caution">Pass EpubCheck and stylecheck before moving forward!</aside>
+<aside class="caution">Pass EpubCheck before moving forward!</aside>
 
 <div>&nbsp;</div>
 
