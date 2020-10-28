@@ -51,7 +51,9 @@ _Example:_
 
 ## Languages and Transliterations
 
-Always use Unicode characters for any language or transliteration, along with one of the following four classes. Foreign book/article titles should only be styled with italics, not language specific styles such as `.lang` or `.translit`.
+We prefer using Unicode characters for foreign languages or transliterations, but in some circumstances, character entities are necessary to get things to render properly.
+
+For Greek and Hebrew, the **mywsb.css** classes `.lang-grc` and `.lang-hbo` will set the fonts to Gentium Plus and Ezra SIL, respectively.
 
 ```html
 <!-- Greek -->
@@ -59,7 +61,20 @@ Always use Unicode characters for any language or transliteration, along with on
 
 <!-- Hebrew -->
 <span class="lang-hbo">‏יְשׁוּעָ</span>
+```
 
+Sometimes a combination of Hebrew and non-Hebrew characters has trouble rendering properly because Hebrew reads right-to-left. In these cases, it can be useful to use the `dir` attribute.
+Surrounding the entire phrase in an element with `dir="ltr"` and each series of Hebrew characters with an element having `dir="rtl"` can help.
+```html
+<!-- doesn't always render correctly -->
+<p>1 <span class="lang-hbo" dir="rtl">(ה)חד</span></p>
+
+<!-- renders correctly -->
+<p dir="ltr">1 (<span class="lang-hbo" dir="rtl">ה</span>)<span class="lang-hbo" dir="rtl">חד</span></p>
+```
+
+Also in **mywsb.css**, the classes `.lang` and `.translit` will both set the font to Gentium Plus italic, and is useful for setting these words apart in the flow of text.
+```
 <!-- Other languages -->
 <span class="lang">exegético</span>
 
@@ -73,7 +88,7 @@ Always use Unicode characters for any language or transliteration, along with on
 
 ## Scripture Quotes
 
-Scripture quotes should be tagged as `blockquote` elements with the `scriptext` class.
+Scripture quotes should be tagged as `blockquote` elements, and may use the **mywsb.css** class `.scriptext`
 
 ```html
 <blockquote class="scriptext">
@@ -87,7 +102,7 @@ Scripture quotes should be tagged as `blockquote` elements with the `scriptext` 
 
 ## Poetry
 
-Tag poetry with `poetry` classes, (`poem1-10` or `poetry`) making sure to follow the indentation conventions of the source material. Nested `<div class="poetry">` tags create indented blocks.
+For poetry, **mywsb.css** has a series of `poetry` classes, (`poem1-10` or `poetry`) giving increasing levels of indentation. Be sure to follow the indentation conventions of the source material. Nested `<div class="poetry">` tags create indented blocks.
 
 ```html
 <!-- Poetry example from the CSB, Genesis 2:23-24 -->
@@ -103,6 +118,15 @@ Tag poetry with `poetry` classes, (`poem1-10` or `poetry`) making sure to follow
   </div>
 </div>
 <p>This is why a man leaves his ...</p>
+
+<!-- OR -->
+<p>And the man said:</p>
+<p class="br-before poem1">This one, at last, is bone of my bone</p>
+<p class="poem2">and flesh of my flesh;</p>
+<p class="poem1">this one will be called “woman,”</p>
+<p class="poem2">for she was taken from man.</p>
+<p class="br-before poem1">This is why a man leaves his ...</p>
+
 ```
 
 Rendered version of the example code:
@@ -119,7 +143,7 @@ If the poetry was written by someone other than the author, it also needs to be 
 
 A chiasm is a literary device that uses a repeating A-B-C ... C′-B′-A′ pattern for clarification and/or emphasis. 
 
-For a chiastic structure use the `poetry` classes above.
+For a chiastic structure indentations, you may use the `poetry` classes above.
 
 ```html
 <p class="poem1">A "No servant can serve two masters;</p>
@@ -152,7 +176,7 @@ Typographic (curly) quotes and straight quotes are equally acceptable in book te
 
 ## Tables
 
-Tables should be tagged semantically. This means cells that contain table headings should be `<th>`, rather than `<td>`, elements. When using `<th>`, avoid adding unnecessary classes like `.bold`, since table headings are already styled in mywsb.css.
+Tables should be tagged semantically. This means cells that contain table headings should be `<th>`, rather than `<td>`, elements. If using **mywsb.css**, be aware that table headings are already styled.
 
 Also, for tables that contain more than one row of headings, wrap the rows with `<thead></thead>` and the remainder of the table with `<tbody></tbody>`. This is recommended for accessibility.
 

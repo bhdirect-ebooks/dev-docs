@@ -23,6 +23,8 @@ Each index in the work should be nested in an `index` type section within its ow
 </body>
 ```
 
+We have developed a workflow that makes achieving the markup outlined below much easier. See [Indexes](/process/indexes.html) under **Development Process** for more information.
+
 ## Index Groups
 
 An index that has groupings of some kind (usually alphabetical) should be tagged accordingly. *If there are no discernible groupings, the entire index should be wrapped in an `index-group` section.*
