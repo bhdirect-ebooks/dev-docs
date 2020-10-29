@@ -28,21 +28,10 @@ Become familiar with the project directory structure:
 5. Each folder inside **dev/epub/**:
    * contains EPUB file structure
    * create EPUBs here following the [Dev Process](https://style.bhdirect-ebooks.org/process/)
-6. After EPUB passes the [Review Process](https://style.bhdirect-ebooks.org/process/review.html) it is time to [build](https://style.bhdirect-ebooks.org/process/convert.html#The-Basic-Upload-Process) the project
-   * running `npm run build` creates a **cross** folder under **dev/** containing CROSS book source and compiler files and folders for each volume
-   * a **dist** folder is created under **dev/**. The **dist** folder includes:
-     * `content_platform` folder with CP EPUBs
-     * `cross_compiled` folder
-       * created when running `npm run moveit`, containing compiled CROSS book folders and files
-     * `scene7` folder
-       * contains cover images that need to be uploaded to **Alfresco > Shared Files > Covers Database**
-     * `ws_marketing` folder
-       * contains covers for Wordsearch
-       * contains sample html files
-
-The video below briefly describes each part of the structure:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RDhEy5iD6i8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+6. After EPUB passes the [Review Process](https://style.bhdirect-ebooks.org/process/review.html) it is time to [publish](https://style.bhdirect-ebooks.org/process/convert.html#The-Basic-Upload-Process) the project
+   * running `npm run build` or `npm run publish` creates a **dist** folder including:
+     * `content_platform` folder with CP EPUB(s) (`npm run publish` also uploads the EPUB(s) to Content Platform Processing Queue)
+     * `scene7` folder containing cover image(s) that need to be uploaded to **Alfresco > Shared Files > Covers Database**
 
 ## Related Tools/Scripts
 
