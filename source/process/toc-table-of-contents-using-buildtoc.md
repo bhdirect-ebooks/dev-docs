@@ -5,25 +5,13 @@ The TOC (Table of Contents) resides in the OEBPS directory of an EPUB, and allow
 
 The general markup of the TOC can be found [here](https://style.bhdirect-ebooks.org/code/navigation.html#Table-of-Contents).
 
-<hr />
-
 ## buildtoc
 
-For the developer, the **buildtoc**  script removes much toil from creating the TOC file, creating links to the various files in the /text directory of the OEBPS folder.
-
-The **buildtoc** script is contained within the @bhdirect/toolkit  node bundle, and specific instructions for using it can be found here: <https://www.npmjs.com/package/@bhdirect/buildtoc> (you will need to be logged in to you npmjs.org account that has been linked to the @bhdirect team repo).
-
-Example of running **buildtoc** in the command line (in the EPUB directory) with a 'flag':
-
-```
-buildtoc -1
-```
-
-<hr />
+The **buildtoc** script creates and EPUB-spec-compliant `<nav epub:type="toc">` from the headings of .xhtml files in OEBPS/text. The script has various command-line flags which alter specifics of what it builds. Please see the [buildtoc Readme](https://github.com/bhdirect-ebooks/buildtoc/blob/master/README.md#buildtoc) or run `toolkit buildtoc` in the terminal for instructions.
 
 ## TOC Labels
 
-Keep in mind that a TOC's elements **need to have labeled parts: **
+Keep in mind that in Liberty titles, TOC entries should have labeled parts, chapters, etc.
 
 **Correctly Labeled Chapters/Appendices:**
 
