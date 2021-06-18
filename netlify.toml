@@ -3,6 +3,6 @@
   publish = "/public"
 
 [[headers]]
-  for = "news/*"
+  for = "/news/*"
   [headers.values]
     Basic-Auth = "ehigdon:testPassword"
