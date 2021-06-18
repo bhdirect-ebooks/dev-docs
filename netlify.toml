@@ -5,10 +5,4 @@
 [[redirects]]
   from = "/news/*"
   to = "/"
-  conditions = {Role = ["admin"]}
-  status = 200
-
-[[redirects]]
-  from = "/news/*"
-  to = "/"
   status = 301
