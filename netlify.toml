@@ -4,6 +4,7 @@
 
 [[redirects]]
   from = "/news/*"
+  to = "/:splat"
   conditions = {Role = ["admin"]}
   status = 200
 
