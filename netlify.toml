@@ -1,3 +1,8 @@
 [build]
   command = "hexo generate"
   publish = "/public"
+
+[[redirects]]
+  from = "/news/*"
+  to = "/admin/"
+  conditions = {Role = ["admin"]}
