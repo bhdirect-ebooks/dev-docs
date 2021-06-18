@@ -6,4 +6,4 @@
   from = "/news/*"
   to = "/admin/"
   conditions = {Role = ["admin"]}
-  status = 201
+  status = 200
