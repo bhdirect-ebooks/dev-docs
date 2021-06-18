@@ -5,6 +5,6 @@
 [[redirects]]
   from = "/news/*"
   to = "/"
-  conditions = {Role = "admin"}
   status = 301
   force = true
+  conditions = {Role: "admin"}
