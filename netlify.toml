@@ -6,3 +6,4 @@
   from = "/news/*"
   to = "/"
   status = 301
+  force = true
