@@ -57,29 +57,28 @@ process:
   dev:
     overview: index.html
     regex-library: regex-library.html
-  prep:
-    admin: project_admin.html
-    scaffold: proj_scaffold.html
-    structure: epub_dir.html
-  clean:
-    content: markup.html
-    package: package_doc.html
-    nav: nav_doc.html
-  enhance:
-    pagebreak: page_break.html
-    toc_formatting: toc-table-of-contents-using-buildtoc.html
-    scripture: scripture.html
-    footnotes: footnotes.html
-    indexes: indexes.html
-    abbr: abbr.html
-    images: images.html
-    videos: videos.html
-    glossary: glossary.html
-    special: special_types.html
-
-  qa:
-    review: review.html
-    convert: convert.html
+//  prep:
+//    admin: project_admin.html
+//    scaffold: proj_scaffold.html
+//    structure: epub_dir.html
+//  clean:
+//    content: markup.html
+//    package: package_doc.html
+//    nav: nav_doc.html
+//  enhance:
+//    pagebreak: page_break.html
+//    toc_formatting: toc-table-of-contents-using-buildtoc.html
+//    scripture: scripture.html
+//    footnotes: footnotes.html
+//    indexes: indexes.html
+//    abbr: abbr.html
+//    images: images.html
+//    videos: videos.html
+//    glossary: glossary.html
+//    special: special_types.html
+//  qa:
+//    review: review.html
+//    convert: convert.html
 
 ocr:
   process:

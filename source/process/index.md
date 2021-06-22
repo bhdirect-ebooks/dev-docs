@@ -18,7 +18,7 @@ See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EP
 4. Rename the decompressed directory to the ISBN
 
 ## Step 2: Pull Metadata from Firebrand
-1. Find the ISBN of the title
+1. Find the ISBN of the title (usually in JIRA or wherever the title was assigned to you).
 2. Use the [firebrand-fetch script](https://github.com/EPUBknowledge/firebrand-fetch) to create content.opf
 3. Review the [opf metadata style guide](https://EPUBknowledge.com/docs/opf-metadata) and ensure compliance
 
@@ -49,9 +49,9 @@ See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EP
 Indesign adds all kinds of CSS classes to the markup to do styling, but as with any auto-generated markup/CSS it's not written in the cleanest and most efficient way. We need to work through the content and clean up the extraneous CSS classes and markup tags.
 - Separate each chapter of the content into `<section>` tags and files.
 	- Each section should be put in it's own `DS02_chapterxx.xhtml` file so that page breaks render properly on all devices.
-	- Each file's opening `<body>` tag should have an `EPUB:type` attribute with a value from the [EPUB 3 Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/)
+	- Each file's opening `<body>` tag should have an `epub:type` attribute with a value from the [EPUB 3 Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/)
 - If there are `<p>` tags that are styled as headers, they should be re-formatted as `<h1-h6>` tags, following the [Headings Style Guide](https://style.bhdirect-ebooks.org/code/structural_types.html#Headings) (be sure to note the styles and keep what is needed retain the look of the header)
-- Tables should be formatted according to the [Table Style Guide](https://epubknowledge.com/docs/table) and be added to the [list of tables](https://EPUBknowledge.com/docs/toc#list-of-tables) in toc.xhtml
+- Tables should be formatted according to the [Table Style Guide](https://epubknowledge.com/docs/table) and be added to the [list of tables](https://EPUBknowledge.com/docs/toc#list-of-tables) in `toc.xhtml`
 - Endnotes or footnotes should be formatted as links according to the [Notes Style Guide](https://epubknowledge.com/docs/notes).
 <!--- A set of regex substitutions should be run to resolve common markup problems (empty tags, etc.).  
 **TODO**: Build a list of common markup issues that are generic enough to apply to all EPUBs (including entity code replacements).-->
@@ -91,4 +91,5 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 
 ## Step 10: Prepare Additional Files and Upload
 1. Prepare any additional files listed in the current [Deliverables Style Guide](https://epubknowledge.com/docs/deliverables#reflowable-title)
-2. Upload final folder to Alfresco
+2. Upload files to Alfresco
+	- See the [suggested directory](https://epubknowledge.com/docs/file-structure#uploading-source-files) structure for uploading
