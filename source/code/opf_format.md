@@ -110,16 +110,13 @@ This includes print (hard and soft back) versions as well as other titles in the
 ### Language Metadata
 By default the API assumes the language is English, and will use `en-US` in the `<dc:language>` tag.
 Spanish titles should be changed to `es`.
-
 ```xml
 <dc:language>es</dc:language>
 ```
-
 Other language codes are also acceptable using the [appropriate ISO code](https://www.w3schools.com/tags/ref_language_codes.asp).
 
 ### Coverage Metadata
 By default the coverage is assumed worldwide distribution and the tag is added.
-
 ```xml
 <dc:coverage>Worldwide</dc:coverage>
 ```
@@ -132,7 +129,6 @@ If the title is origin depicted, such as US only, the tag should be removed.
 For journals, `<meta property="dcterms:bibliographicCitation">` must be included as a child of the `<metadata>` element.
 
 <aside class="caution">The `content` attribute value is one, unbroken string, but it is broken below for readability.</aside>
-
 ```xml
 <meta property="dcterms:bibliographicCitation" scheme="kev.ctx"
 content="&ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal
@@ -195,6 +191,7 @@ All fonts should be declared in the Manifest but if a PostScript exists it shoul
 Use the [command above](#OPF-Manifest) to list the contents of the `fonts/` directory, then do the following find-replace actions and paste the result in the `<manifest>` tag.
 
 #### OpenType Font Manifest
+
 ```
 Find:
 ^(.*?)\.otf
@@ -229,16 +226,13 @@ While all other images in the manifest should be PNG format, the cover image sho
 ```xml
 <item id="cover" href="image/Cover.jpg" media-type="image/jpeg" properties="cover-image" />
 ```
-
 Note two important attributes for the cover item:
-
 - `id="cover"` must be lowercase `cover` so it will not clash with [Metdata's Cover declaration](#Cover-Metadata).
 - `properties="cover-image"` to declare that this is the cover image in the ePub.
 
 ## OPF Spine
 While the Manifest lists all the contents of the ePub the Spine renders the order of XHTML files and it's very important to note what is declared in the Spine and one reason the implemented naming convention is required during development is to assist the Spine creation.
 If the XHTML naming convention was followed then in BBEdit open a new file (shortcut <kbd>&#8984;N</kbd>), copy and paste what's in the manifest for XHTML and run the following find-replace:
-
 ```
 Find:
 <item id="(.*)" href.*?$
@@ -252,7 +246,6 @@ Paste the results in the `<spine>` tag.
 
 ### Linear = No in OPF Spine
 There is the ability to apply `linear=no` to `<itemref />` tags to exclude an XHTML file from the reading order.
-
 ```xml
 <spine toc="ncx">
   <itemref idref="toc" />
