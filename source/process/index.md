@@ -40,7 +40,7 @@ See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EP
 
 ## Step 5: Export Title Page Image from Indesign
 1. Open the main content indesign file
-2. Export the title page as a PNG. (Be sure to follow the [Title Page Style Guide](https://EPUBknowledge.com/docs/titlepage).)
+2. Export the title page as a PNG. (Be sure to follow the [Title Page Style Guide](/code/structural_types.html#Title-Page).)
 3. Create the file `text/DS01_frontmatter01.xhtml` from the content file template
 4. Add the image in a [full page `<div>`](https://epubknowledge.com/docs/fullpage)
 5. Be sure the titlepage image is [included in the OPF manifest](https://EPUBknowledge.com/docs/opf-manifest#images)

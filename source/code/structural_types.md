@@ -19,16 +19,36 @@ sips -g space Cover.jpg | tail -n1 | awk '{print $2}'
 the output should say `RGB`. If the output is `Gray` or anything else it should be converted to `RGB`.
 
 ## Title Page
+### Half Title Page
+Half title pages should always be removed and should never be added to an ePub. Exception to this rule is if editorial has made the request but push back is encouraged as it is redundant and customers have complained.
 
-The title page section should be in the second frontmatter document, and it should normally be a PNG of the source title page. However, it can be HTML.
+### Full Title Page
+#### Export Title Page Image from InDesign
+Sometimes the title page can be built with text but for best results the title page should be exported from InDesign as a PNG. After the export is chosen a prompt will appear, apply these setting:
 
-```html
-<body epub:type="frontmatter">
-  <section epub:type="titlepage">
-    <img src="../images/titlepage.png" alt="title page" />
-  </section>
-</body>
+![Export PNG](/assets/images/title-page-export.png)
+
+- **Range**: The page number
+- **Page**: Page should be selected
+- **Image**: Desired image settings
+
+#### Title Page Image Transparency
+It's common for the title page to have transparency and this should be tested because there will be rendering issues with the image in color modes, biggest issue can be found in **iBook's Black Mode**.
+To test if an image is transparent use _sips_ with `hasAlpha`.
+```bash
+sips -g hasAlpha titlepage.png  | cut -d':' -f2-
 ```
+If there is no alpha the response will be `no` in the terminal.
+
+#### Title Page Width
+All title pages should have a width of `1000px` if the title is a reflowable ePub.
+
+#### Title Page Code Sample
+
+<iframe height="500" style="width: 100%;" scrolling="no" title="title page " src="https://codepen.io/bhdirect/embed/a13ade81164f9d9dbf040044d2afb497?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/bhdirect/pen/a13ade81164f9d9dbf040044d2afb497'>title page </a> by BH Direct
+  (<a href='https://codepen.io/bhdirect'>@bhdirect</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Copyright Page
 
