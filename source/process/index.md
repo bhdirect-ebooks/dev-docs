@@ -13,14 +13,14 @@ See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EP
 1. Open the main title contents indd file in Indesign
 2. [Export as EPUB](https://helpx.adobe.com/indesign/using/export-content-epub-cc.html#export-to-epub)  
 3. Unzip the .epub file that Indesign exported.  
-	- [EPUB ZIP/UNZIP](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#ePub-Zip-Unzip-2-0-1)
+	- [EPUB ZIP/UNZIP](/process/tools-setting-your-machine-and-software#ePub-Zip-Unzip-2-0-1)
 	- [unzip-pub script](https://gist.github.com/codingChewie/fe194f5064084d15c6a562ede1487f85)
 4. Rename the decompressed directory to the ISBN
 
 ## Step 2: Pull Metadata from Firebrand
 1. Find the ISBN of the title (usually in JIRA or wherever the title was assigned to you).
 2. Use the [firebrand-fetch script](https://github.com/EPUBknowledge/firebrand-fetch) to create content.opf
-3. Review the [opf metadata style guide](https://EPUBknowledge.com/docs/opf-metadata) and ensure compliance
+3. Review the [opf metadata style guide](/code/metadata.html) and ensure compliance
 
 ## Step 3: File Cleanup
 1. Remove the following files completely (some will be added back later in a better format.)
@@ -56,7 +56,7 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 <!--- A set of regex substitutions should be run to resolve common markup problems (empty tags, etc.).  
 **TODO**: Build a list of common markup issues that are generic enough to apply to all EPUBs (including entity code replacements).-->
 - Add page breaks to align the content with the print version. See the [page break style guide](https://EPUBknowledge.com/docs/pagebreak) for more details.
-- Convert all symbols to numerical entities (see the [entity style guide](https://style.bhdirect-ebooks.org/code/html_style.html#Entity-References)).
+- Convert all symbols to numerical entities (see the [entity style guide](/code/html_style.html#Entity-References)).
 - Use Regex to find and fix all [empty tags](https://epubknowledge.com/docs/xhtml-general#empty-span), [multiple spans](https://epubknowledge.com/docs/xhtml-general#multiple-span), and [self closing tags](https://epubknowledge.com/docs/xhtml-general#self-closing-tags)
 - [Add `format()`](https://EPUBknowledge.com/docs/opentype#css) to all CSS font definitions
 - Remove unused CSS

@@ -95,6 +95,7 @@ Providing alternative contents is important for accessibility reasons: A blind u
 Strictly keep structure (markup) and presentation (styling) apart. That is, make sure documents contain only HTML, and make sure the HTML is solely serving structural purposes. Keep everything presentational in style sheets.
 
 ## Entity References
+<aside class="notice">An app does exist that handles the conversion from named to numerical called [clean-entity.app](https://github.com/epubknowledge/scripts/tree/main/opf/clean-entity). The app will also convert any rendered symbols to their entity.</aside>
 
 Use entity references where necessary. Use numeric entities only. Examples:
 
