@@ -126,7 +126,16 @@ If the title is origin depicted, such as US only, the tag should be removed.
 <aside class="notice">See a [journal metadata](https://gitlab.com/snippets/26999) snippet on GitLab.</aside>
 For journals, `<meta property="dcterms:bibliographicCitation">` must be included as a child of the `<metadata>` element.
 <aside class="caution">The `content` attribute value is one, unbroken string, but it is broken below for readability.</aside>
-
+```xml
+<meta property="dcterms:bibliographicCitation" scheme="kev.ctx"
+content="&ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal
+&rft.jtitle=Full+Journal+Title
+&rft.stitle=ABBR
+&rft.volume=[\d]+
+&rft.issue=[\d]+
+&rft.date=YYYY
+&rft.chron=Month-Month" />
+```
 
 ## OPF Manifest
 All contents within the OEBPS should be declared in the OPF's Manifest.
@@ -165,7 +174,7 @@ Usually, there are only two CSS files and they have consistent names.
 ```
 
 If you have a title with more CSS files, or they are named differently, use the [command above](#OPF-Manifest) to list the contents of the `css/` directory, then do the following find-replace.
-```
+```bash
 Find:
 ^(.*?)\.css
 
