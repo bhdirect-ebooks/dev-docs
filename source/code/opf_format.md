@@ -140,6 +140,7 @@ content="&ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal
 &rft.chron=Month-Month" />
 ```
 
+
 ## OPF Manifest
 All contents within the OEBPS should be declared in the OPF's Manifest.
 If a hidden file exists it should be removed and should not be added to the Manifest.
@@ -191,7 +192,6 @@ All fonts should be declared in the Manifest but if a PostScript exists it shoul
 Use the [command above](#OPF-Manifest) to list the contents of the `fonts/` directory, then do the following find-replace actions and paste the result in the `<manifest>` tag.
 
 #### OpenType Font Manifest
-
 ```
 Find:
 ^(.*?)\.otf
