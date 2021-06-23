@@ -35,7 +35,6 @@ The cover image should be included in the `<metadata>`,
 
 When the title is pulled from the API it will inject the title and subtitle within the `<dc:title>` tag if a subtitle exists.
 If the subtitle exists, separated by a colon, the subtitle should be placed in a refinement tag.
-
 ```xml
 <dc:title id="theTitle">The Title</dc:title>
 <meta refines="#theTitle" property="title-type">The Subtitle</meta><!-- subtitle -->
@@ -44,7 +43,6 @@ If the subtitle exists, separated by a colon, the subtitle should be placed in a
 ### Set/Series Metadata
 
 Likewise, when the work is part of a set or series, make sure to include the set title and volume in a refinement tag.
-
 ```xml
 <dc:title id="theTitle">Halting the Hateful Hand of Mister Malevolent</dc:title>
 <meta refines="theTitle" property="title-type">An Adventure in Mercy</meta><!-- subtitle -->
@@ -55,7 +53,6 @@ Likewise, when the work is part of a set or series, make sure to include the set
 ### Creator Metadata
 Sometimes the '&' symbol could've been entered in Firebrand if the title has multiple creators.
 Each creator should be in their own `<dc:creator>` tag.
-
 ```xml
 <dc:creator>Pamela Kennedy</dc:creator>
 <dc:creator>B&#38;H Kids Editorial Staff</dc:creator>
@@ -66,7 +63,6 @@ Double check the `<dc:subject>` tags to verify that only one subject is used per
 If the subject structure is incorrect Alfresco will not allow the upload and you will be returned an error after the prompt reaches 100%.
 
 If more than one subject exists, each subject should be moved into its own tag.
-
 ```xml
 <dc:subject>Religion</dc:subject>
 <dc:subject>Biblical Commentary</dc:subject>
@@ -86,7 +82,6 @@ If a coded list exists in the description it should be replaced with a bulleted 
 ### Relation
 Each related title should be listed in `<dc:relation>` tags.
 This includes print (hard and soft back) versions as well as other titles in the series.
-
 ```xml
 <dc:relation>
   Title="Foo bar: soft cover"
@@ -126,8 +121,16 @@ If the title is origin depicted, such as US only, the tag should be removed.
 <aside class="notice">See a [journal metadata](https://gitlab.com/snippets/26999) snippet on GitLab.</aside>
 For journals, `<meta property="dcterms:bibliographicCitation">` must be included as a child of the `<metadata>` element.
 <aside class="caution">The `content` attribute value is one, unbroken string, but it is broken below for readability.</aside>
+
 ```xml
-<meta property="dcterms:bibliographicCitation" scheme="kev.ctx" />
+<meta property="dcterms:bibliographicCitation" scheme="kev.ctx"
+content="&ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal
+&rft.jtitle=Full+Journal+Title
+&rft.stitle=ABBR
+&rft.volume=[\d]+
+&rft.issue=[\d]+
+&rft.date=YYYY
+&rft.chron=Month-Month" />
 ```
 
 ## OPF Manifest
@@ -178,6 +181,7 @@ Replace:
 ### Font Manifest
 All fonts should be declared in the Manifest but if a PostScript exists it should be removed and replaced with either an OpenType or TrueType font. If a PostScript font is added to an ePub the text will render as squares in some applications like Apple iBooks.
 <aside class="caution">Sometimes editorial submits fonts with whitespace in their names. If this exists that whitespace must be removed or replaced with a dash or underscore. Sometimes submitted fonts with whitespace are an indication that the font did not come from UTC. If this occurs the font should downloaded and used from UTC.</aside>
+
 Use the [command above](#OPF-Manifest) to list the contents of the `fonts/` directory, then do the following find-replace actions and paste the result in the `<manifest>` tag.
 
 #### OpenType Font Manifest

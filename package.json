@@ -3,11 +3,12 @@
   "version": "2.1.0",
   "private": true,
   "hexo": {
-    "version": "3.7.1"
+    "version": "3.9.0"
   },
   "scripts": {
     "build": "hexo generate && gulp",
-    "deploy": "hexo deploy"
+    "deploy": "hexo deploy",
+    "serve": "hexo serve"
   },
   "dependencies": {
     "cheerio": "^0.20.0",
