@@ -1,19 +1,22 @@
 ---
 title: Structural Types
 ---
-## Cover Page
+## Cover Image
+eISBN.jpg or any cover in the image directory should be named Cover.jpg.
 
-The cover section should be the only content in the first frontmatter document.
+### Width
+Cover.jpg should have a width of `1600px`, unless the total aspect ratio exceeds 4 million pixels. If it does exceed 4 mil then adjust the width in increments of `20px` and test.
 
-As outlined in [File Naming Conventions](construction.html#File-Naming-Conventions), the cover image must be a JPEG, and must be a minimum of 1333x2000 in size.
+### Extension
+Cover.jpg should use the file extension .jpg **not** .jpeg.
 
-```html
-<body epub:type="frontmatter">
-  <section epub:type="cover">
-    <img src="../images/cover.jpg" alt="cover" />
-  </section>
-</body>
+### Color Space
+The cover image should be in an RGB format.
+You can check an image's color space using *sips*.
 ```
+sips -g space Cover.jpg | tail -n1 | awk '{print $2}'
+```
+the output should say `RGB`. If the output is `Gray` or anything else it should be converted to `RGB`.
 
 ## Title Page
 

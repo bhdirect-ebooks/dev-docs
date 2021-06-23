@@ -35,7 +35,7 @@ See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EP
 
 ## Step 4: Export Cover Image from Indesign
 1. Open the main cover indesign file
-2. Export the cover page as a a JPG. (Be sure to follow the [Cover Image Style Guide](https://EPUBknowledge.com/docs/cover-image).)
+2. Export the cover page as a a JPG. (Be sure to follow the [Cover Image Style Guide](/code/structural_types.html#Cover-Image).)
 3. Add the cover image to the [OPF manifest](https://EPUBknowledge.com/docs/opf-manifest#cover)
 
 ## Step 5: Export Title Page Image from Indesign
