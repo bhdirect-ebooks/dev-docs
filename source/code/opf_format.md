@@ -140,8 +140,7 @@ content="&ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal
 &rft.chron=Month-Month" />
 ```
 
-
-## OPF Manifest
+### OPF Manifest
 All contents within the OEBPS should be declared in the OPF's Manifest.
 If a hidden file exists it should be removed and should not be added to the Manifest.
 If any file exists and not referenced it will fail validation.
@@ -258,4 +257,4 @@ There is the ability to apply `linear=no` to `<itemref />` tags to exclude an XH
   <itemref idref="DS03_backmatter01" />
 </spine>
 ```
-This option isn't widely supported on devices since it was implemented around ePub 2 and most apps do not support this, like _Adobe Digital Editions_.
+This option isn't widely supported on devices since it was implemented around ePub 2 and most apps do not support this, like *Adobe Digital Editions*.
