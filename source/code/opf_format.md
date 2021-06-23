@@ -123,6 +123,7 @@ By default the coverage is assumed worldwide distribution and the tag is added.
 If the title is origin depicted, such as US only, the tag should be removed.
 
 ### Journal Metadata
+## OPF Manifest
 
 <aside class="notice">See a [journal metadata](https://gitlab.com/snippets/26999) snippet on GitLab.</aside>
 
@@ -131,7 +132,13 @@ For journals, `<meta property="dcterms:bibliographicCitation">` must be included
 <aside class="caution">The `content` attribute value is one, unbroken string, but it is broken below for readability.</aside>
 ```xml
 <meta property="dcterms:bibliographicCitation" scheme="kev.ctx"
-content="&ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.jtitle=Full+Journal+Title&rft.stitle=ABBR&rft.volume=[\d]+&rft.issue=[\d]+&rft.date=YYYY&rft.chron=Month-Month" />
+content="&ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal
+&rft.jtitle=Full+Journal+Title
+&rft.stitle=ABBR
+&rft.volume=[\d]+
+&rft.issue=[\d]+
+&rft.date=YYYY
+&rft.chron=Month-Month" />
 ```
 
 ## OPF Manifest
