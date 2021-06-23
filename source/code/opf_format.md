@@ -131,16 +131,10 @@ For journals, `<meta property="dcterms:bibliographicCitation">` must be included
 <aside class="caution">The `content` attribute value is one, unbroken string, but it is broken below for readability.</aside>
 ```xml
 <meta property="dcterms:bibliographicCitation" scheme="kev.ctx"
-content="&ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal
-&rft.jtitle=Full+Journal+Title
-&rft.stitle=ABBR
-&rft.volume=[\d]+
-&rft.issue=[\d]+
-&rft.date=YYYY
-&rft.chron=Month-Month" />
+content="&ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.jtitle=Full+Journal+Title&rft.stitle=ABBR&rft.volume=[\d]+&rft.issue=[\d]+&rft.date=YYYY&rft.chron=Month-Month" />
 ```
 
-### OPF Manifest
+## OPF Manifest
 All contents within the OEBPS should be declared in the OPF's Manifest.
 If a hidden file exists it should be removed and should not be added to the Manifest.
 If any file exists and not referenced it will fail validation.
