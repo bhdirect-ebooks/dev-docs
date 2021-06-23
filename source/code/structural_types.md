@@ -23,8 +23,10 @@ the output should say `RGB`. If the output is `Gray` or anything else it should 
 Half title pages should always be removed and should never be added to an ePub. Exception to this rule is if editorial has made the request but push back is encouraged as it is redundant and customers have complained.
 
 ### Full Title Page
+Sometimes the title page can be built with text but for best results the title page should be exported from InDesign as a PNG and placed in the frontmatter as a [full page image](/css_lib/figures.html#Full-Page-Image).
+
 #### Export Title Page Image from InDesign
-Sometimes the title page can be built with text but for best results the title page should be exported from InDesign as a PNG. After the export is chosen a prompt will appear, apply these setting:
+In Indesign, choose `file->export` then apply these settings:
 
 ![Export PNG](/assets/images/title-page-export.png)
 
@@ -40,11 +42,10 @@ sips -g hasAlpha titlepage.png  | cut -d':' -f2-
 ```
 If there is no alpha the response will be `no` in the terminal.
 
-#### Title Page Width
+#### Title Page Image Width
 All title pages should have a width of `1000px` if the title is a reflowable ePub.
 
 #### Title Page Code Sample
-
 <iframe height="500" style="width: 100%;" scrolling="no" title="title page " src="https://codepen.io/bhdirect/embed/a13ade81164f9d9dbf040044d2afb497?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/bhdirect/pen/a13ade81164f9d9dbf040044d2afb497'>title page </a> by BH Direct
   (<a href='https://codepen.io/bhdirect'>@bhdirect</a>) on <a href='https://codepen.io'>CodePen</a>.
