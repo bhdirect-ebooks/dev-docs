@@ -2,8 +2,6 @@
 title: Content.opf Standards
 ---
 
-## Test Header
-
 ## OPF Metadata
 The `<metadata>` element is the required first child of `<body>` in the Package Document (content.opf).
 
