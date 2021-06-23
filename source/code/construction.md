@@ -45,7 +45,7 @@ The container.xml is also the same for every EPUB.
 
 The content.opf is [available here in its basic form](https://github.com/bhdirect-ebooks/epub-container/blob/master/OEBPS/content.opf).
 
-Metadata and included files will vary from one publication to the next, but the link above gives a good overview of the form. For information on `metadata`, see the [Metadata](metadata.html) section.
+Metadata and included files will vary from one publication to the next, but the link above gives a good overview of the form. For information on `metadata`, see the [Content.opf Metadata](opf_format.html#OPF-Metadata) section.
 
 ***Every content file in the EPUB package must be referenced in the manifest.***
 

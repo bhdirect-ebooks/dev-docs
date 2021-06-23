@@ -31,7 +31,7 @@ sidebar:
     git_commit: Git Commit Messages
     epubs: EPUB Guidelines
     construction: Constructing an EPUB
-    metadata: EPUB Metadata
+    opf_format: Content.opf Formatting Rules
     navigation: Navigation Document
     content: Content Markup
     semantics: EPUB Semantics

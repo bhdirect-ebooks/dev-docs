@@ -20,7 +20,7 @@ code:
     git_commit: git_commit.html
   epubs:
     construction: construction.html
-    metadata: metadata.html
+    opf_format: opf_format.html
     navigation: navigation.html
     semantics: semantics.html
 

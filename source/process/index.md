@@ -20,7 +20,7 @@ See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EP
 ## Step 2: Pull Metadata from Firebrand
 1. Find the ISBN of the title (usually in JIRA or wherever the title was assigned to you).
 2. Use the [firebrand-fetch script](https://github.com/EPUBknowledge/firebrand-fetch) to create content.opf
-3. Review the [opf metadata style guide](/code/metadata.html) and ensure compliance
+3. Review the [opf metadata style guide](/code/opf_format.html#OPF-Metadata) and ensure compliance
 
 ## Step 3: File Cleanup
 1. Remove the following files completely (some will be added back later in a better format.)
@@ -36,7 +36,7 @@ See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EP
 ## Step 4: Export Cover Image from Indesign
 1. Open the main cover indesign file
 2. Export the cover page as a a JPG. (Be sure to follow the [Cover Image Style Guide](/code/structural_types.html#Cover-Image).)
-3. Add the cover image to the [OPF manifest](https://EPUBknowledge.com/docs/opf-manifest#cover)
+3. Add the cover image to the [Content.opf manifest](/code/opf_format.html#OPF-Manifest)
 
 ## Step 5: Export Title Page Image from Indesign
 1. Open the main content indesign file
