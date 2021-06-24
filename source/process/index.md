@@ -56,7 +56,7 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 - Add page breaks to align the content with the print version. See the [Page Break Style Guide](/code/structural_types.html#Page-Breaks) for more details.
 - Convert all symbols to numerical entities (see the [Entity References Style Guide](/code/html_style.html#Entity-References)).
 - Use Regex to find and fix all [empty tags](/process/regex-library.html#Remove-Empty-Spans), [multiple spans](/process/regex-library.html#Span-Combine-1), and [self closing tags](/code/html_style.html#Self-Closing-Tags)
-- [Add `format()`](https://EPUBknowledge.com/docs/opentype#css) to all CSS font definitions
+- [Add `format()`](/code/css_style.html#CSS-Font-Declarations) to all CSS font definitions
 - Remove unused CSS
 
 ## Step 7: Create the OPF Manifest and Spine
