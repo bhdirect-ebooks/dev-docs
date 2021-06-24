@@ -83,11 +83,10 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 1. Zip your EPUB using your method of choice.
 	- [EPUB ZIP/UNZIP](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#ePub-Zip-Unzip-2-0-1)
 	- [EPUB zipper](https://github.com/epubknowledge/scripts/tree/main/guidelines/epub-zipper)  
-	<!-- **TODO**: Standardize the suggested method of packaging.  -->
 2. Validate your EPUB using [EPUB checker](https://github.com/epubknowledge/scripts/tree/main/guidelines/epub-checker)
 3. Run additional validation on your EPUB with FlightDeck (Access FlightDeck through the FireBrand record for the title)
 
 ## Step 10: Prepare Additional Files and Upload
-1. Prepare any additional files listed in the current [Deliverables Style Guide](https://epubknowledge.com/docs/deliverables#reflowable-title)
+1. Prepare any additional files listed in the current [Deliverables Style Guide](/process/deliverables.html)
 2. Upload files to Alfresco
 	- See the [suggested directory](https://epubknowledge.com/docs/file-structure#uploading-source-files) structure for uploading
