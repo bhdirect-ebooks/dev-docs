@@ -51,8 +51,8 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 	- Each section should be put in it's own `DS02_chapterxx.xhtml` file so that page breaks render properly on all devices.
 	- Each file's opening `<body>` tag should have an `epub:type` attribute with a value from the [EPUB 3 Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/)
 - If there are `<p>` tags that are styled as headers, they should be re-formatted as `<h1-h6>` tags, following the [Headings Style Guide](https://style.bhdirect-ebooks.org/code/structural_types.html#Headings) (be sure to note the styles and keep what is needed retain the look of the header)
-- Tables should be formatted according to the [Table Style Guide](/code/general_types.html#Tables) and be added to the [list of tables](/code/navigation.html#toc.xhtml-List-of-Tables) in `toc.xhtml`
-- Endnotes or footnotes should be formatted as links according to the [Notes Style Guide](https://epubknowledge.com/docs/notes).
+- Tables should be formatted according to the [Table Style Guide](/code/general_types.html#Tables) and be added to the [list of tables](/code/navigation.html#toc-xhtml-List-of-Tables) in `toc.xhtml`
+- Endnotes or footnotes should be formatted as links according to the [Notes Style Guide](/code/structural_types.html#Notes).
 <!--- A set of regex substitutions should be run to resolve common markup problems (empty tags, etc.).  
 **TODO**: Build a list of common markup issues that are generic enough to apply to all EPUBs (including entity code replacements).-->
 - Add page breaks to align the content with the print version. See the [page break style guide](https://EPUBknowledge.com/docs/pagebreak) for more details.

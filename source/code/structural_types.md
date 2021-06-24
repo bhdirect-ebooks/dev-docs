@@ -130,24 +130,15 @@ EPUB "pagebreak" tags are inserted before the all text of the corresponding sour
 ```
 
 ## Notes
-
-Each note indicator in the document, whether for a footnote or endnote, should be marked with `<sup class="fn">` with a unique backlink `id` and `<a epub:type="noteref" href=...>` as shown in the code example. The corresponding note content should be placed in an `epub:type="footnotes"` section, either in a `<footer>` in each chapter file or in a `backmatter` file.
-
+Footnotes, rearnotes or any kind of notes found in content **must** back link regardless if they exist in the same file or another file as this is a channel requirement.
+The corresponding note content should be placed in an `epub:type="footnotes"` section, either in a `<footer>` in each chapter file or in a `backmatter` file.
 File names must always be included in the `href` attributes of both the footnote link and backlink, even for `<footer>`-based footnotes.
-
-The note content syntax, after the `</sup>` is a non-breaking space (`#160;`) followed by the note wrapped with `<span class="note"></span>`.
-
-**All note text must be included in `<span class="note"></span>` with no exceptions.** For long, multiple-paragraph footnotes, do not use `<p>`. Instead, add line breaks using `<br />`
-
 ```html
-<!-- Note indicator markup -->
-<sup class="fn" id="note-backlink-1"><a epub:type="noteref" href="[filename].xhtml#note-1">[1]</a></sup>
+Note indicator:
+	<a id="endnote-backlink-2-1" href="SC03_backmatter01.xhtml#endnote-2-1" class="superscript">1</a>
 
-<!-- Note content markup -->
-<div id="note-1" epub:type="footnote">
-  <p><sup><a href="[filename].xhtml#note-backlink-1">1</a></sup>&#160;<span class="note">Note text is placed here.<br />Paragraphs are separated with 'br' tags.</span></p>
-</div>
-<!-- One <div> for each note. -->
+Note (in backmatter):
+	<p class="note"><a href="SC02_chapter02.xhtml#endnote-backlink-2-1">1</a>Note content ... </p>
 ```
 
 ## Indexes
