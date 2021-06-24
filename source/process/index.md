@@ -36,14 +36,14 @@ See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EP
 ## Step 4: Export Cover Image from Indesign
 1. Open the main cover indesign file
 2. Export the cover page as a a JPG. (Be sure to follow the [Cover Image Style Guide](/code/structural_types.html#Cover-Image).)
-3. Add the cover image to the [Content.opf manifest](/code/opf_format.html#OPF-Manifest)
+3. Add the cover image to the [Content.opf manifest](/code/opf_format.html#Cover-Image-Manifest)
 
 ## Step 5: Export Title Page Image from Indesign
 1. Open the main content indesign file
 2. Export the title page as a PNG. (Be sure to follow the [Title Page Style Guide](/code/structural_types.html#Title-Page).)
 3. Create the file `text/DS01_frontmatter01.xhtml` from the content file template
 4. Add the image in a [full page `<div>`](/css_lib/figures.html#Full-Page-Image)
-5. Be sure the titlepage image is [included in the OPF manifest](https://EPUBknowledge.com/docs/opf-manifest#images)
+5. Be sure the titlepage image is [included in the OPF manifest](/code/opf_format.html#Image-Manifest)
 
 ## Step 6: Markup Cleanup
 Indesign adds all kinds of CSS classes to the markup to do styling, but as with any auto-generated markup/CSS it's not written in the cleanest and most efficient way. We need to work through the content and clean up the extraneous CSS classes and markup tags.
@@ -51,7 +51,7 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 	- Each section should be put in it's own `DS02_chapterxx.xhtml` file so that page breaks render properly on all devices.
 	- Each file's opening `<body>` tag should have an `epub:type` attribute with a value from the [EPUB 3 Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/)
 - If there are `<p>` tags that are styled as headers, they should be re-formatted as `<h1-h6>` tags, following the [Headings Style Guide](https://style.bhdirect-ebooks.org/code/structural_types.html#Headings) (be sure to note the styles and keep what is needed retain the look of the header)
-- Tables should be formatted according to the [Table Style Guide](https://epubknowledge.com/docs/table) and be added to the [list of tables](https://EPUBknowledge.com/docs/toc#list-of-tables) in `toc.xhtml`
+- Tables should be formatted according to the [Table Style Guide](/code/general_types.html#Tables) and be added to the [list of tables](https://EPUBknowledge.com/docs/toc#list-of-tables) in `toc.xhtml`
 - Endnotes or footnotes should be formatted as links according to the [Notes Style Guide](https://epubknowledge.com/docs/notes).
 <!--- A set of regex substitutions should be run to resolve common markup problems (empty tags, etc.).  
 **TODO**: Build a list of common markup issues that are generic enough to apply to all EPUBs (including entity code replacements).-->
