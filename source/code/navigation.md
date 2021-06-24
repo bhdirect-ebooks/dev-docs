@@ -3,7 +3,7 @@ title: Navigation Document
 ---
 ## toc.xhtml
 All navigational aids are located within the `<body>` of the navigation document (toc.xhtml for our EPUB projects).
-
+When creating a new toc.xhtml file, you should use the [toc.xhtml template](https://github.com/epubknowledge/bbedit-templates/blob/master/toc/toc.xhtml).
 Each one is an ordered list (`<ol>`) of hyperlinks (`<li><a></a></li>`) nested in a `<nav>` element.
 ```html
 <nav>
@@ -14,7 +14,7 @@ Each one is an ordered list (`<ol>`) of hyperlinks (`<li><a></a></li>`) nested i
 </nav>
 ```
 
-### Table of Contents
+### toc.xhtml Table of Contents
 Each EPUB we develop must have a TOC in the navigation document.
 General guidelines for the TOC:
 * The EPUB TOC should reflect the printed TOC, but...
@@ -33,7 +33,7 @@ General guidelines for the TOC:
 ```
 <aside class="notice">When building the Table of Contents the [_toc.xhtml_ template](https://github.com/epubknowledge/scripts/blob/main/toc-ncx/bbedit-toc-ncx-templates/toc.xhtml) should be used.</aside>
 
-#### Nesting Table of Contents
+#### Nesting Table of Contents in toc.xhtml
 Table of Contents entries that have children should be nested.
 ```html
 <nav epub:type="toc" id="toc">
@@ -122,3 +122,40 @@ Do not add the title page or ornaments in this list.
 </nav>
 ```
 <aside class="notice">If a table is an image it should be included in the `lot` and not the `loi`.</aside>
+
+## toc.ncx
+A _toc.ncx_ should be included in every ePub for backwards compatibility and the [*toc.ncx* template](https://github.com/epubknowledge/bbedit-templates/blob/master/ncx/toc.ncx) should be placed in BBEdit stationary. If you're wanting to test nesting or rendering from the _toc.ncx_ file this can be done in [_Adobe Digital Editions_](https://github.com/epubknowledge/scripts/tree/main/toc-ncx/adobe-digital-editions).
+```html
+<docTitle><text>ePub Documentation</text></docTitle>
+<navMap>
+	<navPoint id="navPoint-1" playOrder="1"><navLabel><text>Foo</text></navLabel><content src="text/SC02_chapter01.xhtml"/></navPoint>
+</navMap>
+</ncx>
+```
+
+### Duplicate `src` in tox.ncx
+epubcheck does require that the NCX have unique src attributes.
+If the src attribute needs to be changed it should be done in the *toc.xhtml* as well as the *toc.ncx*.
+```html
+<docTitle><text>ePub Documentation</text></docTitle>
+<navMap>
+	<navPoint id="navPoint-1" playOrder="1"><navLabel><text>Header 1</text></navLabel><content src="text/SC02_chapter01.xhtml#page1"/></navPoint>
+	<navPoint id="navPoint-2" playOrder="2"><navLabel><text>Header 2</text></navLabel><content src="text/SC02_chapter01.xhtml#page25"/></navPoint>
+</navMap>
+</ncx>
+```
+<aside class="warning">Span tags should **not** exist in the NCX.</aside>
+
+### Nesting `navPoint`s in toc.ncx
+If there are [Table of Contents entries that have children nested](#Nesting-Table-of-Contents), they should also be nested in the toc.ncx.
+```html
+<docTitle><text>ePub Documentation</text></docTitle>
+<navMap>
+	<navPoint id="navPoint-1" playOrder="1">
+		<navLabel><text>Header</text></navLabel><content src="text/SC02_chapter01.xhtml"/>
+		
+		<navPoint id="navPoint-2" playOrder="2"><navLabel><text>Sub Header</text></navLabel><content src="text/SC02_chapter01.xhtml#page25"/></navPoint>
+	</navPoint>
+</navMap>
+</ncx>
+```

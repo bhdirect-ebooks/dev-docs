@@ -60,24 +60,24 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 - Remove unused CSS
 
 ## Step 7: Create the OPF Manifest and Spine
-1. [List the font files used](https://EPUBknowledge.com/docs/opf-manifest#fonts) in the manifest.
-2. [List the CSS files used](https://EPUBknowledge.com/docs/opf-manifest#css) in the manifest.
-3. [List the images used](https://EPUBknowledge.com/docs/opf-manifest#images) (including [the cover](https://EPUBknowledge.com/docs/opf-manifest#cover)) in the manifest.
-4. [List the text files used](https://EPUBknowledge.com/docs/opf-manifest#xhtml) in the manifest.
-5. [Add the navigation files](https://EPUBknowledge.com/docs/opf-manifest#navigation) to the manifest
-5. The `<spine>` tag determines the order in which the content files are rendered in the final EPUB. [Populate it from the text entries in the manifest](https://EPUBknowledge.com/docs/opf-spine/) (be sure to include the toc.xhtml).
+1. [List the font files used](/code/opf_format.html#Font-Manifest) in the manifest.
+2. [List the CSS files used](/code/opf_format.html#CSS-Manifest) in the manifest.
+3. [List the images used](/code/opf_format.html#Image-Manifest) (including [the cover](/code/opf_format.html#Cover-Image-Manifest)) in the manifest.
+4. [List the text files used](/code/opf_format.html#Text-XHTML-Manifest) in the manifest.
+5. [Add the navigation files](/code/opf_format.html#Navigation-Manifest) to the manifest
+5. Populate the [`<spine>` tag](/code/opf_format.html#OPF-Spine) from the table of contents. (be sure to include the toc.xhtml).
 
 ## Step 8: Build the Table of Contents
-1. Create a new `OEBPS/toc.xhtml` file from the [TOC template](https://EPUBknowledge.com/docs/toc#template)
+1. Create a new `OEBPS/toc.xhtml` file from the [TOC template](/code/navigation.html#toc-xhtml)
 2. Build a Table of Contents list in the `nav#toc` element.
-	- See The [TOC Style Guide](https://EPUBknowledge.com/docs/toc#toc)
+	- See The [TOC Style Guide](/code/navigation.html#toc-xhtml)
 3. Build a page list in the `nav[EPUB:type="page-list"]` element.
 	- Every page number that exists in the print version should be included in this list and linked to the pagebreak in the content files.
-	- See the [Page List Style Guide](https://EPUBknowledge.com/docs/toc#page-list)
-4. Add the [list of images](https://EPUBknowledge.com/docs/toc#list-of-images) and [list of tables](https://EPUBknowledge.com/docs/toc#list-of-tables)
-5. Create a new `OEBPS/toc.ncx` file from the [NCX template](https://EPUBknowledge.com/docs/ncx)
+	- See the [Page List Style Guide](/code/navigation.html#toc-xhtml-Page-List)
+4. Add the [list of images](/code/navigation.html#toc-xhtml-List-Of-Images) and [list of tables](/code/navigation.html#toc-xhtml-List-Of-Tables)
+5. Create a new `OEBPS/toc.ncx` file from the [NCX template](/code/navigation.html#toc-ncx)
 6. Fill in the meta data in `OEBPS/toc.ncx`
-7. Use the Table of Contents list to [generate the `<navMap>`](https://EPUBknowledge.com/docs/ncx)
+7. Use the Table of Contents list to [build the `<navMap>`](/code/navigation.html#toc-ncx)
 
 ## Step 9: Package your EPUB
 1. Zip your EPUB using your method of choice.
