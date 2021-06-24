@@ -110,24 +110,20 @@ _**Note that the numbers 1-6 here indicate hierarchy level, not sequential order
 <aside class="notice">Let's imagine we have a book with the following structure.<ul style="list-style-type:none"><li>Preface</li><li>Introduction</li><li>Part A<ul style="list-style-type:none"><li>Part A-1<ul style="list-style-type:none"><li>Chapter 1</li><li>Chapter 2</li></ul></li><li>Part A-2<ul style="list-style-type:none"><li>Chapter 3</li></ul></li></ul></li><li>Interlude</li><li>Part B<ul style="list-style-type:none"><li>Chapter 4</li><li>Chapter 5</li></ul></li><li>Conclusion</li><li>Index</li></ul><p>In this case, the `<section epub:type="">` and `<h1>` conventions would be like so:</p><table><tr><th>Book Section</th><th>Section Epub Type</th><th>h1</th></tr><tr><td>Preface</td><td>`preface`</td><td>`<h1 class="top-level">Preface</h1>`</td></tr><tr><td>Introduction</td><td>`introduction`</td><td>`<h1 class="top-level">Introduction</h1>`</td></tr><tr><td>Part A</td><td>`part`</td><td>`<h1 class="part-1">Part A</h1>`</td></tr><tr><td>Part A-1</td><td>`part`</td><td>`<h1 class="part-2">Part A-1</h1>`</td></tr><tr><td>Chapter 1</td><td>`chapter`</td><td>`<h1>Chapter 1</h1>`</td></tr><tr><td>Chapter 2</td><td>`chapter`</td><td>`<h1>Chapter 2</h1>`</td></tr><tr><td>Part A-2</td><td>`part`</td><td>`<h1 class="part-2">Part A-2</h1>`</td></tr><tr><td>Chapter 3</td><td>`chapter`</td><td>`<h1>Chapter 3</h1>`</td></tr><tr><td>Interlude</td><td>`chapter`</td><td>`<h1 class="top-level">Interlude</h1>`</td></tr><tr><td>Part B</td><td>`part`</td><td>`<h1 class="part-1">Part B</h1>`</td></tr><tr><td>Chapter 4</td><td>`chapter`</td><td>`<h1>Chapter 4</h1>`</td></tr><tr><td>Chapter 5</td><td>`chapter`</td><td>`<h1>Chapter 5</h1>`</td></tr><tr><td>Conclusion</td><td>`conclusion`</td><td>`<h1 class="top-level">Conclusion</h1>`</td></tr><tr><td>Index</td><td>`index`</td><td>`<h1 class="top-level">Index</h1>`</td></tr></table></aside>
 
 ## Page Breaks
-
-Pages should be marked with an `<span>` element and the EPUB `pagebreak` type, like the example here (where <em>X</em> is the page identifier).
-
+Pages should be marked with an `<a>` element and the EPUB `pagebreak` type.
 ```html
 <span epub:type="pagebreak" id="pageX" title="X"></span>
 ```
-
-EPUB "pagebreak" tags are inserted before the all text of the corresponding source page, and for our team, they must follow these guidelines:
-
+EPUB `pagebreak` tags are inserted before all of the text on the corresponding source page, and for our team, they must follow these guidelines:
 * not in `h1-6` but above
 * not breaking Scripture references
 * not as direct children of `<ol>`, `<ul>`, `<dl>`, or `<table>` (HTML syntax rules)
-
 ```html
 <!-- Above headings -->
-<span epub:type="pagebreak" id="page808" title="808"></span>
+<a epub:type="pagebreak" id="page123" title="123"></a>
 <h1>My Heading</h1>
 ```
+<aside class="notice">If a page break is the first or last element in a `<p>` tag, it should be moved to outside the `<p>` tag and placed on its own line.</aside>
 
 ## Notes
 Footnotes, rearnotes or any kind of notes found in content **must** back link regardless if they exist in the same file or another file as this is a channel requirement.
@@ -138,7 +134,7 @@ Note indicator:
 	<a id="endnote-backlink-2-1" href="SC03_backmatter01.xhtml#endnote-2-1" class="superscript">1</a>
 
 Note (in backmatter):
-	<p class="note"><a href="SC02_chapter02.xhtml#endnote-backlink-2-1">1</a>Note content ... </p>
+	<p class="note"><a href="SC02_chapter02.xhtml#endnote-backlink-2-1">1.</a> Note content ... </p>
 ```
 
 ## Indexes

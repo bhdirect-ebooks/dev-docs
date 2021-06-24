@@ -55,7 +55,7 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 - Endnotes or footnotes should be formatted as links according to the [Notes Style Guide](/code/structural_types.html#Notes).
 <!--- A set of regex substitutions should be run to resolve common markup problems (empty tags, etc.).  
 **TODO**: Build a list of common markup issues that are generic enough to apply to all EPUBs (including entity code replacements).-->
-- Add page breaks to align the content with the print version. See the [page break style guide](https://EPUBknowledge.com/docs/pagebreak) for more details.
+- Add page breaks to align the content with the print version. See the [Page Break Style Guide](/code/structural_types.html#Page-Breaks) for more details.
 - Convert all symbols to numerical entities (see the [entity style guide](/code/html_style.html#Entity-References)).
 - Use Regex to find and fix all [empty tags](https://epubknowledge.com/docs/xhtml-general#empty-span), [multiple spans](https://epubknowledge.com/docs/xhtml-general#multiple-span), and [self closing tags](https://epubknowledge.com/docs/xhtml-general#self-closing-tags)
 - [Add `format()`](https://EPUBknowledge.com/docs/opentype#css) to all CSS font definitions
