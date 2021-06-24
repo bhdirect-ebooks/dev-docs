@@ -53,11 +53,9 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 - If there are `<p>` tags that are styled as headers, they should be re-formatted as `<h1-h6>` tags, following the [Headings Style Guide](https://style.bhdirect-ebooks.org/code/structural_types.html#Headings) (be sure to note the styles and keep what is needed retain the look of the header)
 - Tables should be formatted according to the [Table Style Guide](/code/general_types.html#Tables) and be added to the [list of tables](/code/navigation.html#toc-xhtml-List-of-Tables) in `toc.xhtml`
 - Endnotes or footnotes should be formatted as links according to the [Notes Style Guide](/code/structural_types.html#Notes).
-<!--- A set of regex substitutions should be run to resolve common markup problems (empty tags, etc.).  
-**TODO**: Build a list of common markup issues that are generic enough to apply to all EPUBs (including entity code replacements).-->
 - Add page breaks to align the content with the print version. See the [Page Break Style Guide](/code/structural_types.html#Page-Breaks) for more details.
-- Convert all symbols to numerical entities (see the [entity style guide](/code/html_style.html#Entity-References)).
-- Use Regex to find and fix all [empty tags](https://epubknowledge.com/docs/xhtml-general#empty-span), [multiple spans](https://epubknowledge.com/docs/xhtml-general#multiple-span), and [self closing tags](https://epubknowledge.com/docs/xhtml-general#self-closing-tags)
+- Convert all symbols to numerical entities (see the [Entity References Style Guide](/code/html_style.html#Entity-References)).
+- Use Regex to find and fix all [empty tags](/process/regex-library.html#Remove-Empty-Spans), [multiple spans](/process/regex-library.html#Span-Combine-1), and [self closing tags](https://epubknowledge.com/docs/xhtml-general#self-closing-tags)
 - [Add `format()`](https://EPUBknowledge.com/docs/opentype#css) to all CSS font definitions
 - Remove unused CSS
 
