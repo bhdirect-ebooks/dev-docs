@@ -58,6 +58,7 @@ process:
     overview: index.html
     regex-library: regex-library.html
     fonts: fonts.html
+    deliverables: deliverables.html
 //  prep:
 //    admin: project_admin.html
 //    scaffold: proj_scaffold.html
