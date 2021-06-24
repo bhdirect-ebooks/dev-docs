@@ -42,6 +42,15 @@ Use valid XHTML in the context of EPUB3 specifications.
 * Close void elements: <code class="rec">&#60;br /&#62;</code>, not <code class="not">&#60;br&#62;</code>.
 * Use end tags: <code class="rec">&#60;p&#62;Text&#60;/p&#62;</code>, not <code class="not">&#60;p&#62;Text</code>.
 
+## Self Closing Tags
+
+Self closing tags are not allowed except for images. For example: `<p class=”foobar” />` should be replaced with `<p class=”foobar”></p>`. Good references:
+
+- [Are self-closing tags valid in HTML5?](https://stackoverflow.com/questions/3558119/are-non-void-self-closing-tags-valid-in-html5)
+- [Difference between “> or ” /> in HTML](https://stackoverflow.com/questions/16173514/difference-between-or-in-html)
+- [Do we still need end slashes in HTML5?](https://stackoverflow.com/questions/7366344/do-we-still-need-end-slashes-in-html5)
+- [Why do browsers think this <div/> tag isn't immediately ended?](https://stackoverflow.com/questions/5455768/why-do-browsers-think-this-div-tag-isnt-immediately-ended)
+
 ## Semantics
 
 Use HTML according to its purpose, and always prefer semantic elements over those that are semantically ambiguous.
