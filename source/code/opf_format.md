@@ -123,6 +123,19 @@ If the title is origin depicted, such as US only, the tag should be removed.
 Since EPUB readers [assume reflowable content by default](https://www.w3.org/publishing/epub3/epub-packages.html#layout-usage), when building a fixed-layout title we must explicitly declare the layout in the content.opf.
 ```xml
 <meta property="rendition:layout">pre-paginated</meta>
+<meta property="rendition:spread">landscape</meta>
+<meta property="rendition:orientation">landscape</meta>
+<meta property="ibooks:binding">false</meta>
+```
+
+Because of transparency and magnification differences, a `.mobi` file must be created for fixed-layout titles. There are some additional metadata entries that are required for the `.mobi` file.
+```xml
+<meta property="rendition:layout">pre-paginated</meta>
+<meta property="rendition:spread">landscape</meta>
+<meta name="book-type" content="children" />
+<meta name="fixed-layout" content="true" />
+<meta name="RegionMagnification" content="true" />
+<meta name="original-resolution" content="720x504" />
 ```
 
 ### Journal Metadata
