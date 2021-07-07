@@ -96,8 +96,89 @@ When a chapter has a label of some kind (e.g., "Chapter 1", "1", "A" "IV", etc.)
 Whenever a book has a part structure (hierarchical groupings of related chapters), at least one special class (`.top-level`) should be used with _any `<h1>` element in front, back, or body that does not belong in a part_.
 
 ##### `.top-level` Example
-
-<aside class="notice">Let's imagine we have a book with the following structure. <strong>The bolded sections should have the `.top-level` class on their `<h1>` elements.</strong><ul style="list-style-type:none"><li><strong>Preface</strong></li><li><strong>Introduction</strong></li><li>Part 1<ul style="list-style-type:none"><li>Chapter 1</li><li>Chapter 2</li></ul></li><li><strong>Interlude</strong></li><li>Part 2<ul style="list-style-type:none"><li>Chapter 3</li><li>Chapter 4</li></ul></li><li><strong>Conclusion</strong></li><li><strong>Index</strong></li></ul><p>More specifically, the `<section epub:type="">` and `<h1>` conventions would be like so:</p><table><tr><th>Book Section</th><th>Section Epub Type</th><th>h1</th></tr><tr><td>Preface</td><td>`preface`</td><td>`<h1 class="top-level">Preface</h1>`</td></tr><tr><td>Introduction</td><td>`introduction`</td><td>`<h1 class="top-level">Introduction</h1>`</td></tr><tr><td>Part 1</td><td>`part`</td><td>`<h1>Part 1</h1>`</td></tr><tr><td>Chapter 1</td><td>`chapter`</td><td>`<h1>Chapter 1</h1>`</td></tr><tr><td>Chapter 2</td><td>`chapter`</td><td>`<h1>Chapter 2</h1>`</td></tr><tr><td>Interlude</td><td>`chapter`</td><td>`<h1 class="top-level">Interlude</h1>`</td></tr><tr><td>Part 2</td><td>`part`</td><td>`<h1>Part 2</h1>`</td></tr><tr><td>Chapter 3</td><td>`chapter`</td><td>`<h1>Chapter 3</h1>`</td></tr><tr><td>Chapter 4</td><td>`chapter`</td><td>`<h1>Chapter 4</h1>`</td></tr><tr><td>Conclusion</td><td>`conclusion`</td><td>`<h1 class="top-level">Conclusion</h1>`</td></tr><tr><td>Index</td><td>`index`</td><td>`<h1 class="top-level">Index</h1>`</td></tr></table></aside>
+<p>Let's imagine we have a book with the following structure. <strong>The bolded sections should have the `.top-level` class on their `&#60;h1&#62;` elements.</strong></p>
+<ul style="list-style-type:none">
+    <li><strong>Preface</strong></li>
+    <li><strong>Introduction</strong></li>
+    <li>Part 1
+        <ul style="list-style-type:none">
+            <li>Chapter 1</li>
+            <li>Chapter 2</li>
+        </ul>
+    </li>
+    <li><strong>Interlude</strong></li>
+    <li>Part 2
+        <ul style="list-style-type:none">
+            <li>Chapter 3</li>
+            <li>Chapter 4</li>
+        </ul>
+    </li>
+    <li><strong>Conclusion</strong></li>
+    <li><strong>Index</strong></li>
+</ul>
+<p>More specifically, the <code>&#60;section epub:type=""&#62;</code> and <code>&#60;h1&#62;</code> conventions would be like so:</p>
+<table>
+    <tr>
+        <th>Book Section</th>
+        <th>Section Epub Type</th>
+        <th>h1</th>
+    </tr>
+    <tr>
+        <td>Preface</td>
+        <td><code>preface</code></td>
+        <td><code>&#60;h1 class="top-level"&#62;Preface&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Introduction</td>
+        <td><code>introduction</code></td>
+        <td><code>&#60;h1 class="top-level"&#62;Introduction&#60/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Part 1</td>
+        <td><code>part</code></td>
+        <td><code>&#60;h1&#62;Part 1&#60/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Chapter 1</td>
+        <td><code>chapter</code></td>
+        <td><code>&#60;h1&#62;Chapter 1&#60/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Chapter 2</td>
+        <td><code>chapter</code></td>
+        <td><code>&#60;h1&#62;Chapter 2&#60/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Interlude</td>
+        <td><code>chapter</code></td>
+        <td><code>&#60;h1 class="top-level"&#62;Interlude&#60/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Part 2</td>
+        <td><code>part</code></td>
+        <td><code>&#60;h1&#62;Part 2&#60/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Chapter 3</td>
+        <td><code>chapter</code></td>
+        <td><code>&#60;h1&#62;Chapter 3&#60/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Chapter 4</td>
+        <td><code>chapter</code></td>
+        <td><code>&#60;h1&#62;Chapter 4&#60/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Conclusion</td>
+        <td><code>conclusion</code></td>
+        <td><code>&#60;h1 class="top-level"&#62;Conclusion&#60/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Index</td>
+        <td><code>index</code></td>
+        <td><code>&#60;h1 class="top-level"&#62;Index&#60/h1&#62;</code></td>
+    </tr>
+</table>
 
 ##### Sub-Parts
 
@@ -106,8 +187,113 @@ When there are parts that consist of sub-parts, the special classes `.part-1`, `
 _**Note that the numbers 1-6 here indicate hierarchy level, not sequential order!**_ ([Just like h1-6 tags.](http://w3c.github.io/html/sections.html#outline))
 
 ###### Sub-Parts Example
-
-<aside class="notice">Let's imagine we have a book with the following structure.<ul style="list-style-type:none"><li>Preface</li><li>Introduction</li><li>Part A<ul style="list-style-type:none"><li>Part A-1<ul style="list-style-type:none"><li>Chapter 1</li><li>Chapter 2</li></ul></li><li>Part A-2<ul style="list-style-type:none"><li>Chapter 3</li></ul></li></ul></li><li>Interlude</li><li>Part B<ul style="list-style-type:none"><li>Chapter 4</li><li>Chapter 5</li></ul></li><li>Conclusion</li><li>Index</li></ul><p>In this case, the `<section epub:type="">` and `<h1>` conventions would be like so:</p><table><tr><th>Book Section</th><th>Section Epub Type</th><th>h1</th></tr><tr><td>Preface</td><td>`preface`</td><td>`<h1 class="top-level">Preface</h1>`</td></tr><tr><td>Introduction</td><td>`introduction`</td><td>`<h1 class="top-level">Introduction</h1>`</td></tr><tr><td>Part A</td><td>`part`</td><td>`<h1 class="part-1">Part A</h1>`</td></tr><tr><td>Part A-1</td><td>`part`</td><td>`<h1 class="part-2">Part A-1</h1>`</td></tr><tr><td>Chapter 1</td><td>`chapter`</td><td>`<h1>Chapter 1</h1>`</td></tr><tr><td>Chapter 2</td><td>`chapter`</td><td>`<h1>Chapter 2</h1>`</td></tr><tr><td>Part A-2</td><td>`part`</td><td>`<h1 class="part-2">Part A-2</h1>`</td></tr><tr><td>Chapter 3</td><td>`chapter`</td><td>`<h1>Chapter 3</h1>`</td></tr><tr><td>Interlude</td><td>`chapter`</td><td>`<h1 class="top-level">Interlude</h1>`</td></tr><tr><td>Part B</td><td>`part`</td><td>`<h1 class="part-1">Part B</h1>`</td></tr><tr><td>Chapter 4</td><td>`chapter`</td><td>`<h1>Chapter 4</h1>`</td></tr><tr><td>Chapter 5</td><td>`chapter`</td><td>`<h1>Chapter 5</h1>`</td></tr><tr><td>Conclusion</td><td>`conclusion`</td><td>`<h1 class="top-level">Conclusion</h1>`</td></tr><tr><td>Index</td><td>`index`</td><td>`<h1 class="top-level">Index</h1>`</td></tr></table></aside>
+<p>Let's imagine we have a book with the following structure.</p>
+<ul style="list-style-type:none">
+    <li>Preface</li>
+    <li>Introduction</li>
+    <li>Part A
+        <ul style="list-style-type:none">
+            <li>Part A-1
+                <ul style="list-style-type:none">
+                    <li>Chapter 1</li>
+                    <li>Chapter 2</li>
+                </ul>
+            </li>
+            <li>Part A-2
+                <ul style="list-style-type:none">
+                    <li>Chapter 3</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Interlude</li>
+    <li>Part B
+        <ul style="list-style-type:none">
+            <li>Chapter 4</li>
+            <li>Chapter 5</li>
+        </ul>
+    </li>
+    <li>Conclusion</li>
+    <li>Index</li>
+</ul>
+<p>In this case, the <code>&#60;section epub:type=""&#62;</code> and <code>&#60;h1&#62;</code> conventions would be like so:</p>
+<table>
+    <tr>
+        <th>Book Section</th>
+        <th>Section Epub Type</th>
+        <th>h1</th>
+    </tr>
+    <tr>
+        <td>Preface</td>
+        <td><code>preface</code></td>
+        <td><code>&#60;h1 class="top-level"&#62;Preface&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Introduction</td>
+        <td><code>introduction</code></td>
+        <td><code>&#60;h1 class="top-level"&#62;Introduction&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Part A</td>
+        <td><code>part</code></td>
+        <td><code>&#60;h1 class="part-1"&#62;Part A&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Part A-1</td>
+        <td><code>part</code></td>
+        <td><code>&#60;h1 class="part-2"&#62;Part A-1&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Chapter 1</td>
+        <td><code>chapter</code></td>
+        <td><code>&#60;h1&#62;Chapter 1&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Chapter 2</td>
+        <td><code>chapter</code></td>
+        <td><code>&#60;h1&#62;Chapter 2&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Part A-2</td>
+        <td><code>part</code></td>
+        <td><code>&#60;h1 class="part-2"&#62;Part A-2&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Chapter 3</td>
+        <td><code>chapter</code></td>
+        <td><code>&#60;h1&#62;Chapter 3&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Interlude</td>
+        <td><code>chapter</code></td>
+        <td><code>&#60;h1 class="top-level"&#62;Interlude&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Part B</td>
+        <td><code>part</code></td>
+        <td><code>&#60;h1 class="part-1"&#62;Part B&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Chapter 4</td>
+        <td><code>chapter</code></td>
+        <td><code>&#60;h1&#62;Chapter 4&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Chapter 5</td>
+        <td><code>chapter</code></td>
+        <td><code>&#60;h1&#62;Chapter 5&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Conclusion</td>
+        <td><code>conclusion</code></td>
+        <td><code>&#60;h1 class="top-level"&#62;Conclusion&#60;/h1&#62;</code></td>
+    </tr>
+    <tr>
+        <td>Index</td>
+        <td><code>index</code></td>
+        <td><code>&#60;h1 class="top-level"&#62;Index&#60;/h1&#62;</code></td>
+    </tr>
+</table>
 
 ## Page Breaks
 Pages should be marked with an `<a>` element and the EPUB `pagebreak` type.

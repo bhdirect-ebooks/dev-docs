@@ -25,6 +25,8 @@ A good practice to see if any metadata could be added is to always reference the
 </metadata>
 ```
 
+<aside class="warning">For fixed-layout EPUBs there are more [required tags](#FixedLayoutMetadata).</span>
+
 ### Cover Metadata
 The cover image should be included in the `<metadata>`,
 ```
@@ -117,6 +119,12 @@ By default the coverage is assumed worldwide distribution and the tag is added.
 ```
 If the title is origin depicted, such as US only, the tag should be removed.
 
+### Fixed Layout Metadata
+Since EPUB readers [assume reflowable content by default](https://www.w3.org/publishing/epub3/epub-packages.html#layout-usage), when building a fixed-layout title we must explicitly declare the layout in the content.opf.
+```xml
+<meta property="rendition:layout">pre-paginated</meta>
+```
+
 ### Journal Metadata
 <aside class="notice">See a [journal metadata](https://gitlab.com/snippets/26999) snippet on GitLab.</aside>
 For journals, `<meta property="dcterms:bibliographicCitation">` must be included as a child of the `<metadata>` element.
@@ -163,10 +171,15 @@ The following two navigation files should always be included in the `<manifest>`
 
 ### CSS Manifest
 All CSS in the CSS directory should be included in the Manifest.
-Usually, there are only two CSS files and they have consistent names.
+For reflowable EPUBs, there are usually two CSS files and they have consistent names.
 ```xml
 <item id="idGeneratedStyles.css" href="css/idGeneratedStyles.css" media-type="text/css" />
 <item id="epub3.css" href="css/epub3.css" media-type="text/css" />
+```
+
+For fixed-layout EPUBs, the epub3.css file is not necessary.
+```xml
+<item id="idGeneratedStyles.css" href="css/idGeneratedStyles.css" media-type="text/css" />
 ```
 
 If you have a title with more CSS files, or they are named differently, use the [command above](#OPF-Manifest) to list the contents of the `css/` directory, then do the following find-replace.
