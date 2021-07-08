@@ -25,7 +25,7 @@ A good practice to see if any metadata could be added is to always reference the
 </metadata>
 ```
 
-<aside class="warning">For fixed-layout EPUBs there are more [required tags](#FixedLayoutMetadata).</span>
+<aside class="warning">For fixed-layout EPUBs there are more [required tags](#FixedLayoutMetadata).</aside>
 
 ### Cover Metadata
 The cover image should be included in the `<metadata>`,
