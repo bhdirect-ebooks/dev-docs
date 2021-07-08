@@ -23,7 +23,7 @@ In some instances a title may require a fixed layout version along with a reflow
 - **eISBN.epub**
 - **eISBN_sample.epub**
 - **eISBN.pdf:** Print edition PDF with cover image inserted and named as _Cover_ and crop marks removed. If a PDF is not supplied do an export from the InDesign file and add the Cover and rename to Cover using Acrobat.
-- **eISBN.mobi** EPUB with [required additional metadata](/code/opf_format.html#FixedLayoutMetadata), converted to mobi format using kindlegen or Kindle Previewer
+- **eISBN.mobi** EPUB with [required additional metadata](/code/opf_format.html#Fixed-Layout-Metadata), converted to mobi format using kindlegen or Kindle Previewer
 
 ### Enhanced Deliverables <sup>(historically named iBooks in Alfresco)</sup>
 - **eISBN_sample_enhanced.epub**
