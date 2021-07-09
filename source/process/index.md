@@ -76,7 +76,8 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 - Convert all symbols to numerical entities (see the [Entity References Style Guide](/code/html_style.html#Entity-References)).
 - Use Regex to find and fix all [empty tags](/process/regex-library.html#Remove-Empty-Spans), [multiple spans](/process/regex-library.html#Span-Combine-1), and [self closing tags](/code/html_style.html#Self-Closing-Tags)
 - [Add `format()`](/code/css_style.html#CSS-Font-Declarations) to all CSS font definitions
-- Remove unused CSS
+- Find and remove any `CharOverride` and `ParaOverride` classes in the xhtml
+- Remove unused CSS (including the `CharOrverride` and `ParaOverride` rules)
 
 ## Step 7: Create the OPF Manifest and Spine
 1. [List the font files used](/code/opf_format.html#Font-Manifest) in the manifest.
