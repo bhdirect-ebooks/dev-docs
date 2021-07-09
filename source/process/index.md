@@ -11,11 +11,29 @@ See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EP
 
 ## Step 1: Export EPUB from Indesign
 1. Open the main title contents indd file in Indesign
-2. [Export as EPUB](https://helpx.adobe.com/indesign/using/export-content-epub-cc.html#export-to-epub)  
-3. Unzip the .epub file that Indesign exported.  
+2. Anchor images in the text so that they are in the right place when you export the EPUB.
+    1. Find your image in the Indesign document
+    2. Click the little blue square in the upper right corner of the image and drag it to the place in the text where you want the image to be placed in the text.
+    
+    <aside class="notice">
+    
+    See [This short YouTube video](https://www.youtube.com/watch?v=5eEp6uIIjII) for a visual demonstration.
+    
+    </aside>
+3. Review the Paragraph and Character Styles
+    1. Reviewing the paragraph styles will give you a good idea of what types of CSS classes you will need.
+    2. Any styles that are not necessary (like "no_break", or "keep_together") can be removed in Indesign before exporting.
+4. [Export as EPUB](https://helpx.adobe.com/indesign/using/export-content-epub-cc.html#export-to-epub) (<kbd>&#8984;E</kbd>)
+    1. Under General, make sure Version is set to "EPUB 3.0"
+    2. Under General, set Cover to "None"
+    3. Under Text > Options, check "Remove Forced Line Breaks"
+    4. Under Text > Lists, set Bullets and Numbers to "Convert to Text"
+    5. Under Conversion settings, set Format to "PNG" and resolution to 150 PPI
+    6. Under HTML & CSS > Additional CSS, click "Add Style Sheet" and add epub3.css from your local machine
+5. Unzip the .epub file that Indesign exported.  
 	- [EPUB ZIP/UNZIP](/process/tools-setting-your-machine-and-software#ePub-Zip-Unzip-2-0-1)
 	- [unzip-pub script](https://gist.github.com/codingChewie/fe194f5064084d15c6a562ede1487f85)
-4. Rename the decompressed directory to the ISBN
+6. Rename the decompressed directory to the ISBN
 
 ## Step 2: Pull Metadata from Firebrand
 1. Find the ISBN of the title (usually in JIRA or wherever the title was assigned to you).
