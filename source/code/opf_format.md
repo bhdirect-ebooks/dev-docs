@@ -218,7 +218,6 @@ Replace:
 
 ### Font Manifest
 All fonts should be declared in the Manifest but if a PostScript exists it should be removed and replaced with either an OpenType or TrueType font. If a PostScript font is added to an ePub the text will render as squares in some applications like Apple iBooks.
-
 <aside class="caution">
 
 Sometimes editorial submits fonts with whitespace in their names. If this exists that whitespace must be removed or replaced with a dash or underscore. Sometimes submitted fonts with whitespace are an indication that the font did not come from UTC. If this occurs the font should downloaded and used from UTC.

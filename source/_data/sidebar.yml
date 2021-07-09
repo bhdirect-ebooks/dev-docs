@@ -20,7 +20,7 @@ code:
     git_commit: git_commit.html
   epubs:
     construction: construction.html
-    metadata: metadata.html
+    opf_format: opf_format.html
     navigation: navigation.html
     semantics: semantics.html
 
@@ -57,29 +57,30 @@ process:
   dev:
     overview: index.html
     regex-library: regex-library.html
-  prep:
-    admin: project_admin.html
-    scaffold: proj_scaffold.html
-    structure: epub_dir.html
-  clean:
-    content: markup.html
-    package: package_doc.html
-    nav: nav_doc.html
-  enhance:
-    pagebreak: page_break.html
-    toc_formatting: toc-table-of-contents-using-buildtoc.html
-    scripture: scripture.html
-    footnotes: footnotes.html
-    indexes: indexes.html
-    abbr: abbr.html
-    images: images.html
-    videos: videos.html
-    glossary: glossary.html
-    special: special_types.html
-
-  qa:
-    review: review.html
-    convert: convert.html
+    fonts: fonts.html
+    deliverables: deliverables.html
+//  prep:
+//    admin: project_admin.html
+//    scaffold: proj_scaffold.html
+//    structure: epub_dir.html
+//  clean:
+//    content: markup.html
+//    package: package_doc.html
+//    nav: nav_doc.html
+//  enhance:
+//    pagebreak: page_break.html
+//    toc_formatting: toc-table-of-contents-using-buildtoc.html
+//    scripture: scripture.html
+//    footnotes: footnotes.html
+//    indexes: indexes.html
+//    abbr: abbr.html
+//    images: images.html
+//    videos: videos.html
+//    glossary: glossary.html
+//    special: special_types.html
+//  qa:
+//    review: review.html
+//    convert: convert.html
 
 ocr:
   process:

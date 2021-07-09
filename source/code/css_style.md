@@ -148,3 +148,39 @@ For color values that permit it, 3 character hexadecimal notation is shorter and
   color: #eebbcc;
 }
 ```
+
+## CSS Font Declarations
+Any font added to the `font` directory should be referenced in the CSS.
+```css
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../font/AGaramondPro-Regular.otf') format('opentype');
+}
+```
+When exporting from Indesign, the format is not included and should be added.
+```
+Find:
+	(?<=\.otf"\));$
+	
+Replace:
+	format('opentype');
+```
+<aside class="notice">When using a TrueType font, the format should be 'truetype'</aside>
+
+If a font comes in italic it should be included with a font style of `italic` and `oblique`:
+```css
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  font-style: italic;
+  font-weight: normal;
+  src: url('../font/AGaramondPro-Italic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Adobe Garamond Pro';
+  font-style: oblique;
+  font-weight: normal;
+  src: url('../font/AGaramondPro-Italic.otf') format('opentype');
+}
+```

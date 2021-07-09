@@ -1,90 +1,112 @@
 ---
-title: Dev Process Overview
+title: Getting Started
 ---
 <hr />
 
-## Tools
-
-* [Apps Used in Development](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software)
-* [Setting Up Your Machine](https://style.bhdirect-ebooks.org/process/new-computer-setup)
-* [Collection of Team Training Videos](https://docs.google.com/spreadsheets/d/1Zcb8mRYyKbr3TGoOOk_12m_bPOncIC4m-gdXHM8r6Ms/edit#gid=0)
+## Introduction: What is an EPUB?
+An EPUB is a collection of content, distributed as a single file [using ZIP format](https://www.w3.org/publishing/EPUB32/EPUB-overview.html#sec-container).  
+See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EPUB32/EPUB-overview.html) for a more in-depth overview.
 
 <hr />
 
-## I. Prep
+## Step 1: Export EPUB from Indesign
+1. Open the main title contents indd file in Indesign
+2. Anchor images in the text so that they are in the right place when you export the EPUB.
+    1. Find your image in the Indesign document
+    2. Click the little blue square in the upper right corner of the image and drag it to the place in the text where you want the image to be placed in the text.
+    
+    <aside class="notice">
+    
+    See [This short YouTube video](https://www.youtube.com/watch?v=5eEp6uIIjII) for a visual demonstration.
+    
+    </aside>
+3. Review the Paragraph and Character Styles
+    1. Reviewing the paragraph styles will give you a good idea of what types of CSS classes you will need.
+    2. Any styles that are not necessary (like "no_break", or "keep_together") can be removed in Indesign before exporting.
+4. [Export as EPUB](https://helpx.adobe.com/indesign/using/export-content-epub-cc.html#export-to-epub) (<kbd>&#8984;E</kbd>)
+    1. Under General, make sure Version is set to "EPUB 3.0"
+    2. Under General, set Cover to "None"
+    3. Under Text > Options, check "Remove Forced Line Breaks"
+    4. Under Text > Lists, set Bullets and Numbers to "Convert to Text"
+    5. Under Conversion settings, set Format to "PNG" and resolution to 150 PPI
+    6. Under HTML & CSS > Additional CSS, click "Add Style Sheet" and add epub3.css from your local machine
+5. Unzip the .epub file that Indesign exported.  
+	- [EPUB ZIP/UNZIP](/process/tools-setting-your-machine-and-software#ePub-Zip-Unzip-2-0-1)
+	- [unzip-pub script](https://gist.github.com/codingChewie/fe194f5064084d15c6a562ede1487f85)
+6. Rename the decompressed directory to the ISBN
 
-### A. Start the project
+## Step 2: Pull Metadata from Firebrand
+1. Find the ISBN of the title (usually in JIRA or wherever the title was assigned to you).
+2. Use the [firebrand-fetch script](https://github.com/EPUBknowledge/firebrand-fetch) to create content.opf
+3. If the title is fixed-layout (such as a cookbook, coffee table book, and some children's books), add the [necessary tags](/code/opf_format.html#Fixed-Layout-MetaData) to the content.opf.
+4. Review the [opf metadata style guide](/code/opf_format.html#OPF-Metadata) and ensure compliance
 
-1. [Project Admin](https://style.bhdirect-ebooks.org/process/project_admin.html)
-2. [Project Scaffolding](https://style.bhdirect-ebooks.org/process/project_admin.html)
+## Step 3: File Cleanup
+1. Remove the following files completely (some will be added back later in a better format.)
+	- META-INF/encryption.xml
+	- OEBPS/cover.xhtml
+	- OEBPS/toc.ncx
+	- OEBPS/toc.xhtml
+2. Rename the `/image/` directory to `/img/`
+3. Copy all of the fonts from the `Document fonts` folder in the source files to the `/fonts/` directory
+	- We do this because when Indesign exports an EPUB, it encrypts the fonts. We need the unencrypted fonts to move forward with development.
+	- See the [Font Style Guide](/process/fonts.html) for more information
 
-### B. Create EPUB directory
+## Step 4: Export Cover Image from Indesign
+1. Open the main cover indesign file
+2. Export the cover page as a a JPG. (Be sure to follow the [Cover Image Style Guide](/code/structural_types.html#Cover-Image).)
+3. Add the cover image to the [Content.opf manifest](/code/opf_format.html#Cover-Image-Manifest)
 
-* Structure and name [EPUB Directories and Files](epub_dir.html)
+## Step 5: Export Title Page Image from Indesign
+1. Open the main content indesign file
+2. Export the title page as a PNG. (Be sure to follow the [Title Page Style Guide](/code/structural_types.html#Title-Page).)
+3. Create the file `text/DS01_frontmatter01.xhtml` from the content file template
+4. Add the image in a [full page `<div>`](/css_lib/figures.html#Full-Page-Image)
+5. Be sure the titlepage image is [included in the OPF manifest](/code/opf_format.html#Image-Manifest)
 
-<hr>
+## Step 6: Markup Cleanup
+Indesign adds all kinds of CSS classes to the markup to do styling, but as with any auto-generated markup/CSS it's not written in the cleanest and most efficient way. We need to work through the content and clean up the extraneous CSS classes and markup tags.
+- Separate each chapter of the content into `<section>` tags and files.
+	- Each section should be put in it's own `DS02_chapterxx.xhtml` file so that page breaks render properly on all devices.
+	- Each file's opening `<body>` tag should have an `epub:type` attribute with a value from the [EPUB 3 Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/)
+- If there are `<p>` tags that are styled as headers, they should be re-formatted as `<h1-h6>` tags, following the [Headings Style Guide](https://style.bhdirect-ebooks.org/code/structural_types.html#Headings) (be sure to note the styles and keep what is needed retain the look of the header)
+- Tables should be formatted according to the [Table Style Guide](/code/general_types.html#Tables) and be added to the [list of tables](/code/navigation.html#toc-xhtml-List-of-Tables) in `toc.xhtml`
+- Endnotes or footnotes should be formatted as links according to the [Notes Style Guide](/code/structural_types.html#Notes).
+- Add page breaks to align the content with the print version. See the [Page Break Style Guide](/code/structural_types.html#Page-Breaks) for more details.
+- Convert all symbols to numerical entities (see the [Entity References Style Guide](/code/html_style.html#Entity-References)).
+- Use Regex to find and fix all [empty tags](/process/regex-library.html#Remove-Empty-Spans), [multiple spans](/process/regex-library.html#Span-Combine-1), and [self closing tags](/code/html_style.html#Self-Closing-Tags)
+- [Add `format()`](/code/css_style.html#CSS-Font-Declarations) to all CSS font definitions
+- Find and remove any `CharOverride` and `ParaOverride` classes in the xhtml
+- Remove unused CSS (including the `CharOrverride` and `ParaOverride` rules)
 
-## II. Clean & Code
+## Step 7: Create the OPF Manifest and Spine
+1. [List the font files used](/code/opf_format.html#Font-Manifest) in the manifest.
+2. [List the CSS files used](/code/opf_format.html#CSS-Manifest) in the manifest.
+3. [List the images used](/code/opf_format.html#Image-Manifest) (including [the cover](/code/opf_format.html#Cover-Image-Manifest)) in the manifest.
+4. [List the text files used](/code/opf_format.html#Text-XHTML-Manifest) in the manifest.
+5. [Add the navigation files](/code/opf_format.html#Navigation-Manifest) to the manifest
+5. Populate the [`<spine>` tag](/code/opf_format.html#OPF-Spine) from the table of contents. (be sure to include the toc.xhtml).
 
-### A. Identify and [markup content](../code/general_types.html) types and styles
+## Step 8: Build the Table of Contents
+1. Create a new `OEBPS/toc.xhtml` file from the [TOC template](/code/navigation.html#toc-xhtml)
+2. Build a Table of Contents list in the `nav#toc` element.
+	- See The [TOC Style Guide](/code/navigation.html#toc-xhtml)
+3. Build a page list in the `nav[EPUB:type="page-list"]` element.
+	- Every page number that exists in the print version should be included in this list and linked to the pagebreak in the content files.
+	- See the [Page List Style Guide](/code/navigation.html#toc-xhtml-Page-List)
+4. Add the [list of images](/code/navigation.html#toc-xhtml-List-Of-Images) and [list of tables](/code/navigation.html#toc-xhtml-List-Of-Tables)
+5. Create a new `OEBPS/toc.ncx` file from the [NCX template](/code/navigation.html#toc-ncx)
+6. Fill in the meta data in `OEBPS/toc.ncx`
+7. Use the Table of Contents list to [build the `<navMap>`](/code/navigation.html#toc-ncx)
 
-* [Cover](https://style.bhdirect-ebooks.org/code/structural_types.html#Cover-Page), [title page](https://style.bhdirect-ebooks.org/code/structural_types.html#Title-Page), and [copyright page](../code/structural_types.html#Copyright-Page)
-* [Headings](../code/structural_types.html#Headings) (hierarchical)
-* [Lists and outlines](../css_lib/lists.html)
-* [Block & pull quotes](../css_lib/quotes.html)
-* [Poetry](../code/general_types.html#Poetry)
-* [Tables](../code/general_types.html#Tables)
-* [Languages & transliterations](../code/general_types.html#Languages-and-Transliterations)
-* [Figural images](../code/media_types.html#Images)
-* Convert existing [page breaks](../code/structural_types.html#Page-Breaks)
-* Bring code into compliance with [formatting rules](../code/general_format.html) and [style rules](../code/html_style.html)
+## Step 9: Package your EPUB
+1. Zip your EPUB using your method of choice.
+	- [EPUB ZIP/UNZIP](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#ePub-Zip-Unzip-2-0-1)
+	- [EPUB zipper](https://github.com/epubknowledge/scripts/tree/main/guidelines/epub-zipper)  
+2. Validate your EPUB using [EPUB checker](https://github.com/epubknowledge/scripts/tree/main/guidelines/epub-checker)
+3. Run additional validation on your EPUB with FlightDeck (Access FlightDeck through the FireBrand record for the title)
 
-### B. Create well-formed EPUB documents
-
-* [Package document (content.opf)](package_doc.html)
-* [Navigation document](nav_doc.html) [(toc.xhtml)](toc-table-of-contents-using-buildtoc.html)
-
-### Checkpoint!
-
-<aside class="caution">If possible, pass EpubCheck before moving forward!</aside>
-
-<div>&nbsp;</div>
-
-<hr>
-
-## III. Enhance
-
-* [Add page breaks](../code/structural_types.html#Page-Breaks)
-* [Footnotes](footnotes.html)
-* [Indexes](indexes.html)
-* [Abbreviations](abbr.html)
-* [Glossary](glossary.html)
-* [Scripture references](scripture.html)
-* [Videos](videos.html)
-* [Images](https://style.bhdirect-ebooks.org/process/images)
-* Workbooks/Studies
-  * [Workbook enhancements](../code/data_types.html#Workbook-Questions-and-Answers)
-* [Dictionaries](../code/dictionaries.html)
-  * [Dictionary metadata](../code/dictionaries.html#Dictionary-Metadata)
-  * [Dictionary markup](../code/dictionaries.html#Dictionary-Content)
-  * [Search Key Map](../code/dictionaries.html#Search-Key-Map)
-
-<hr>
-
-## IV. QA & Convert
-
-### A. Self Review
-
-* [Review Process](review.html)
-
-### Checkpoint!
-
-<aside class="caution">Pass EpubCheck before moving forward!</aside>
-
-<div>&nbsp;</div>
-
-### B. Peer Review
-
-* [Review Process](review.html)
-
-### C. [Conversion](convert.html)
+## Step 10: Prepare Additional Files and Upload
+1. Prepare any additional files listed in the current [Deliverables Style Guide](/process/deliverables.html)
+2. Upload files to Alfresco
+	- See the [suggested directory](https://epubknowledge.com/docs/file-structure#uploading-source-files) structure for uploading

@@ -13,4 +13,4 @@ The brain of the EPUB.
 
 [Package and Container Files](../code/construction.html#Package-and-Container-Files)
 
-[EPUB Metadata](../code/metadata.html)
+[Content.opf Metadata](../code/opf_format.html#OPF-Metadata)

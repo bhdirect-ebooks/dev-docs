@@ -175,26 +175,275 @@ Typographic (curly) quotes and straight quotes are equally acceptable in book te
 <hr />
 
 ## Tables
-
-Tables should be tagged semantically. This means cells that contain table headings should be `<th>`, rather than `<td>`, elements. If using **mywsb.css**, be aware that table headings are already styled.
-
-Also, for tables that contain more than one row of headings, wrap the rows with `<thead></thead>` and the remainder of the table with `<tbody></tbody>`. This is recommended for accessibility.
-
+All tables should have the `epub:type="table"` applied to the table tag.
 ```html
-<div class="table">
-  <table class="bdr">
-    <thead>
-      <tr class="offset">
-        <th colspan="5">Miracles of Jesus</th>
-      </tr>
-      <tr>
-        <th>Miracle</th>
-        <th colspan="4">Bible Passage</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- ... -->
-    </tbody>
-  </table>
-</div>
+<table epub:type="table"></table>
 ```
+Style name for the table should be:
+```bash
+table | number of columns | col, example: <table epub:type="table" class="style">
+```
+All tables should have an `id`, this `id` is what should be included in the _toc.xhtml_ `epub:type="lot"`. If a table doesn’t have a name applied by the content it should be named: `chapter | increment`.
+```html
+<table epub:type="table" id="table.1.2" class="style"></table>
+```
+`<p>` tags should not be present in tables. If the style used for the `<p>` tag is needed, it should be applied to the `<td>` tag.
+
+### Two Column Table
+#### HTML for Two Column Table
+```html
+<table epub:type="table" id="table.1.1" class="table2col">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Doe</td>
+  </tr>
+  <tr>
+    <td>Joel</td>
+    <td>Doe</td>
+  </tr>
+  <tr>
+    <td>Jesse</td>
+    <td>Doe</td>
+  </tr>
+</table>
+```
+
+#### CSS for Two Column Table
+```css
+table.table2col {
+  width: 98%;
+  margin: 1em 1%;
+  border-collapse: collapse;
+  border: 1px solid #c1c3d1;
+}
+.table2col tr {
+  border-bottom: 1px solid #c1c3d1;
+  color: #666b85;
+}
+.table2col tr:nth-child(odd) td {
+  background-color: #ebebeb;
+}
+.table2col tr th {
+  font-family: 'Gotham Light', serif;
+  color: #d5dde5;
+  background-color: #1b1e24;
+  font-size: 1em;
+  padding: 0.5em;
+  text-align: center;
+  vertical-align: middle;
+  border-top: none;
+}
+.table2col td {
+  font-family: 'Adobe Garamond Pro', serif;
+  padding: 10px;
+  background: #ffffff;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1em;
+  border-right: 1px solid #c1c3d1;
+  letter-spacing: 0.01em;
+  width: 50%;
+}
+```
+
+### Three Column Table
+#### HTML for Three Column Table
+```html
+<table epub:type="table" id="table.1.2" class="table3col">
+  <tr>
+    <th>Foo</th>
+    <th>Bar</th>
+    <th>Cho</th>
+  </tr>
+  <tr>
+    <td>Bacon ipsum dolor amet shankle</td>
+    <td>Bacon ipsum dolor amet shankle</td>
+    <td>Bacon ipsum dolor amet shankle</td>
+  </tr>
+  <tr>
+    <td>Brisket meatball</td>
+    <td>Brisket meatball</td>
+    <td>Brisket meatball</td>
+  </tr>
+  <tr>
+    <td>Cupim shoulder short ribs</td>
+    <td>Cupim shoulder short ribs</td>
+    <td>Cupim shoulder short ribs</td>
+  </tr>
+</table>
+```
+
+#### CSS for Three Column Table
+```css
+table.table3col {
+  width: 96%;
+  margin: 1em 2%;
+  border-collapse: collapse;
+  border: none;
+  border: 1px solid #ebebeb;
+}
+.table3col tr th {
+  font-family: 'Adobe Garamond Pro', serif;
+  background-color: #2980b9;
+  color: #ffffff;
+  padding: 0.5em;
+  letter-spacing: 0.04em;
+}
+.table3col tr {
+  background-color: #ffffff;
+}
+.table3col td {
+  font-family: 'Gotham Book';
+  font-size: 0.75em;
+  padding: 0.5em;
+  width: 25%;
+  border-right: 1px solid #ebebeb;
+}
+```
+
+### Four Column Table
+#### HTML for Four Column Table
+```html
+<table epub:type="table" id="table.1.3" class="table4col">
+  <tr>
+    <th>Product</th>
+    <th>Unit Price</th>
+    <th>Quantity</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>Adjustable Desk</td>
+    <td>$800</td>
+    <td>10</td>
+    <td>arrived</td>
+  </tr>
+  <tr>
+    <td>Leather iPhone wallet</td>
+    <td>$45</td>
+    <td>15</td>
+    <td>foo</td>
+  </tr>
+  <tr>
+    <td>27" Apple Thunderbolt displays</td>
+    <td>$1000</td>
+    <td>2</td>
+    <td>bar</td>
+  </tr>
+  <tr>
+    <td>Bose studio headphones</td>
+    <td>$60</td>
+    <td>4</td>
+    <td>delivered</td>
+  </tr>
+</table>
+```
+
+#### CSS for Four Column Table
+```css
+table.table4col {
+  width: 98%;
+  margin: 1em 1%;
+  border-collapse: collapse;
+  border: none;
+}
+.table4col tr th {
+  font-family: 'Gotham Light', serif;
+  background-color: #27ae60;
+  color: #ffffff;
+  padding: 0.5em;
+}
+.table4col tr {
+  background-color: #ffffff;
+}
+.table4col tr:nth-child(odd) td {
+  background-color: #ebebeb;
+}
+.table4col td {
+  font-family: 'Gotham Book';
+  font-size: 0.75em;
+  padding: 0.5em;
+  width: 25%;
+}
+```
+
+### Custom Table
+#### HTML for Custom Table
+```html
+<table epub:type="table" id="table.1.4" class="table1mod">
+  <tr>
+    <th colspan="4">Shankle leberkas salami pork loin filet mignon.</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Cupim shoulder short ribs, biltong beef ribs jerky picanha venison.</td>
+    <td>Brisket</td>
+    <td>Bacon</td>
+    <td>Pork</td>
+  </tr>
+  <tr>
+    <td>$45</td>
+    <td>15</td>
+    <td><span class="italic">foo</span></td>
+  </tr>
+  <tr>
+    <td>27" Apple Thunderbolt displays</td>
+    <td class="bad">$1000</td>
+    <td>2</td>
+    <td>bar</td>
+  </tr>
+  <tr>
+    <td><span class="small_cap">Bose studio headphones</span></td>
+    <td>$60</td>
+    <td>4</td>
+    <td class="good">delivered</td>
+  </tr>
+</table>
+```
+
+#### CSS for Custom Table
+```css
+table.table1mod {
+  width: 98%;
+  margin: 1em 1%;
+  border-collapse: collapse;
+  border: none;
+}
+.table1mod tr th {
+  font-family: 'Gotham Black';
+  background-color: #cfcfcf;
+  color: #ffffff;
+  padding: 0.5em;
+  letter-spacing: 0.05em;
+  text-shadow: #838383 1px 1px 1px;
+}
+.table1mod tr {
+  background-color: #ffffff;
+}
+.table1mod tr:nth-child(odd) td {
+  background-color: #ebebeb;
+}
+.table1mod td {
+  font-family: 'Gotham Book';
+  font-size: 0.75em;
+  padding: 0.5em;
+  width: 25%;
+}
+td.good {
+  color: #468847 !important;
+  background-color: #dff0d8 !important;
+  font-weight: bold;
+}
+td.bad {
+  color: #a94442 !important;
+  background-color: #f2dede !important;
+  font-weight: bold;
+}
+```
+If a table style is generic throughout the content then the width on the `<td>` can be removed and a generic name can be applied. If an table is heavily detailed and larger than 4 columns it can be included as an image but should be referenced in the `lot` and not the `loi`.
