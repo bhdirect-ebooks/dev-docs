@@ -38,7 +38,6 @@ The cover image should be included in the `<metadata>`,
 ```
 
 ### Subtitle Metadata
-
 When the title is pulled from the API it will inject the title and subtitle within the `<dc:title>` tag if a subtitle exists.
 If the subtitle exists, separated by a colon, the subtitle should be placed in a refinement tag.
 ```xml
@@ -47,7 +46,6 @@ If the subtitle exists, separated by a colon, the subtitle should be placed in a
 ```
 
 ### Set/Series Metadata
-
 Likewise, when the work is part of a set or series, make sure to include the set title and volume in a refinement tag.
 ```xml
 <dc:title id="theTitle">Halting the Hateful Hand of Mister Malevolent</dc:title>
@@ -143,9 +141,19 @@ Because of transparency and magnification differences, a `.mobi` file must be cr
 ```
 
 ### Journal Metadata
-<aside class="notice">See a [journal metadata](https://gitlab.com/snippets/26999) snippet on GitLab.</aside>
+<aside class="notice">
+
+See a [journal metadata](https://gitlab.com/snippets/26999) snippet on GitLab.
+
+</aside>
+
 For journals, `<meta property="dcterms:bibliographicCitation">` must be included as a child of the `<metadata>` element.
-<aside class="caution">The `content` attribute value is one, unbroken string, but it is broken below for readability.</aside>
+
+<aside class="caution">
+
+The `content` attribute value is one, unbroken string, but it is broken below for readability.
+
+</aside>
 
 ```xml
 <meta property="dcterms:bibliographicCitation" scheme="kev.ctx"
@@ -210,7 +218,11 @@ Replace:
 
 ### Font Manifest
 All fonts should be declared in the Manifest but if a PostScript exists it should be removed and replaced with either an OpenType or TrueType font. If a PostScript font is added to an ePub the text will render as squares in some applications like Apple iBooks.
-<aside class="caution">Sometimes editorial submits fonts with whitespace in their names. If this exists that whitespace must be removed or replaced with a dash or underscore. Sometimes submitted fonts with whitespace are an indication that the font did not come from UTC. If this occurs the font should downloaded and used from UTC.</aside>
+<aside class="caution">
+
+Sometimes editorial submits fonts with whitespace in their names. If this exists that whitespace must be removed or replaced with a dash or underscore. Sometimes submitted fonts with whitespace are an indication that the font did not come from UTC. If this occurs the font should downloaded and used from UTC.
+
+</aside>
 
 Use the [command above](#OPF-Manifest) to list the contents of the `fonts/` directory, then do the following find-replace actions and paste the result in the `<manifest>` tag.
 
@@ -265,7 +277,11 @@ Replace:
 ```
 Paste the results in the `<spine>` tag.
 
-<aside class="notice">By default we assume the first entry to be referenced will always be the `toc`. While this is our default standard sometimes this can be changed and that usually comes from an editorial request.</aside>
+<aside class="notice">
+
+By default we assume the first entry to be referenced should be the `toc`. While this is our default standard sometimes this can be changed and that usually comes from an editorial request.
+
+</aside>
 
 ### Linear = No in OPF Spine
 There is the ability to apply `linear=no` to `<itemref />` tags to exclude an XHTML file from the reading order.
