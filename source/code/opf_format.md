@@ -259,7 +259,7 @@ Replace:
 While all other images in the manifest should be PNG format, the cover image should be a JPG. 
 
 ```xml
-<item id="cover" href="image/Cover.jpg" media-type="image/jpeg" properties="cover-image" />
+<item id="cover" href="img/Cover.jpg" media-type="image/jpeg" properties="cover-image" />
 ```
 Note two important attributes for the cover item:
 - `id="cover"` must be lowercase `cover` so it will not clash with [Metdata's Cover declaration](#Cover-Metadata).
