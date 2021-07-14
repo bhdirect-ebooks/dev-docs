@@ -70,6 +70,7 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 	- Each section should be put in it's own `DS02_chapterxx.xhtml` file so that page breaks render properly on all devices.
 	- Each file's opening `<body>` tag should have an `epub:type` attribute with a value from the [EPUB 3 Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/)
 - If there are `<p>` tags that are styled as headers, they should be re-formatted as `<h1-h6>` tags, following the [Headings Style Guide](https://style.bhdirect-ebooks.org/code/structural_types.html#Headings) (be sure to note the styles and keep what is needed retain the look of the header)
+- Images should be exported from Indesign following the [Image Style Guide](/process/images.html)
 - Tables should be formatted according to the [Table Style Guide](/code/general_types.html#Tables) and be added to the [list of tables](/code/navigation.html#toc-xhtml-List-of-Tables) in `toc.xhtml`
 - Endnotes or footnotes should be formatted as links according to the [Notes Style Guide](/code/structural_types.html#Notes).
 - Add page breaks to align the content with the print version. See the [Page Break Style Guide](/code/structural_types.html#Page-Breaks) for more details.
