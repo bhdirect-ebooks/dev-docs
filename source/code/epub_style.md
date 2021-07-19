@@ -18,7 +18,7 @@ EPUBs should be constructed according to this documentation.
 
 ## EPUB Structural Semantics
 
-Follow EPUB 3 Structural Semantics Vocabulary wherever possible. See also the corresponding chapter in this document for team-specific requirements.
+Follow EPUB 3 Structural Semantics Vocabulary wherever possible. See the  chapter [Document Sections Style Guide](https://style.bhdirect-ebooks.org/code/semantics.html#Document-Sections) for team-specific requirements.
 
 See: [EPUB 3 Structural Semantics Vocabulary](https://idpf.github.io/epub-vocabs/structure/)
 
