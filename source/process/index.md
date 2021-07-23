@@ -95,7 +95,7 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 3. Build a page list in the `nav[EPUB:type="page-list"]` element.
 	- Every page number that exists in the print version should be included in this list and linked to the pagebreak in the content files.
 	- See the [Page List Style Guide](/code/navigation.html#toc-xhtml-Page-List)
-4. Add the [list of images](/code/navigation.html#toc-xhtml-List-Of-Images) and [list of tables](/code/navigation.html#toc-xhtml-List-Of-Tables)
+4. Add the [list of images](/code/navigation.html#toc-xhtml-List-of-Images) and [list of tables](/code/navigation.html#toc-xhtml-List-of-Tables)
 5. Create a new `OEBPS/toc.ncx` file from the [NCX template](/code/navigation.html#toc-ncx)
 6. Fill in the meta data in `OEBPS/toc.ncx`
 7. Use the Table of Contents list to [build the `<navMap>`](/code/navigation.html#toc-ncx)
