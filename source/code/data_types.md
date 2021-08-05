@@ -96,7 +96,10 @@ The `data-wb-answer` value must match the value of the question to which it corr
 <p data-wb-answer="chap34-314">[Your Response Here]</p>
 ```
 
-<aside class="tip">We have established a shorthand-plus-script workflow to make adding workbook markup easier, see [expand-ws.js](https://github.com/bhdirect-ebooks/single-scripts/tree/master/expand-wb) for information.
+<aside class="tip">
+
+We have established a shorthand-plus-script workflow to make adding workbook markup easier, see [expand-ws.js](https://github.com/bhdirect-ebooks/single-scripts/tree/master/expand-wb) for information.
+
 </aside>
 
 ## Strong's Numbers
@@ -137,11 +140,18 @@ In Bibles (and **only** in Bibles), the words of Jesus may be tagged with the `d
 <span data-speaker="Jesus">"Have you understood all these things?"</span>
 ```
 
-<aside class="warning">Words of Jesus span elements cannot be used to cover more than a single verse. Start a new `<span data-speaker="Jesus">` for <b>every</b> verse.</aside>
+<aside class="warning">
+
+Words of Jesus span elements cannot be used to cover more than a single verse. Start a new `<span data-speaker="Jesus">` for <b>every</b> verse.
+
+</aside>
 
 ## Script-Specific Data Attributes
 
-<aside class="caution">The following sections on *Parsing Context* and *Do Not Parse* are specifically for use with the `toolkit` script `percival`. They don't have any purpose beyond that, and can be removed after `percival` has been run.
+<aside class="caution">
+
+The following sections on *Parsing Context* and *Do Not Parse* are specifically for use with the `toolkit` script `percival`. They don't have any purpose beyond that, and can be removed after `percival` has been run.
+
 </aside>
 
 ### Parsing Context
@@ -158,7 +168,11 @@ A `<span>` tag may be used in places where an `<hr>` is not appropriate.
 <span data-parsing="Gen.1"></span>
 ```
 
-<aside class="warning">There is a bug in `percival` where parsing tags with only a 'book' value which begin with a number, such as '1Chr' or '2Cor' will not work. For any 'book' value with begins with a number, a 'chapter' must also be given, e.g. '1Sam.1'</aside>
+<aside class="warning">
+
+There is a bug in `percival` where parsing tags with only a 'book' value which begin with a number, such as '1Chr' or '2Cor' will not work. For any 'book' value with begins with a number, a 'chapter' must also be given, e.g. '1Sam.1'
+
+</aside>
 
 ### Do Not Parse
 
@@ -168,7 +182,8 @@ To indicate that a specific portion of text should not be parsed as Scripture, u
 <span data-parsing=""></span>123:4<span data-parsing="Gen"></span>
 ```
 
-<aside class="warning">Important: After using an empty parsing attribute in this way, always restore context with a normal parsing context tag, as shown above.</aside>
+<aside class="warning">
 
-<hr />
+Important: After using an empty parsing attribute in this way, always restore context with a normal parsing context tag, as shown above.
 
+</aside>
