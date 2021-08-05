@@ -107,7 +107,33 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 2. Validate your EPUB using [EPUB checker](https://github.com/epubknowledge/scripts/tree/main/guidelines/epub-checker)
 3. Run additional validation on your EPUB with FlightDeck (Access FlightDeck through the FireBrand record for the title)
 
+<details close>
+	<summary><strong>Optional</strong>: Create a CHO version of the EPUB</summary>
+	<ol>
+		<li>Copy the EPUB directory and rename to the CHO version ISBN</li>
+		<li>Replace the ISBN in all locations in the EPUB (content.opf, toc.ncx, copyright page, etc.)</li>
+		<li>Make sure that the LIN is listed properly on the copyright page</li>
+		<li>Zip the CHO version as a separate EPUB to upload</li>
+	</ol>
+</details>
+
+
 ## Step 10: Prepare Additional Files and Upload
 1. Prepare any additional files listed in the current [Deliverables Style Guide](/process/deliverables.html)
 2. Upload files to Alfresco
 	- See the [suggested directory](https://epubknowledge.com/docs/file-structure#uploading-source-files) structure for uploading
+
+<details close>
+	<summary><strong>Optional</strong>: Add Content Platform (CP) enhancements</summary>
+	<ol>
+		<li>Login to Content Platform with your LifeWay ID using the following URL: <a href="https://content.lifeway.com/">https://content.lifeway.com/</a> (Must be on VPN)</li>
+		<li>Search for the specific title by ISBN, GUID, LIN, or Title using the search box/drop-down in the top left of the screen. <img src="/assets/images/contentplatform/image3.png" alt="Search Feature" /></li>
+		<li>Click on the title needing enhancement and select the <em>Enhance Content</em> button from the modal window. <img src="/assets/images/contentplatform/image6.png" alt="Enhance Content Button" /></li>
+		<li>A new browser window will open displaying the ePub itself with options at the top. Begin by selecting <em>Workbook</em> from the drop-down menu. <img src="/assets/images/contentplatform/image2.png" alt="Index Dropdown" /></li>
+		<li>Next, choose the chapter that you want to begin enhancing by using the TOC on the left. When you’re ready to begin, click the rectangular button next to the drop-down menu. <img src="/assets/images/contentplatform/image1.png" alt="Question Button" /></li>
+		<li>To create a workbook enhancement, select a question in the body of the text. Once the text is selected a new modal window will appear on the left side of the screen. Click the Save button and an icon will appear after the selected text indicating a workbook enhancement has been added. <img src="/assets/images/contentplatform/image7.png" alt="Save Question Modal" /></li>
+		<li>Once you’ve finished and are ready to move on to the next chapter, click the small rectangular icon next to the drop-down menu at the top. This will allow you to access the TOC to move to the next chapter needing enhancements. <img src="/assets/images/contentplatform/image1.png" alt="Add Question Button" /></li>
+		<li>If you need to delete an individual enhancement, click on the enhancement icon in the body of the text and click <em>Delete</em>. The icon should no longer be visible in the content. <img src="/assets/images/contentplatform/image8.png" alt="Delete Question Button" /></li>
+		<li>When all the enhancements have been made for a title, click the orange <em>Workbook</em> button (which is the drop-down). This should change the color to green indicating the status has successfully changed in Content Platform. <img src="/assets/images/contentplatform/image5.png" alt="Save Workbook Button" /></li>
+	</ol>
+</details>
