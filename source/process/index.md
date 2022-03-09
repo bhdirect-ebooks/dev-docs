@@ -104,7 +104,7 @@ Indesign adds all kinds of CSS classes to the markup to do styling, but as with 
 1. Zip your EPUB using your method of choice.
 	- [EPUB ZIP/UNZIP](https://style.bhdirect-ebooks.org/process/tools-setting-your-machine-and-software#ePub-Zip-Unzip-2-0-1)
 	- [EPUB zipper](https://github.com/epubknowledge/scripts/tree/main/guidelines/epub-zipper)  
-2. Validate your EPUB using [EPUB checker](https://github.com/epubknowledge/scripts/tree/main/guidelines/epub-checker)
+2. Validate your EPUB using [EPUB checker](https://lifewaychristianresources.sharepoint.com/:f:/s/PETMicrosoftTestTeam/EmFygm2iuoxFhTdJIovByy8BAzHhyGvc2H3McmlG4bkxOA?e=Wo81NC)
 3. Run additional validation on your EPUB with FlightDeck (Access FlightDeck through the FireBrand record for the title)
 
 <details close>
