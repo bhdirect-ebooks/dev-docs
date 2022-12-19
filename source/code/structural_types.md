@@ -2,7 +2,7 @@
 title: Structural Types
 ---
 ## Cover Image
-eISBN.jpg or any cover in the image directory should be named Cover.jpg.
+eISBN.jpg or any cover in the image directory should be named Cover.jpg. The following adjustments can be performed in any advanced image editory, but Photoshop is our current standard. 
 
 ### Width
 Cover.jpg should have a width of `1600px`, unless the total aspect ratio exceeds 4 million pixels. If it does exceed 4 mil then adjust the width in increments of `20px` and test.
