@@ -5,7 +5,7 @@ title: Structural Types
 eISBN.jpg or any cover in the image directory should be renamed Cover.jpg. The following adjustments can be performed in any advanced image editory, but Photoshop is our current standard. 
 
 ### Width
-Cover.jpg should have a width of `1600px`, unless the total aspect ratio exceeds 4 million pixels. If it does exceed 4 mil then adjust the width in increments of `20px` and test.
+Cover.jpg should have a width of `1600px`, unless the total aspect ratio exceeds 4 million pixels. The image size can be changed in Photoshop by selecting "Image—>Image Size". If it does exceed 4 mil then adjust the width in increments of `20px` and test.
 
 ### Extension
 Cover.jpg should use the file extension .jpg **not** .jpeg.
