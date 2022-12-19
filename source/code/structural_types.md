@@ -30,16 +30,11 @@ In InDesign, choose `File->Export`. From the `Format` dropdown select `PNG` and 
 - **Page**: Page should be selected
 - **Image**: Desired image settings
 
-#### Title Page Image Transparency
-It's common for the title page to have transparency and this should be tested because there will be rendering issues with the image in color modes, biggest issue can be found in **iBook's Black Mode**.
-To test if an image is transparent use _sips_ with `hasAlpha`.
-```bash
-sips -g hasAlpha titlepage.png  | cut -d':' -f2-
-```
-If there is no alpha the response will be `no` in the terminal.
+#### **Note About Title Page Image Transparency
+It's common for the title page to have transparency and this should be removed because there will be rendering issues with the image in color modes, biggest issue can be found in **iBook's Black Mode**. Transparency will be removed if you deselect the transparency option in the export process described above.
 
-#### Title Page Image Width
-All title pages should have a width of `1000px` if the title is a reflowable ePub.
+#### Adjust Title Page Image Width in Photoshop
+Open the exported Title Page in Photoshop. All title pages should have a width of `1000px` if the title is a reflowable ePub. To adjust the Title Page size, select `Image->Image Size` and set the width to 1000px. 
 
 #### Title Page Code Sample
 <iframe height="500" style="width: 100%;" scrolling="no" title="title page " src="https://codepen.io/bhdirect/embed/a13ade81164f9d9dbf040044d2afb497?height=265&theme-id=dark&default-tab=html,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
@@ -48,12 +43,10 @@ All title pages should have a width of `1000px` if the title is a reflowable ePu
 </iframe>
 
 ## Copyright Page
-
 The copyright page should be the third frontmatter document.
 
 
 ## Headings
-
 Heading tags reflect a hierarchy and should therefore be used for semantic (not stylistic) purposes. _Only the chapter title, part title, or frontmatter/backmatter section title should be tagged using `<h1>`._ The next lower level heading tag would be `<h2>`, then `<h3>`, etc.
 
 _**It is important to understand the concept of the HTML document outline**_ [See the spec](http://w3c.github.io/html/sections.html#outline). Always think of headings in terms of the document outline.
