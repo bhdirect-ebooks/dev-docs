@@ -2,31 +2,27 @@
 title: Structural Types
 ---
 ## Cover Image
-eISBN.jpg or any cover in the image directory should be renamed Cover.jpg. The following adjustments can be performed in any advanced image editory, but Photoshop is our current standard. 
+eISBN.jpg or any cover in the image directory should be renamed Cover.jpg. The following adjustments can be performed in any advanced image editor, but Photoshop is our current standard. 
 
 ### Width
-Cover.jpg should have a width of `1600px`, unless the total aspect ratio exceeds 4 million pixels. The image size can be changed in Photoshop by selecting "Image—>Image Size". If it does exceed 4 mil then adjust the width in increments of `20px` and test.
+Cover.jpg should have a width of `1600px`, unless the total aspect ratio exceeds 4 million pixels. The image size can be changed in Photoshop by selecting `Image->Image Size`. If it does exceed 4 mil then adjust the width in increments of `20px` and test.
 
 ### Extension
 Cover.jpg should use the file extension .jpg **not** .jpeg.
 
 ### Color Space
 The cover image should be in an RGB format.
-You can check an image's color space using *sips*.
-```
-sips -g space Cover.jpg | tail -n1 | awk '{print $2}'
-```
-the output should say `RGB`. If the output is `Gray` or anything else it should be converted to `RGB`.
+You can check an image's color space by selecting `Image->Mode`. The output should say `RGB`. If the output is `Grayscale` `Indexed Color` or anything else it should be converted to `RGB`.
 
 ## Title Page
 ### Half Title Page
-Half title pages should always be removed and should never be added to an ePub. Exception to this rule is if editorial has made the request but push back is encouraged as it is redundant and customers have complained.
+Half title pages should always be removed and should never be added to an ePub. Exception to this rule is if editorial has made the request, but push-back is encouraged as it is redundant and customers have complained.
 
 ### Full Title Page
 Sometimes the title page can be built with text but for best results the title page should be exported from InDesign as a PNG and placed in the frontmatter as a [full page image](/css_lib/figures.html#Full-Page-Image).
 
 #### Export Title Page Image from InDesign
-In Indesign, choose `file->export` then apply these settings:
+In InDesign, choose `File->Export`. From the `Format` dropdown select `PNG` and then click `Save`. Then apply these settings:
 
 ![Export PNG](/assets/images/title-page-export.png)
 
