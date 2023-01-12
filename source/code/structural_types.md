@@ -43,7 +43,7 @@ Open the exported Title Page in Photoshop. All title pages should have a width o
 </iframe>
 
 ## Copyright Page
-The copyright page should be the third frontmatter document.
+The Copyright page should be the third front-matter document, following the Cover page and the Title page.
 
 
 ## Headings

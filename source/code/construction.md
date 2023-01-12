@@ -18,7 +18,7 @@ Use the following directory structure for each EPUB:
 
 ## Package and Container Files
 
-The primary package and container files are referenced here in their expected basic forms, but it is beyond the scope of this documentation to describe the EPUB specification in detail. For a better understanding of EPUB and related specifications, please use the [documents available to the team in Alfresco](https://cms.lifeway.com/share/page/site/bh-academic/folder-details?nodeRef=workspace://SpacesStore/72fd3c44-683e-4532-974e-458e8c87f0ca).
+The primary package and container files are referenced here in their expected basic forms, but it is beyond the scope of this documentation to describe the EPUB specification in detail. For a better understanding of EPUB and related specifications, please use the [documents available to the team in Alfresco](https://cms.lifeway.com/share/page/site/bh-academic/folder-details?nodeRef=workspace://SpacesStore/72fd3c44-683e-4532-974e-458e8c87f0ca). (Note: There is no documentation available at this time).
 
 ### mimetype
 
