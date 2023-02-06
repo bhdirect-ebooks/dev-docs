@@ -7,7 +7,7 @@ The `<metadata>` element is the required first child of `<body>` in the Package 
 
 The required elements are `<dc:identifier>`, `<dc:title>`, and `<dc:language>`, along with `<meta property="dcterms:modified">`.
 
-All tags located in the metadata section (`<metadata></metadata>`) should be populated with [firebrand-fetch](https://github.com/EPUBknowledge/firebrand-fetch). If you create the OPF file with the script and a tag is empty do not remove the tag, check to see if that metadata exists in Firebrand and if it is missing contact the metadata curator associated with the title and ask it to be updated. If a metadata error exists and needs to be added to Firebrand we are not edit it that is something the curator should do.
+All tags located in the metadata section (`<metadata></metadata>`) should be populated with the [Create Firebrand OPF](https://github.com/EPUBknowledge/firebrand-fetch) script. If you create the OPF file with the script and a tag is empty do not remove the tag, check to see if that metadata exists in Firebrand and if it is missing contact the metadata curator associated with the title and ask it to be updated. If a metadata error exists and needs to be added to Firebrand we are not edit it that is something the curator should do.
 
 A good practice to see if any metadata could be added is to always reference the Cover.jpg. If any metadata is found ask the metadata curator to add the missing metadata to the title. The more metadata we provide for the title the better chances customers can find and will know more about it.
 
