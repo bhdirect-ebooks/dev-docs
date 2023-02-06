@@ -50,6 +50,8 @@ See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EP
 2. Rename the `/image/` directory to `/img/`
 3. Copy all of the fonts from the `Document fonts` folder in the source files to the `/font/` directory
 	- We do this because when Indesign exports an EPUB, it encrypts the fonts. We need the unencrypted fonts to move forward with development.
+	- If any of the original fonts have been replaced with fonts found in the Universal Type Client, they can be collected from UTC.
+	- If Adobe fonts are included in the ePub, they should remain encrypted, and the encryption.xml file is retained.
 	- See the [Font Style Guide](/process/fonts.html) for more information
 
 ## Step 4: Export Cover Image from Indesign
