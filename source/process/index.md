@@ -37,7 +37,7 @@ See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EP
 
 ## Step 2: Pull Metadata from Firebrand
 1. Find the ISBN of the title (usually in JIRA or wherever the title was assigned to you).
-2. Use the [Create Firebrand OPF](/assets/Downloads/Create_Firebrand_OPF.zip) Applescript to create content.opf. Note: When using the Create Firebrand OPF script, use the ISBN-13 number for the ePub without dashes. 
+2. Use the [Create Firebrand OPF](/assets/Downloads/Create_Firebrand_OPF.zip) Applescript to create content.opf. `Note:` *When using the Create Firebrand OPF script, use the ISBN-13 number for the ePub without dashes.
 3. If the title is fixed-layout (such as a cookbook, coffee table book, and some children's books), add the [necessary tags](/code/opf_format.html#Fixed-Layout-MetaData) to the content.opf.
 4. Review the [opf metadata style guide](/code/opf_format.html#OPF-Metadata) and ensure compliance
 
