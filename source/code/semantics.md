@@ -47,7 +47,7 @@ Include the `bodymatter` EPUB type with the `<body>` tag for all chapter and par
 </body>
 ```
 
-## Document-Sections
+## Document Sections
 
 Most of the document sections you will encounter from day to day are referenced here. Follow the structure outlines, but also make sure to consult [Document sections and components](https://idpf.github.io/epub-vocabs/structure/#h_sections) section of the EPUB vocabulary for the full list of document section types and use them where applicable.
 
