@@ -67,7 +67,7 @@ See the official [W3C EPUB 3 Overview document](https://www.w3.org/publishing/EP
 5. Be sure the titlepage image is [included in the OPF manifest](/code/opf_format.html#Image-Manifest)
 
 ## Step 6: Markup Cleanup
-Indesign adds all kinds of CSS classes to the markup to do styling, but as with any auto-generated markup/CSS it's not written in the cleanest and most efficient way. We need to work through the content and clean up the extraneous CSS classes and markup tags.
+InDesign adds all kinds of CSS classes to the markup to do styling, but as with any auto-generated markup/CSS it's not written in the cleanest and most efficient way. We need to work through the content and clean up the extraneous CSS classes and markup tags.
 - Separate each chapter of the content into `<section>` tags and files.
 	- Each section should be put in it's own `DS02_chapterxx.xhtml` file so that page breaks render properly on all devices.
 	- Each file's opening `<body>` tag should have an `epub:type` attribute with a value from the [EPUB Document Sections Style Guide](/code/semantics.html#Document-Sections).
