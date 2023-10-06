@@ -23,7 +23,7 @@
     "hexo-server": "^2.0.0",
     "lodash": "^4.17.21",
     "lunr": "^2.3.9",
-    "postcss": "^8.3.5"
+    "postcss": "^8.4.31"
   },
   "devDependencies": {
     "cssnano": "^5.0.6",
